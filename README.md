@@ -1,6 +1,6 @@
 # Projet-Roguelike-RPG
 
-Projet dans le cadre de notre 2ème année de licence informatique
+Projet réalisé dans le cadre de la 2ème année de licence informatique du 17/01/22 au 07/04/22 par une équipe de 3 étudiants : 
 
 Courcol Thibault
 Bougle Dimitri
