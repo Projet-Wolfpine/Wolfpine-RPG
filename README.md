@@ -8,7 +8,6 @@ Rattier Killian,
 Abid Ilyas
 
 Description du projet :
-Roguelike RPG est un jeu type RPG se déroulant dans la ville de Wolfpine. Dans cette ville, /*vous pourrez jouer un personnage de type Mage, Guerrier, Archer ou encore un Ork.*/
-Dans cette ville, vous pourrez visiter 3 bâtiments. Le premier étant l'hôtel de ville, où vous pourrez vous reposer et dans lequel vous arrivez avec une courte introduction décrivant les objectifs du jeu. Le second bâtiment sera une boutique dans laquelle vous achèterez vos objets tels que les potions de soin.
-Le dernier bâtiment quant-à-lui sera l’entrée du donjon. Dans ce donjon similaire à un labyrinthe vous progresserez de salle en salle regroupant différents équipements et items afin de vous permettre de combattre le boss de fin de ce donjon.
+Roguelike RPG est un jeu type RPG se déroulant dans la Région de Wolfpine. C’est dans un petit village situé dans cette contrée qu’on commence l’aventure dans une maison près d’un PNJ qui nous donnera une quete. Dans le village en question il y’aura quelques batiments comme une auberge ou une forge dans laquelle on pourra aller chercher nos premiers équipements pour la suite de l’aventure. La quête qui nous sera donnée nous invitera à visiter la carte du monde pour nous rendre dans un endroit plus dangereux ou on retrouvera un donjon avec plusieurs salles et un boss de fin
+
 
