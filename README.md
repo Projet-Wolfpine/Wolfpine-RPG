@@ -2,10 +2,10 @@
 
 Projet réalisé dans le cadre de la 2ème année de licence informatique du 17/01/22 au 07/04/22 par une équipe de 3 étudiants : 
 
-Courcol Thibault
-Bougle Dimitri
-Rattier Killian
-Abid Ilyas
+Courcol Thibault,
+Bougle Dimitri,
+Rattier Killian,
+Abid Ilyas.
 
 Description du projet :
 Roguelike RPG est un jeu type RPG se déroulant dans la ville de Wolfpine. Dans cette ville, vous pourrez jouer un personnage de type Mage, Guerrier, Archer ou encore un Ork.
