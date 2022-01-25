@@ -5,6 +5,7 @@ Projet réalisé dans le cadre de la 2ème année de licence informatique du 17/
 Courcol Thibault
 Bougle Dimitri
 Rattier Killian
+Abid ILyas
 
 Description du projet :
 Roguelike RPG est un jeu type RPG se déroulant dans la ville de *****. Dans cette ville, vous pourrez jouer un personnage de type Mage, Guerrier, Archer ou encore un Ork.
