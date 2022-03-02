@@ -180,7 +180,7 @@ void jeu(int mat[Y][X], int anc_coord_x, int anc_coord_y){
 
 
 
-void placer_pers2(int mat[Y][X], int coord_x, int coord_y, perso_t  *player){
+void placer_pers2(int mat[Y][X], int coord_y, int coord_x, perso_t  *player){
 
   if(case_libre(mat,coord_y,coord_x)){
 
@@ -196,7 +196,7 @@ void placer_pers2(int mat[Y][X], int coord_x, int coord_y, perso_t  *player){
 
 
 
-void deplacer_pers2(int mat[Y][X], int coord_x, int coord_y, perso_t  *player){
+void deplacer_pers2(int mat[Y][X], int coord_y, int coord_x, perso_t  *player){
 
   if(case_libre(mat,coord_y,coord_x)){
 
