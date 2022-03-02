@@ -1,22 +1,15 @@
-
 CC=gcc
+FLAGS=-Wall -g
 
-SDL_DIR=${HOME}/SDL2
-SDLLIB_DIR=${SDL_DIR}/lib
-SDLINC_DIR=${SDL_DIR}/include
 
-LIBS=-L${SDLLIB_DIR} -lSDL2 -lSDL2main -lSDL2_ttf -lSDL2_image
-INCLUDES=-I${SDLINC_DIR} 
+PROG=bin/main
+PROG_F=src/main.c
 
-PROG=sdl_test
+all: main
 
-all: sdl_text
-
-sdl_text: sdl_test.c
-	${CC} -o ${PROG} sdl_test.c ${LIBS} ${INCLUDES}
+main: src/main.c
+	${CC} -o ${PROG} ${PROG_F} -lSDL2main -lSDL2_image -lSDL2_ttf -lSDL2
 
 clean: 
 	rm -f ${PROG}
 	rm -f *.o
-
-
