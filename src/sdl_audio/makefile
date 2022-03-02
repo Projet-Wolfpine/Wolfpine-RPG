@@ -1,22 +1,14 @@
-
 CC=gcc
+FLAGS=-Wall -g
 
-SDL_DIR=${HOME}/SDL2
-SDLLIB_DIR=${SDL_DIR}/lib
-SDLINC_DIR=${SDL_DIR}/include
+PROG=audio
+PROG_F=source/audio.c source/prog_audio_test.c
 
-LIBS=-L${SDLLIB_DIR} -lSDL2 -lSDL2main
-INCLUDES=-I${SDLINC_DIR} 
+all: main
 
-PROG=sdl_audio
-
-all: sdl_text
-
-sdl_text: sdl_audio.c
-	${CC} -o ${PROG} sdl_audio.c ${LIBS} ${INCLUDES}
+main: source/audio.c source/prog_audio_test.c
+	${CC} -o ${PROG} ${PROG_F} -lSDL2main -lSDL2_image -lSDL2_ttf -lSDL2 -lSDL2_mixer
 
 clean: 
 	rm -f ${PROG}
 	rm -f *.o
-
-
