@@ -89,55 +89,75 @@ void jeu(int mat[Y][X], int anc_coord_x, int anc_coord_y){
 
 //Modification des fonctions avec une structure personnage et des pointeurs sur entiers
 
-void placer_pers2(int mat[Y][X], int coord_x, int coord_y, perso_t * player){
+void placer_pers2(int mat[Y][X], int coord_x, int coord_y, perso_t  *player){
   if(case_libre(mat,coord_y,coord_x)){
     mat[coord_y][coord_x]=2;
-    player->anc_coord_x = coord_x;
+    player->anc_coord_x = coord_x;//probleme de modification de coordonées à cause des pointeurs
     player->anc_coord_y = coord_y;
   }
 }
 
-void deplacer_pers2(int mat[Y][X], int coord_x, int coord_y, perso_t * player){
+void deplacer_pers2(int mat[Y][X], int coord_x, int coord_y, perso_t  *player){
   if(case_libre(mat,coord_y,coord_x)){
-    placer_pers2(mat,coord_y,coord_x,player);
     mat[player->anc_coord_y][player->anc_coord_x] = 0;
+    placer_pers2(mat,coord_y,coord_x,player);
   }
 }
 
+void aller_gauche(int mat[X][Y], perso_t *player){
+  deplacer_pers2(mat,player->anc_coord_x-1,player->anc_coord_y,player);
+  player->anc_coord_x -= 1;
+}
 
-/*void jeu2(int mat[Y][X], perso_t player){
+void aller_droite(int mat[X][Y], perso_t *player){
+  deplacer_pers2(mat,player->anc_coord_x,player->anc_coord_y+1,player);
+  player->anc_coord_y += 1;
+}
+
+void aller_dessus(int mat[X][Y], perso_t *player){
+  deplacer_pers2(mat,player->anc_coord_x,player->anc_coord_y-1,player);
+  player->anc_coord_y -= 1;
+}
+
+void aller_dessous(int mat[X][Y], perso_t *player){
+  deplacer_pers2(mat,player->anc_coord_x+1,player->anc_coord_y,player);
+  player->anc_coord_x += 1;
+}
+
+
+/*void jeu2(int mat[Y][X], perso_t *player){
   char direction;
   printf("Saisir Z,Q,S ou D pour vous deplacer\n");
   scanf("%c",&direction);
   switch(direction){
-    case 'z': deplacer_pers2(mat,player.anc_coord_x,player.anc_coord_y-1,player); player.anc_coord_y -= 1;break;
-    case 'q': deplacer_pers2(mat,player.anc_coord_x-1,player.anc_coord_y,player); player.anc_coord_x -= 1;break;
-    case 'd': deplacer_pers2(mat,player.anc_coord_x,player.anc_coord_y+1,player); player.anc_coord_y += 1;break;
-    case 's': deplacer_pers2(mat,player.anc_coord_x+1,player.anc_coord_y,player); player.anc_coord_x += 1;break;
-    case 'Z': deplacer_pers2(mat,player.anc_coord_x,player.anc_coord_y-1,player); player.anc_coord_y -= 1;break;
-    case 'Q': deplacer_pers2(mat,player.anc_coord_x-1,player.anc_coord_y,player); player.anc_coord_x -= 1;break;
-    case 'D': deplacer_pers2(mat,player.anc_coord_x,player.anc_coord_y+1,player); player.anc_coord_y += 1;break;
-    case 'S': deplacer_pers2(mat,player.anc_coord_x+1,player.anc_coord_y,player); player.anc_coord_x += 1;break;
-    default: printf("Saisir Z,Q,S ou D pour  deplacer\n");scanf("%c",&direction);
+    case 'z': deplacer_pers2(mat,player->anc_coord_x,player->anc_coord_y-1,player); player->anc_coord_y -= 1;break;
+    case 'q': deplacer_pers2(mat,player->anc_coord_x-1,player->anc_coord_y,player); player->anc_coord_x -= 1;break;
+    case 'd': deplacer_pers2(mat,player->anc_coord_x,player->anc_coord_y+1,player); player->anc_coord_y += 1;break;
+    case 's': deplacer_pers2(mat,player->anc_coord_x+1,player->anc_coord_y,player); player->anc_coord_x += 1;break;
+    case 'Z': deplacer_pers2(mat,player->anc_coord_x,player->anc_coord_y-1,player); player->anc_coord_y -= 1;break;
+    case 'Q': deplacer_pers2(mat,player->anc_coord_x-1,player->anc_coord_y,player); player->anc_coord_x -= 1;break;
+    case 'D': deplacer_pers2(mat,player->anc_coord_x,player->anc_coord_y+1,player); player->anc_coord_y += 1;break;
+    case 'S': deplacer_pers2(mat,player->anc_coord_x+1,player->anc_coord_y,player); player->anc_coord_x += 1;break;
+    default: printf("Saisir Z,Q,S ou D pour  deplacer\n");scanf("%c",&direction);break;
   }
-}
-*/
+}*/
+
 //Programme principal
 int main (){
   int mat[Y][X];
-  perso_t player;
+  perso_t *player;
 
   init_mat(mat);
   contour_mat(mat);
-
-  placer_pers2(mat, 1, 1,&player);
+  afficher_mat(mat);
+  placer_pers2(mat, 1, 1,player);
   /*while(1){//boucle infinie pour test (oui je sais que c moche)
     system("clear");
     afficher_mat(mat);
     jeu2(mat,player);
   }*/
-  afficher_mat(mat);
-  deplacer_pers2(mat,2,2,&player);
+  //afficher_mat(mat);
+  aller_gauche(mat,player);
   afficher_mat(mat);
   return 0;
 }
