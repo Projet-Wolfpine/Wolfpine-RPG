@@ -38,8 +38,6 @@ struct spell_s{
 	int dgt;
 };
 
-
-/*
 //Fonction de création et d'initialisationn d'une matrice vide (remplie d'etat de collisio à 0)
 void init_mat(objet_t mat[Y][X]){
   for(int i=0;i<Y;i++){
@@ -140,8 +138,6 @@ void info_objet(objet_t mat[Y][X], int coord_y, int coord_x){
   }
 }
 
-*/
-
 //Creation du systeme de combat
 
 //Fais en sorte que le joueur puisse choisir son nom (struct) connard
@@ -156,7 +152,6 @@ void init_player(perso_t * player){
 	for(int i = 0; i < NB_SPELLS; i++)
 	{	
 		player->spells[i] = malloc(sizeof(spell_t));
-		player->spells[i]->dgt = 0;
 		player->spells[i]->name = "vide";
 		player->spells[i]->dgt = 0;
 	}	
@@ -171,40 +166,82 @@ void init_monster(monstre_t * monster){
 void add_spell(perso_t * player, int num_spell, char * spell_name, int dgt){
 	player->spells[num_spell]->name = spell_name;
 	player->spells[num_spell]->dgt = dgt;
-	printf("Nom du sort : %s	||	Dégats du sort : %d\n",player->spells[num_spell]->name, player->spells[num_spell]->dgt);
+}
 
+void spell_choice(perso_t * player, int * spell_num)
+{
+  for(int i = 0; i < NB_SPELLS; i++)
+  {
+    printf("Sort %d : %s   ", i+1, player->spells[i]->name);
+  }
+  printf("\n");
+
+
+  while(*spell_num < 1 || *spell_num > 4)
+  {
+    scanf("%d",spell_num);
+    //Faire en sorte qu'on ne puisse pas choisir un sort à "vide" ou aux dégats à 0
+  }
+  *spell_num -= 1;
 }
 
 void tour_joueur(perso_t * player, monstre_t * monstre){
-	int choix = 0;
-	
-	printf("Choisissez le mode d'attaque\n");
+	int choix = 0; 
+  int spell_num = 0;
+  int dgt;
 
-	while(choix != 1 || choix != 2){
-		printf("1 : attaque	||	2 : sort AAAs\n");
-		scanf("%d",&choix);
-	}
-	
-	if(choix == 1)
-	{
-		monstre->hp -= player->dgt - monstre->armor;
-		printf("Vous infligez %d dégats au monstre	||	HP player : %d  HP monstre : %d", player->dgt-monstre->armor, player->hp, monstre->hp);
-	}
+  if(player->hp >= 0){
+    while(choix != 1 && choix != 2){
+      printf("Choisissez le mode d'attaque (1 : attaque , 2 : sort) : ");
+      scanf("%d",&choix);
+    }
+    
+    if(choix == 1)
+    {
+      dgt =  player->dgt - monstre->armor;
+      monstre->hp -= dgt;
+      printf("Vous infligez %d dégats au monstre	     ||	HP player : %d  HP monstre : %d\n", dgt, player->hp, monstre->hp);
+    }
+    else if(choix == 2)
+    {
+      printf("Choisissez quel sort vous souhaitez utiliser.\n");
+      spell_choice(player,&spell_num);
+      dgt = player->spells[spell_num]->dgt - monstre->armor;
+      monstre->hp -= dgt;
+      printf("Vous infligez %d dégats magiques au monstre  ||	HP player : %d  HP monstre : %d\n", dgt, player->hp, monstre->hp);
+    }
+  }
+  else{
+    printf("Oh.. vous avez perdu il me semble.\n");
+  }
+}
+
+void tour_monstre(perso_t * player, monstre_t * monstre)
+{
+  int dgt;
+
+  if(monstre->hp >= 0){
+    dgt = monstre->dgt - player->armor;
+    player->hp -= dgt;
+    printf("Le monstre attaque ! vous prenez %d dégats    ||	HP player : %d  HP monstre : %d\n\n", dgt, player->hp, monstre->hp);
+  }
+  else{
+    printf("Bravo ! Vous avez battu le méchant monstre\n");
+  }
 }
 
 void combat(monstre_t * monstre, perso_t * player){
   //Affichage spécial du combat
-  printf("test1\n");
-  init_player(player);
-  printf("test2\n");
-  init_monster(monstre);
-  printf("Deg monstre : %d\n",monstre->dgt);
-  add_spell(player,1,"Foudre",60); 
-  
-  while(monstre->hp != 0 || player->hp != 0){//condition de sortie à modifier avec sdl ?
-	tour_joueur(player,monstre);
-  }
 
+  init_player(player);
+  init_monster(monstre);
+  add_spell(player,0,"Foudre",77); 
+  
+  
+  while(monstre->hp > 0 && player->hp > 0){//condition de sortie à modifier avec sdl ?
+	  tour_joueur(player,monstre);
+    tour_monstre(player,monstre);
+  }
 }
 
 int main(){
@@ -213,6 +250,8 @@ int main(){
   joueur= malloc(sizeof(perso_t));
   monstre_t *monstre;
   monstre = malloc(sizeof(perso_t));
+
+
   combat(monstre, joueur);
 
   //init_mat(mat);
@@ -239,4 +278,6 @@ int main(){
   //aller_droite(mat,player);
   //afficher_mat(mat);
 }
+
+
 
