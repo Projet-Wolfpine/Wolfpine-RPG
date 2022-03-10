@@ -4,27 +4,42 @@
 //Lors du parcours de matrice puisque que les premiers crochet correspondes à la vertical et pas l'horizontal il faudra commencer par mettre les coordonnés Y puis X pour les fonctions
 #define Y 11
 #define X 31
+#define NB_SPELLS 4
 
-typedef struct objet_s{
+typedef struct spell_s spell_t;
+typedef struct objet_s objet_t;
+typedef struct perso_s perso_t;
+typedef struct monstre_s monstre_t;
+
+
+struct objet_s{
   char *id;//nom de la cellule
   int col;//statut de collision
-}objet_t;
+};
 
-typedef struct perso_s{
+struct perso_s{
   int anc_coord_x;
   int anc_coord_y;
   char *position; //Si jamais le dernier déplacement est gauche on tourne le perso et on modifira cette valeur pour afficher le sprite en consequece en sdl
   int hp;
   int dgt;
   int armor;
-}perso_t;
+  spell_t *spells[NB_SPELLS];
+};
 
-typedef struct monstre_s{//a voir pour remplacer voir suprimer cette structure et utilisé la meme que pour les personages donc la renommer entité
+struct monstre_s{//a voir pour remplacer voir suprimer cette structure et utilisé la meme que pour les personages donc la renommer entité
   int hp;
   int dgt;
   int armor;
-}monstre_t;
+};
 
+struct spell_s{
+	char * name;
+	int dgt;
+};
+
+
+/*
 //Fonction de création et d'initialisationn d'une matrice vide (remplie d'etat de collisio à 0)
 void init_mat(objet_t mat[Y][X]){
   for(int i=0;i<Y;i++){
@@ -125,35 +140,103 @@ void info_objet(objet_t mat[Y][X], int coord_y, int coord_x){
   }
 }
 
+*/
+
 //Creation du systeme de combat
 
-void combat(monstre_t monstre, perso_t player){
-  //Affichage spécial du combat
-  while(monstre.hp == 0 || player.hp == 0){//condition de sortie à modifier avec sdl ?
+//Fais en sorte que le joueur puisse choisir son nom (struct) connard
+void init_player(perso_t * player){
+	player->anc_coord_x = 5;
+	player->anc_coord_y = 4;
+	player->position = "droite"; //Si jamais le dernier déplacement est gauche on tourne le perso et on modifira cette valeur pour afficher le sprite en consequece en sdl
+	player->hp = 600;
+	player->dgt = 50;
+	player->armor = 15;
+	
+	for(int i = 0; i < NB_SPELLS; i++)
+	{	
+		player->spells[i] = malloc(sizeof(spell_t));
+		player->spells[i]->dgt = 0;
+		player->spells[i]->name = "vide";
+		player->spells[i]->dgt = 0;
+	}	
+}
 
+void init_monster(monstre_t * monster){
+	monster->hp = 200;
+	monster->dgt = 20;
+	monster->armor = 5;
+}
+
+void add_spell(perso_t * player, int num_spell, char * spell_name, int dgt){
+	player->spells[num_spell]->name = spell_name;
+	player->spells[num_spell]->dgt = dgt;
+	printf("Nom du sort : %s	||	Dégats du sort : %d\n",player->spells[num_spell]->name, player->spells[num_spell]->dgt);
+
+}
+
+void tour_joueur(perso_t * player, monstre_t * monstre){
+	int choix = 0;
+	
+	printf("Choisissez le mode d'attaque\n");
+
+	while(choix != 1 || choix != 2){
+		printf("1 : attaque	||	2 : sort AAAs\n");
+		scanf("%d",&choix);
+	}
+	
+	if(choix == 1)
+	{
+		monstre->hp -= player->dgt - monstre->armor;
+		printf("Vous infligez %d dégats au monstre	||	HP player : %d  HP monstre : %d", player->dgt-monstre->armor, player->hp, monstre->hp);
+	}
+}
+
+void combat(monstre_t * monstre, perso_t * player){
+  //Affichage spécial du combat
+  printf("test1\n");
+  init_player(player);
+  printf("test2\n");
+  init_monster(monstre);
+  printf("Deg monstre : %d\n",monstre->dgt);
+  add_spell(player,1,"Foudre",60); 
+  
+  while(monstre->hp != 0 || player->hp != 0){//condition de sortie à modifier avec sdl ?
+	tour_joueur(player,monstre);
   }
 
 }
 
 int main(){
-  objet_t mat[Y][X];
-  perso_t *player;
+  //objet_t mat[Y][X];
+  perso_t *joueur;
+  joueur= malloc(sizeof(perso_t));
+  monstre_t *monstre;
+  monstre = malloc(sizeof(perso_t));
+  combat(monstre, joueur);
 
-  init_mat(mat);
-  contour_mat(mat);
+  //init_mat(mat);
+  //contour_mat(mat);
 
-  placer_objet(mat,1,3,"palmier",1);
-  placer_objet(mat,2,5,"route",0);
-  afficher_mat(mat);
+  //placer_objet(mat,1,3,"palmier",1);
+ // placer_objet(mat,2,5,"route",0);
+ // afficher_mat(mat);
   //placer_pers(mat,3,3,player);
 
-  afficher_mat(mat);
-  info_objet(mat,1,3);
-  info_objet(mat,2,2);
+ // afficher_mat(mat);
+  //info_objet(mat,1,3);
+  //info_objet(mat,2,2);
 
-  info_objet(mat,2,5);
-  info_objet(mat,3,3);
+  //info_objet(mat,2,5);
+ // info_objet(mat,3,3);
+  
+  
+  
+  
+  
+  
 
   //aller_droite(mat,player);
   //afficher_mat(mat);
 }
+
