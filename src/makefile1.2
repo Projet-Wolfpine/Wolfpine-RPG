@@ -1,0 +1,30 @@
+CC=gcc
+FLAGS=-Wall -g
+SDL_DIR=lib/SDL2
+EXECU_DIR=bin
+SDL_LIB_DIR=${SDL_DIR}/lib
+SDL_INC_DIR=${SDL_DIR}/include
+LIBS=-L${SDL_LIB_DIR} -lSDL2main -lSDL2_image -lSDL2_ttf -lSDL2
+INCS=-I${SDL_INC_DIR}
+
+include=include/
+src=src/
+prog=bin/prog 
+obj=obj/
+ncurse=-lncurses
+fichierc=main.c ${src}menu_principale.c ${src}commun.c ${src}affichage_sdl.c ${src}fonction_sdl.c
+fichierh=${include}menu_principale.h ${include}commun.h ${include}affichage_sdl.h ${include}fonction_sdl.h
+
+all:clean main
+
+${PROG}: ${fichierc} ${fichierh}
+	${CC} -o ${prog} ${fichierc} ${fichierh} ${INCS} ${FLAGS}
+
+PATH:
+	export LD_LIBRARY_PATH="${PWD}/lib/SDL2/lib"
+
+clean: 
+	rm -f ${src}*.o
+	rm -f ${include}*.o
+	rm -f *.o
+	rm -f ${prog}
