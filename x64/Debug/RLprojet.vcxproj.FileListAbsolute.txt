@@ -1,2 +1,0 @@
-C:\Users\thiba\source\repos\RLprojet\x64\Debug\RLprojet.exe
-C:\Users\thiba\Desktop\Projet-Roguelike-RPG-master\x64\Debug\RLprojet.exe
