@@ -5,14 +5,27 @@
 #define Y 11
 #define X 31
 #define NB_SPELLS 4
+#define TAILLE_INV 20
 
 typedef struct spell_s spell_t;
-typedef struct objet_s objet_t;
+typedef struct case_s case_t;
 typedef struct perso_s perso_t;
 typedef struct monstre_s monstre_t;
+typedef struct objet_s objet_t;
+typedef struct inv_s inv_t;
 
 
 struct objet_s{
+  int id;
+  int qte;
+  char * name;
+  char * desc;
+  int heal;
+  int dgt;
+  int armor;
+};
+
+struct case_s{
   char *id;//nom de la cellule
   int col;//statut de collision
 };
@@ -25,6 +38,7 @@ struct perso_s{
   int dgt;
   int armor;
   spell_t *spells[NB_SPELLS];
+  objet_t *objets[TAILLE_INV];
 };
 
 struct monstre_s{//a voir pour remplacer voir suprimer cette structure et utilisé la meme que pour les personages donc la renommer entité
@@ -39,7 +53,7 @@ struct spell_s{
 };
 
 //Fonction de création et d'initialisationn d'une matrice vide (remplie d'etat de collisio à 0)
-void init_mat(objet_t mat[Y][X]){
+void init_mat(case_t mat[Y][X]){
   for(int i=0;i<Y;i++){
     for(int j=0; j<X; j++){
       mat[i][j].col = 0;
@@ -49,7 +63,7 @@ void init_mat(objet_t mat[Y][X]){
 }
 
 //Fonction de création des bordures de la matrice
-void contour_mat(objet_t mat[Y][X]){
+void contour_mat(case_t mat[Y][X]){
   for(int j = 0; j<X; j++){
       mat[0][j].col = 1;
       mat[Y-1][j].col = 1;
@@ -61,7 +75,7 @@ void contour_mat(objet_t mat[Y][X]){
 }
 
 //Fonction d'affichage de la matrice
-void afficher_mat(objet_t mat[Y][X]){
+void afficher_mat(case_t mat[Y][X]){
   for(int i=0;i<Y;i++){
     for(int j=0; j<X; j++){
       if(mat[i][j].col== 2){//personnage
@@ -79,12 +93,12 @@ void afficher_mat(objet_t mat[Y][X]){
 }
 
 //Renvoi vrai si la case est libre
-int case_libre (objet_t mat[Y][X], int coord_y, int coord_x){
+int case_libre (case_t mat[Y][X], int coord_y, int coord_x){
   return(mat[coord_y][coord_x].col == 0);//ne pas modifier pour garder le déplacement du personnage possible
 }
 
 //Fonction qui permet de placer un objet dans la matrice
-void placer_objet(objet_t mat[Y][X], int coord_y, int coord_x, char* id, int col){
+void placer_objet(case_t mat[Y][X], int coord_y, int coord_x, char* id, int col){
   if(case_libre(mat,coord_y,coord_x) && strcmp(mat[coord_y][coord_x].id,"vide")){
     mat[coord_y][coord_x].col = col; //ici le chiffre 1 correspond à une collision et 0 correspond à une aucune collision
     mat[coord_y][coord_x].id = id;
@@ -93,7 +107,7 @@ void placer_objet(objet_t mat[Y][X], int coord_y, int coord_x, char* id, int col
   }
 }
 
-void placer_pers(objet_t mat[Y][X], int coord_y, int coord_x, perso_t  *player){
+void placer_pers(case_t mat[Y][X], int coord_y, int coord_x, perso_t  *player){
   if(case_libre(mat,coord_y,coord_x)){
     mat[coord_y][coord_x].col=2;
     player->anc_coord_x = coord_x;
@@ -101,35 +115,35 @@ void placer_pers(objet_t mat[Y][X], int coord_y, int coord_x, perso_t  *player){
   }
 }
 
-void deplacer_pers(objet_t mat[Y][X], int coord_y, int coord_x, perso_t  *player){
+void deplacer_pers(case_t mat[Y][X], int coord_y, int coord_x, perso_t  *player){
   if(case_libre(mat,coord_y,coord_x)){
     mat[player->anc_coord_y][player->anc_coord_x].col = 0;
     placer_pers(mat,coord_y,coord_x,player);
   }
 }
 
-void aller_gauche(objet_t mat[Y][X], perso_t *player){
+void aller_gauche(case_t mat[Y][X], perso_t *player){
   deplacer_pers(mat,player->anc_coord_x-1,player->anc_coord_y,player);
   player->anc_coord_x -= 1;
 }
 
-void aller_droite(objet_t mat[Y][X], perso_t *player){
+void aller_droite(case_t mat[Y][X], perso_t *player){
   deplacer_pers(mat,player->anc_coord_x,player->anc_coord_y+1,player);
   player->anc_coord_y += 1;
 }
 
-void aller_dessus(objet_t mat[Y][X], perso_t *player){
+void aller_dessus(case_t mat[Y][X], perso_t *player){
   deplacer_pers(mat,player->anc_coord_x,player->anc_coord_y-1,player);
   player->anc_coord_y -= 1;
 }
 
-void aller_dessous(objet_t mat[Y][X], perso_t *player){
+void aller_dessous(case_t mat[Y][X], perso_t *player){
   deplacer_pers(mat,player->anc_coord_x+1,player->anc_coord_y,player);
   player->anc_coord_x += 1;
 }
 
 //Nous permet de savoir ce que contient une case
-void info_objet(objet_t mat[Y][X], int coord_y, int coord_x){
+void info_objet(case_t mat[Y][X], int coord_y, int coord_x){
   if(case_libre(mat,coord_y,coord_x) && strcmp(mat[coord_y][coord_x].id,"vide")){//ne marche pas mais est pourtant necessaire pour éviter une erreur de segmentation
     printf("L'emplacement en Y = %d et X = %d ne contient aucun objet\n", coord_y, coord_x);
   }else{
@@ -155,6 +169,18 @@ void init_player(perso_t * player){
 		player->spells[i]->name = "vide";
 		player->spells[i]->dgt = 0;
 	}	
+
+  for (int i = 0; i < TAILLE_INV; i++){
+    player->objets[i] = malloc(sizeof(objet_t));
+    player->objets[i]->id = -1;
+    player->objets[i]->qte = 0;
+    player->objets[i]->name = "VIDE";
+    player->objets[i]->desc = "VIDE";
+    player->objets[i]->heal = 0;
+    player->objets[i]->dgt = 0;
+    player->objets[i]->armor = 0;
+  }
+  
 }
 
 void init_monster(monstre_t * monster){
@@ -162,6 +188,41 @@ void init_monster(monstre_t * monster){
 	monster->dgt = 20;
 	monster->armor = 5;
 }
+
+
+int add_item(perso_t * player,int place, int id, int qte, char * name, char * desc, int heal, int dgt, int armor){
+  player->objets[place]->id = id;
+  for(int i = 0; i < TAILLE_INV; i++){
+    //player->objets[place]
+    if((player->objets[place]->qte > 0)){
+      player->objets[i]->qte += qte;
+      return(0);
+    }
+    else{
+      player->objets[place]->id = id;
+      player->objets[place]->qte = qte;
+      player->objets[place]->name = name;
+      player->objets[place]->desc = desc;
+      player->objets[place]->heal = heal;
+      player->objets[place]->dgt = dgt;
+      player->objets[place]->armor = armor;
+    }
+  }
+  return(0);
+}
+
+void aff_inventory(perso_t * player){
+  for(int i = 0; i < TAILLE_INV; i++){
+   if(player->objets[i]->id > 0){
+      printf("%d  : %d  : %s  : %s  : %d  : %d  : %d\n", player->objets[i]->id, player->objets[i]->qte, player->objets[i]->name, player->objets[i]->desc,
+      player->objets[i]->heal, player->objets[i]->dgt, player->objets[i]->armor);
+    }
+  }
+}
+
+/*void use_pot(){
+
+}*/
 
 void add_spell(perso_t * player, int num_spell, char * spell_name, int dgt){
 	player->spells[num_spell]->name = spell_name;
@@ -205,6 +266,9 @@ void tour_joueur(perso_t * player, monstre_t * monstre){
     {
       dgt =  player->dgt - monstre->armor;
       monstre->hp -= dgt;
+       if(monstre->hp < 0){
+          monstre->hp = 0;
+        }
       printf("Vous infligez %d dégats au monstre	     ||	HP player : %d  HP monstre : %d\n", dgt, player->hp, monstre->hp);
     }
     else if(choix == 2)
@@ -273,18 +337,29 @@ void combat(monstre_t * monstre, perso_t * player){
 }
 
 int main(){
-  //objet_t mat[Y][X];
+  //case_t mat[Y][X];
   perso_t *joueur;
   joueur= malloc(sizeof(perso_t));
   monstre_t *monstre;
   monstre = malloc(sizeof(perso_t));
 
- // init_player(joueur);
-//  init_monster(monstre);
+ init_player(joueur);
+ init_monster(monstre);
+
+ add_item(joueur,1, 1, 1, "Epee D", "Vous aussi vous aimez l'épée d ?", 0, 15, 0);
+ aff_inventory(joueur);
+  add_item(joueur,1, 1, 1, "Epee D", "Vous aussi vous aimez l'épée d ?", 0, 15, 0);
+  printf("\n\n\n");
+  aff_inventory(joueur);
+   add_item(joueur,8, 8, 1, "Test", "Oui", 0, 0, 5);
+     printf("\n\n\n");
+ aff_inventory(joueur);
+
+
  // add_spell(joueur,0,"Foudre",77); 
  // printf("%d\n",spell_existe(joueur,0));
  // printf("%d\n",spell_existe(joueur,1));
-  combat(monstre, joueur);
+ // combat(monstre, joueur);
 
   //init_mat(mat);
   //contour_mat(mat);
