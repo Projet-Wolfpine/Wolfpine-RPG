@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "string.h"
+#include <string.h>
 
 #define NB_SPELLS 4
 #define TAILLE_INV 20
