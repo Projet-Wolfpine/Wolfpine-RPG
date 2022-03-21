@@ -154,7 +154,7 @@ void info_objet(case_t mat[Y][X], int coord_y, int coord_x){
 
 //Creation du systeme de combat
 
-//Fais en sorte que le joueur puisse choisir son nom (struct) connard
+//Fais en sorte que le joueur puisse choisir son nom (struct)
 void init_player(perso_t * player){
 	player->anc_coord_x = 5;
 	player->anc_coord_y = 4;
