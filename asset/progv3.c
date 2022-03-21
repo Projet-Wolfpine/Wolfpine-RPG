@@ -12,12 +12,10 @@ typedef struct case_s case_t;
 typedef struct perso_s perso_t;
 typedef struct monstre_s monstre_t;
 typedef struct objet_s objet_t;
-typedef struct inv_s inv_t;
 
 
 struct objet_s{
   int id;
-  int qte;
   char * name;
   char * desc;
   int heal;
@@ -154,7 +152,7 @@ void info_objet(case_t mat[Y][X], int coord_y, int coord_x){
 
 //Creation du systeme de combat
 
-//Fais en sorte que le joueur puisse choisir son nom (struct)
+//Fais en sorte que le joueur puisse choisir son nom (struct) connard
 void init_player(perso_t * player){
 	player->anc_coord_x = 5;
 	player->anc_coord_y = 4;
@@ -173,7 +171,6 @@ void init_player(perso_t * player){
   for (int i = 0; i < TAILLE_INV; i++){
     player->objets[i] = malloc(sizeof(objet_t));
     player->objets[i]->id = -1;
-    player->objets[i]->qte = 0;
     player->objets[i]->name = "VIDE";
     player->objets[i]->desc = "VIDE";
     player->objets[i]->heal = 0;
@@ -190,39 +187,57 @@ void init_monster(monstre_t * monster){
 }
 
 
-int add_item(perso_t * player,int place, int id, int qte, char * name, char * desc, int heal, int dgt, int armor){
-  player->objets[place]->id = id;
-  for(int i = 0; i < TAILLE_INV; i++){
-    //player->objets[place]
-    if((player->objets[place]->qte > 0)){
-      player->objets[i]->qte += qte;
-      return(0);
-    }
-    else{
-      player->objets[place]->id = id;
-      player->objets[place]->qte = qte;
-      player->objets[place]->name = name;
-      player->objets[place]->desc = desc;
-      player->objets[place]->heal = heal;
-      player->objets[place]->dgt = dgt;
-      player->objets[place]->armor = armor;
-    }
-  }
+int add_item(perso_t * player, int id, char * name, char * desc, int heal, int dgt, int armor){
+	if(player->objets[id]->id != -1){
+		return(-1);
+	}		 
+
+   player->objets[id]->id = id;
+   player->objets[id]->name = name;
+   player->objets[id]->desc = desc;
+   player->objets[id]->heal = heal;
+   player->objets[id]->dgt = dgt;
+   player->objets[id]->armor = armor;
+   
+   if(! strcmp(player->objets[id]->name,"Potion de soin")){
+   		player->hp += heal;
+   		player->dgt += dgt;
+   		player->armor += armor;
+   }
+   
   return(0);
+}
+
+void del_item(perso_t * player, int id){
+	player->objets[id]->id = -1;
+    player->objets[id]->name = "VIDE";
+    player->objets[id]->desc = "VIDE";
+    player->objets[id]->heal = 0;
+    player->objets[id]->dgt = 0;
+    player->objets[id]->armor = 0;
+}
+
+void use_heal(perso_t * player){
+	int i;
+	int id = 0;
+	for(i=0; i < TAILLE_INV; i++){
+		if(!strcmp(player->objets[i]->name,"Potion de soin")){
+			id = i;
+		}
+	}
+	printf("%d	!\n",id);
+	player->hp += player->objets[id]->heal;
+	del_item(player, player->objets[id]->id);
 }
 
 void aff_inventory(perso_t * player){
   for(int i = 0; i < TAILLE_INV; i++){
    if(player->objets[i]->id > 0){
-      printf("%d  : %d  : %s  : %s  : %d  : %d  : %d\n", player->objets[i]->id, player->objets[i]->qte, player->objets[i]->name, player->objets[i]->desc,
+      printf("%d  : %s  : %s  : %d  : %d : %d\n", player->objets[i]->id, player->objets[i]->name, player->objets[i]->desc,
       player->objets[i]->heal, player->objets[i]->dgt, player->objets[i]->armor);
     }
   }
 }
-
-/*void use_pot(){
-
-}*/
 
 void add_spell(perso_t * player, int num_spell, char * spell_name, int dgt){
 	player->spells[num_spell]->name = spell_name;
@@ -331,7 +346,7 @@ void combat(monstre_t * monstre, perso_t * player){
   
   
   while(monstre->hp > 0 && player->hp > 0){//condition de sortie à modifier avec sdl ?
-	tour_joueur(player,monstre);
+		tour_joueur(player,monstre);
     	tour_monstre(player,monstre);
   }
 }
@@ -346,14 +361,19 @@ int main(){
  init_player(joueur);
  init_monster(monstre);
 
- add_item(joueur,1, 1, 1, "Epee D", "Vous aussi vous aimez l'épée d ?", 0, 15, 0);
- aff_inventory(joueur);
-  add_item(joueur,1, 1, 1, "Epee D", "Vous aussi vous aimez l'épée d ?", 0, 15, 0);
+  printf("HP : %d \n", joueur->hp);
+  add_item(joueur,1, "Epee", "Ceci est une épee Epee d'Erastre", 0, 15, 0);
+  add_item(joueur,8, "Test", "Oui", 0, 0, 5);
+  add_item(joueur,2, "Potion de soin", "Oui", 15, 0, 0);
   printf("\n\n\n");
   aff_inventory(joueur);
-   add_item(joueur,8, 8, 1, "Test", "Oui", 0, 0, 5);
-     printf("\n\n\n");
- aff_inventory(joueur);
+  use_heal(joueur);
+  printf("HP : %d \n", joueur->hp);
+  printf("\n\n\n");
+  aff_inventory(joueur);
+  
+  
+  
 
 
  // add_spell(joueur,0,"Foudre",77); 
@@ -385,3 +405,5 @@ int main(){
   //aller_droite(mat,player);
   //afficher_mat(mat);
 }
+
+
