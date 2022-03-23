@@ -4,6 +4,14 @@
 #include "structures.h"
 #include "deplacement.h"
 
+/**
+ * \file deplacement.c
+ * \brief Fonctions de déplacement d'un personnage dans une matrice.
+ * \author Ilyas.A
+ * \version 1.0
+ * \date 21 mars 2022
+ */
+
 //Fonction de création et d'initialisationn d'une matrice vide (remplie d'etat de collisio à 0)
 void init_mat(case_t mat[Y][X]){
   for(int i=0;i<Y;i++){
