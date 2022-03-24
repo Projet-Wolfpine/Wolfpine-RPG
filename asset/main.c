@@ -6,4 +6,5 @@
 void main(){
 	perso_t * player;
 	init_player(player);
+	free_player(*player);
 }

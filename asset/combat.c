@@ -45,6 +45,33 @@ void init_player(perso_t * player){
     player->objets[i]->dgt = 0;
     player->objets[i]->armor = 0;
   }
+  printf("OK\n");
+}
+
+void free_player(perso_t player){
+	// Free des sorts
+	for(int i = 0; i < NB_SPELLS; i++)
+	{	
+		free(&player.spell[i]);
+		//&player.spell[i] = NULL;
+	}
+	printf("Spell OK\n");
+	
+	//Free de l'inventaire
+	for (int i = 0; i < TAILLE_INV; i++){
+		free(&player.spell[i]);
+		//*player.spell[i] = NULL;
+	}
+	
+	// Free du nom
+	free(&player.name);
+	//*player.name = NULL;
+	
+	// Free du player
+	free(&player);
+	
+	printf("OK\n");
+	
 }
 
 void init_monster(monstre_t * monster){
