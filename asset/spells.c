@@ -21,8 +21,8 @@
  * \param dgt Nombre de dégats infligés par le sort.
  */ 
 void add_spell(perso_t * player, int num_spell, char * spell_name, int dgt){
-	player->spells[num_spell]->name = spell_name;
-	player->spells[num_spell]->dgt = dgt;
+	player->spell[num_spell]->name = spell_name;
+	player->spell[num_spell]->dgt = dgt;
 }
 
 
@@ -37,7 +37,7 @@ void add_spell(perso_t * player, int num_spell, char * spell_name, int dgt){
  					 la valeur "vide" indiquant un sort non utilisable
  */
 int spell_existe(perso_t * player, int num_spell){
-  return(strcmp(player->spells[num_spell]->name, "vide"));
+  return(strcmp(player->spell[num_spell]->name, "vide"));
 }
 
 
@@ -52,7 +52,7 @@ void spell_choice(perso_t * player, int * spell_num)
 {
   for(int i = 0; i < NB_SPELLS; i++)
   {
-    printf("Sort %d : %s   ", i+1, player->spells[i]->name);
+    printf("Sort %d : %s   ", i+1, player->spell[i]->name);
   }
   printf("\n");
 

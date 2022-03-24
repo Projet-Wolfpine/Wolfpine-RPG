@@ -1,16 +1,19 @@
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
-
-#define NB_SPELLS 4
-#define TAILLE_INV 20
-
-typedef struct spell_s spell_t;
-typedef struct case_s case_t;
 typedef struct perso_s perso_t;
 typedef struct monstre_s monstre_t;
 typedef struct objet_s objet_t;
-typedef struct inv_s inv_t;
+typedef struct spell_s spell_t;
+typedef struct case_s case_t;
+
+/**
+ * \file structures.h
+ * \brief Structures d'objets.
+ * \author Killian.R
+ * \version 1.2
+ * \date 24 mars 2022
+ */
+
+#define NB_SPELLS 4
+#define TAILLE_INV 20
 
 /**
  * \struct objet_t structures.h "Objet"
@@ -34,16 +37,17 @@ struct case_s{
 };
 
 /**
- * \struct objet_t structures.h "Objet"
+ * \struct perso_t structures.h "Personnage"
  */
 struct perso_s{
   int anc_coord_x;
   int anc_coord_y;
   char *position; //Si jamais le dernier déplacement est gauche on tourne le perso et on modifira cette valeur pour afficher le sprite en consequece en sdl
+  char * name;
   int hp;
   int dgt;
   int armor;
-  spell_t *spells[NB_SPELLS];
+  spell_t *spell[NB_SPELLS];
   objet_t *objets[TAILLE_INV];
 };
 

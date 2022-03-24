@@ -2,11 +2,26 @@
 #include <stdio.h>
 #include <string.h>
 #include "combat.h"
-#include "spells.h"
-#include "inventory.h"
 
+/**
+ * \file combat.c
+ * \brief Fonctions de combat.
+ * \author Killian.R
+ * \version 1.1
+ * \date 24 mars 2022
+ */
+ 
 //Faire en sorte que le joueur puisse choisir son nom (struct)
 void init_player(perso_t * player){
+
+	player = malloc(sizeof(perso_t));
+	player->name =  malloc(sizeof(char *));
+	
+	printf("Bonjour.. euh.. quel est ton nom déjà ?\n");
+	scanf("%s",player->name);
+	
+	printf("Ah oui.. %s.. ça me reviens.\n", player->name);
+	
 	player->anc_coord_x = 5;
 	player->anc_coord_y = 4;
 	player->position = "droite"; //Si jamais le dernier déplacement est gauche on tourne le perso et on modifira cette valeur pour afficher le sprite en consequece en sdl
@@ -16,9 +31,9 @@ void init_player(perso_t * player){
 	
 	for(int i = 0; i < NB_SPELLS; i++)
 	{	
-		player->spells[i] = malloc(sizeof(spell_t));
-		player->spells[i]->name = "vide";
-		player->spells[i]->dgt = 0;
+		player->spell[i] = malloc(sizeof(spell_t));
+		player->spell[i]->name = "vide";
+		player->spell[i]->dgt = 0;
 	}	
 
   for (int i = 0; i < TAILLE_INV; i++){
@@ -30,7 +45,6 @@ void init_player(perso_t * player){
     player->objets[i]->dgt = 0;
     player->objets[i]->armor = 0;
   }
-  
 }
 
 void init_monster(monstre_t * monster){
@@ -65,7 +79,7 @@ void tour_joueur(perso_t * player, monstre_t * monstre){
       spell_choice(player,&spell_num);
       if(spell_existe(player,spell_num) != 0)
       {
-              dgt = player->spells[spell_num]->dgt - monstre->armor;
+              dgt = player->spell[spell_num]->dgt - monstre->armor;
               monstre->hp -= dgt;
               if(monstre->hp < 0){
                 monstre->hp = 0;
@@ -79,7 +93,7 @@ void tour_joueur(perso_t * player, monstre_t * monstre){
           printf("Choisissez un sort valide.\n");
           spell_choice(player,&spell_num);
         }
-        dgt = player->spells[spell_num]->dgt - monstre->armor;
+        dgt = player->spell[spell_num]->dgt - monstre->armor;
         monstre->hp -= dgt;
         if(monstre->hp < 0){
           monstre->hp = 0;

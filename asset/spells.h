@@ -1,6 +1,3 @@
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
 #include "structures.h"
 
 void add_spell(perso_t * player, int num_spell, char * spell_name, int dgt);
