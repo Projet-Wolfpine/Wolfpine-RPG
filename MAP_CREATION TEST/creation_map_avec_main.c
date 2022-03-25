@@ -112,11 +112,12 @@ int main(){
   case_t map_info[Y][X];
   int map_int[Y][X];
   char nom_fichier[20];
+  int i,j;
   printf("donnez le nom du fichier : ") ;
   scanf("%s", nom_fichier) ;
   lecture_fichier_map(nom_fichier, map_int);
-  for(int i = 0; i<Y;i++){
-    for(int j = 0; j<X;j++){
+  for(i = 0; i<Y;i++){
+    for(j = 0; j<X;j++){
       printf("%i ", map_int[i][j]);
     }
     printf("\n");
@@ -124,8 +125,10 @@ int main(){
   mise_struct_map(map_info,map_int);
   printf("\n");
   printf("\n");
-  printf("%d",map_info[0][0].col);
-  printf("\n");
-  printf("%s",map_info[0][0].id);
+  for(i =0; i<Y;i++){
+    for(j=0; j<X;j++){
+      printf("%s",map_info[i][j].id);
+    }
+  }
   printf("\n");
 }
