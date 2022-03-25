@@ -8,7 +8,7 @@
 
 
 
-perso_t init_player(perso_t * player);
+perso_t init_player();
 
 void free_player(perso_t player);
 
@@ -18,6 +18,6 @@ void tour_joueur(perso_t * player, monstre_t * monstre);
 
 void tour_monstre(perso_t * player, monstre_t * monstre);
 
-void combat(monstre_t * monstre, perso_t * player);
+perso_t combat(monstre_t * monstre);
 
 #endif

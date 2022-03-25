@@ -12,9 +12,8 @@
  */
  
 //Faire en sorte que le joueur puisse choisir son nom (struct)
-perso_t init_player(perso_t * player){
-
-	player = malloc(sizeof(perso_t));
+perso_t init_player(){
+	perso_t * player = malloc(sizeof(perso_t));
 	player->name =  malloc(sizeof(char *));
 	
 	printf("Bonjour.. euh.. quel est ton nom déjà ?\n");
@@ -25,7 +24,7 @@ perso_t init_player(perso_t * player){
 	player->anc_coord_x = 5;
 	player->anc_coord_y = 4;
 	player->position = "droite"; //Si jamais le dernier déplacement est gauche on tourne le perso et on modifira cette valeur pour afficher le sprite en consequece en sdl
-	player->hp = 600;
+	player->hp = PLAYER_HP;
 	player->dgt = 50;
 	player->armor = 15;
 	
@@ -45,7 +44,7 @@ perso_t init_player(perso_t * player){
     player->objets[i]->dgt = 0;
     player->objets[i]->armor = 0;
   }
-  return(*player);
+  return *player;
 }
 
 void free_player(perso_t player){
@@ -151,20 +150,23 @@ void tour_monstre(perso_t * player, monstre_t * monstre)
   }
 }
 
-void combat(monstre_t * monstre, perso_t * player){
+perso_t combat(monstre_t * monstre){
   //Affichage spécial du combat
 
-  init_player(player);
+  perso_t player;
+  player = init_player();
   printf("Init player OK\n");
   init_monster(monstre);
   printf("Init monster OK\n");
-  add_spell(player,0,"Foudre",77); 
+  add_spell(&player,0,"Foudre",77); 
   printf("Add spell OK\n");
   
   
-  while(monstre->hp > 0 && player->hp > 0){//condition de sortie à modifier avec sdl ?
-	tour_joueur(player,monstre);
-    	tour_monstre(player,monstre);
+  while(monstre->hp > 0 && player.hp > 0){//condition de sortie à modifier avec sdl ?
+	tour_joueur(&player,monstre);
+    	tour_monstre(&player,monstre);
   }
+  
+  return(player);
 }
 

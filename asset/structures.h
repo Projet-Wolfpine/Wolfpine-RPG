@@ -17,6 +17,7 @@ typedef struct case_s case_t;
 
 #define NB_SPELLS 4
 #define TAILLE_INV 20
+#define PLAYER_HP 600
 
 /**
  * \struct objet_t structures.h "Objet"

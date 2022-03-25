@@ -38,11 +38,12 @@ int add_item(perso_t * player, int id, char * name, char * desc, int heal, int d
    player->objets[id]->dgt = dgt;
    player->objets[id]->armor = armor;
    
-   if(! strcmp(player->objets[id]->name,"Potion de soin")){
+   if(strcmp(player->objets[id]->name,"Potion de soin")){
    	player->hp += heal;
    	player->dgt += dgt;
    	player->armor += armor;
    }
+
    
   return(0);
 }
@@ -72,14 +73,24 @@ void del_item(perso_t * player, int id){
 void use_heal(perso_t * player){
 	int i;
 	int id = 0;
+	
+	printf("Hp : %d\n",player->hp);
+	
 	for(i=0; i < TAILLE_INV; i++){
 		if(!strcmp(player->objets[i]->name,"Potion de soin")){
 			id = i;
 		}
 	}
-	printf("%d	!\n",id);
-	player->hp += player->objets[id]->heal;
+	
+	if(player->hp + player->objets[id]->heal > PLAYER_HP){
+		player->hp += player->objets[id]->heal;
+		player->hp -= player->hp - PLAYER_HP;
+	}
+	else{
+		player->hp += player->objets[id]->heal;
+	}
 	del_item(player, player->objets[id]->id);
+	printf("Hp : %d\n",player->hp);
 }
 
 /**
