@@ -1,7 +1,7 @@
 #include "stdlib.h"
 #include "stdio.h"
 #include "deplacement.h"
-
+//https://github.com/vgc/vgc/issues/124
 void lecture_fichier_map(char nom_fichier[20],int map_int[Y][X]){
   /* lis un fichier.txt data de a map demandée,
    et met chaque entier dans une case de la matrice*/
