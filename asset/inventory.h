@@ -1,9 +1,7 @@
-#ifndef _STRUCTURES_H
-#define _STRUCTURES_H
-#include "combat.h"
-#include "spells.h"
-#include "inventory.h"
-#include "deplacement.h"
+#ifndef _INVENTORY_H
+#define _INVENTORY_H
+#include "structures.h"
+
 
 
 int add_item(perso_t * player, int id, char * name, char * desc, int heal, int dgt, int armor);

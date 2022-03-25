@@ -21,8 +21,8 @@
  * \param dgt Nombre de dégats infligés par le sort.
  */ 
 void add_spell(perso_t * player, int num_spell, char * spell_name, int dgt){
-	player->spell[num_spell]->name = spell_name;
-	player->spell[num_spell]->dgt = dgt;
+	(player)->spell[num_spell]->name = spell_name;
+	(player)->spell[num_spell]->dgt = dgt;
 }
 
 

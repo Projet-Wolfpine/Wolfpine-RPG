@@ -1,9 +1,11 @@
-#ifndef _STRUCTURES_H
-#define _STRUCTURES_H
-#include "combat.h"
+#ifndef _COMBAT_H
+#define _COMBAT_H
+#include "structures.h"
 #include "spells.h"
 #include "inventory.h"
 #include "deplacement.h"
+//#include "dungeon.h"
+
 
 
 perso_t init_player(perso_t * player);

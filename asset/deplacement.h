@@ -1,9 +1,6 @@
-#ifndef _STRUCTURES_H
-#define _STRUCTURES_H
-#include "combat.h"
-#include "spells.h"
-#include "inventory.h"
-#include "deplacement.h"
+#ifndef _DEPLACEMENT_H
+#define _DEPLACEMENT_H
+#include "structures.h"
 
 
 //Lors du parcours de matrice puisque que les premiers crochet correspondes à la vertical et pas l'horizontal il faudra commencer par mettre les coordonnés Y puis X pour les fonctions

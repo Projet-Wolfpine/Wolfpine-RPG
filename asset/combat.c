@@ -12,7 +12,7 @@
  */
  
 //Faire en sorte que le joueur puisse choisir son nom (struct)
-void init_player(perso_t * player){
+perso_t init_player(perso_t * player){
 
 	player = malloc(sizeof(perso_t));
 	player->name =  malloc(sizeof(char *));
@@ -45,11 +45,11 @@ void init_player(perso_t * player){
     player->objets[i]->dgt = 0;
     player->objets[i]->armor = 0;
   }
-  printf("OK\n");
+  return(*player);
 }
 
 void free_player(perso_t player){
-	// Free des sorts
+	/*// Free des sorts
 	for(int i = 0; i < NB_SPELLS; i++)
 	{	
 		free(&player.spell[i]);
@@ -70,7 +70,7 @@ void free_player(perso_t player){
 	// Free du player
 	free(&player);
 	
-	printf("OK\n");
+	printf("OK\n");*/
 	
 }
 
@@ -155,8 +155,11 @@ void combat(monstre_t * monstre, perso_t * player){
   //Affichage spécial du combat
 
   init_player(player);
+  printf("Init player OK\n");
   init_monster(monstre);
+  printf("Init monster OK\n");
   add_spell(player,0,"Foudre",77); 
+  printf("Add spell OK\n");
   
   
   while(monstre->hp > 0 && player->hp > 0){//condition de sortie à modifier avec sdl ?

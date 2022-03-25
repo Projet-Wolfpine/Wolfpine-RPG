@@ -1,3 +1,6 @@
+#ifndef _INCL_STRUCTURES
+#define _INCL_STRUCTURES
+
 typedef struct perso_s perso_t;
 typedef struct monstre_s monstre_t;
 typedef struct objet_s objet_t;
@@ -67,3 +70,5 @@ struct spell_s{
 	char * name;
 	int dgt;
 };
+
+#endif

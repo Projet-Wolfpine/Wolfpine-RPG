@@ -1,10 +1,6 @@
-#ifndef _STRUCTURES_H
-#define _STRUCTURES_H
-#include "combat.h"
-#include "spells.h"
-#include "inventory.h"
-#include "deplacement.h"
-
+#ifndef _SPELLS_H
+#define _SPELLS_H
+#include "structures.h"
 
 void add_spell(perso_t * player, int num_spell, char * spell_name, int dgt);
 
