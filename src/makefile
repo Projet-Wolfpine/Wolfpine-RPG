@@ -15,8 +15,8 @@ src=src/
 prog=bin/prog 
 obj=obj/
 ncurse=-lncurses
-fichierc=main.c menu_principal.c commun.c affichage_sdl.c fonction_sdl.c deplacement.c game.c gestion_deplacement_sdl.c
-fichierh=menu_principal.h commun.h affichage_sdl.h fonction_sdl.h deplacement.h game.h gestion_deplacement_sdl.h
+fichierc=main.c menu_principal.c commun.c affichage_sdl.c fonction_sdl.c deplacement.c game.c gestion_deplacement_sdl.c creation_map.c 
+fichierh=menu_principal.h commun.h affichage_sdl.h fonction_sdl.h deplacement.h game.h gestion_deplacement_sdl.h creation_map.h 
 
 PROG=prog
 
