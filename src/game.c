@@ -10,10 +10,12 @@
 #define TAILLE_CASE_PXL 32
 
 perso_t *joueur;
+char * nom_map="map3.txt";
 
 //joueur = malloc(sizeof(perso_t));
 
 void start(){
+    int y=10,x=10;
     SDL_RenderClear(renderer);
     int touche=-1;
     int running = 1;
@@ -22,28 +24,38 @@ void start(){
     //afficher_mat(mat);
     //init_player(&joueur);
     //placer_pers(mat,5,10,&joueur);
-    afficher_map("map3.txt",64);
+    afficher_map(nom_map,64);
     faire_rendu();
-    while(running == 1){  
+    while(running == 1){
         touche=touche_detecter();
         if(touche != 0){
-            afficher_map("map3.txt",64);
+            afficher_map(nom_map,64);
+        
             if(touche == 1){
-                drawImage(TAILLE_CASE_PXL*15 , TAILLE_CASE_PXL*7 , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL ); 
+                //nom_map="map2.txt";
+                y--;
+                drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL ); 
                 faire_rendu();
 
             }
             if(touche == 2){
-                drawImage(TAILLE_CASE_PXL*15 , TAILLE_CASE_PXL*8 , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
+                //nom_map="map3.txt";
+                y++;
+                drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
                 faire_rendu();
+                
             }
             if(touche == 3){
-                drawImage(TAILLE_CASE_PXL*16, TAILLE_CASE_PXL*8 , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
+                x++;
+                drawImage(TAILLE_CASE_PXL*x, TAILLE_CASE_PXL*y , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
                 faire_rendu();
+                
             }
             if(touche == 4){
-                drawImage(TAILLE_CASE_PXL*14 , TAILLE_CASE_PXL*8 , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
+                x--;
+                drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
                 faire_rendu();
+                
             }
             if(touche == 5){
                 running=0;
@@ -51,7 +63,7 @@ void start(){
             
             
 
-        }        
+        }      
 
     }
     Menu();
