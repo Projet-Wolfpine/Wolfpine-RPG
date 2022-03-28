@@ -132,11 +132,11 @@ void mise_struct_map(case_t map_info[Y][X], int map_int[Y][X]){
                 map_info[i][j].id = "ID_SORTIE1";
                 map_info[i][j].col = 0;
             }
-            if(map_int[i][j] == 27){
+            if(map_int[i][j] == 26){
                 map_info[i][j].id = "ID_SORTIE2";
                 map_info[i][j].col = 0;
             }
-            if(map_int[i][j] == 25){
+            if(map_int[i][j] == 27){
                 map_info[i][j].id = "ID_HERBE1";
                 map_info[i][j].col = 0;
             }
