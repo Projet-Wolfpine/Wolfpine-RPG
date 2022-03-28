@@ -45,10 +45,91 @@ void mise_struct_map(case_t map_info[Y][X], int map_int[Y][X]){
             if(map_int[i][j] == 4){
                 map_info[i][j].id = "ID_LIT2";
                 map_info[i][j].col = 0;
-                
+
             }
             if(map_int[i][j] == 5){
-                map_info[i][j].id = "ID_LIT2";
+                map_info[i][j].id = "ID_LIT1";
+                map_info[i][j].col = 0;
+            }
+            if(map_int[i][j] == 6){
+              map_info[i][j].id = "ID_TAPIS1";
+              map_info[i][j].col = 0;
+            }
+            if(map_int[i][j] == 7){
+              map_info[i][j].id = "ID_TAPIS2";
+              map_info[i][j].col = 0;
+            }
+            if(map_int[i][j] == 8){
+              map_info[i][j].id = "ID_TAPIS3";
+              map_info[i][j].col = 0;
+            }
+            if(map_int[i][j] == 9){
+              map_info[i][j].id = "ID_TAPIS4";
+              map_info[i][j].col = 0;
+            }
+            if(map_int[i][j] == 10){
+                map_info[i][j].id = "ID_TAPIS5";
+                map_info[i][j].col = 0;
+            }
+            if(map_int[i][j] == 11){
+                map_info[i][j].id = "ID_TAPIS6";
+                map_info[i][j].col = 0;
+            }
+            if(map_int[i][j] == 12){
+                map_info[i][j].id = "ID_TAPIS7";
+                map_info[i][j].col = 0;
+            }
+            if(map_int[i][j] == 13){
+                map_info[i][j].id = "ID_TAPIS8";
+                map_info[i][j].col = 0;
+            }
+            if(map_int[i][j] == 14){
+                map_info[i][j].id = "ID_TAPIS9";
+                map_info[i][j].col = 0;
+            }
+            if(map_int[i][j] == 15){
+                map_info[i][j].id = "ID_TABOURET";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 16){
+                map_info[i][j].id = "ID_TABLE1";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 17){
+                map_info[i][j].id = "ID_TABLE2";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 18){
+                map_info[i][j].id = "ID_TABLE3";
+                map_info[i][j].col = 1;
+            }
+
+            if(map_int[i][j] == 19){
+                map_info[i][j].id = "ID_TABLE4";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 20){
+                map_info[i][j].id = "ID_TABLE5";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 21){
+                map_info[i][j].id = "ID_TABLE6";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 22){
+                map_info[i][j].id = "ID_TABLE7";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 23){
+                map_info[i][j].id = "ID_TABLE8";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 24){
+                map_info[i][j].id = "ID_TABLE9";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 25){
+                map_info[i][j].id = "ID_SORTIE1";
                 map_info[i][j].col = 0;
             }
         }
