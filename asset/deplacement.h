@@ -4,7 +4,7 @@
 
 
 //Lors du parcours de matrice puisque que les premiers crochet correspondes à la vertical et pas l'horizontal il faudra commencer par mettre les coordonnés Y puis X pour les fonctions
-#define Y 16
+#define Y 11
 #define X 31
 
 void init_mat(case_t mat[Y][X]);

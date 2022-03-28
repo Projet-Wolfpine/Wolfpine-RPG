@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include<time.h>
 #include "combat.h"
 
 /**
@@ -47,36 +48,12 @@ perso_t init_player(){
   return *player;
 }
 
-void free_player(perso_t player){
-	/*// Free des sorts
-	for(int i = 0; i < NB_SPELLS; i++)
-	{	
-		free(&player.spell[i]);
-		//&player.spell[i] = NULL;
-	}
-	printf("Spell OK\n");
-	
-	//Free de l'inventaire
-	for (int i = 0; i < TAILLE_INV; i++){
-		free(&player.spell[i]);
-		//*player.spell[i] = NULL;
-	}
-	
-	// Free du nom
-	free(&player.name);
-	//*player.name = NULL;
-	
-	// Free du player
-	free(&player);
-	
-	printf("OK\n");*/
-	
-}
-
-void init_monster(monstre_t * monster){
-	monster->hp = 200;
-	monster->dgt = 20;
-	monster->armor = 5;
+void init_monster(monstre_t * monster, char * name, int hp, int dgt, int armor){
+	monster->name =  malloc(sizeof(char *));
+	strcpy(monster->name,name);
+	monster->hp = hp;
+	monster->dgt = dgt;
+	monster->armor = armor;
 }
 
 void tour_joueur(perso_t * player, monstre_t * monstre){
@@ -125,48 +102,52 @@ void tour_joueur(perso_t * player, monstre_t * monstre){
           monstre->hp = 0;
         }
       }
-      printf("Vous infligez %d dégats magiques au monstre  ||	HP player : %d  HP monstre : %d\n", dgt, player->hp, monstre->hp);
+      printf("Vous infligez %d dégats magiques à %s  ||	HP player : %d  HP monstre : %d\n", dgt, monstre->name, player->hp, monstre->hp);
     }
-  }
-  else{
-    printf("Oh.. vous avez perdu il me semble.\n");
   }
 }
 
 void tour_monstre(perso_t * player, monstre_t * monstre)
 {
   int dgt;
+  int crit;
+  
+	srand(time(0));
 
+	
   if(monstre->hp > 0){
-    dgt = monstre->dgt - player->armor;
-    player->hp -= dgt;
+  	crit = rand() % 101;
+		printf("Crit val : %d\n",crit);
+  	if(crit >= 95){
+  		dgt = monstre->dgt - player->armor;
+  		dgt += 15;
+  		player->hp -= dgt;
+  	}
+  	else{
+		  dgt = monstre->dgt - player->armor;
+		  player->hp -= dgt;
+		}
     if(player->hp < 0){
       player->hp = 0;
-    }
-    printf("Le monstre attaque ! vous prenez %d dégats    ||	HP player : %d  HP monstre : %d\n\n", dgt, player->hp, monstre->hp);
+      printf("%s attaque ! vous prenez %d dégats    ||	HP player : %d  HP monstre : %d\n\n",monstre->name, dgt, player->hp, monstre->hp);
+      printf("Oh.. vous avez perdu il me semble.\n");
+		}
+ 		else{
+ 			printf("%s attaque ! vous prenez %d dégats    ||	HP player : %d  HP monstre : %d\n\n",monstre->name, dgt, player->hp, monstre->hp);
+ 		}
   }
   else{
     printf("Bravo ! Vous avez battu le méchant monstre\n");
   }
 }
 
-perso_t combat(monstre_t * monstre){
+perso_t combat(perso_t * player, monstre_t * monstre){
   //Affichage spécial du combat
-
-  perso_t player;
-  player = init_player();
-  printf("Init player OK\n");
-  init_monster(monstre);
-  printf("Init monster OK\n");
-  add_spell(&player,0,"Foudre",77); 
-  printf("Add spell OK\n");
-  
-  
-  while(monstre->hp > 0 && player.hp > 0){//condition de sortie à modifier avec sdl ?
-	tour_joueur(&player,monstre);
-    	tour_monstre(&player,monstre);
+  while(monstre->hp > 0 && player->hp > 0){//condition de sortie à modifier avec sdl ?
+			tour_joueur(player,monstre);
+    	tour_monstre(player,monstre);
   }
   
-  return(player);
+  return(*player);
 }
 
