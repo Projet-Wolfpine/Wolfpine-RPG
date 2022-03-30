@@ -32,11 +32,11 @@ void mise_struct_map(case_t map_info[Y][X], int map_int[Y][X]){
         for(j=0;j<X;j++){
             if(map_int[i][j] == 1){
                 map_info[i][j].id = "ID_MUR1";
-                map_info[i][j].col = 2;
+                map_info[i][j].col = 1;
             }
             if(map_int[i][j] == 2){
                 map_info[i][j].id = "ID_MUR2";
-                map_info[i][j].col = 2;
+                map_info[i][j].col = 1;
             }
             if(map_int[i][j] == 3){
                 map_info[i][j].id = "ID_SOL1";
@@ -44,12 +44,12 @@ void mise_struct_map(case_t map_info[Y][X], int map_int[Y][X]){
             }
             if(map_int[i][j] == 4){
                 map_info[i][j].id = "ID_LIT2";
-                map_info[i][j].col = 0;
+                map_info[i][j].col = 1;
 
             }
             if(map_int[i][j] == 5){
                 map_info[i][j].id = "ID_LIT1";
-                map_info[i][j].col = 0;
+                map_info[i][j].col = 1;
             }
             if(map_int[i][j] == 6){
               map_info[i][j].id = "ID_TAPIS1";
@@ -132,14 +132,112 @@ void mise_struct_map(case_t map_info[Y][X], int map_int[Y][X]){
                 map_info[i][j].id = "ID_SORTIE1";
                 map_info[i][j].col = 0;
             }
-            if(map_int[i][j] == 27){
+            if(map_int[i][j] == 26){
                 map_info[i][j].id = "ID_SORTIE2";
                 map_info[i][j].col = 0;
             }
-            if(map_int[i][j] == 28){
+            if(map_int[i][j] == 27){
                 map_info[i][j].id = "ID_HERBE1";
                 map_info[i][j].col = 0;
             }
+            if(map_int[i][j] == 28){
+                map_info[i][j].id = "ID_PORTE1";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 29){
+                map_info[i][j].id = "ID_PORTE2";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 30){
+                map_info[i][j].id = "ID_FENETRE";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 31){
+                map_info[i][j].id = "ID_TOIT1";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 32){
+                map_info[i][j].id = "ID_TOIT2";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 33){
+                map_info[i][j].id = "ID_TOIT3";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 34){
+                map_info[i][j].id = "ID_TOIT4";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 35){
+                map_info[i][j].id = "ID_BUISSON";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 36){
+                map_info[i][j].id = "ID_CHEMIN";
+                map_info[i][j].col = 0;
+            }
+            if(map_int[i][j] == 37){
+                map_info[i][j].id = "ID_FONTAINE1";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 38){
+                map_info[i][j].id = "ID_FONTAINE2";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 39){
+                map_info[i][j].id = "ID_FONTAINE3";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 40){
+                map_info[i][j].id = "ID_FONTAINE4";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 41){
+                map_info[i][j].id = "ID_FONTAINE5";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 42){
+                map_info[i][j].id = "ID_FONTAINE6";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 43){
+                map_info[i][j].id = "ID_FONTAINE7";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 44){
+                map_info[i][j].id = "ID_FONTAINE8";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 45){
+                map_info[i][j].id = "ID_FONTAINE9";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 46){
+                map_info[i][j].id = "ID_SORTIE3";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 47){
+                map_info[i][j].id = "ID_CHEMINBLOC1";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 48){
+                map_info[i][j].id = "ID_TOITBLEU1";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 49){
+                map_info[i][j].id = "ID_TOITBLEU2";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 50){
+                map_info[i][j].id = "ID_TOITBLEU3";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 51){
+                map_info[i][j].id = "ID_TOITBLEU4";
+                map_info[i][j].col = 1;
+            }
+
+
         }
     }
 }
