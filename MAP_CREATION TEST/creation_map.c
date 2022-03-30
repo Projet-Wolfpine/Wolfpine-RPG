@@ -28,11 +28,11 @@ void mise_struct_map(case_t map_info[Y][X], int map_int[Y][X]){
       switch(map_int[i][j]){
         case 1:
           map_info[i][j].id = "ID_MUR1";
-          map_info[i][j].col = 2;
+          map_info[i][j].col = 1;
           break;
         case 2:
           map_info[i][j].id = "ID_MUR2";
-          map_info[i][j].col = 2;
+          map_info[i][j].col = 1;
           break;
         case 3:
           map_info[i][j].id = "ID_SOL1";
