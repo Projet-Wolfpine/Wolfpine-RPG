@@ -135,7 +135,7 @@ void init_affichage(){
 													SDL_WINDOW_SHOWN);
 
 	renderer=SDL_CreateRenderer(fenetre, -1, SDL_RENDERER_ACCELERATED);
-	SDL_SetWindowFullscreen(fenetre, SDL_WINDOW_FULLSCREEN);
+	SDL_SetWindowFullscreen(fenetre, SDL_WINDOW_BORDERLESS);
 	loadImages();
 	SPRITE_W = 125;
 }

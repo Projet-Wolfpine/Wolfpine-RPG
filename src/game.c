@@ -6,67 +6,104 @@
 #include "deplacement.h"
 #include "game.h"
 #include "creation_map.h"
+#include "combat.h"
+#include "string.h"
 
-#define TAILLE_CASE_PXL 32
+#define TAILLE_CASE_PXL 64
 
-perso_t *joueur;
-char * nom_map="map3.txt";
+/*
+perso_t joueur;
+joueur = init_player();
+*/
+char * nom_map="map1.txt";
+
+
 char * info_case(case_t mat[Y][X] , int coord_y, int coord_x){
     return(mat[coord_y][coord_x].id);
 }
 
-void sauvegarder_jeu (case_t mat[Y][Z], ){
+
+void sauvegarder_jeu (case_t mat[Y][X],perso_t *perso, char * nom_map){
     FILE * sauv;
-    fic=fopen(sauv,"r");
-
-
+    sauv=fopen("sauvegarde.txt","w");
+    fprintf(sauv,"%s/%d/%d",nom_map,perso->anc_coord_y,perso->anc_coord_x);
+    fclose(sauv);
 }
 
+/*
+void charger_jeu (case_t mat[Y][X], perso_t *perso,char * nom_map){
+    FILE * sauv;
+    if(sauv=fopen("sauvegarde.txt","r")){
+        fscanf(sauv,"%s/%d/%d",nom_map,perso->anc_coord_y,perso->anc_coord_x);
+    }else{
+        //gerer si aucune sauvegarde n'a été creer
+        printf("Aucune sauvegarde de disponible echec du chargement\n");
+    }
+}
+*/
+/*
 void est_a_cote(){ //pour les pnj 
 
 }
-
-//joueur = malloc(sizeof(perso_t));
+*/
 
 void start(){
+    char * info;
     int y=10,x=10;
     SDL_RenderClear(renderer);
     int touche=-1;
     int running = 1;
-  	//init_mat(mat);
-	//contour_mat(mat);
-    //afficher_mat(mat);
-    //init_player(&joueur);
-    //placer_pers(mat,5,10,&joueur);
-    afficher_map(nom_map,64);
+    case_t mat[Y][X];
+    perso_t joueur;
+    joueur = init_player();
+  	init_mat(mat);
+    afficher_mat(mat);
+    placer_pers(mat,y,x,&joueur);
+    afficher_mat(mat);
+    afficher_map(nom_map,64,mat);//SDL
+    drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL ); 
     faire_rendu();
     while(running == 1){
         touche=touche_detecter();
         if(touche != 0){
-            afficher_map(nom_map,64);
+            afficher_map(nom_map,64,mat);
+            info=info_case(mat,y,x);
         
-            if(touche == 1){
+            if(touche == 1 && dessus(mat,&joueur)){
                 //nom_map="map2.txt";
+
                 y--;
+                sauvegarder_jeu(mat,&joueur,nom_map);
+                info=info_case(mat,y,x);
+                afficher_mat(mat);
                 drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL ); 
                 faire_rendu();
 
             }
-            if(touche == 2){
+            if(touche == 2 && dessous(mat,&joueur)){
                 //nom_map="map3.txt";
                 y++;
+                info=info_case(mat,y,x);
+                afficher_mat(mat);
+
                 drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
                 faire_rendu();
                 
             }
-            if(touche == 3){
+            if(touche == 3 && droite(mat,&joueur)){
                 x++;
+                info=info_case(mat,y,x);
+                afficher_mat(mat);
+                //afficher_mat(mat);
                 drawImage(TAILLE_CASE_PXL*x, TAILLE_CASE_PXL*y , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
                 faire_rendu();
                 
             }
-            if(touche == 4){
+            if(touche == 4 && gauche(mat,&joueur)){
                 x--;
+                info=info_case(mat,y,x);
+                afficher_mat(mat);
+                //afficher_map(nom_map,64,mat);
                 drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
                 faire_rendu();
                 
@@ -74,8 +111,46 @@ void start(){
             if(touche == 5){
                 running=0;
             }
+
+            if(touche == 6){//touche I pour inventaire
+                //à remplir
+            }
             
-            
+            printf("\nvaleur de strcmp = %d\n",strcmp(info,"ID_SORTIE1"));
+            if((strcmp(info,"ID_SORTIE1"))== 0 && strcmp(nom_map,"map1.txt")==0){
+                SDL_RenderClear(renderer);
+                nom_map="map2.txt";
+                afficher_map(nom_map,64,mat);
+                y = 8;
+                x = 5;
+                placer_pers(mat,y,x,&joueur);
+                drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
+                faire_rendu();
+            }
+    
+             if((strcmp(info,"ID_SORTIE2"))==0 && strcmp(nom_map,"map2.txt")==0){
+                SDL_RenderClear(renderer);
+                nom_map="map1.txt";
+                afficher_map(nom_map,64,mat);
+                y = 15;
+                x = 15;
+                placer_pers(mat,y,x,&joueur);
+                drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
+                faire_rendu();
+            }
+
+            /*if(x == 10 && y == 10){
+            	monstre_t monstre;
+            	init_monster(&monstre, "Wolfy", 5, 5 ,5);
+   	
+            	drawImage(500, 50 , "combat.png", 1920/2, 1080/2);
+            	drawText(900,75,monstre.name,25,25);
+            	//drawText(1080,75,monstre.hp,25,25);
+            	
+            	faire_rendu();
+ 							
+            	combat(&joueur,&monstre);
+            }*/
 
         }      
 

@@ -4,16 +4,19 @@
 
 TTF_Font *police;
 
+
 int afficher_menu(char menu[4][30]){
   //afficher_image_menu("images/menu.jpeg");
   drawImage(0,0,"menu",1920,1080);// ou dm.x , dm.y 
   char * text;
-  int largeur = dm.w;
+  int largeur = SCREEN_WIDTH;
+  printf("hauteur = %d\n",SCREEN_HEIGHT);
+  printf("largeur = %d\n",SCREEN_WIDTH);
   text = "P r o j e t - W O L F P I N E";
   int w;
 	TTF_SizeText(police,text,&w,NULL);
   drawText((largeur-w)/2, 40, text, 45, 15);
-  //int largeur = dm.w;
+  
   
   for(int i = 0, y=200; i<4; i++, y+=150){
     drawImage( 700, y, "button.png", 475, 130);

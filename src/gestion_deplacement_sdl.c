@@ -7,7 +7,7 @@ SDL_Event event;
 int touche_detecter(){ 
     if ( SDL_PollEvent(&event) ){
         switch(event.type){
-            case SDL_KEYUP: // Événement de relâchement d'une touche clavier
+            case SDL_KEYDOWN: // Événement de relâchement d'une touche clavier
                 if ( event.key.keysym.sym == SDLK_UP){
                     return 1;
                 }
@@ -22,6 +22,9 @@ int touche_detecter(){
                 }
                  if ( event.key.keysym.sym == SDLK_ESCAPE){
                     return 5;
+                }
+                 if ( event.key.keysym.sym == SDLK_i){
+                    return 6;
                 }
             break;
         }

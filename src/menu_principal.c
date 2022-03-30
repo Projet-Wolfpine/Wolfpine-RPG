@@ -6,17 +6,22 @@
 
 
 TTF_Font *police;
-SDL_DisplayMode dm;
+
 
 //#define TAILLE_CASE_PXL2 63
 
 
 
 void Menu(){
+	SDL_DisplayMode dm;
 	int longeur = 1920;
 	int hauteur = 1080;
 	int largeur = dm.w;
 	int running=-1; //la variable qui gère le choix du menu
+	//case_t mat[Y][X];
+    //perso_t joueur;
+    //joueur = init_player();
+	//char * nom_map="map1.txt";
 	char list[4][30] = { "Nouvelle partie", "Charger une Sauvegarde", "Options", "Quitter" };
 	running = afficher_menu(list);
 
@@ -24,6 +29,8 @@ void Menu(){
 		start();
 	}
 	if(running==1){
+		//charger_jeu(mat,&joueur,nom_map);
+		//printf("%d,%d,%s",joueur.anc_coord_y,joueur.anc_coord_x,nom_map);
 		fond_rouge();
 		SDL_Delay(1000);
 		

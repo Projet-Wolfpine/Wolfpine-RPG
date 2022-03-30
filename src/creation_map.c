@@ -43,13 +43,13 @@ void mise_struct_map(case_t map_info[Y][X], int map_int[Y][X]){
                 map_info[i][j].col = 0;
             }
             if(map_int[i][j] == 4){
-                map_info[i][j].id = "ID_LIT2";
+                map_info[i][j].id = "ID_LIT1";
                 map_info[i][j].col = 1;
 
             }
             if(map_int[i][j] == 5){
-                map_info[i][j].id = "ID_LIT1";
-                map_info[i][j].col = 1;
+                map_info[i][j].id = "ID_LIT2";
+                map_info[i][j].col = 0;
             }
             if(map_int[i][j] == 6){
               map_info[i][j].id = "ID_TAPIS1";
@@ -89,7 +89,7 @@ void mise_struct_map(case_t map_info[Y][X], int map_int[Y][X]){
             }
             if(map_int[i][j] == 15){
                 map_info[i][j].id = "ID_TABOURET";
-                map_info[i][j].col = 1;
+                map_info[i][j].col = 0;
             }
             if(map_int[i][j] == 16){
                 map_info[i][j].id = "ID_TABLE1";
@@ -214,7 +214,7 @@ void mise_struct_map(case_t map_info[Y][X], int map_int[Y][X]){
             }
             if(map_int[i][j] == 46){
                 map_info[i][j].id = "ID_SORTIE3";
-                map_info[i][j].col = 1;
+                map_info[i][j].col = 0;
             }
             if(map_int[i][j] == 47){
                 map_info[i][j].id = "ID_CHEMINBLOC1";
@@ -236,14 +236,17 @@ void mise_struct_map(case_t map_info[Y][X], int map_int[Y][X]){
                 map_info[i][j].id = "ID_TOITBLEU4";
                 map_info[i][j].col = 1;
             }
-
-
+            if(map_int[i][j] == 51){
+                map_info[i][j].id = "ID_MUR3";
+                map_info[i][j].col = 1;
+            }
         }
     }
 }
 
-void afficher_map(char * nom_map,int taille){
+void afficher_map(char * nom_map,int taille, case_t map_info[Y][X]){
   int i,j;
+  //init_mat(map_info);
   lecture_fichier_map(nom_map, map_int);
   mise_struct_map(map_info,map_int);
   for(i = 0;i<Y; i++){

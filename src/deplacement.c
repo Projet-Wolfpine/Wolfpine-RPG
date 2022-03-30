@@ -3,7 +3,15 @@
 #include <string.h>
 #include "deplacement.h"
 
-//Fonction de création et d'initialisationn d'une matrice vide (remplie d'etat de collisio à 0)
+/**
+ * \file deplacement.c
+ * \brief Fonctions de déplacement d'un personnage dans une matrice.
+ * \author Ilyas.A
+ * \version 1.0
+ * \date 21 mars 2022
+ */
+
+//Fonction de création et d'initialisationn d'une matrice vide (remplie d'etat de collision à 0)
 void init_mat(case_t mat[Y][X]){
   for(int i=0;i<Y;i++){
     for(int j=0; j<X; j++){
@@ -34,10 +42,11 @@ void afficher_mat(case_t mat[Y][X]){
       }
       if(mat[i][j].col== 1)//collision
         printf("C");
-      if(mat[i][j].col== 0 && strcmp(mat[i][j].id,"vide"))//case traversable
+      /*if(mat[i][j].col== 0 && strcmp(mat[i][j].id,"vide"))//case traversable
         printf("T");
+      */
       if(mat[i][j].col== 0)//case vide
-        printf(" ");
+        printf(".");
     }
     printf("\n");
   }
@@ -48,16 +57,7 @@ int case_libre (case_t mat[Y][X], int coord_y, int coord_x){
   return(mat[coord_y][coord_x].col == 0);//ne pas modifier pour garder le déplacement du personnage possible
 }
 
-//Fonction qui permet de placer un objet dans la matrice
-void placer_objet(case_t mat[Y][X], int coord_y, int coord_x, char* id, int col){
-  if(case_libre(mat,coord_y,coord_x) && strcmp(mat[coord_y][coord_x].id,"vide")){
-    mat[coord_y][coord_x].col = col; //ici le chiffre 1 correspond à une collision et 0 correspond à une aucune collision
-    mat[coord_y][coord_x].id = id;
-  }else{
-    //traiter le cas ou ça ne peut pas placer / ou il y'a deja un objet
-  }
-}
-
+//Place le personnage si la case est libre
 void placer_pers(case_t mat[Y][X], int coord_y, int coord_x, perso_t  *player){
   if(case_libre(mat,coord_y,coord_x)){
     mat[coord_y][coord_x].col=2;
@@ -66,67 +66,31 @@ void placer_pers(case_t mat[Y][X], int coord_y, int coord_x, perso_t  *player){
   }
 }
 
-void deplacer_pers(case_t mat[Y][X], int coord_y, int coord_x, perso_t  *player){
+//Deplace un personnage à des coordonnées voulu
+int deplacer_pers(case_t mat[Y][X], int coord_y, int coord_x, perso_t  *player){
   if(case_libre(mat,coord_y,coord_x)){
     mat[player->anc_coord_y][player->anc_coord_x].col = 0;
     placer_pers(mat,coord_y,coord_x,player);
-  }
-}
-
-void aller_gauche(case_t mat[Y][X], perso_t *player){
-  deplacer_pers(mat,player->anc_coord_x-1,player->anc_coord_y,player);
-  player->anc_coord_x -= 1;
-}
-
-void aller_droite(case_t mat[Y][X], perso_t *player){
-  deplacer_pers(mat,player->anc_coord_x,player->anc_coord_y+1,player);
-  player->anc_coord_y += 1;
-}
-
-void aller_dessus(case_t mat[Y][X], perso_t *player){
-  deplacer_pers(mat,player->anc_coord_x,player->anc_coord_y-1,player);
-  player->anc_coord_y -= 1;
-}
-
-void aller_dessous(case_t mat[Y][X], perso_t *player){
-  deplacer_pers(mat,player->anc_coord_x+1,player->anc_coord_y,player);
-  player->anc_coord_x += 1;
-}
-
-//Nous permet de savoir ce que contient une case
-void info_objet(case_t mat[Y][X], int coord_y, int coord_x){
-  if(case_libre(mat,coord_y,coord_x) && strcmp(mat[coord_y][coord_x].id,"vide")){//ne marche pas mais est pourtant necessaire pour éviter une erreur de segmentation
-    printf("L'emplacement en Y = %d et X = %d ne contient aucun objet\n", coord_y, coord_x);
+    return 1;
   }else{
-    printf("L'objet stocké en Y = %d et X = %d est : %s\n",coord_y, coord_x, mat[coord_y][coord_x].id);
-    printf("Son statut de collision est de : %d\n",mat[coord_y][coord_x].col);
+    return 0;
   }
 }
 
-void init_player(perso_t * player){
-  player = malloc(sizeof(perso_t));
-	player->anc_coord_x = 5;
-	player->anc_coord_y = 4;
-	player->position = "droite"; //Si jamais le dernier déplacement est gauche on tourne le perso et on modifira cette valeur pour afficher le sprite en consequece en sdl
-	player->hp = 600;
-	player->dgt = 50;
-	player->armor = 15;
-	
-	for(int i = 0; i < NB_SPELLS; i++)
-	{	
-		player->spells[i] = malloc(sizeof(spell_t));
-		player->spells[i]->name = "vide";
-		player->spells[i]->dgt = 0;
-	}	
+//Fonction de déplacement matricielle 
 
-  for (int i = 0; i < TAILLE_INV; i++){
-    player->objets[i] = malloc(sizeof(objet_t));
-    player->objets[i]->id = -1;
-    player->objets[i]->name = "VIDE";
-    player->objets[i]->desc = "VIDE";
-    player->objets[i]->heal = 0;
-    player->objets[i]->dgt = 0;
-    player->objets[i]->armor = 0;
-  }
-  
+int gauche(case_t mat[Y][X], perso_t *player){
+  return(deplacer_pers(mat,player->anc_coord_y,player->anc_coord_x-1,player));
+}
+
+int droite(case_t mat[Y][X], perso_t *player){
+  return(deplacer_pers(mat,player->anc_coord_y,player->anc_coord_x+1,player));
+}
+
+int dessus(case_t mat[Y][X], perso_t *player){
+  return(deplacer_pers(mat,player->anc_coord_y-1,player->anc_coord_x,player));
+}
+
+int dessous(case_t mat[Y][X], perso_t *player){
+  return(deplacer_pers(mat,player->anc_coord_y+1,player->anc_coord_x,player));
 }
