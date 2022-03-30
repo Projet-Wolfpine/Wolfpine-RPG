@@ -390,6 +390,10 @@ void mise_struct_map(case_t map_info[Y][X], int map_int[Y][X]){
                 map_info[i][j].id = "ID_BARRIERE3";
                 map_info[i][j].col = 1;
             }
+            if(map_int[i][j] == 90){
+              map_info[i][j].id = "ID_SOL2";
+              map_info[i][j].col = 1;
+            }
         }
     }
 }
