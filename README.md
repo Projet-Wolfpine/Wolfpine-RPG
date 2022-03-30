@@ -1,4 +1,4 @@
-# Projet-Roguelike-RPG
+# Projet-Wolfpine-RPG
 
 Projet réalisé dans le cadre de la 2ème année de licence informatique du 17/01/22 au 07/04/22 par une équipe de 4 étudiants : 
 
