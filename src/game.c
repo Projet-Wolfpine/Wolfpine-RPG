@@ -11,6 +11,20 @@
 
 perso_t *joueur;
 char * nom_map="map3.txt";
+char * info_case(case_t mat[Y][X] , int coord_y, int coord_x){
+    return(mat[coord_y][coord_x].id);
+}
+
+void sauvegarder_jeu (case_t mat[Y][Z], ){
+    FILE * sauv;
+    fic=fopen(sauv,"r");
+
+
+}
+
+void est_a_cote(){ //pour les pnj 
+
+}
 
 //joueur = malloc(sizeof(perso_t));
 
