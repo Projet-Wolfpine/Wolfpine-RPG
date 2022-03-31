@@ -197,11 +197,12 @@ void start(){
 		
    		
    		
-            	monstre_t monstre;
+           	monstre_t monstre;
             	init_monster(&monstre, "Wolfy", 50, 30 ,5);
                 add_spell(&joueur,0,"Foudre",75);
-                printf("%d\n", spell_existe(&joueur,0));
-                printf("%d\n", spell_existe(&joueur,1));
+                add_spell(&joueur,1,"Marrée",150);
+                add_spell(&joueur,2,"Brasier",150);
+                add_item(&joueur, 3, "Potion de soin", "caca", 50, 0, 0);
 
             					
             	combat(&joueur,&monstre);
