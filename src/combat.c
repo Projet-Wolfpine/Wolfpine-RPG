@@ -8,6 +8,7 @@
 #include <math.h>
 #include "fonction_sdl.h"
 #include "combat.h"
+#include "audio.h"
 
 /**
  * \file combat.c
@@ -17,6 +18,8 @@
  * \date 24 mars 2022
  */
 SDL_Color noir = {0, 0, 0};
+SDL_Color rouge = {255, 0, 0};
+SDL_Color blanc = {255, 255, 255};
 char hp_joueur[3];
 char hp_monstre[3];
 char inf_dgt[2];
@@ -98,22 +101,63 @@ void init_monster(monstre_t * monster, char * name, int hp, int dgt, int armor){
 
 void aff_info(perso_t * player, monstre_t * monstre, char * fond, char * sprite){
 
-	drawImage(0, 0, fond, 1920, 1080);
-	drawImage(700,200,sprite, 520, 520);
-	__itoa(player->hp,hp_joueur,10,3);
-	drawText(480,920,hp_joueur,30,30,noir);
-	drawText(850,150,monstre->name,40,40,noir);
-	__itoa(monstre->hp,hp_monstre,10,3);
-	drawText(1700,80,hp_monstre,30,30,noir);
-	faire_rendu();
-
+	if(!strcmp(fond,"combat.png")){
+		drawImage(0, 0, fond, 1920, 1080);
+		drawImage(700,200,sprite, 520, 520);
+		__itoa(player->hp,hp_joueur,10,3);
+		drawText(490,900,hp_joueur,60,40,rouge);
+		drawText(720,900,"ATQ",60,40,noir);
+		drawText(1020,900,"SORT",60,40,noir);
+		drawText(1380,900,"INV",60,40,noir);
+		drawText(820,150,monstre->name,60,40,blanc);
+		__itoa(monstre->hp,hp_monstre,10,3);
+		drawText(1700,85,hp_monstre,60,40,rouge);
+		faire_rendu();
+	}
+	else if(!strcmp(fond,"spells.png")){
+		drawImage(0, 0, fond, 1920, 1080);
+		drawImage(700,200,sprite, 520, 520);
+		drawImage(1580,820,"exit_cross.png", 50, 50);
+		//Spells
+		if(spell_existe(player,0) != 0){
+			drawText(650,900,player->spell[0]->name,60,40,noir);
+		}
+		if(spell_existe(player,1) != 0){
+			drawText(930,900,player->spell[1]->name,60,40,noir);
+		}
+		if(spell_existe(player,2) != 0){
+			drawText(1250,900,player->spell[2]->name,60,40,noir);
+		}
+		__itoa(player->hp,hp_joueur,10,3);
+		drawText(490,900,hp_joueur,60,40,rouge);
+		drawText(820,150,monstre->name,60,40,blanc);
+		__itoa(monstre->hp,hp_monstre,10,3);
+		drawText(1700,85,hp_monstre,60,40,rouge);
+		faire_rendu();
+	}
+	else{
+		drawImage(0, 0, "spells.png", 1920, 1080);
+		drawImage(700,200,sprite, 520, 520);
+		drawImage(1580,820,"exit_cross.png", 50, 50);
+		if(!strcmp(player->objets[3]->name,"Potion de soin")){
+			drawText(900,900,"Potion de soin",60,40,rouge);
+		}
+		__itoa(player->hp,hp_joueur,10,3);
+		drawText(490,900,hp_joueur,60,40,rouge);
+		drawText(820,150,monstre->name,60,40,blanc);
+		__itoa(monstre->hp,hp_monstre,10,3);
+		drawText(1700,85,hp_monstre,60,40,rouge);
+		faire_rendu();
+	}
 }
+
 void tour_joueur(perso_t * player, monstre_t * monstre){
 	SDL_Event event;
 	int choix = 0; 
 	int spell_num = 0;
 	int dgt;
 	int spell_choose = -1;
+	int heal = -1;
 	int combat = -1;
 	int souris_x=0, souris_y=0;
   
@@ -129,7 +173,7 @@ void tour_joueur(perso_t * player, monstre_t * monstre){
 				case SDL_MOUSEBUTTONDOWN:
 					SDL_GetMouseState(&souris_x, &souris_y);
 
-					if((souris_x >= 700 && souris_x <=825) && (souris_y >= 900 && souris_y <=950)){
+					if((souris_x >= 720 && souris_x <=1000) && (souris_y >= 900 && souris_y <=960)){
 						dgt =  player->dgt - monstre->armor;
 						monstre->hp -= dgt;
 						if(monstre->hp < 0){
@@ -140,20 +184,9 @@ void tour_joueur(perso_t * player, monstre_t * monstre){
 						combat = 0; break;
 					}
 
-					if((souris_x >= 1000 && souris_x <=1300) && (souris_y >= 900 && souris_y <=950)){
-						//while(spell_choose != TRUE){
-							aff_info(player,monstre, "spells.png", "wolfy.png");
-							//Spells
-							drawText(650,920,player->spell[0]->name,30,30,noir);
-							drawText(900,920,player->spell[1]->name,30,30,noir);
-							drawText(1100,920,player->spell[2]->name,30,30,noir);
-							drawText(1300,920,player->spell[3]->name,30,30,noir);	
-
-							faire_rendu();
-
-							
+					if((souris_x >= 1020 && souris_x <=1350) && (souris_y >= 900 && souris_y <=960)){
+						aff_info(player,monstre, "spells.png", "wolfy.png");
 						
-
 						while(spell_choose == -1){
 							if (SDL_WaitEvent(&event) != 0) {
 								switch(event.type){
@@ -168,17 +201,24 @@ void tour_joueur(perso_t * player, monstre_t * monstre){
 												monstre->hp = 0;
 											}
 
+											SDL_Init(SDL_INIT_AUDIO);
+    	
+											initAudio();
+											playSound("sounds/thunder.wav", SDL_MIX_MAXVOLUME / 6);
+											drawImage(700,200,"thunder.png", 520, 520);
+											faire_rendu();
+											SDL_Delay(500);
+											
 											aff_info(player,monstre, "combat.png", "wolfy.png");
 
-											spell_choose = 0; break;
-										}
-										else{
-											tour_joueur(player, monstre);
+											endAudio();
+										
+											spell_choose = 0;
 										}
 									}
 
 
-									if((souris_x >= 900 && souris_x <=1050) && (souris_y >= 900 && souris_y <=950)){
+									if((souris_x >= 930 && souris_x <=1100) && (souris_y >= 900 && souris_y <=950)){
 										if(spell_existe(player,1) != 0){
 											dgt = player->spell[0]->dgt - monstre->armor;
 											monstre->hp -= dgt;
@@ -187,18 +227,62 @@ void tour_joueur(perso_t * player, monstre_t * monstre){
 											}
 
 											aff_info(player,monstre, "combat.png", "wolfy.png");
+											spell_choose = 0;
+										}
+									}
 
-											spell_choose = 0; break;
+									if((souris_x >= 1250 && souris_x <=1400) && (souris_y >= 900 && souris_y <=950)){
+										if(spell_existe(player,1) != 0){
+											dgt = player->spell[0]->dgt - monstre->armor;
+											monstre->hp -= dgt;
+											if(monstre->hp < 0){
+												monstre->hp = 0;
+											}
+
+											aff_info(player,monstre, "combat.png", "wolfy.png");
+											spell_choose = 0;
 										}
-										else{
-											tour_joueur(player, monstre);
-										}
+									}
+
+									//Cas de sortie
+									if((souris_x >= 1580 && souris_x <=1630) && (souris_y >= 820 && souris_y <=870)){
+										tour_joueur(player,monstre);
+										spell_choose = 0; combat = 0; break;
 									}
 								}
 							}
 						}
 						combat = 0; break;
 					}
+
+					if((souris_x >= 1380 && souris_x <=1640) && (souris_y >= 900 && souris_y <=950)){
+						aff_info(player,monstre, "heal.png", "wolfy.png");
+						while(heal == -1){
+							if (SDL_WaitEvent(&event) != 0) {
+								switch(event.type){
+								case SDL_MOUSEBUTTONDOWN:
+									SDL_GetMouseState(&souris_x, &souris_y);
+
+									if((souris_x >= 900 && souris_x <=1630) && (souris_y >= 900 && souris_y <=950)){
+										if(!strcmp(player->objets[3]->name,"Potion de soin")){
+											use_heal(player);
+											heal = 0;
+										}
+									}
+									
+
+									//Cas de sortie
+									if((souris_x >= 1580 && souris_x <=1630) && (souris_y >= 820 && souris_y <=870)){
+										tour_joueur(player,monstre);
+										heal = 0; combat = 0; break;
+									}
+									
+								}
+							}
+						}
+					}
+					combat = 0; break;
+					
 				}
 			}
 		}
@@ -211,14 +295,7 @@ void tour_monstre(perso_t * player, monstre_t * monstre)
   	int crit;
   
 	srand(time(0));
-	drawImage(0, 0, "combat.png", 1920, 1080);
-	drawImage(700,200,"wolfy.png", 520, 520);
-	__itoa(player->hp,hp_joueur,10,3);
-	drawText(480,920,hp_joueur,30,30,noir);
-	drawText(850,150,monstre->name,40,40,noir);
-	__itoa(monstre->hp,hp_monstre,10,3);
-	drawText(1700,80,hp_monstre,30,30,noir);
-	faire_rendu();
+	aff_info(player,monstre, "combat.png", "wolfy.png");
 	
   	if(monstre->hp > 0){
   		crit = rand() % 101;
@@ -230,18 +307,6 @@ void tour_monstre(perso_t * player, monstre_t * monstre)
   	else{
   		dgt = monstre->dgt - player->armor;
 		player->hp -= dgt;
-		  
-  	 	/*__itoa(player->hp,hp_joueur,10,3);
-  	  	__itoa(dgt,inf_dgt,10,3);
-  		drawText(700,350,inf_dgt,25,25,noir);
-  		faire_rendu();
-  		drawText(1200,350,"hp.",25,25,noir);
-  		faire_rendu();
-  		drawText(1300,900,hp_joueur,25,25,noir);
-  		faire_rendu();
-  		SDL_Delay(2000);*/
-  		
-
 	}
     if(player->hp < 0){
       player->hp = 0;
@@ -259,8 +324,8 @@ void tour_monstre(perso_t * player, monstre_t * monstre)
   else{
 	
 	
-  	drawText(625,700,monstre->name,40,40,noir);
-	drawText(900,700,"est mort !",40,40,noir);
+  	//drawText(820,700,monstre->name,50,30,blanc);
+	drawText(820,200,"est mort !",60,40,blanc);
   	faire_rendu();
   }
 
@@ -270,7 +335,7 @@ void tour_monstre(perso_t * player, monstre_t * monstre)
 perso_t combat(perso_t * player, monstre_t * monstre){
   //Affichage spécial du combat
   while(monstre->hp > 0 && player->hp > 0){//condition de sortie à modifier avec sdl ?
-	tour_joueur(player,monstre);
+		tour_joueur(player,monstre);
     	tour_monstre(player,monstre);
   }
   
