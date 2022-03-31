@@ -5,7 +5,7 @@
 #include <SDL2/SDL_image.h>
 #include "fonction_sdl.h"
 
-SDL_Renderer*renderer; 
+SDL_Renderer * renderer; 
 int nb_images=0;
 TTF_Font *police;
 

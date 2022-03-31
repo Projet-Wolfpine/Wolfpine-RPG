@@ -4,6 +4,7 @@
 #include "gestion_deplacement_sdl.h"
 #include "menu_principal.h"
 #include "deplacement.h"
+#include "affichage_sdl.h"
 #include "game.h"
 #include "creation_map.h"
 #include "combat.h"
@@ -63,16 +64,16 @@ void start(){
     afficher_map(nom_map,64,mat);//SDL
     drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL ); 
     faire_rendu();
+    affichage_dialogue();
     while(running == 1){
         touche=touche_detecter();
         if(touche != 0){
             afficher_map(nom_map,64,mat);
             info=info_case(mat,y,x);
-		 if(touche == 1 && dessus(mat,&joueur)){
+		    if(touche == 1 && dessus(mat,&joueur)){
                 //nom_map="map2.txt";
-
                 y--;
-		printf("%d\n",est_a_cote(mat,&joueur));
+		        printf("%d\n",est_a_cote(mat,&joueur));
                 info=info_case(mat,y,x);
                 afficher_mat(mat);
                 drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "dessus.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL ); 
@@ -82,7 +83,7 @@ void start(){
             if(touche == 2 && dessous(mat,&joueur)){
                 //nom_map="map3.txt";
                 y++;
-		printf("%d\n",est_a_cote(mat,&joueur));
+		        printf("%d\n",est_a_cote(mat,&joueur));
                 info=info_case(mat,y,x);
                 afficher_mat(mat);
 
@@ -92,7 +93,7 @@ void start(){
             }
             if(touche == 3 && droite(mat,&joueur)){
                 x++;
-		printf("%d\n",est_a_cote(mat,&joueur));
+		        printf("%d\n",est_a_cote(mat,&joueur));
                 info=info_case(mat,y,x);
                 afficher_mat(mat);
                 //afficher_mat(mat);
@@ -102,7 +103,7 @@ void start(){
             }
             if(touche == 4 && gauche(mat,&joueur)){
                 x--;
-		printf("%d\n",est_a_cote(mat,&joueur));
+		        printf("%d\n",est_a_cote(mat,&joueur));
                 info=info_case(mat,y,x);
                 afficher_mat(mat);
                 //afficher_map(nom_map,64,mat);

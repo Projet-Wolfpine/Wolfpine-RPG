@@ -49,3 +49,21 @@ int afficher_menu(char menu[4][30]){
   }
   return running;
 }
+
+
+//bug
+char  list[5][100];
+
+void affichage_dialogue(){
+  int i;
+  FILE * fichier_dialogue;
+  fichier_dialogue=fopen("dialogue.txt","r");
+  fscanf(fichier_dialogue,"%c", list[0]);
+  for(i=0;i<5;i++){
+    fscanf(fichier_dialogue,"%c", list[i+1]);
+  }
+  fclose(fichier_dialogue);
+  printf("\naffichage : %s\n",list[0]);
+
+}
+//bug

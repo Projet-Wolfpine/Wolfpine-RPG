@@ -54,7 +54,6 @@ void mise_struct_map(case_t map_info[Y][X], int map_int[Y][X]){
             if(map_int[i][j] == 4){
                 map_info[i][j].id = "ID_LIT1";
                 map_info[i][j].col = 1;
-
             }
             if(map_int[i][j] == 5){
                 map_info[i][j].id = "ID_LIT2";
@@ -112,7 +111,6 @@ void mise_struct_map(case_t map_info[Y][X], int map_int[Y][X]){
                 map_info[i][j].id = "ID_TABLE3";
                 map_info[i][j].col = 1;
             }
-
             if(map_int[i][j] == 19){
                 map_info[i][j].id = "ID_TABLE4";
                 map_info[i][j].col = 1;
@@ -285,7 +283,6 @@ void mise_struct_map(case_t map_info[Y][X], int map_int[Y][X]){
                 map_info[i][j].id = "ID_ARBRE2_4";
                 map_info[i][j].col = 1;
             }
-
             if(map_int[i][j] == 62){
                 map_info[i][j].id = "ID_ARBRE3_1";
                 map_info[i][j].col = 1;
