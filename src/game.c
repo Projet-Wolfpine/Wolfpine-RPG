@@ -72,6 +72,7 @@ void start(){
                 //nom_map="map2.txt";
 
                 y--;
+		printf("%d\n",est_a_cote(mat,&joueur));
                 info=info_case(mat,y,x);
                 afficher_mat(mat);
                 drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "dessus.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL ); 
@@ -81,6 +82,7 @@ void start(){
             if(touche == 2 && dessous(mat,&joueur)){
                 //nom_map="map3.txt";
                 y++;
+		printf("%d\n",est_a_cote(mat,&joueur));
                 info=info_case(mat,y,x);
                 afficher_mat(mat);
 
@@ -90,6 +92,7 @@ void start(){
             }
             if(touche == 3 && droite(mat,&joueur)){
                 x++;
+		printf("%d\n",est_a_cote(mat,&joueur));
                 info=info_case(mat,y,x);
                 afficher_mat(mat);
                 //afficher_mat(mat);
@@ -99,6 +102,7 @@ void start(){
             }
             if(touche == 4 && gauche(mat,&joueur)){
                 x--;
+		printf("%d\n",est_a_cote(mat,&joueur));
                 info=info_case(mat,y,x);
                 afficher_mat(mat);
                 //afficher_map(nom_map,64,mat);
