@@ -402,6 +402,18 @@ void mise_struct_map(case_t map_info[Y][X], int map_int[Y][X]){
                 map_info[i][j].id = "ID_MUR3";
                 map_info[i][j].col = 1;
             }
+            if(map_int[i][j] == 91){
+                map_info[i][j].id = "ID_MURDONJON1";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 92){
+                map_info[i][j].id = "ID_SORTIE5";
+                map_info[i][j].col = 0;
+            }
+            if(map_int[i][j] == 93){
+                map_info[i][j].id = "ID_SORTIE6";
+                map_info[i][j].col = 0;
+            }
         }
     }
     clock_gettime(CLOCK_REALTIME, &end2);
