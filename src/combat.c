@@ -307,7 +307,7 @@ void tour_monstre(perso_t * player, monstre_t * monstre)
 perso_t combat(perso_t * player, monstre_t * monstre){
   //Affichage spécial du combat
   while(monstre->hp > 0 && player->hp > 0){//condition de sortie à modifier avec sdl ?
-			tour_joueur(player,monstre);
+	tour_joueur(player,monstre);
     	tour_monstre(player,monstre);
   }
   
