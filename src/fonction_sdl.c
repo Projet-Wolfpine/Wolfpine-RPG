@@ -136,7 +136,7 @@ void init_affichage(){
 	renderer=SDL_CreateRenderer(fenetre, -1, SDL_RENDERER_ACCELERATED);
 	SDL_SetWindowFullscreen(fenetre, SDL_WINDOW_BORDERLESS);//SDL_WINDOW_FULLSCREEN
 	loadImages();
-	SPRITE_W = 125;
+	
 }
 
 void afficher_image_menu(SDL_PRINTF_FORMAT_STRING char *nom){
