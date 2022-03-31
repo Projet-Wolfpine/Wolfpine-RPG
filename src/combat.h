@@ -12,6 +12,8 @@ perso_t init_player();
 
 void init_monster(monstre_t * monster, char * name, int hp, int dgt, int armor);
 
+void aff_info(perso_t * player, monstre_t * monstre, char * fond, char * sprite);
+
 void tour_joueur(perso_t * player, monstre_t * monstre);
 
 void tour_monstre(perso_t * player, monstre_t * monstre);
