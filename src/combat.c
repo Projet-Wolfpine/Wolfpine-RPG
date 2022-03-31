@@ -11,7 +11,42 @@
  * \version 1.1
  * \date 24 mars 2022
  */
- 
+SDL_Color noir = {0, 0, 0};
+char hp_joueur[3];
+char hp_monstre[3];
+char inf_dgt[2];
+
+int __itoa(int num,char *result,int base,int nbrNum)
+{
+	int j=0;
+	int i=0;
+	int k=0;
+	int l=0;
+	int temp;
+	char res[32];
+	char res2[nbrNum+1];
+	char cList[]={'0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f'};
+	if(result==NULL || base>16 || base<2)return -1;
+	j=num;
+	i=31;
+	while(i>=0)
+		{
+		l=pow(base,i);
+		temp=(int)j/l;
+		res[k++]=cList[temp];
+		j-=temp*l;
+		i--;
+		}
+	i=0;
+	j=31-(nbrNum-1);
+	for(k=j;k<32;k++)res2[i++]=res[k];
+
+	res2[nbrNum]='\0';
+	//printf("res2=%s \n",res2);
+	memcpy(result,res2,sizeof(res2));
+	return 0;
+}
+
 //Faire en sorte que le joueur puisse choisir son nom (struct)
 perso_t init_player(){
 	perso_t * player = malloc(sizeof(perso_t));
