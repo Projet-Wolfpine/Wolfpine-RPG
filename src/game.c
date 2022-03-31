@@ -139,18 +139,20 @@ void start(){
                 faire_rendu();
             }
 
-            /*if(x == 10 && y == 10){
+            if(x == 10 && y == 10){
+		
+		
+   		
+   		
             	monstre_t monstre;
-            	init_monster(&monstre, "Wolfy", 5, 5 ,5);
-   	
-            	drawImage(500, 50 , "combat.png", 1920/2, 1080/2);
-            	drawText(900,75,monstre.name,25,25);
-            	//drawText(1080,75,monstre.hp,25,25);
-            	
-            	faire_rendu();
- 							
+            	init_monster(&monstre, "Wolfy", 50, 30 ,5);
+                add_spell(&joueur,0,"Foudre",75);
+                printf("%d\n", spell_existe(&joueur,0));
+                printf("%d\n", spell_existe(&joueur,1));
+
+            					
             	combat(&joueur,&monstre);
-            }*/
+            }
 
         }      
 
