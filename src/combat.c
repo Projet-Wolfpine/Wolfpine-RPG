@@ -242,39 +242,66 @@ void tour_joueur(perso_t * player, monstre_t * monstre){
   }
 }
 
-
 void tour_monstre(perso_t * player, monstre_t * monstre)
 {
-  int dgt;
-  int crit;
+  	int dgt;
+  	int crit;
   
 	srand(time(0));
-
+	drawImage(0, 0, "combat.png", 1920, 1080);
+	drawImage(700,200,"wolfy.png", 520, 520);
+	__itoa(player->hp,hp_joueur,10,3);
+	drawText(480,920,hp_joueur,30,30,noir);
+	drawText(850,150,monstre->name,40,40,noir);
+	__itoa(monstre->hp,hp_monstre,10,3);
+	drawText(1700,80,hp_monstre,30,30,noir);
+	faire_rendu();
 	
-  if(monstre->hp > 0){
-  	crit = rand() % 101;
-		printf("Crit val : %d\n",crit);
+  	if(monstre->hp > 0){
+  		crit = rand() % 101;
   	if(crit >= 95){
   		dgt = monstre->dgt - player->armor;
   		dgt += 15;
   		player->hp -= dgt;
   	}
   	else{
-		  dgt = monstre->dgt - player->armor;
-		  player->hp -= dgt;
-		}
+  		dgt = monstre->dgt - player->armor;
+		player->hp -= dgt;
+		  
+  	 	/*__itoa(player->hp,hp_joueur,10,3);
+  	  	__itoa(dgt,inf_dgt,10,3);
+  		drawText(700,350,inf_dgt,25,25,noir);
+  		faire_rendu();
+  		drawText(1200,350,"hp.",25,25,noir);
+  		faire_rendu();
+  		drawText(1300,900,hp_joueur,25,25,noir);
+  		faire_rendu();
+  		SDL_Delay(2000);*/
+  		
+
+	}
     if(player->hp < 0){
       player->hp = 0;
       printf("%s attaque ! vous prenez %d dégats    ||	HP player : %d  HP monstre : %d\n\n",monstre->name, dgt, player->hp, monstre->hp);
       printf("Oh.. vous avez perdu il me semble.\n");
-		}
- 		else{
- 			printf("%s attaque ! vous prenez %d dégats    ||	HP player : %d  HP monstre : %d\n\n",monstre->name, dgt, player->hp, monstre->hp);
- 		}
+	}
+ 	else{
+ 			/*__itoa(player->hp,hp_joueur,10,3);
+  		drawText(500,900,hp_joueur,25,25,noir);*/
+
+  		
+ 		printf("%s attaque ! vous prenez %d dégats    ||	HP player : %d  HP monstre : %d\n\n",monstre->name, dgt, player->hp, monstre->hp);
+ 	}
   }
   else{
-    printf("Bravo ! Vous avez battu le méchant monstre\n");
+	
+	
+  	drawText(625,700,monstre->name,40,40,noir);
+	drawText(900,700,"est mort !",40,40,noir);
+  	faire_rendu();
   }
+
+  		
 }
 
 perso_t combat(perso_t * player, monstre_t * monstre){
