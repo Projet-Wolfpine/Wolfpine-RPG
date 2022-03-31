@@ -9,7 +9,6 @@ SDL_Renderer*renderer;
 int nb_images=0;
 TTF_Font *police;
 
-SDL_Color jaune = {204, 154, 0};
 SDL_Texture * images[200];
 char ** noms;
 
@@ -82,8 +81,8 @@ void quitter_affichage(){
 	SDL_Quit();
 }
 
-void drawText (int x, int y, char * string, int h, int w){
-	SDL_Surface *texte = TTF_RenderUTF8_Blended(police, string, jaune);
+void drawText (int x, int y, char * string, int h, int w, SDL_Color color){
+	SDL_Surface *texte = TTF_RenderUTF8_Blended(police, string, color);
 	SDL_Texture *texte_tex = SDL_CreateTextureFromSurface(renderer, texte);
 	SDL_FreeSurface(texte); /* on a la texture, plus besoin du texte */
 	/* Position ou sera mis le texte dans la fenêtre */
@@ -124,7 +123,7 @@ void init_affichage(){
 	
 	SDL_DisplayMode dm;
 	SDL_GetCurrentDisplayMode(0, &dm);
-	police = TTF_OpenFont("./font/fast99.ttf", 35);
+	police = TTF_OpenFont("./font/times.ttf", 35);
 	SCREEN_HEIGHT = dm.h;
 	SCREEN_WIDTH = dm.w;
 	/* Création de la fenêtre */
@@ -135,7 +134,7 @@ void init_affichage(){
 													SDL_WINDOW_SHOWN);
 
 	renderer=SDL_CreateRenderer(fenetre, -1, SDL_RENDERER_ACCELERATED);
-	SDL_SetWindowFullscreen(fenetre, SDL_WINDOW_BORDERLESS);
+	SDL_SetWindowFullscreen(fenetre, SDL_WINDOW_BORDERLESS);//SDL_WINDOW_FULLSCREEN
 	loadImages();
 	SPRITE_W = 125;
 }
