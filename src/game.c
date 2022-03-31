@@ -68,15 +68,13 @@ void start(){
         if(touche != 0){
             afficher_map(nom_map,64,mat);
             info=info_case(mat,y,x);
-        
-            if(touche == 1 && dessus(mat,&joueur)){
+		 if(touche == 1 && dessus(mat,&joueur)){
                 //nom_map="map2.txt";
 
                 y--;
-                sauvegarder_jeu(mat,&joueur,nom_map);
                 info=info_case(mat,y,x);
                 afficher_mat(mat);
-                drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL ); 
+                drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "dessus.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL ); 
                 faire_rendu();
 
             }
@@ -86,7 +84,7 @@ void start(){
                 info=info_case(mat,y,x);
                 afficher_mat(mat);
 
-                drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
+                drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "dessous.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
                 faire_rendu();
                 
             }
@@ -95,7 +93,7 @@ void start(){
                 info=info_case(mat,y,x);
                 afficher_mat(mat);
                 //afficher_mat(mat);
-                drawImage(TAILLE_CASE_PXL*x, TAILLE_CASE_PXL*y , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
+                drawImage(TAILLE_CASE_PXL*x, TAILLE_CASE_PXL*y , "droite.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
                 faire_rendu();
                 
             }
@@ -104,29 +102,29 @@ void start(){
                 info=info_case(mat,y,x);
                 afficher_mat(mat);
                 //afficher_map(nom_map,64,mat);
-                drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
+                drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "gauche.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
                 faire_rendu();
                 
             }
             if(touche == 5){
                 running=0;
             }
-
-            if(touche == 6){//touche I pour inventaire
-                //à remplir
-            }
-            
-            printf("\nvaleur de strcmp = %d\n",strcmp(info,"ID_SORTIE1"));
-            if((strcmp(info,"ID_SORTIE1"))== 0 && strcmp(nom_map,"map1.txt")==0){
+            if(touche == 6 ){
+                drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
+                drawImage(1920/4 , 1080/4 , "inventory0.png", 1920/2, 1080/2 );
+                faire_rendu();
+                touche=touche_detecter();
+                while(touche != 6){
+                    touche=touche_detecter();
+                }
                 SDL_RenderClear(renderer);
-                nom_map="map2.txt";
                 afficher_map(nom_map,64,mat);
-                y = 8;
-                x = 5;
-                placer_pers(mat,y,x,&joueur);
                 drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
                 faire_rendu();
+                
             }
+        
+      
 
              if((strcmp(info,"ID_SORTIE2"))==0 && strcmp(nom_map,"map2.txt")==0){
                 SDL_RenderClear(renderer);
