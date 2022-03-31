@@ -13,7 +13,7 @@ SDL_Surface *image;
 SDL_DisplayMode dm;
 
 void setcolor(int, int);
-void drawText (int , int , char *, int, int);
+void drawText (int , int , char *, int, int, SDL_Color);
 void drawImage (int , int , char *, int, int );
 void init_affichage();
 void loadImages();
