@@ -96,6 +96,19 @@ void init_monster(monstre_t * monster, char * name, int hp, int dgt, int armor){
 	monster->armor = armor;
 }
 
+void aff_info(perso_t * player, monstre_t * monstre, char * fond, char * sprite){
+
+	drawImage(0, 0, fond, 1920, 1080);
+	drawImage(700,200,sprite, 520, 520);
+	__itoa(player->hp,hp_joueur,10,3);
+	drawText(480,920,hp_joueur,30,30,noir);
+	drawText(850,150,monstre->name,40,40,noir);
+	__itoa(monstre->hp,hp_monstre,10,3);
+	drawText(1700,80,hp_monstre,30,30,noir);
+	faire_rendu();
+
+}
+
 void tour_joueur(perso_t * player, monstre_t * monstre){
 	int choix = 0; 
 	int spell_num = 0;
