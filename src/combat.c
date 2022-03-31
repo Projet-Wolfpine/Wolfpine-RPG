@@ -1,7 +1,12 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include<time.h>
+#include <time.h>
+#include <SDL2/SDL_ttf.h>
+#include <SDL2/SDL_image.h>
+
+#include <math.h>
+#include "fonction_sdl.h"
 #include "combat.h"
 
 /**
