@@ -27,4 +27,6 @@ int dessus(case_t mat[Y][X], perso_t *player);
 
 int dessous(case_t mat[Y][X], perso_t *player);
 
+int est_a_cote(case_t mat[Y][X], perso_t *perso);
+
 #endif

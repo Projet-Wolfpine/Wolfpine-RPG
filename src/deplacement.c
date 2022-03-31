@@ -37,6 +37,9 @@ void contour_mat(case_t mat[Y][X]){
 void afficher_mat(case_t mat[Y][X]){
   for(int i=0;i<Y;i++){
     for(int j=0; j<X; j++){
+      if(mat[i][j].col== 3){//pnj
+        printf("A");
+      }
       if(mat[i][j].col== 2){//personnage
         printf("P");
       }
@@ -93,4 +96,21 @@ int dessus(case_t mat[Y][X], perso_t *player){
 
 int dessous(case_t mat[Y][X], perso_t *player){
   return(deplacer_pers(mat,player->anc_coord_y+1,player->anc_coord_x,player));
+}
+
+int est_a_cote(case_t mat[Y][X], perso_t *perso){ //pour les pnj 
+   if(mat[perso->anc_coord_y+1][perso->anc_coord_x].col == 3){
+       return 1;
+   }
+   if(mat[perso->anc_coord_y-1][perso->anc_coord_x].col == 3){
+       return 1;
+   }
+   if(mat[perso->anc_coord_y][perso->anc_coord_x+1].col == 3){
+       return 1;
+   }
+   if(mat[perso->anc_coord_y][perso->anc_coord_x-1].col == 3){
+       return 1;
+   }else{
+        return 0;
+    }
 }
