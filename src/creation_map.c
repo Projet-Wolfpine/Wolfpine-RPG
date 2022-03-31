@@ -1,9 +1,15 @@
 #include "deplacement.h"
 #include "creation_map.h"
 #include "fonction_sdl.h"
+#include <sys/time.h>
+#include <time.h>
 
 case_t map_info[Y][X];
 int map_int[Y][X];
+
+float time_diff2(struct timespec *start, struct timespec *end){
+    return (end->tv_sec - start->tv_sec) + 1e-9*(end->tv_nsec - start->tv_nsec);
+}
 
 
   /* la fonction prend la matrice avec les entiers afin de  remplir un tableau
@@ -27,6 +33,9 @@ void lecture_fichier_map(char nom_fichier[20],int map_int[Y][X]){
 }
 
 void mise_struct_map(case_t map_info[Y][X], int map_int[Y][X]){
+    struct timespec start2;
+    struct timespec end2;
+    clock_gettime(CLOCK_REALTIME, &start2);
     int i, j;
     for(i=0;i<Y;i++){
         for(j=0;j<X;j++){
@@ -43,13 +52,13 @@ void mise_struct_map(case_t map_info[Y][X], int map_int[Y][X]){
                 map_info[i][j].col = 0;
             }
             if(map_int[i][j] == 4){
-                map_info[i][j].id = "ID_LIT2";
+                map_info[i][j].id = "ID_LIT1";
                 map_info[i][j].col = 1;
 
             }
             if(map_int[i][j] == 5){
-                map_info[i][j].id = "ID_LIT1";
-                map_info[i][j].col = 1;
+                map_info[i][j].id = "ID_LIT2";
+                map_info[i][j].col = 0;
             }
             if(map_int[i][j] == 6){
               map_info[i][j].id = "ID_TAPIS1";
@@ -89,7 +98,7 @@ void mise_struct_map(case_t map_info[Y][X], int map_int[Y][X]){
             }
             if(map_int[i][j] == 15){
                 map_info[i][j].id = "ID_TABOURET";
-                map_info[i][j].col = 1;
+                map_info[i][j].col = 0;
             }
             if(map_int[i][j] == 16){
                 map_info[i][j].id = "ID_TABLE1";
@@ -214,7 +223,7 @@ void mise_struct_map(case_t map_info[Y][X], int map_int[Y][X]){
             }
             if(map_int[i][j] == 46){
                 map_info[i][j].id = "ID_SORTIE3";
-                map_info[i][j].col = 1;
+                map_info[i][j].col = 0;
             }
             if(map_int[i][j] == 47){
                 map_info[i][j].id = "ID_CHEMINBLOC1";
@@ -237,8 +246,8 @@ void mise_struct_map(case_t map_info[Y][X], int map_int[Y][X]){
                 map_info[i][j].col = 1;
             }
             if(map_int[i][j] == 52){
-                map_info[i][j].id = "ID_MUR3";
-                map_info[i][j].col = 1;
+              map_info[i][j].id = "ID_SOL2";
+              map_info[i][j].col = 0;
             }
             if(map_int[i][j] == 53){
                 map_info[i][j].id = "ID_HERBE2";
@@ -337,7 +346,6 @@ void mise_struct_map(case_t map_info[Y][X], int map_int[Y][X]){
                 map_info[i][j].id = "ID_GROTTE1";
                 map_info[i][j].col = 1;
             }
-
             if(map_int[i][j] == 77){
                 map_info[i][j].id = "ID_GROTTE2";
                 map_info[i][j].col = 1;
@@ -391,11 +399,13 @@ void mise_struct_map(case_t map_info[Y][X], int map_int[Y][X]){
                 map_info[i][j].col = 1;
             }
             if(map_int[i][j] == 90){
-                map_info[i][j].id = "ID_SOL2";
+                map_info[i][j].id = "ID_MUR3";
                 map_info[i][j].col = 1;
             }
         }
     }
+    clock_gettime(CLOCK_REALTIME, &end2);
+     printf("time fonction %0.8f sec\n",time_diff2(&start2, &end2));
 }
 
 void afficher_map(char * nom_map,int taille, case_t map_info[Y][X]){
