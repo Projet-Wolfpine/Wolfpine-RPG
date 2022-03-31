@@ -7,7 +7,7 @@ SDL_DIR=${HOME}/SDL2
 SDLLIB_DIR=${SDL_DIR}/lib
 SDLINC_DIR=${SDL_DIR}/include
 SDL_DIR=${HOME}/SDL2
-LIBS=-L${SDLLIB_DIR} -lSDL2 -lSDL2_ttf -lSDL2_image
+LIBS=-L${SDLLIB_DIR} -lSDL2 -lSDL2_ttf -lSDL2_image -lm
 INCLUDES=-I${SDLINC_DIR} 
 
 include=include/
