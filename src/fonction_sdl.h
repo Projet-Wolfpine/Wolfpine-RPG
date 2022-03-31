@@ -4,7 +4,6 @@
 
 int SCREEN_HEIGHT;
 int SCREEN_WIDTH;
-int SPRITE_W;
 
 void * fenetre;
 SDL_Window*pWindow;
