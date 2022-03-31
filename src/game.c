@@ -127,7 +127,7 @@ void start(){
                 drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
                 faire_rendu();
             }
-    
+
              if((strcmp(info,"ID_SORTIE2"))==0 && strcmp(nom_map,"map2.txt")==0){
                 SDL_RenderClear(renderer);
                 nom_map="map1.txt";
@@ -138,6 +138,46 @@ void start(){
                 drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
                 faire_rendu();
             }
+            if((strcmp(info,"ID_SORTIE3"))==0 && strcmp(nom_map,"map2.txt")==0){
+               SDL_RenderClear(renderer);
+               nom_map="map3.txt";
+               afficher_map(nom_map,64,mat);
+               y = 15;
+               x = 15;
+               placer_pers(mat,y,x,&joueur);
+               drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
+               faire_rendu();
+           }
+           if((strcmp(info,"ID_SORTIE4"))==0 && strcmp(nom_map,"map3.txt")==0){
+              SDL_RenderClear(renderer);
+              nom_map="map2.txt";
+              afficher_map(nom_map,64,mat);
+              y = 0;
+              x = 15;
+              placer_pers(mat,y,x,&joueur);
+              drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
+              faire_rendu();
+          }
+          if((strcmp(info,"ID_ENTREEGROTTE1"))==0 && strcmp(nom_map,"map3.txt")==0){
+             SDL_RenderClear(renderer);
+             nom_map="donjon1.txt";
+             afficher_map(nom_map,64,mat);
+             y = 15;
+             x = 16;
+             placer_pers(mat,y,x,&joueur);
+             drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
+             faire_rendu();
+         }
+         if((strcmp(info,"ID_SORTIE5"))==0 && strcmp(nom_map,"donjon1.txt")==0){
+            SDL_RenderClear(renderer);
+            nom_map="map3.txt";
+            afficher_map(nom_map,64,mat);
+            y = 6;
+            x = 15;
+            placer_pers(mat,y,x,&joueur);
+            drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
+            faire_rendu();
+        }
 
             if(x == 10 && y == 10){
 		
