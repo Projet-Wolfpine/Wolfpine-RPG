@@ -127,9 +127,19 @@ void start(){
                 faire_rendu();
                 
             }
+		
+            printf("\nvaleur de strcmp = %d\n",strcmp(info,"ID_SORTIE1"));
+            if((strcmp(info,"ID_SORTIE1"))== 0 && strcmp(nom_map,"map1.txt")==0){
+                SDL_RenderClear(renderer);
+                nom_map="map2.txt";
+                afficher_map(nom_map,64,mat);
+                y = 8;
+                x = 5;
+                placer_pers(mat,y,x,&joueur);
+                drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
+                faire_rendu();
+            }
         
-      
-
              if((strcmp(info,"ID_SORTIE2"))==0 && strcmp(nom_map,"map2.txt")==0){
                 SDL_RenderClear(renderer);
                 nom_map="map1.txt";
