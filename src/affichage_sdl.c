@@ -3,7 +3,7 @@
 #include <SDL2/SDL.h>
 
 TTF_Font *police;
-
+SDL_Color jaune = {204, 154, 0};
 
 int afficher_menu(char menu[4][30]){
   //afficher_image_menu("images/menu.jpeg");
@@ -15,12 +15,12 @@ int afficher_menu(char menu[4][30]){
   text = "P r o j e t - W O L F P I N E";
   int w;
 	TTF_SizeText(police,text,&w,NULL);
-  drawText((largeur-w)/2, 40, text, 45, 15);
+  drawText((largeur-w)/2, 40, text, 45, 15, jaune);
   
   
   for(int i = 0, y=200; i<4; i++, y+=150){
     drawImage( 700, y, "button.png", 475, 130);
-    drawText(800, y+45, menu[i], 25, 12);
+    drawText(800, y+45, menu[i], 25, 12, jaune);
   }
   faire_rendu();
   SDL_Event event;
@@ -49,4 +49,3 @@ int afficher_menu(char menu[4][30]){
   }
   return running;
 }
-
