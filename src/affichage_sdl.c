@@ -60,11 +60,13 @@ void affichage_dialogue(){
   FILE * fichier_dialogue;
   fichier_dialogue=fopen("dialogue.txt","r");
   for(i=0;i<5;i++){
+    fseek(fichier_dialogue, +5, SEEK_CUR);
     fgets(list[i], TAILLE_MAX, fichier_dialogue); 
   }
   fclose(fichier_dialogue);
 
   printf("\naffichage : %s\n",list[0]);
+  printf("\naffichage : %s\n",list[1]);
 
 }
 //bug
