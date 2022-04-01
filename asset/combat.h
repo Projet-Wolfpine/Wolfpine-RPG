@@ -4,11 +4,14 @@
 #include "spells.h"
 #include "inventory.h"
 #include "deplacement.h"
+
 //#include "dungeon.h"
 
 
 
 perso_t init_player();
+
+void free_player(perso_t * player);
 
 void init_monster(monstre_t * monster, char * name, int hp, int dgt, int armor);
 

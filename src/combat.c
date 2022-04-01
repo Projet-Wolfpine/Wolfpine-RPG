@@ -91,9 +91,11 @@ perso_t init_player(){
   return *player;
 }
 
-void init_monster(monstre_t * monster, char * name, int hp, int dgt, int armor){
+void init_monster(monstre_t * monster, char * name, char * sprite, int hp, int dgt, int armor){
 	monster->name =  malloc(sizeof(char *));
+	monster->sprite =  malloc(sizeof(char *));
 	strcpy(monster->name,name);
+	strcpy(monster->sprite,sprite);
 	monster->hp = hp;
 	monster->dgt = dgt;
 	monster->armor = armor;
@@ -166,7 +168,7 @@ void tour_joueur(perso_t * player, monstre_t * monstre){
 
 		SDL_GetMouseState(&souris_x, &souris_y);
 		while(combat == -1 && monstre->hp > 0){
-			aff_info(player,monstre, "combat.png", "wolfy.png");
+			aff_info(player,monstre, "combat.png", monstre->sprite);
 			
 		 	if (SDL_WaitEvent(&event) != 0) {
 				switch(event.type){
@@ -180,12 +182,12 @@ void tour_joueur(perso_t * player, monstre_t * monstre){
 							monstre->hp = 0;
 						}
 
-						aff_info(player,monstre, "combat.png", "wolfy.png");
+						aff_info(player,monstre, "combat.png", monstre->sprite);
 						combat = 0; break;
 					}
 
 					if((souris_x >= 1020 && souris_x <=1350) && (souris_y >= 900 && souris_y <=960)){
-						aff_info(player,monstre, "spells.png", "wolfy.png");
+						aff_info(player,monstre, "spells.png", monstre->sprite);
 						
 						while(spell_choose == -1){
 							if (SDL_WaitEvent(&event) != 0) {
@@ -209,7 +211,7 @@ void tour_joueur(perso_t * player, monstre_t * monstre){
 											faire_rendu();
 											SDL_Delay(500);
 											
-											aff_info(player,monstre, "combat.png", "wolfy.png");
+											aff_info(player,monstre, "combat.png", monstre->sprite);
 
 											endAudio();
 										
@@ -226,7 +228,7 @@ void tour_joueur(perso_t * player, monstre_t * monstre){
 												monstre->hp = 0;
 											}
 
-											aff_info(player,monstre, "combat.png", "wolfy.png");
+											aff_info(player,monstre, "combat.png", monstre->sprite);
 											spell_choose = 0;
 										}
 									}
@@ -239,7 +241,7 @@ void tour_joueur(perso_t * player, monstre_t * monstre){
 												monstre->hp = 0;
 											}
 
-											aff_info(player,monstre, "combat.png", "wolfy.png");
+											aff_info(player,monstre, "combat.png", monstre->sprite);
 											spell_choose = 0;
 										}
 									}
@@ -256,7 +258,7 @@ void tour_joueur(perso_t * player, monstre_t * monstre){
 					}
 
 					if((souris_x >= 1380 && souris_x <=1640) && (souris_y >= 900 && souris_y <=950)){
-						aff_info(player,monstre, "heal.png", "wolfy.png");
+						aff_info(player,monstre, "heal.png", monstre->sprite);
 						while(heal == -1){
 							if (SDL_WaitEvent(&event) != 0) {
 								switch(event.type){
@@ -295,7 +297,7 @@ void tour_monstre(perso_t * player, monstre_t * monstre)
   	int crit;
   
 	srand(time(0));
-	aff_info(player,monstre, "combat.png", "wolfy.png");
+	aff_info(player,monstre, "combat.png", monstre->sprite);
 	
   	if(monstre->hp > 0){
   		crit = rand() % 101;
@@ -335,10 +337,9 @@ void tour_monstre(perso_t * player, monstre_t * monstre)
 perso_t combat(perso_t * player, monstre_t * monstre){
   //Affichage spécial du combat
   while(monstre->hp > 0 && player->hp > 0){//condition de sortie à modifier avec sdl ?
-		tour_joueur(player,monstre);
+	tour_joueur(player,monstre);
     	tour_monstre(player,monstre);
   }
   
   return(*player);
 }
-

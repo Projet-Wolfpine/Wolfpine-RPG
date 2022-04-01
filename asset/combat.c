@@ -48,6 +48,28 @@ perso_t init_player(){
   return *player;
 }
 
+void free_player(perso_t * player){
+	for (int i = 0; i < NB_SPELLS; i++){
+		
+		free(player->spell[i]);
+		player->spell[i] = NULL;
+		
+	} 
+	for (int j = 0; j < TAILLE_INV; j++){
+		
+		free(player->objets[j]);
+		player->objets[j] = NULL;
+		
+	} 
+	
+	free(player->name);
+	player->name = NULL;
+	
+	free(player);
+	player = NULL;
+	
+}
+
 void init_monster(monstre_t * monster, char * name, int hp, int dgt, int armor){
 	monster->name =  malloc(sizeof(char *));
 	strcpy(monster->name,name);

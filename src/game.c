@@ -211,9 +211,14 @@ void start(){
           drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
           faire_rendu();
       }
+<<<<<<< HEAD
       if(touche == 7 && est_a_cote(mat, &joueur)){
           affichage_dialogue("PNJ02");
       }
+=======
+ 	add_item(&joueur, 0, "Epee d'Erastre", "Ceci est une fraude", 0, 69, 0);
+        
+>>>>>>> c0b677663c2d5ac6907c56be7e49389cf86ea97c
 
             if(x == 10 && y == 10){
 		
@@ -221,17 +226,17 @@ void start(){
    		
    		
            	monstre_t monstre;
-            	init_monster(&monstre, "Wolfy", 50, 30 ,5);
+            	init_monster(&monstre, "Wolfy", "wolfy.png", 50, 30 ,5);
                 add_spell(&joueur,0,"Foudre",75);
                 add_spell(&joueur,1,"Marrée",150);
                 add_spell(&joueur,2,"Brasier",150);
                 add_item(&joueur, 3, "Potion de soin", "caca", 50, 0, 0);
+                
 
             					
             	combat(&joueur,&monstre);
             }
-
-        }      
+	}
 
     }
     Menu();

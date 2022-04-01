@@ -59,7 +59,8 @@ struct perso_s{
  * \struct monstre_t structures.h "Monstre"
  */
 struct monstre_s{//a voir pour remplacer voir suprimer cette structure et utilisé la meme que pour les personages donc la renommer entité
-	char * name;
+  char * name;
+  char * sprite;
   int hp;
   int dgt;
   int armor;
