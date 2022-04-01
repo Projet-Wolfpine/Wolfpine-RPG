@@ -191,6 +191,26 @@ void start(){
             drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
             faire_rendu();
         }
+	if((strcmp(info,"ID_SORTIE6"))==0 && strcmp(nom_map,"donjon1.txt")==0){
+           SDL_RenderClear(renderer);
+           nom_map="donjon2.txt";
+           afficher_map(nom_map,64,mat);
+           y = 3;
+           x = 0;
+           placer_pers(mat,y,x,&joueur);
+           drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
+           faire_rendu();
+       }
+       if((strcmp(info,"ID_SORTIE7"))==0 && strcmp(nom_map,"donjon2.txt")==0){
+          SDL_RenderClear(renderer);
+          nom_map="donjon1.txt";
+          afficher_map(nom_map,64,mat);
+          y = 3;
+          x = 29;
+          placer_pers(mat,y,x,&joueur);
+          drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
+          faire_rendu();
+      }
 
             if(x == 10 && y == 10){
 		
