@@ -9,6 +9,7 @@
 #include "creation_map.h"
 #include "combat.h"
 #include "string.h"
+#include "time.h"
 
 #define TAILLE_CASE_PXL 64
 
@@ -54,6 +55,8 @@ void start(){
     SDL_RenderClear(renderer);
     int touche=-1;
     int running = 1;
+    int random;
+    srand(time(0));
     case_t mat[Y][X];
     perso_t joueur;
     joueur = init_player();
