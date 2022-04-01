@@ -52,29 +52,24 @@ int afficher_menu(char menu[4][30]){
 }
 
 
-//bug
 
 #define TAILLE_MAX 1000 
 
 void affichage_dialogue(char * id_PNJ){
-  char  list[5][100];
+  char  list[5][500];
   char id_perso[5];
-  int i;
+  int i,j=0;
   FILE * fichier_dialogue;
   fichier_dialogue=fopen("dialogue.txt","r");
-  for(i=0;i<5;i++){
+  for(i=0;i<7;i++){
     fscanf(fichier_dialogue, "%s", id_perso);
-    printf("\naffichage id : %s \n",id_perso);
-      if(strcmp(id_PNJ,id_perso) == 0){
-        printf("\affichage 1 : %s\n",id_perso);
-        fseek(fichier_dialogue, +6, SEEK_SET);
-        fgets(list[0], TAILLE_MAX, fichier_dialogue);
-      }
-      fscanf(fichier_dialogue, "%*[^\n]");
+    if(strcmp(id_PNJ,id_perso) == 0){
+          printf("\naffichage 1 : %s\n",id_perso);
+          fgets(list[0], TAILLE_MAX, fichier_dialogue);
+    }
+    fscanf(fichier_dialogue, "%*[^\n]");
   }
   fclose(fichier_dialogue);
- 
-  printf("\naffichage 2: %s\n",list[0]);
-
+  printf("\naffichage 4: %s\n",list[0]);
 }
-//bug
+
