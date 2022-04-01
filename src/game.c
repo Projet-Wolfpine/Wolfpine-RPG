@@ -81,14 +81,12 @@ void start(){
                 afficher_mat(mat);
                 drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "dessus.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL ); 
                 faire_rendu();
-		if(!strcmp(info,"ID_SOLMONSTRE1")){
+		        if(!strcmp(info,"ID_SOLMONSTRE1")){
                 	//srand(time(0));
                 	random=rand() % 101;
-               		
-                	if(random > 97){
+               		if(random > 97){
                 		monstre_t monstre;
-            			init_monster(&monstre, "Wolfy", "wolfy.png", 50, 30 ,5);
-          			
+            			init_monster(&monstre, "Sanik", "sanic.png", 50, 30 ,5);
             			combat(&joueur,&monstre);
                 	}
                 }
@@ -104,13 +102,13 @@ void start(){
                 drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "dessous.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
                 faire_rendu();
 		  
-		 if(!strcmp(info,"ID_SOLMONSTRE1")){
+		        if(!strcmp(info,"ID_SOLMONSTRE1")){
                 	//srand(time(0));
                 	random=rand() % 101;
                		
                 	if(random > 97){
                 		monstre_t monstre;
-            			init_monster(&monstre, "Wolfy", "wolfy.png", 50, 30 ,5);
+            			init_monster(&monstre, "Sanik", "sanic.png", 50, 30 ,5);
           			
             			combat(&joueur,&monstre);
                 	}
@@ -126,13 +124,13 @@ void start(){
                 drawImage(TAILLE_CASE_PXL*x, TAILLE_CASE_PXL*y , "droite.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
                 faire_rendu();
 		    
-		 if(!strcmp(info,"ID_SOLMONSTRE1")){
+		         if(!strcmp(info,"ID_SOLMONSTRE1")){
                 	//srand(time(0));
                 	random=rand() % 101;
                		
                 	if(random > 97){
                 		monstre_t monstre;
-            			init_monster(&monstre, "Wolfy", "wolfy.png", 50, 30 ,5);
+            			init_monster(&monstre, "Sanik", "sanic.png", 50, 30 ,5);
           			
             			combat(&joueur,&monstre);
                 	}
@@ -148,13 +146,13 @@ void start(){
                 drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "gauche.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
                 faire_rendu();
 		    
-		 if(!strcmp(info,"ID_SOLMONSTRE1")){
+		         if(!strcmp(info,"ID_SOLMONSTRE1")){
                 	//srand(time(0));
                 	random=rand() % 101;
                		
                 	if(random > 97){
                 		monstre_t monstre;
-            			init_monster(&monstre, "Wolfy", "wolfy.png", 50, 30 ,5);
+            			init_monster(&monstre, "Sanik", "sanic.png", 50, 30 ,5);
           			
             			combat(&joueur,&monstre);
                 	}
@@ -191,7 +189,7 @@ void start(){
                 faire_rendu();
             }
         
-             if((strcmp(info,"ID_SORTIE2"))==0 && strcmp(nom_map,"map2.txt")==0){
+            if((strcmp(info,"ID_SORTIE2"))==0 && strcmp(nom_map,"map2.txt")==0){
                 SDL_RenderClear(renderer);
                 nom_map="map1.txt";
                 afficher_map(nom_map,64,mat);
@@ -210,8 +208,8 @@ void start(){
                placer_pers(mat,y,x,&joueur);
                drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
                faire_rendu();
-           }
-           if((strcmp(info,"ID_SORTIE4"))==0 && strcmp(nom_map,"map3.txt")==0){
+            }
+            if((strcmp(info,"ID_SORTIE4"))==0 && strcmp(nom_map,"map3.txt")==0){
               SDL_RenderClear(renderer);
               nom_map="map2.txt";
               afficher_map(nom_map,64,mat);
@@ -220,8 +218,8 @@ void start(){
               placer_pers(mat,y,x,&joueur);
               drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
               faire_rendu();
-          }
-          if((strcmp(info,"ID_ENTREEGROTTE1"))==0 && strcmp(nom_map,"map3.txt")==0){
+            }
+            if((strcmp(info,"ID_ENTREEGROTTE1"))==0 && strcmp(nom_map,"map3.txt")==0){
              SDL_RenderClear(renderer);
              nom_map="donjon1.txt";
              afficher_map(nom_map,64,mat);
@@ -230,163 +228,71 @@ void start(){
              placer_pers(mat,y,x,&joueur);
              drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
              faire_rendu();
-         }
-         if((strcmp(info,"ID_SORTIE5"))==0 && strcmp(nom_map,"donjon1.txt")==0){
+            }
+            if((strcmp(info,"ID_SORTIE5"))==0 && strcmp(nom_map,"donjon1.txt")==0){
+              SDL_RenderClear(renderer);
+              nom_map="map3.txt";
+              afficher_map(nom_map,64,mat);
+               y = 6;
+               x = 15;
+                placer_pers(mat,y,x,&joueur);
+                drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
+               faire_rendu();
+            }
+	        if((strcmp(info,"ID_SORTIE6"))==0 && strcmp(nom_map,"donjon1.txt")==0){
+                SDL_RenderClear(renderer);
+                nom_map="donjon2.txt";
+                  afficher_map(nom_map,64,mat);
+                  y = 3;
+                  x = 0;
+                  placer_pers(mat,y,x,&joueur);
+                   drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
+                   faire_rendu();
+            }
+            if((strcmp(info,"ID_SORTIE7"))==0 && strcmp(nom_map,"donjon2.txt")==0){
+             SDL_RenderClear(renderer);
+             nom_map="donjon1.txt";
+              afficher_map(nom_map,64,mat);
+              y = 3;
+              x = 29;
+              placer_pers(mat,y,x,&joueur);
+              drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
+              faire_rendu();
+            }
+	        if((strcmp(info,"ID_SORTIE8"))==0 && strcmp(nom_map,"donjon2.txt")==0){
+              SDL_RenderClear(renderer);
+              nom_map="donjon3.txt";
+             afficher_map(nom_map,64,mat);
+              y = 4;
+               x = 0;
+           placer_pers(mat,y,x,&joueur);
+                 drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
+             faire_rendu();
+            }
+            if((strcmp(info,"ID_SORTIE9"))==0 && strcmp(nom_map,"donjon3.txt")==0){
             SDL_RenderClear(renderer);
-            nom_map="map3.txt";
+            nom_map="donjon2.txt";
             afficher_map(nom_map,64,mat);
-            y = 6;
-            x = 15;
+            y = 7;
+            x = 29;
             placer_pers(mat,y,x,&joueur);
             drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
             faire_rendu();
-        }
-	if((strcmp(info,"ID_SORTIE6"))==0 && strcmp(nom_map,"donjon1.txt")==0){
-           SDL_RenderClear(renderer);
-           nom_map="donjon2.txt";
-           afficher_map(nom_map,64,mat);
-           y = 3;
-           x = 0;
-           placer_pers(mat,y,x,&joueur);
-           drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
-           faire_rendu();
-       }
-       if((strcmp(info,"ID_SORTIE7"))==0 && strcmp(nom_map,"donjon2.txt")==0){
-          SDL_RenderClear(renderer);
-          nom_map="donjon1.txt";
-          afficher_map(nom_map,64,mat);
-          y = 3;
-          x = 29;
-          placer_pers(mat,y,x,&joueur);
-          drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
-          faire_rendu();
-       }
-	if((strcmp(info,"ID_SORTIE8"))==0 && strcmp(nom_map,"donjon2.txt")==0){
-         SDL_RenderClear(renderer);
-         nom_map="donjon3.txt";
-         afficher_map(nom_map,64,mat);
-         y = 4;
-         x = 0;
-         placer_pers(mat,y,x,&joueur);
-         drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
-         faire_rendu();
-     }
-     if((strcmp(info,"ID_SORTIE9"))==0 && strcmp(nom_map,"donjon3.txt")==0){
-        SDL_RenderClear(renderer);
-        nom_map="donjon2.txt";
-        afficher_map(nom_map,64,mat);
-        y = 7;
-        x = 29;
-        placer_pers(mat,y,x,&joueur);
-        drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
-        faire_rendu();
-    }
-	
-		
-      if(touche == 7 && est_a_cote(mat, &joueur)){
-          affichage_dialogue("PNJ02");
-      }
- 	add_item(&joueur, 0, "Epee d'Erastre", "Ceci est une fraude", 0, 69, 0);
-        
-	
-	      /*COMBAT DONJON*/
-       /*if(touche == 1 && dessus(mat,&joueur) && !strcmp(mat[x][y].id,"ID_SOLMONSTRE1")){
-                y--;
-		        printf("%d\n",est_a_cote(mat,&joueur));
-                info=info_case(mat,y,x);
-                afficher_mat(mat);
-                drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "dessus.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL ); 
-                faire_rendu();
-                
-                random=rand()+101;
-                printf("%d\n",random);
-                if(random > 80){
-                	monstre_t monstre;
-            			init_monster(&monstre, "Wolfy", "wolfy.png", 50, 30 ,5);
-          			
-            			combat(&joueur,&monstre);
-                }
-                
-                
-
             }
-            if(touche == 2 && dessous(mat,&joueur) && !strcmp(mat[x][y].id,"ID_SOLMONSTRE1")){
-                //nom_map="map3.txt";
-                y++;
-		        printf("%d\n",est_a_cote(mat,&joueur));
-                info=info_case(mat,y,x);
-                afficher_mat(mat);
-
-                drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "dessous.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
-                faire_rendu();
-                
-                random=rand()+101;
-                printf("%d\n",random);
-                if(random > 80){
-                	monstre_t monstre;
-            			init_monster(&monstre, "Wolfy", "wolfy.png", 50, 30 ,5);
-          			
-            			combat(&joueur,&monstre);
-                }
-                
+            if(touche == 7 && est_a_cote(mat, &joueur)){
+                affichage_dialogue("PNJ02");
             }
-            
-            if(touche == 3 && droite(mat,&joueur) && !strcmp(mat[x][y].id,"ID_SOLMONSTRE1")){
-                x++;
-		        printf("%d\n",est_a_cote(mat,&joueur));
-                info=info_case(mat,y,x);
-                afficher_mat(mat);
-                //afficher_mat(mat);
-                drawImage(TAILLE_CASE_PXL*x, TAILLE_CASE_PXL*y , "droite.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
-                faire_rendu();
-                
-                random=rand()+101;
-                printf("%d\n",random);
-                if(random > 80){
-                	monstre_t monstre;
-            			init_monster(&monstre, "Wolfy", "wolfy.png", 50, 30 ,5);
-          			
-            			combat(&joueur,&monstre);
-                }
-                
-            }
-            if(touche == 4 && gauche(mat,&joueur) && !strcmp(mat[x][y].id,"ID_SOLMONSTRE1")){
-                x--;
-		        printf("%d\n",est_a_cote(mat,&joueur));
-                info=info_case(mat,y,x);
-                afficher_mat(mat);
-                //afficher_map(nom_map,64,mat);
-                drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "gauche.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
-                faire_rendu();
-                
-                random=rand()+101;
-                printf("%d\n",random);
-                if(random > 80){
-                	monstre_t monstre;
-            			init_monster(&monstre, "Wolfy", "wolfy.png", 50, 30 ,5);
-          			
-            			combat(&joueur,&monstre);
-                }
-                
-            }*/
-
+ 	        add_item(&joueur, 0, "Epee d'Erastre", "Ceci est une fraude", 0, 69, 0);
             if(x == 10 && y == 10){
-		
-		
-   		
-   		
-           	monstre_t monstre;
+			    monstre_t monstre;
             	init_monster(&monstre, "Wolfy", "wolfy.png", 50, 30 ,5);
                 add_spell(&joueur,0,"Foudre",75);
                 add_spell(&joueur,1,"Marrée",150);
                 add_spell(&joueur,2,"Brasier",150);
-                add_item(&joueur, 3, "Potion de soin", "caca", 50, 0, 0);
-                
-
-            					
+                add_item(&joueur, 3, "Potion de soin", "caca", 50, 0, 0);				
             	combat(&joueur,&monstre);
             }
-	}
+	    }   
 
     }
     Menu();

@@ -575,10 +575,15 @@ void mise_struct_map(case_t map_info[Y][X], int map_int[Y][X]){
                 map_info[i][j].id = "PNJ_EPEE";
                 map_info[i][j].col = 3;
             }
+            if(map_int[i][j] == 902){
+                map_info[i][j].id = "PNJ02";
+                map_info[i][j].col = 3;
+            }
             if(map_int[i][j] == 911){
                 map_info[i][j].id = "PNJ_WOLFY";
                 map_info[i][j].col = 3;
             }
+
         }
     }
     clock_gettime(CLOCK_REALTIME, &end2);
