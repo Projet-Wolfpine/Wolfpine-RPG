@@ -1,5 +1,6 @@
 #include "affichage_sdl.h"
 #include "fonction_sdl.h"
+#include "string.h"
 #include <SDL2/SDL.h>
 
 TTF_Font *police;
@@ -52,21 +53,28 @@ int afficher_menu(char menu[4][30]){
 
 
 //bug
-char  list[5][100];
+
 #define TAILLE_MAX 1000 
 
-void affichage_dialogue(){
+void affichage_dialogue(char * id_PNJ){
+  char  list[5][100];
+  char id_perso[5];
   int i;
   FILE * fichier_dialogue;
   fichier_dialogue=fopen("dialogue.txt","r");
   for(i=0;i<5;i++){
-    fseek(fichier_dialogue, +5, SEEK_CUR);
-    fgets(list[i], TAILLE_MAX, fichier_dialogue); 
+    fscanf(fichier_dialogue, "%s", id_perso);
+    printf("\naffichage id : %s \n",id_perso);
+      if(strcmp(id_PNJ,id_perso) == 0){
+        printf("\affichage 1 : %s\n",id_perso);
+        fseek(fichier_dialogue, +6, SEEK_SET);
+        fgets(list[0], TAILLE_MAX, fichier_dialogue);
+      }
+      fscanf(fichier_dialogue, "%*[^\n]");
   }
   fclose(fichier_dialogue);
-
-  printf("\naffichage : %s\n",list[0]);
-  printf("\naffichage : %s\n",list[1]);
+ 
+  printf("\naffichage 2: %s\n",list[0]);
 
 }
 //bug

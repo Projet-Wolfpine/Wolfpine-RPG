@@ -64,7 +64,7 @@ void start(){
     afficher_map(nom_map,64,mat);//SDL
     drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL ); 
     faire_rendu();
-    affichage_dialogue();
+    
     while(running == 1){
         touche=touche_detecter();
         if(touche != 0){
@@ -210,6 +210,9 @@ void start(){
           placer_pers(mat,y,x,&joueur);
           drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
           faire_rendu();
+      }
+      if(touche == 7 && est_a_cote(mat, &joueur)){
+          affichage_dialogue("PNJ02");
       }
 
             if(x == 10 && y == 10){

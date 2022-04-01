@@ -26,6 +26,9 @@ int touche_detecter(){
                  if ( event.key.keysym.sym == SDLK_i){
                     return 6;
                 }
+                if ( event.key.keysym.sym == SDLK_a){
+                    return 7;
+                }
             break;
         }
     }
