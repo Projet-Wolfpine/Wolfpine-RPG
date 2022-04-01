@@ -15,8 +15,8 @@ src=src/
 prog=bin/prog 
 obj=obj/
 ncurse=-lncurses
-fichierc=main.c menu_principal.c affichage_sdl.c fonction_sdl.c game.c gestion_deplacement_sdl.c creation_map.c combat.c deplacement.c inventory.c spells.c
-fichierh=menu_principal.h affichage_sdl.h fonction_sdl.h game.h gestion_deplacement_sdl.h creation_map.h structures.h combat.h combat.h deplacement.h inventory.h spells.h
+fichierc=main.c menu_principal.c affichage_sdl.c fonction_sdl.c game.c gestion_deplacement_sdl.c creation_map.c combat.c deplacement.c inventory.c spells.c audio.c
+fichierh=menu_principal.h affichage_sdl.h fonction_sdl.h game.h gestion_deplacement_sdl.h creation_map.h structures.h combat.h combat.h deplacement.h inventory.h spells.h audio.h
 
 PROG=prog
 
