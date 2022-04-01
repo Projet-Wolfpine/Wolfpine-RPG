@@ -210,7 +210,29 @@ void start(){
           placer_pers(mat,y,x,&joueur);
           drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
           faire_rendu();
-      }
+       }
+	if((strcmp(info,"ID_SORTIE8"))==0 && strcmp(nom_map,"donjon2.txt")==0){
+         SDL_RenderClear(renderer);
+         nom_map="donjon3.txt";
+         afficher_map(nom_map,64,mat);
+         y = 4;
+         x = 0;
+         placer_pers(mat,y,x,&joueur);
+         drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
+         faire_rendu();
+     }
+     if((strcmp(info,"ID_SORTIE9"))==0 && strcmp(nom_map,"donjon3.txt")==0){
+        SDL_RenderClear(renderer);
+        nom_map="donjon2.txt";
+        afficher_map(nom_map,64,mat);
+        y = 7;
+        x = 29;
+        placer_pers(mat,y,x,&joueur);
+        drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
+        faire_rendu();
+    }
+	
+		
       if(touche == 7 && est_a_cote(mat, &joueur)){
           affichage_dialogue("PNJ02");
       }
