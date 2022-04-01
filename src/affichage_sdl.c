@@ -13,7 +13,7 @@ int afficher_menu(char menu[4][30]){
   int largeur = SCREEN_WIDTH;
   printf("hauteur = %d\n",SCREEN_HEIGHT);
   printf("largeur = %d\n",SCREEN_WIDTH);
-  text = "P r o j e t - W O L F P I N E";
+  text = "W O L F P I N E";
   int w;
 	TTF_SizeText(police,text,&w,NULL);
   drawText((largeur-w)/2, 40, text, 45, 15, jaune);
