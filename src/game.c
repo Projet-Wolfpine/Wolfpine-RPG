@@ -78,6 +78,17 @@ void start(){
                 afficher_mat(mat);
                 drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "dessus.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL ); 
                 faire_rendu();
+		if(!strcmp(info,"ID_SOLMONSTRE1")){
+                	//srand(time(0));
+                	random=rand() % 101;
+               		
+                	if(random > 97){
+                		monstre_t monstre;
+            			init_monster(&monstre, "Wolfy", "wolfy.png", 50, 30 ,5);
+          			
+            			combat(&joueur,&monstre);
+                	}
+                }
 
             }
             if(touche == 2 && dessous(mat,&joueur)){
@@ -89,6 +100,18 @@ void start(){
 
                 drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "dessous.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
                 faire_rendu();
+		  
+		 if(!strcmp(info,"ID_SOLMONSTRE1")){
+                	//srand(time(0));
+                	random=rand() % 101;
+               		
+                	if(random > 97){
+                		monstre_t monstre;
+            			init_monster(&monstre, "Wolfy", "wolfy.png", 50, 30 ,5);
+          			
+            			combat(&joueur,&monstre);
+                	}
+                }
                 
             }
             if(touche == 3 && droite(mat,&joueur)){
@@ -99,6 +122,18 @@ void start(){
                 //afficher_mat(mat);
                 drawImage(TAILLE_CASE_PXL*x, TAILLE_CASE_PXL*y , "droite.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
                 faire_rendu();
+		    
+		 if(!strcmp(info,"ID_SOLMONSTRE1")){
+                	//srand(time(0));
+                	random=rand() % 101;
+               		
+                	if(random > 97){
+                		monstre_t monstre;
+            			init_monster(&monstre, "Wolfy", "wolfy.png", 50, 30 ,5);
+          			
+            			combat(&joueur,&monstre);
+                	}
+                }
                 
             }
             if(touche == 4 && gauche(mat,&joueur)){
@@ -109,6 +144,18 @@ void start(){
                 //afficher_map(nom_map,64,mat);
                 drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "gauche.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
                 faire_rendu();
+		    
+		 if(!strcmp(info,"ID_SOLMONSTRE1")){
+                	//srand(time(0));
+                	random=rand() % 101;
+               		
+                	if(random > 97){
+                		monstre_t monstre;
+            			init_monster(&monstre, "Wolfy", "wolfy.png", 50, 30 ,5);
+          			
+            			combat(&joueur,&monstre);
+                	}
+                }
                 
             }
             if(touche == 5){
