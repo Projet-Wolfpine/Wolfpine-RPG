@@ -219,6 +219,87 @@ void start(){
  	add_item(&joueur, 0, "Epee d'Erastre", "Ceci est une fraude", 0, 69, 0);
         
 >>>>>>> c0b677663c2d5ac6907c56be7e49389cf86ea97c
+	
+	      /*COMBAT DONJON*/
+       /*if(touche == 1 && dessus(mat,&joueur) && !strcmp(mat[x][y].id,"ID_SOLMONSTRE1")){
+                y--;
+		        printf("%d\n",est_a_cote(mat,&joueur));
+                info=info_case(mat,y,x);
+                afficher_mat(mat);
+                drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "dessus.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL ); 
+                faire_rendu();
+                
+                random=rand()+101;
+                printf("%d\n",random);
+                if(random > 80){
+                	monstre_t monstre;
+            			init_monster(&monstre, "Wolfy", "wolfy.png", 50, 30 ,5);
+          			
+            			combat(&joueur,&monstre);
+                }
+                
+                
+
+            }
+            if(touche == 2 && dessous(mat,&joueur) && !strcmp(mat[x][y].id,"ID_SOLMONSTRE1")){
+                //nom_map="map3.txt";
+                y++;
+		        printf("%d\n",est_a_cote(mat,&joueur));
+                info=info_case(mat,y,x);
+                afficher_mat(mat);
+
+                drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "dessous.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
+                faire_rendu();
+                
+                random=rand()+101;
+                printf("%d\n",random);
+                if(random > 80){
+                	monstre_t monstre;
+            			init_monster(&monstre, "Wolfy", "wolfy.png", 50, 30 ,5);
+          			
+            			combat(&joueur,&monstre);
+                }
+                
+            }
+            
+            if(touche == 3 && droite(mat,&joueur) && !strcmp(mat[x][y].id,"ID_SOLMONSTRE1")){
+                x++;
+		        printf("%d\n",est_a_cote(mat,&joueur));
+                info=info_case(mat,y,x);
+                afficher_mat(mat);
+                //afficher_mat(mat);
+                drawImage(TAILLE_CASE_PXL*x, TAILLE_CASE_PXL*y , "droite.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
+                faire_rendu();
+                
+                random=rand()+101;
+                printf("%d\n",random);
+                if(random > 80){
+                	monstre_t monstre;
+            			init_monster(&monstre, "Wolfy", "wolfy.png", 50, 30 ,5);
+          			
+            			combat(&joueur,&monstre);
+                }
+                
+            }
+            if(touche == 4 && gauche(mat,&joueur) && !strcmp(mat[x][y].id,"ID_SOLMONSTRE1")){
+                x--;
+		        printf("%d\n",est_a_cote(mat,&joueur));
+                info=info_case(mat,y,x);
+                afficher_mat(mat);
+                //afficher_map(nom_map,64,mat);
+                drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "gauche.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
+                faire_rendu();
+                
+                random=rand()+101;
+                printf("%d\n",random);
+                if(random > 80){
+                	monstre_t monstre;
+            			init_monster(&monstre, "Wolfy", "wolfy.png", 50, 30 ,5);
+          			
+            			combat(&joueur,&monstre);
+                }
+                
+            }*/
 
             if(x == 10 && y == 10){
 		
