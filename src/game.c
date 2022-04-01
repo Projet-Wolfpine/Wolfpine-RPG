@@ -86,7 +86,7 @@ void start(){
                 	random=rand() % 101;
                		if(random > 97){
                 		monstre_t monstre;
-            			init_monster(&monstre, "Wolfy", "wolfy.png", 50, 30 ,5);
+            			init_monster(&monstre, "Sanik", "sanic.png", 50, 30 ,5);
             			combat(&joueur,&monstre);
                 	}
                 }
@@ -108,7 +108,7 @@ void start(){
                		
                 	if(random > 97){
                 		monstre_t monstre;
-            			init_monster(&monstre, "Wolfy", "wolfy.png", 50, 30 ,5);
+            			init_monster(&monstre, "Sanik", "sanic.png", 50, 30 ,5);
           			
             			combat(&joueur,&monstre);
                 	}
@@ -130,7 +130,7 @@ void start(){
                		
                 	if(random > 97){
                 		monstre_t monstre;
-            			init_monster(&monstre, "Wolfy", "wolfy.png", 50, 30 ,5);
+            			init_monster(&monstre, "Sanik", "sanic.png", 50, 30 ,5);
           			
             			combat(&joueur,&monstre);
                 	}
@@ -152,7 +152,7 @@ void start(){
                		
                 	if(random > 97){
                 		monstre_t monstre;
-            			init_monster(&monstre, "Wolfy", "wolfy.png", 50, 30 ,5);
+            			init_monster(&monstre, "Sanik", "sanic.png", 50, 30 ,5);
           			
             			combat(&joueur,&monstre);
                 	}
