@@ -26,7 +26,6 @@ char inf_dgt[2];
 
 int __itoa(int num,char *result,int base,int nbrNum)
 {
-	
 	int j=0;
 	int i=0;
 	int k=0;
