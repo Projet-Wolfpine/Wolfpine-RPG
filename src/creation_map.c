@@ -427,12 +427,156 @@ void mise_struct_map(case_t map_info[Y][X], int map_int[Y][X]){
                 map_info[i][j].id = "ID_SORTIE8";
                 map_info[i][j].col = 0;
             }
+            if(map_int[i][j] == 98){
+                map_info[i][j].id = "ID_SORTIE9";
+                map_info[i][j].col = 0;
+            }
+            if(map_int[i][j] == 99){
+                map_info[i][j].id = "ID_ESCALIERDONJON1";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 100){
+                map_info[i][j].id = "ID_ESCALIERDONJON2";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 101){
+                map_info[i][j].id = "ID_ESCALIERDONJON3";
+                map_info[i][j].col = 0;
+            }
+            if(map_int[i][j] == 102){
+                map_info[i][j].id = "ID_ESCALIERDONJON4";
+                map_info[i][j].col = 0;
+            }
+            if(map_int[i][j] == 103){
+                map_info[i][j].id = "ID_ESCALIERDONJON5";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 104){
+                map_info[i][j].id = "ID_ESCALIERDONJON6";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 105){
+                map_info[i][j].id = "ID_SOL3";
+                map_info[i][j].col = 0;
+            }
+            if(map_int[i][j] == 106){
+                map_info[i][j].id = "ID_MURET1";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 107){
+                map_info[i][j].id = "ID_MURET2";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 108){
+                map_info[i][j].id = "ID_MURET3";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 109){
+                map_info[i][j].id = "ID_MURET4";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 110){
+                map_info[i][j].id = "ID_WOLFY1";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 111){
+                map_info[i][j].id = "ID_WOLFY2";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 112){
+                map_info[i][j].id = "ID_WOLFY3";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 113){
+                map_info[i][j].id = "ID_WOLFY4";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 114){
+                map_info[i][j].id = "ID_WOLFY5";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 115){
+                map_info[i][j].id = "ID_WOLFY6";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 116){
+                map_info[i][j].id = "ID_WOLFY7";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 117){
+                map_info[i][j].id = "ID_WOLFY8";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 118){
+                map_info[i][j].id = "ID_WOLFY9";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 119){
+                map_info[i][j].id = "ID_WOLFY10";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 120){
+                map_info[i][j].id = "ID_WOLFY11";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 121){
+                map_info[i][j].id = "ID_WOLFY12";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 122){
+                map_info[i][j].id = "ID_WOLFY13";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 123){
+                map_info[i][j].id = "ID_WOLFY14";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 124){
+                map_info[i][j].id = "ID_WOLFY15";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 125){
+                map_info[i][j].id = "ID_WOLFY16";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 126){
+                map_info[i][j].id = "ID_WOLFY17";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 127){
+                map_info[i][j].id = "ID_WOLFY18";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 128){
+                map_info[i][j].id = "ID_WOLFY19";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 129){
+                map_info[i][j].id = "ID_WOLFY20";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 130){
+                map_info[i][j].id = "ID_WOLFY21";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 131){
+                map_info[i][j].id = "ID_WOLFY22";
+                map_info[i][j].col = 1;
+            }
+            if(map_int[i][j] == 132){
+                map_info[i][j].id = "ID_WOLFY23";
+                map_info[i][j].col = 1;
+            }
             if(map_int[i][j] == 900){
                 map_info[i][j].id = "PNJ01";
                 map_info[i][j].col = 3;
             }
             if(map_int[i][j] == 901){
                 map_info[i][j].id = "PNJ_EPEE";
+                map_info[i][j].col = 3;
+            }
+            if(map_int[i][j] == 911){
+                map_info[i][j].id = "PNJ_WOLFY";
                 map_info[i][j].col = 3;
             }
         }
