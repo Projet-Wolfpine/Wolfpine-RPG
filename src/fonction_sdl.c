@@ -127,7 +127,7 @@ void init_affichage(){
 	SCREEN_HEIGHT = dm.h;
 	SCREEN_WIDTH = dm.w;
 	/* Création de la fenêtre */
-	fenetre = SDL_CreateWindow("Projet Wolpine",SDL_WINDOWPOS_UNDEFINED,
+	fenetre = SDL_CreateWindow("Wolfpine",SDL_WINDOWPOS_UNDEFINED,
 													SDL_WINDOWPOS_UNDEFINED,
 													SCREEN_WIDTH,
 													SCREEN_HEIGHT,
