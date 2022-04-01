@@ -211,14 +211,11 @@ void start(){
           drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
           faire_rendu();
       }
-<<<<<<< HEAD
       if(touche == 7 && est_a_cote(mat, &joueur)){
           affichage_dialogue("PNJ02");
       }
-=======
  	add_item(&joueur, 0, "Epee d'Erastre", "Ceci est une fraude", 0, 69, 0);
         
->>>>>>> c0b677663c2d5ac6907c56be7e49389cf86ea97c
 	
 	      /*COMBAT DONJON*/
        /*if(touche == 1 && dessus(mat,&joueur) && !strcmp(mat[x][y].id,"ID_SOLMONSTRE1")){
