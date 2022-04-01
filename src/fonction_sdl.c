@@ -134,6 +134,7 @@ void init_affichage(){
 													SDL_WINDOW_SHOWN);
 
 	renderer=SDL_CreateRenderer(fenetre, -1, SDL_RENDERER_ACCELERATED);
+	//SDL_WM_SetIcon(IMG_Load("./images/wolfy.png"), NULL);
 	SDL_SetWindowFullscreen(fenetre, SDL_WINDOW_BORDERLESS);//SDL_WINDOW_FULLSCREEN
 	loadImages();
 	

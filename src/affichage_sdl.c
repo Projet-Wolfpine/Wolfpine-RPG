@@ -56,7 +56,7 @@ int afficher_menu(char menu[4][30]){
 #define TAILLE_MAX 1000 
 
 void affichage_dialogue(char * id_PNJ){
-  char  list[5][500];
+  char  list[5][TAILLE_MAX];
   char id_perso[5];
   int i,j=0;
   FILE * fichier_dialogue;
@@ -65,11 +65,13 @@ void affichage_dialogue(char * id_PNJ){
     fscanf(fichier_dialogue, "%s", id_perso);
     if(strcmp(id_PNJ,id_perso) == 0){
           printf("\naffichage 1 : %s\n",id_perso);
-          fgets(list[0], TAILLE_MAX, fichier_dialogue);
+          fgets(list[0], TAILLE_MAX, fichier_dialogue);          
     }
     fscanf(fichier_dialogue, "%*[^\n]");
   }
   fclose(fichier_dialogue);
+  drawImage( 1100, 890, "dialogue.png", 600, 130);
+  drawText(1100, 950, list[0], 25, 12, jaune);
   printf("\naffichage 4: %s\n",list[0]);
 }
 
