@@ -24,5 +24,6 @@ int main(){
   deplacer_pers(mat,10,12,&player);
   afficher_mat(mat);
   printf("TEST\n");
-  aller_gauche2(mat,&player);
+  gauche(mat,&player);
+  droite(mat,&player);
 }
