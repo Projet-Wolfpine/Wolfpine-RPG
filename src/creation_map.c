@@ -32,6 +32,7 @@ void lecture_fichier_map(char nom_fichier[20],int map_int[Y][X]){
   fclose(fic);
 }
 
+//Fonction pemetant d'associer un id et un statut de collision à toutes les cases de la matrice
 void mise_struct_map(case_t map_info[Y][X], int map_int[Y][X]){
     struct timespec start2;
     struct timespec end2;
