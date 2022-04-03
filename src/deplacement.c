@@ -45,9 +45,6 @@ void afficher_mat(case_t mat[Y][X]){
       }
       if(mat[i][j].col== 1)//collision
         printf("C");
-      /*if(mat[i][j].col== 0 && strcmp(mat[i][j].id,"vide"))//case traversable
-        printf("T");
-      */
       if(mat[i][j].col== 0)//case vide
         printf(".");
     }
@@ -98,6 +95,7 @@ int dessous(case_t mat[Y][X], perso_t *player){
   return(deplacer_pers(mat,player->anc_coord_y+1,player->anc_coord_x,player));
 }
 
+//Fonction pour savoir si on est proche ou non d'un PNJ
 int est_a_cote(case_t mat[Y][X], perso_t *perso){ //pour les pnj 
    if(mat[perso->anc_coord_y+1][perso->anc_coord_x].col == 3){
        return 1;

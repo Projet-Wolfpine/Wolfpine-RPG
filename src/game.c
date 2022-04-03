@@ -24,7 +24,7 @@ char * info_case(case_t mat[Y][X] , int coord_y, int coord_x){
     return(mat[coord_y][coord_x].id);
 }
 
-
+//Fonction qui permet de sauvegarder diverse informations sur le joueur et son placement pour les inclure dans un fichier txt 
 void sauvegarder_jeu (case_t mat[Y][X],perso_t *perso, char * nom_map){
     FILE * sauv;
     sauv=fopen("sauvegarde.txt","w");
@@ -51,25 +51,27 @@ void est_a_cote(){ //pour les pnj
 
 void start(){
     char * info;
-    int y=10,x=10;
+    int y=10,x=10;//Initialisation de la posiition de départ dans la premiere map
     SDL_RenderClear(renderer);
     int touche=-1;
-    int running = 1;
+    int running = 1;//Initialisation pour savoir si le jeu continue de tourner ou non
     int random;
     srand(time(0));
+	//Initialisation de la matrice et du joueur
     case_t mat[Y][X];
     perso_t joueur;
     joueur = init_player();
   	init_mat(mat);
-    afficher_mat(mat);
+    afficher_mat(mat);//verif
     placer_pers(mat,y,x,&joueur);
-    afficher_mat(mat);
+    afficher_mat(mat);//verification 
+	
     afficher_map(nom_map,64,mat);//SDL
     drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL ); 
     faire_rendu();
     
     while(running == 1){
-        touche=touche_detecter();
+        touche=touche_detecter();    
         if(touche != 0){
             afficher_map(nom_map,64,mat);
             info=info_case(mat,y,x);
