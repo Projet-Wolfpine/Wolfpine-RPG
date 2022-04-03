@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include "inventory.h"
+#include "../lib/inventory.h"
 
 
 /**

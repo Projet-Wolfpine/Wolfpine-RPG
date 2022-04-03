@@ -1,13 +1,13 @@
 #include "stdio.h"
 #include "stdlib.h"
-#include "string.h"
+#include "../lib/string.h"
 /*
 #include "structures.h"
 #include "deplacement.h"
 #include "spells.h"
 #include "inventory.h"
 */
-#include "combat.h"
+#include "../lib/combat.h"
 
 //Test de la création, initialisation de la map et du joueur en terminal, et du déplacement
 int main(){

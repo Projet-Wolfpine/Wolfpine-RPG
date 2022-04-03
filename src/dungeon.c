@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include "dungeon.h"
+#include "../lib/dungeon.h"
 
 
 

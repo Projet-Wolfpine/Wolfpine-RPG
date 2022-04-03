@@ -12,18 +12,18 @@ INCLUDES=-I${SDLINC_DIR}
 
 include=include/
 src=src/
-prog=bin/prog 
+prog=../bin/prog 
 obj=obj/
+lib=../lib/
 ncurse=-lncurses
 fichierc=main.c menu_principal.c affichage_sdl.c fonction_sdl.c game.c gestion_deplacement_sdl.c creation_map.c combat.c deplacement.c inventory.c spells.c audio.c
-fichierh=menu_principal.h affichage_sdl.h fonction_sdl.h game.h gestion_deplacement_sdl.h creation_map.h structures.h combat.h combat.h deplacement.h inventory.h spells.h audio.h
+fichierh=${lib}menu_principal.h ${lib}affichage_sdl.h ${lib}fonction_sdl.h ${lib}game.h ${lib}gestion_deplacement_sdl.h ${lib}creation_map.h ${lib}structures.h ${lib}combat.h ${lib}combat.h ${lib}deplacement.h ${lib}inventory.h ${lib}spells.h ${lib}audio.h
 
-PROG=prog
 
 all:clean main
 
 main: ${fichierc} ${fichierh}
-	${CC} -o ${PROG} ${fichierc} ${fichierh} ${LIBS} ${INCLUDES} 
+	${CC} -o ${prog} ${fichierc} ${fichierh} ${LIBS} ${INCLUDES} 
 
 
 PATH:

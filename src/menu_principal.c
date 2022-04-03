@@ -1,8 +1,8 @@
-#include "affichage_sdl.h"
-#include "fonction_sdl.h"
+#include "../lib/affichage_sdl.h"
+#include "../lib/fonction_sdl.h"
 #include <SDL2/SDL_image.h>
 #include <SDL2/SDL.h>
-#include  "game.h"
+#include  "../lib/game.h"
 
 
 TTF_Font *police;

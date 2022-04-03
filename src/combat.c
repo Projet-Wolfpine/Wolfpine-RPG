@@ -6,9 +6,9 @@
 #include <SDL2/SDL_image.h>
 
 #include <math.h>
-#include "fonction_sdl.h"
-#include "combat.h"
-#include "audio.h"
+#include "../lib/fonction_sdl.h"
+#include "../lib/combat.h"
+#include "../lib/audio.h"
 
 /**
  * \file combat.c

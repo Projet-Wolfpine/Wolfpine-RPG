@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include "spells.h"
+#include "../lib/spells.h"
 
 /**
  * \file spells.c

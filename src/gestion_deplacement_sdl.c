@@ -1,5 +1,5 @@
-#include "gestion_deplacement_sdl.h"
-#include "fonction_sdl.h"
+#include "../lib/gestion_deplacement_sdl.h"
+#include "../lib/fonction_sdl.h"
 #include <SDL2/SDL.h>
 
 SDL_Event event;

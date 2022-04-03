@@ -1,5 +1,5 @@
-#include "affichage_sdl.h"
-#include "fonction_sdl.h"
+#include "../lib/affichage_sdl.h"
+#include "../lib/fonction_sdl.h"
 #include "string.h"
 #include <SDL2/SDL.h>
 

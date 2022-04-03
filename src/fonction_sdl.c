@@ -3,7 +3,7 @@
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_ttf.h>
 #include <SDL2/SDL_image.h>
-#include "fonction_sdl.h"
+#include "../lib/fonction_sdl.h"
 
 
 /**
@@ -34,20 +34,20 @@ void loadImages(){
 	DIR *d;
 	struct dirent *dir;
 
-	d = opendir("./images/");
+	d = opendir("../images/");
 	while ((dir = readdir(d)) != NULL) nb_images++;
 	closedir(d);
 
 	noms = malloc(sizeof(char*)*nb_images);
 
-	d = opendir("./images/");
+	d = opendir("../images/");
 	for (int i=0;(dir = readdir(d)) != NULL; i++){
 		noms[i] = malloc(sizeof(char)*strlen(dir->d_name)+1);
 		strcpy(noms[i], dir->d_name);
 	}
 	closedir(d);
 	for(int i=0; i<nb_images; i++){
-		char nom[50] = "./images/";
+		char nom[50] = "../images/";
 		strcat(nom, noms[i]);
 		images[i] = IMG_LoadTexture(renderer, nom);
 		if(i==22){
@@ -200,7 +200,7 @@ void init_affichage(){
 	TTF_Init();
 	SDL_DisplayMode dm;
 	SDL_GetCurrentDisplayMode(0, &dm);
-	police = TTF_OpenFont("./font/times.ttf", 35);
+	police = TTF_OpenFont("../font/times.ttf", 35);
 	SCREEN_HEIGHT = dm.h;
 	SCREEN_WIDTH = dm.w;
 	/* Création de la fenêtre */
@@ -212,7 +212,7 @@ void init_affichage(){
 
 	renderer=SDL_CreateRenderer(fenetre, -1, SDL_RENDERER_ACCELERATED);
 	SDL_Surface* iconSurface;
-	iconSurface = SDL_LoadBMP("./images/wolfy.bmp");
+	iconSurface = SDL_LoadBMP("../images/wolfy.bmp");
 	SDL_SetWindowIcon(fenetre, iconSurface);
 	SDL_SetWindowFullscreen(fenetre, SDL_WINDOW_BORDERLESS);//SDL_WINDOW_FULLSCREEN
 	loadImages();

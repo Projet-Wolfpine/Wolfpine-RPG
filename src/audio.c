@@ -4,7 +4,7 @@
 
 #include <SDL2/SDL.h>
 
-#include "audio.h"
+#include "../lib/audio.h"
 
 #define AUDIO_FORMAT AUDIO_S16LSB
 #define AUDIO_FREQUENCY 48000

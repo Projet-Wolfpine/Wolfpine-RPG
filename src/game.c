@@ -1,13 +1,13 @@
 #include <SDL2/SDL_ttf.h>
 #include <SDL2/SDL_image.h>
-#include "fonction_sdl.h"
-#include "gestion_deplacement_sdl.h"
-#include "menu_principal.h"
-#include "deplacement.h"
-#include "affichage_sdl.h"
-#include "game.h"
-#include "creation_map.h"
-#include "combat.h"
+#include "../lib/fonction_sdl.h"
+#include "../lib/gestion_deplacement_sdl.h"
+#include "../lib/menu_principal.h"
+#include "../lib/deplacement.h"
+#include "../lib/affichage_sdl.h"
+#include "../lib/game.h"
+#include "../lib/creation_map.h"
+#include "../lib/combat.h"
 #include "string.h"
 #include "time.h"
 

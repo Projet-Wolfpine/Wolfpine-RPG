@@ -1,6 +1,6 @@
-#include "deplacement.h"
-#include "creation_map.h"
-#include "fonction_sdl.h"
+#include "../lib/deplacement.h"
+#include "../lib/creation_map.h"
+#include "../lib/fonction_sdl.h"
 #include <sys/time.h>
 #include <time.h>
 
