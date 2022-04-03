@@ -3,8 +3,23 @@
 #include "string.h"
 #include <SDL2/SDL.h>
 
-TTF_Font *police;
-SDL_Color jaune = {204, 154, 0};
+#define TAILLE_MAX 1000 /*!< Taille du texte ici de 1000 caractère*/
+/**
+ * \file affichage_sdl.c
+ * \brief Fonctions d'affichage du menu et du dialogue.
+ * \author thibault.C
+ * \version 1.1
+ * \date 03/04/2022
+ */
+
+TTF_Font *police; /*!< Pointeur sur la police utilisée */
+SDL_Color jaune = {204, 154, 0}; /*!< Couleur jaune  */
+
+/**
+ * \fn int afficher_menu(char menu[4][30])
+ * \brief fonction d'affichage du menu et de detection du choix de l'utilisateur 
+ * \param[in] menu Récupération de la liste format texte du menu pour effectuer l'affichage
+ */
 
 int afficher_menu(char menu[4][30]){
   //afficher_image_menu("images/menu.jpeg");
@@ -51,9 +66,11 @@ int afficher_menu(char menu[4][30]){
   return running;
 }
 
-
-
-#define TAILLE_MAX 1000 
+/**
+ * \fn void affichage_dialogue(char * id_PNJ)
+ * \brief fonction d'affichage des dialogue 
+ * \param[in] menu Récupération de la liste format texte du menu pour effectuer l'affichage
+ */
 
 void affichage_dialogue(char * id_PNJ){
   char  list[5][TAILLE_MAX];
@@ -62,16 +79,16 @@ void affichage_dialogue(char * id_PNJ){
   FILE * fichier_dialogue;
   fichier_dialogue=fopen("dialogue.txt","r");
   for(i=0;i<7;i++){
-    fscanf(fichier_dialogue, "%s", id_perso);
-    if(strcmp(id_PNJ,id_perso) == 0){
+    fscanf(fichier_dialogue, "%s", id_perso); /*!<recuperation de l'id chaque debut de ligne*/
+    if(strcmp(id_PNJ,id_perso) == 0){/*!<comparaison de la recuperation de l'id et de id_PNJ */  
           printf("\naffichage 1 : %s\n",id_perso);
-          fgets(list[0], TAILLE_MAX, fichier_dialogue);          
+          fgets(list[0], TAILLE_MAX, fichier_dialogue); /*!< recuperation du dialogue  */       
     }
-    fscanf(fichier_dialogue, "%*[^\n]");
+    fscanf(fichier_dialogue, "%*[^\n]"); /*!< permet de changer de faire un saut de ligne */
   }
   fclose(fichier_dialogue);
-  drawImage( 1100, 890, "dialogue.png", 600, 130);
-  drawText(1100, 950, list[0], 25, 12, jaune);
+  drawImage( 1100, 890, "dialogue.png", 600, 130); /*!< affichage de la bulle du dialogue */ 
+  drawText(1100, 950, list[0], 25, 12, jaune); /*!< affichage de la bulle du dialogue */
   printf("\naffichage 4: %s\n",list[0]);
 }
 

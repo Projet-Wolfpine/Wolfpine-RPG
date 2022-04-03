@@ -219,6 +219,15 @@ void init_affichage(){
 	
 }
 
+
+
+/**
+ * \fn afficher_image_menu(SDL_PRINTF_FORMAT_STRING char *nom)
+ * \brief affiche l'image du fond dans le menu pricipal
+* \param[in] nom de l'image
+ */
+
+
 void afficher_image_menu(SDL_PRINTF_FORMAT_STRING char *nom){
     image = IMG_Load(nom);
     if(image  == NULL){
