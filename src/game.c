@@ -180,8 +180,37 @@ void start(){
             }
             if(touche == 6 ){
                 drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
-                drawImage(1920/4 , 1080/4 , "inventory0.png", 1920/2, 1080/2 );
-                faire_rendu();
+		    
+                if(joueur.objets[0]->id != -1){
+                    if (joueur.objets[3]->id != -1)
+                    {
+                       drawImage(1920/4 , 1080/4 , "inventory1p.png", 1920/2, 1080/2 );
+                    }else{
+                        drawImage(1920/4 , 1080/4 , "inventory1.png", 1920/2, 1080/2 );
+                    }
+                    faire_rendu();
+                }
+
+                if(joueur.objets[0]->id != -1 && joueur.objets[1]->id != -1){
+                    if (joueur.objets[3]->id != -1)
+                    {
+                       drawImage(1920/4 , 1080/4 , "inventory2p.png", 1920/2, 1080/2 );
+                    }else{
+                        drawImage(1920/4 , 1080/4 , "inventory2.png", 1920/2, 1080/2 );
+                    }
+                    faire_rendu();
+                }
+
+                if(joueur.objets[0]->id != -1 && joueur.objets[1]->id != -1 && joueur.objets[2]->id != -1){
+                    if (joueur.objets[3]->id != -1)
+                    {
+                       drawImage(1920/4 , 1080/4 , "inventory3p.png", 1920/2, 1080/2 );
+                    }else{
+                        drawImage(1920/4 , 1080/4 , "inventory3.png", 1920/2, 1080/2 );
+                    }
+                    faire_rendu();
+                }
+		    
                 touche=touche_detecter();
                 while(touche != 6){
                     touche=touche_detecter();
