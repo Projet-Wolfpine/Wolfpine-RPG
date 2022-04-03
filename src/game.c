@@ -43,25 +43,21 @@ void charger_jeu (case_t mat[Y][X], perso_t *perso,char * nom_map){
     }
 }
 */
-/*char* interaction_pnj(case_t mat[Y][X], perso_t *perso) {
-    char *id_pnj;
+char* interaction_pnj(case_t mat[Y][X], perso_t *perso) {
     if(est_a_cote(mat,perso) == -1){//pnj au dessus
-        strcpy(id_pnj,mat[perso->anc_coord_y+1][perso->anc_coord_x].id);
-        return(id_pnj);
+        printf("\nid = %s\n",mat[perso->anc_coord_y+1][perso->anc_coord_x].id);
+        return(mat[perso->anc_coord_y+1][perso->anc_coord_x].id);
     }
     if(est_a_cote(mat,perso) == -2){//pnj en dessous
-        strcpy(id_pnj,mat[perso->anc_coord_y-1][perso->anc_coord_x].id);
-        return(id_pnj);
+        return(mat[perso->anc_coord_y-1][perso->anc_coord_x].id);
     }
     if(est_a_cote(mat,perso) == -3){//pnj à droite
-        strcpy(id_pnj,mat[perso->anc_coord_y][perso->anc_coord_x+1].id);
-        return(id_pnj);
+        return(mat[perso->anc_coord_y][perso->anc_coord_x+1].id);
     }
     if(est_a_cote(mat,perso) == -4){//pnj à gauche
-        strcpy(id_pnj,mat[perso->anc_coord_y][perso->anc_coord_x-1].id);
-        return(id_pnj);
+        return(mat[perso->anc_coord_y][perso->anc_coord_x-1].id);
     }
-}*/
+}
 
 void start(){
     char * info;
@@ -87,6 +83,7 @@ void start(){
     while(running == 1){
         touche=touche_detecter();    
         if(touche != 0){
+	    char * id_pnj = interaction_pnj(mat,&joueur);
             afficher_map(nom_map,64,mat);
             info=info_case(mat,y,x);
 		    if(touche == 1 && dessus(mat,&joueur)){
@@ -325,7 +322,7 @@ void start(){
             faire_rendu();
             }
             if(touche == 7 && est_a_cote(mat, &joueur)<0){
-                affichage_dialogue("PNJ02");
+                affichage_dialogue(id_pnj);
                 drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
                 faire_rendu();
             }
