@@ -43,7 +43,7 @@ void charger_jeu (case_t mat[Y][X], perso_t *perso,char * nom_map){
     }
 }
 */
-char* interaction_pnj(case_t mat[Y][X], perso_t *perso) {
+/*char* interaction_pnj(case_t mat[Y][X], perso_t *perso) {
     char *id_pnj;
     if(est_a_cote(mat,&perso) == -1){//pnj au dessus
         strcpy(id_pnj,mat[perso->anc_coord_y+1][perso->anc_coord_x].id);
@@ -61,7 +61,7 @@ char* interaction_pnj(case_t mat[Y][X], perso_t *perso) {
         strcpy(id_pnj,mat[perso->anc_coord_y][perso->anc_coord_x-1].id);
         return(id_pnj);
     }
-}
+}*/
 
 void start(){
     char * info;

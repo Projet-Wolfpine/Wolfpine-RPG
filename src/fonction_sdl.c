@@ -201,8 +201,8 @@ void init_affichage(){
 	SDL_DisplayMode dm;
 	SDL_GetCurrentDisplayMode(0, &dm);
 	police = TTF_OpenFont("../font/times.ttf", 35);
-	SCREEN_HEIGHT = dm.h;
-	SCREEN_WIDTH = dm.w;
+	SCREEN_HEIGHT = 1080;
+	SCREEN_WIDTH = 1920;
 	/* Création de la fenêtre */
 	fenetre = SDL_CreateWindow("Wolfpine",SDL_WINDOWPOS_UNDEFINED,
 													SDL_WINDOWPOS_UNDEFINED,
