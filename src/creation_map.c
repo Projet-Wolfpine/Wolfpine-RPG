@@ -592,16 +592,32 @@ void mise_struct_map(case_t map_info[Y][X], int map_int[Y][X]){
                 map_info[i][j].id = "PNJ01";
                 map_info[i][j].col = 3;
             }
-            if(map_int[i][j] == 901){
-                map_info[i][j].id = "PNJ_EPEE";
-                map_info[i][j].col = 3;
-            }
             if(map_int[i][j] == 902){
                 map_info[i][j].id = "PNJ02";
                 map_info[i][j].col = 3;
             }
-            if(map_int[i][j] == 911){
-                map_info[i][j].id = "PNJ_WOLFY";
+            if(map_int[i][j] == 903){
+                map_info[i][j].id = "PNJ03";
+                map_info[i][j].col = 3;
+            }
+            if(map_int[i][j] == 904){
+                map_info[i][j].id = "PNJ04";
+                map_info[i][j].col = 3;
+            }
+            if(map_int[i][j] == 905){
+                map_info[i][j].id = "PNJ05";
+                map_info[i][j].col = 3;
+            }
+            if(map_int[i][j] == 908){
+                map_info[i][j].id = "PNJ08";
+                map_info[i][j].col = 3;
+            }
+            if(map_int[i][j] == 909){
+                map_info[i][j].id = "PNJ09";
+                map_info[i][j].col = 3;
+            }
+            if(map_int[i][j] == 910){
+                map_info[i][j].id = "PNJ10";
                 map_info[i][j].col = 3;
             }
 
