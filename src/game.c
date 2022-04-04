@@ -342,8 +342,41 @@ void start(){
             // Gestion intéraction avec PNJ
             if(touche == 7 && est_a_cote(mat, &joueur)<0){
                 affichage_dialogue(id_pnj);
-                drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
+                drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );        
                 faire_rendu();
+                if(strcmp(id_pnj,"PNJ02")==0){
+                    SDL_Delay(2000);
+                    monstre_t monstre;
+            		init_monster(&monstre, "Wolfy", "wolfy.png", 50, 25 ,5);
+            		combat(&joueur,&monstre);
+                    add_spell( &joueur,  0,  "Foudre",  50);
+                    joueur.hp = 600;
+                }
+                if(strcmp(id_pnj,"PNJ03")==0){
+                    add_item(&joueur, 0, "Épée", "Une puissante épée", 0, 20, 0);
+                }
+                if(strcmp(id_pnj,"PNJ04")==0){
+                    add_item(&joueur, 1, "Armure", "Une armure solide", 0, 0, 10);
+                }
+                if(strcmp(id_pnj,"PNJ08")==0){
+                    SDL_Delay(2000);
+                    monstre_t monstre;
+            		init_monster(&monstre, "Dio", "dio2.png", 500, 50 ,5);
+            		combat(&joueur,&monstre);
+                    add_spell( &joueur,  1,  "Marée",  150);
+                    joueur.hp = 600;
+                    
+                }
+                if(strcmp(id_pnj,"PNJ09")==0){
+                    add_item(&joueur, 1, "Arc", "Pour toujours plus de degats", 0, 10, 0);
+                }
+                if(strcmp(id_pnj,"PNJ10")==0){
+                    SDL_Delay(2000);
+                    monstre_t monstre;
+            		init_monster(&monstre, "WOLFY IN SHAPE", "wolfboss.png", 999, 70 ,5);
+            		combat(&joueur,&monstre);
+                    
+                }
             }
 	    }   
 
