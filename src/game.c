@@ -207,6 +207,10 @@ void start(){
                     }
                     faire_rendu();
                 }
+                else{
+                    drawImage(1920/4 , 1080/4 , "inventory0.png", 1920/2, 1080/2 );
+                    faire_rendu();
+                }
 		    
                 touche=touche_detecter();
                 while(touche != 6){

@@ -14,7 +14,7 @@
 
 TTF_Font *police; /*!< Pointeur sur la police utilisée */
 SDL_Color jaune = {204, 154, 0}; /*!< Couleur jaune  */
-
+SDL_Color noire = {0, 0, 0}; /*!< Couleur jaune  */
 /**
  * \fn int afficher_menu(char menu[4][30])
  * \brief fonction d'affichage du menu et de detection du choix de l'utilisateur 
@@ -82,14 +82,14 @@ void affichage_dialogue(char * id_PNJ){
   for(i=0;i<7;i++){
     fscanf(fichier_dialogue, "%s", id_perso); /*!<recuperation de l'id chaque debut de ligne*/
     if(strcmp(id_PNJ,id_perso) == 0){/*!<comparaison de la recuperation de l'id et de id_PNJ */  
-          printf("\naffichage 1 : %s\n",id_perso);
+          printf("\naffichage id_perso : %s\n",id_perso);
           fgets(list[0], TAILLE_MAX, fichier_dialogue); /*!< recuperation du dialogue  */       
     }
     fscanf(fichier_dialogue, "%*[^\n]"); /*!< permet de changer de faire un saut de ligne */
   }
   fclose(fichier_dialogue);
-  drawImage( 1100, 890, "dialogue.png", 600, 130); /*!< affichage de la bulle du dialogue */ 
-  drawText(1100, 950, list[0], 25, 12, jaune); /*!< affichage de la bulle du dialogue */
-  printf("\naffichage 4: %s\n",list[0]);
+  drawImage( 5, 900, "dialogue.png", 1900, 120); /*!< affichage de la bulle du dialogue */ 
+  drawText(10, 950, list[0], 23, 12, noire); /*!< affichage de la bulle du dialogue */
+  printf("\naffichage du dialogue: %s\n",list[0]);
 }
 

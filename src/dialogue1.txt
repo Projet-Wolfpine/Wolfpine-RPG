@@ -1,0 +1,8 @@
+PNJ01 Bonjour jeune aventurier, tu veux devenir puissant et vaincre le grand méchnat monstrre du donjon ? N'hésite pas à tabasser ce petit chien pour t'entrainer //PNJ DANS LA MAISON AU DEBUT 
+PNJ02 wouf wouf *avec des yeux qui pleurent* //WOLFY DANS LA MAISON 
+PNJ03 Bonjour je suis Erastre le plus grand aventurier du village, néanmoins je me suis croisé les ligaments, prend mon épée et bat toi à ma place //PNJ DEVANT L'ENTREE DU DJ QUI DONNE EPEE
+PNJ04 *un corps sans vie git sur le sol vous en profitez pour le déchausser de ses air shmax et vous obtenez une resistance accrue* //PNJ MORT DANS LA PREMIERE SALLE QUI DONNE ARMURE
+PNJ05 Toi qui brave les sentiers cachés à la recherche de défi laisse moi te récompenser avec ce sort *Vous obtenez le sort Braisier (toujours utile pour un barbecue)*//PNJ SALLE CACHE QUI DONNE BRASIER
+PNJ06 Le petit que t'as hagar reviendra plus fort graou graou//WOLFY SOUS STEROIDE
+PNJ07 C'est dangereux de se balader seul, prend ça *Elle vous donne une noix mais celle ci étant pourrite vous la jettez sur le sol*
+PNJ08 Tu pensais que c'était un PNJ mais c'était moi DIOOOO //dio qui est un fake pnj

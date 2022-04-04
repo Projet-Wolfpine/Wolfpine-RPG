@@ -11,8 +11,8 @@ TTF_Font *police;
 //#define TAILLE_CASE_PXL2 63
 
 
-
 void Menu(){
+	SDL_Color rouge = {192, 0, 26};
 	SDL_DisplayMode dm;
 	int longeur = 1920;
 	int hauteur = 1080;
@@ -31,8 +31,13 @@ void Menu(){
 	if(running==1){
 		//charger_jeu(mat,&joueur,nom_map);
 		//printf("%d,%d,%s",joueur.anc_coord_y,joueur.anc_coord_x,nom_map);
-		fond_rouge();
+		drawImage( 700, 350, "button.png", 475, 130);
+    	drawText(800, 395, "Pas de sauvegarde ", 25, 12, rouge);
+		faire_rendu();
 		SDL_Delay(1000);
+		SDL_RenderClear(renderer);
+		Menu();
+
 		
 	}
 	if(running==2){

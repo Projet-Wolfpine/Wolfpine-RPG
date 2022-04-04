@@ -98,21 +98,22 @@ int dessous(case_t mat[Y][X], perso_t *player){
 //Fonction pour savoir si on est proche ou non d'un PNJ
 int est_a_cote(case_t mat[Y][X], perso_t *perso){ //pour les pnj 
    if(mat[perso->anc_coord_y+1][perso->anc_coord_x].col == 3){
-        printf("test 1");
+        printf("\nDetection PNJ bas\n");
        return -1;
    }
    if(mat[perso->anc_coord_y-1][perso->anc_coord_x].col == 3){
-     printf("test 2");
+     printf("\nDetection PNJ haut\n");
        return -2;
    }
    if(mat[perso->anc_coord_y][perso->anc_coord_x+1].col == 3){
-     printf("test 3");
+     printf("\nDetection PNJ droite\n");
        return -3;
    }
    if(mat[perso->anc_coord_y][perso->anc_coord_x-1].col == 3){
-     printf("test 4");
+     printf("\nDetection PNJ gauche\n");
        return -4;
    }else{
+        printf("\nPas de PNJ\n");
         return 0;
     }
 }
