@@ -593,7 +593,6 @@ void mise_struct_map(case_t map_info[Y][X], int map_int[Y][X]){
 
 void afficher_map(char * nom_map,int taille, case_t map_info[Y][X]){
   int i,j;
-  //init_mat(map_info);
   lecture_fichier_map(nom_map, map_int);
   mise_struct_map(map_info,map_int);
   for(i = 0;i<Y; i++){

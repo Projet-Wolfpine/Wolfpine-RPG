@@ -109,7 +109,6 @@ void start(){
 		        printf("%d\n",est_a_cote(mat,&joueur));
                 info=info_case(mat,y,x);
                 afficher_mat(mat);
-                //afficher_mat(mat);
                 drawImage(TAILLE_CASE_PXL*x, TAILLE_CASE_PXL*y , "droite.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
                 faire_rendu();
             }
@@ -119,7 +118,6 @@ void start(){
 		        printf("%d\n",est_a_cote(mat,&joueur));
                 info=info_case(mat,y,x);
                 afficher_mat(mat);
-                //afficher_map(nom_map,64,mat);
                 drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "gauche.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
                 faire_rendu();
             }

@@ -15,13 +15,12 @@
 TTF_Font *police; /*!< Pointeur sur la police utilisée */
 SDL_Color jaune = {204, 154, 0}; /*!< Couleur jaune  */
 SDL_Color noire = {0, 0, 0}; /*!< Couleur jaune  */
+
 /**
  * \fn int afficher_menu(char menu[4][30])
  * \brief fonction d'affichage du menu et de detection du choix de l'utilisateur 
  * \param[in] menu Récupération de la liste format texte du menu pour effectuer l'affichage
  */
-
-
 int afficher_menu(char menu[4][30]){
   //afficher_image_menu("images/menu.jpeg");
   drawImage(0,0,"menu",1920,1080);// ou dm.x , dm.y 

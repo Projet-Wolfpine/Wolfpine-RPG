@@ -4,9 +4,6 @@
 #include "spells.h"
 #include "inventory.h"
 #include "deplacement.h"
-//#include "dungeon.h"
-
-
 
 perso_t init_player();
 

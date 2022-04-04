@@ -17,7 +17,7 @@ obj=obj/
 lib=../lib/
 ncurse=-lncurses
 fichierc=main.c menu_principal.c affichage_sdl.c fonction_sdl.c game.c gestion_deplacement_sdl.c creation_map.c combat.c deplacement.c inventory.c spells.c audio.c
-fichierh=${lib}menu_principal.h ${lib}affichage_sdl.h ${lib}fonction_sdl.h ${lib}game.h ${lib}gestion_deplacement_sdl.h ${lib}creation_map.h ${lib}structures.h ${lib}combat.h ${lib}combat.h ${lib}deplacement.h ${lib}inventory.h ${lib}spells.h ${lib}audio.h
+fichierh=${lib}menu_principal.h ${lib}affichage_sdl.h ${lib}fonction_sdl.h ${lib}game.h ${lib}gestion_deplacement_sdl.h ${lib}creation_map.h ${lib}structures.h ${lib}combat.h ${lib}deplacement.h ${lib}inventory.h ${lib}spells.h ${lib}audio.h
 
 
 all:clean main

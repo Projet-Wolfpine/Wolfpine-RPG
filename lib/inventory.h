@@ -2,8 +2,6 @@
 #define _INVENTORY_H
 #include "structures.h"
 
-
-
 int add_item(perso_t * player, int id, char * name, char * desc, int heal, int dgt, int armor);
 
 void del_item(perso_t * player, int id);

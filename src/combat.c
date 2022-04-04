@@ -55,16 +55,9 @@ int __itoa(int num,char *result,int base,int nbrNum)
 	return 0;
 }
 
-//Faire en sorte que le joueur puisse choisir son nom (struct)
 perso_t init_player(){
 	perso_t * player = malloc(sizeof(perso_t));
 	player->name =  malloc(sizeof(char *));
-	
-	//printf("Bonjour.. euh.. quel est ton nom déjà ?\n");
-	//scanf("%s",player->name);
-	
-	//printf("Ah oui.. %s.. ça me reviens.\n", player->name);
-	
 	player->anc_coord_x = 5;
 	player->anc_coord_y = 4;
 	player->position = "droite"; //Si jamais le dernier déplacement est gauche on tourne le perso et on modifira cette valeur pour afficher le sprite en consequece en sdl
@@ -120,6 +113,7 @@ void aff_info(perso_t * player, monstre_t * monstre, char * fond, char * sprite)
 		drawImage(0, 0, fond, 1920, 1080);
 		drawImage(700,200,sprite, 520, 520);
 		drawImage(1580,820,"exit_cross.png", 50, 50);
+
 		//Spells
 		if(spell_existe(player,0) != 0){
 			drawText(650,900,player->spell[0]->name,60,40,noir);
@@ -316,17 +310,10 @@ void tour_monstre(perso_t * player, monstre_t * monstre)
       printf("Oh.. vous avez perdu il me semble.\n");
 	}
  	else{
- 			/*__itoa(player->hp,hp_joueur,10,3);
-  		drawText(500,900,hp_joueur,25,25,noir);*/
-
-  		
  		printf("%s attaque ! vous prenez %d dégats    ||	HP player : %d  HP monstre : %d\n\n",monstre->name, dgt, player->hp, monstre->hp);
  	}
   }
   else{
-	
-	
-  	//drawText(820,700,monstre->name,50,30,blanc);
 	drawText(820,200,"est mort !",60,40,blanc);
   	faire_rendu();
   }
@@ -335,8 +322,8 @@ void tour_monstre(perso_t * player, monstre_t * monstre)
 }
 
 perso_t combat(perso_t * player, monstre_t * monstre){
-  //Affichage spécial du combat
-  while(monstre->hp > 0 && player->hp > 0){//condition de sortie à modifier avec sdl ?
+
+  while(monstre->hp > 0 && player->hp > 0){
 	tour_joueur(player,monstre);
     	tour_monstre(player,monstre);
   }
