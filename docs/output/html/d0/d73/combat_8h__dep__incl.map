@@ -1,6 +1,6 @@
 <map id="/info/etu/l2info/s202278/Wolfpine/Wolfpine&#45;RPG/lib/combat.h" name="/info/etu/l2info/s202278/Wolfpine/Wolfpine&#45;RPG/lib/combat.h">
 <area shape="rect" id="node1" title=" " alt="" coords="192,5,355,61"/>
 <area shape="rect" id="node2" href="$d3/d19/combat_8c.html" title="Fonctions de combat." alt="" coords="5,109,168,165"/>
-<area shape="rect" id="node3" href="$d1/dcb/game_8c.html" title=" " alt="" coords="192,109,355,165"/>
-<area shape="rect" id="node4" href="$d5/d47/test__deplacement_8c.html" title=" " alt="" coords="379,109,541,165"/>
+<area shape="rect" id="node3" href="$d1/dcb/game_8c.html" title="Fonctions de lancement du jeu." alt="" coords="192,109,355,165"/>
+<area shape="rect" id="node4" href="$d5/d47/test__deplacement_8c.html" title="Test des fonctions de déplacement." alt="" coords="379,109,541,165"/>
 </map>

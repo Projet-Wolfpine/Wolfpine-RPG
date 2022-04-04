@@ -5,6 +5,17 @@ warning: source '$(../lib)' is not a readable file or directory... skipping.
 /info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/affichage_sdl.c:71: warning: argument 'menu' of command @param is not found in the argument list of affichage_dialogue(char *id_PNJ)
 /info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/lib/affichage_sdl.h:2: warning: The following parameter of affichage_dialogue(char *id_PNJ) is not documented:
   parameter 'id_PNJ'
+/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/lib/combat.h:10: warning: documented empty return type of init_monster
+/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/deplacement.c:69: warning: argument 'coor_x' of command @param is not found in the argument list of case_libre(case_t mat[Y][X], int coord_y, int coord_x)
+/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/lib/deplacement.h:12: warning: The following parameter of case_libre(case_t mat[Y][X], int coord_y, int coord_x) is not documented:
+  parameter 'coord_x'
+/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/deplacement.c:96: warning: argument 'coor_x' of command @param is not found in the argument list of deplacer_pers(case_t mat[Y][X], int coord_y, int coord_x, perso_t *player)
+/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/lib/deplacement.h:16: warning: The following parameter of deplacer_pers(case_t mat[Y][X], int coord_y, int coord_x, perso_t *player) is not documented:
+  parameter 'coord_x'
+/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/deplacement.c:81: warning: argument 'coor_x' of command @param is not found in the argument list of placer_pers(case_t mat[Y][X], int coord_y, int coord_x, perso_t *player)
+/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/lib/deplacement.h:14: warning: The following parameters of placer_pers(case_t mat[Y][X], int coord_y, int coord_x, perso_t *player) are not documented:
+  parameter 'coord_x'
+  parameter 'player'
 /info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/fonction_sdl.c:167: warning: argument 'Abscisse' of command @param is not found in the argument list of drawImage(int x, int y, char *nom, int w, int h)
 /info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/fonction_sdl.c:167: warning: argument 'Ordonnée' of command @param is not found in the argument list of drawImage(int x, int y, char *nom, int w, int h)
 /info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/fonction_sdl.c:167: warning: argument 'Nom' of command @param is not found in the argument list of drawImage(int x, int y, char *nom, int w, int h)
@@ -32,6 +43,20 @@ warning: source '$(../lib)' is not a readable file or directory... skipping.
 /info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/affichage_sdl.c:71: warning: argument 'menu' of command @param is not found in the argument list of affichage_dialogue(char *id_PNJ)
 /info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/affichage_sdl.c:75: warning: The following parameter of affichage_dialogue(char *id_PNJ) is not documented:
   parameter 'id_PNJ'
+/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/combat.c:111: warning: documented empty return type of init_monster
+/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/creation_map.c:20: warning: argument 'stop' of command @param is not found in the argument list of time_diff2(struct timespec *start, struct timespec *end)
+/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/creation_map.c:25: warning: The following parameter of time_diff2(struct timespec *start, struct timespec *end) is not documented:
+  parameter 'end'
+/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/deplacement.c:69: warning: argument 'coor_x' of command @param is not found in the argument list of case_libre(case_t mat[Y][X], int coord_y, int coord_x)
+/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/deplacement.c:75: warning: The following parameter of case_libre(case_t mat[Y][X], int coord_y, int coord_x) is not documented:
+  parameter 'coord_x'
+/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/deplacement.c:96: warning: argument 'coor_x' of command @param is not found in the argument list of deplacer_pers(case_t mat[Y][X], int coord_y, int coord_x, perso_t *player)
+/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/deplacement.c:102: warning: The following parameter of deplacer_pers(case_t mat[Y][X], int coord_y, int coord_x, perso_t *player) is not documented:
+  parameter 'coord_x'
+/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/deplacement.c:81: warning: argument 'coor_x' of command @param is not found in the argument list of placer_pers(case_t mat[Y][X], int coord_y, int coord_x, perso_t *player)
+/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/deplacement.c:86: warning: The following parameters of placer_pers(case_t mat[Y][X], int coord_y, int coord_x, perso_t *player) are not documented:
+  parameter 'coord_x'
+  parameter 'player'
 /info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/fonction_sdl.c:167: warning: argument 'Abscisse' of command @param is not found in the argument list of drawImage(int x, int y, char *nom, int w, int h)
 /info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/fonction_sdl.c:167: warning: argument 'Ordonnée' of command @param is not found in the argument list of drawImage(int x, int y, char *nom, int w, int h)
 /info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/fonction_sdl.c:167: warning: argument 'Nom' of command @param is not found in the argument list of drawImage(int x, int y, char *nom, int w, int h)

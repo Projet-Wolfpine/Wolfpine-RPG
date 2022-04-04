@@ -142,7 +142,7 @@
       <type>perso_t</type>
       <name>combat</name>
       <anchorfile>d9/dab/combat_8h.html</anchorfile>
-      <anchor>aa2c1ca7f1bdf0a9c7e48a79c2890a095</anchor>
+      <anchor>a0b43da61372174ac12c0c21e8c37701c</anchor>
       <arglist>(perso_t *player, monstre_t *monstre)</arglist>
     </member>
   </compound>
@@ -1183,7 +1183,7 @@
       <type>char *</type>
       <name>info_case</name>
       <anchorfile>d1/dcb/game_8c.html</anchorfile>
-      <anchor>aa6d96ab6476527b240917c534678608e</anchor>
+      <anchor>a7f7e17f164fe397e766d8648aa7f83c6</anchor>
       <arglist>(case_t mat[Y][X], int coord_y, int coord_x)</arglist>
     </member>
     <member kind="function">
@@ -1197,7 +1197,7 @@
       <type>char *</type>
       <name>interaction_pnj</name>
       <anchorfile>d1/dcb/game_8c.html</anchorfile>
-      <anchor>aa0faf4e3e17cb4141a36f3ab94cb7960</anchor>
+      <anchor>a5bcafe15f254ee78a66037933ea827b7</anchor>
       <arglist>(case_t mat[Y][X], perso_t *perso)</arglist>
     </member>
     <member kind="function">
