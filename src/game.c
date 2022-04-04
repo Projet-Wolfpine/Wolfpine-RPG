@@ -12,11 +12,8 @@
 #include "time.h"
 
 #define TAILLE_CASE_PXL 64
+#define DROP_RATE 97
 
-/*
-perso_t joueur;
-joueur = init_player();
-*/
 char * nom_map="map1.txt";
 
 
@@ -67,6 +64,7 @@ void start(){
     int running = 1;//Initialisation pour savoir si le jeu continue de tourner ou non
     int random;
     srand(time(0));
+
 	//Initialisation de la matrice et du joueur
     case_t mat[Y][X];
     perso_t joueur;
@@ -87,26 +85,15 @@ void start(){
             afficher_map(nom_map,64,mat);
             info=info_case(mat,y,x);
 		    if(touche == 1 && dessus(mat,&joueur)){
-                //nom_map="map2.txt";
                 y--;
 		        printf("%d\n",est_a_cote(mat,&joueur));
                 info=info_case(mat,y,x);
                 afficher_mat(mat);
                 drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "dessus.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL ); 
                 faire_rendu();
-		        if(!strcmp(info,"ID_SOLMONSTRE1")){
-                	//srand(time(0));
-                	random=rand() % 101;
-               		if(random > 97){
-                		monstre_t monstre;
-            			init_monster(&monstre, "Sanik", "sanic.png", 50, 30 ,5);
-            			combat(&joueur,&monstre);
-                	}
-                }
-
             }
+
             if(touche == 2 && dessous(mat,&joueur)){
-                //nom_map="map3.txt";
                 y++;
 		        printf("%d\n",est_a_cote(mat,&joueur));
                 info=info_case(mat,y,x);
@@ -114,20 +101,8 @@ void start(){
 
                 drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "dessous.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
                 faire_rendu();
-		  
-		        if(!strcmp(info,"ID_SOLMONSTRE1")){
-                	//srand(time(0));
-                	random=rand() % 101;
-               		
-                	if(random > 97){
-                		monstre_t monstre;
-            			init_monster(&monstre, "Sanik", "sanic.png", 50, 30 ,5);
-          			
-            			combat(&joueur,&monstre);
-                	}
-                }
-                
             }
+
             if(touche == 3 && droite(mat,&joueur)){
                 x++;
 		        printf("%d\n",est_a_cote(mat,&joueur));
@@ -136,20 +111,8 @@ void start(){
                 //afficher_mat(mat);
                 drawImage(TAILLE_CASE_PXL*x, TAILLE_CASE_PXL*y , "droite.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
                 faire_rendu();
-		    
-		         if(!strcmp(info,"ID_SOLMONSTRE1")){
-                	//srand(time(0));
-                	random=rand() % 101;
-               		
-                	if(random > 97){
-                		monstre_t monstre;
-            			init_monster(&monstre, "Sanik", "sanic.png", 50, 30 ,5);
-          			
-            			combat(&joueur,&monstre);
-                	}
-                }
-                
             }
+
             if(touche == 4 && gauche(mat,&joueur)){
                 x--;
 		        printf("%d\n",est_a_cote(mat,&joueur));
@@ -158,20 +121,20 @@ void start(){
                 //afficher_map(nom_map,64,mat);
                 drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "gauche.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
                 faire_rendu();
-		    
-		         if(!strcmp(info,"ID_SOLMONSTRE1")){
-                	//srand(time(0));
-                	random=rand() % 101;
-               		
-                	if(random > 97){
-                		monstre_t monstre;
-            			init_monster(&monstre, "Sanik", "sanic.png", 50, 30 ,5);
-          			
-            			combat(&joueur,&monstre);
-                	}
-                }
-                
             }
+
+            // Gestion de combat donjon
+            if(!strcmp(info,"ID_SOLMONSTRE1") || !strcmp(info,"ID_SOLMONSTRE2" )){
+                random=rand() % 101;
+               		
+                if(random > DROP_RATE){
+                	monstre_t monstre;
+            		init_monster(&monstre, "Sanik", "sanic.png", 50, 30 ,5);
+          			
+            		combat(&joueur,&monstre);
+                }
+            }
+
             if(touche == 5){
                 running=0;
             }
@@ -330,7 +293,7 @@ void start(){
                 drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
                 faire_rendu();
             }
-	 }   
+	    }   
 
     }
     Menu();

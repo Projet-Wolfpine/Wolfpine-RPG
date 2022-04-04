@@ -214,7 +214,7 @@ void init_affichage(){
 	SDL_Surface* iconSurface;
 	iconSurface = SDL_LoadBMP("../images/wolfy.bmp");
 	SDL_SetWindowIcon(fenetre, iconSurface);
-	SDL_SetWindowFullscreen(fenetre, SDL_WINDOW_FULLSCREEN);//SDL_WINDOW_BORDERLESS
+	SDL_SetWindowFullscreen(fenetre, SDL_WINDOW_BORDERLESS);//SDL_WINDOW_BORDERLESS
 	loadImages();
 	
 }
