@@ -1,0 +1,27 @@
+var audio_8c =
+[
+    [ "PrivateAudioDevice", "d2/dcc/struct_private_audio_device.html", "d2/dcc/struct_private_audio_device" ],
+    [ "AUDIO_CHANNELS", "d3/d9a/audio_8c.html#a8fc745a0f6e356f4b79cb0ab059c40f0", null ],
+    [ "AUDIO_FORMAT", "d3/d9a/audio_8c.html#a25ef1d957093181c04182f3c55f3f1ea", null ],
+    [ "AUDIO_FREQUENCY", "d3/d9a/audio_8c.html#aae969438a57a86fddf0cf53106c9b6b4", null ],
+    [ "AUDIO_MAX_SOUNDS", "d3/d9a/audio_8c.html#a745ce39b149e95ee75d50b9c99578469", null ],
+    [ "AUDIO_MUSIC_FADE_VALUE", "d3/d9a/audio_8c.html#ac38de408d890f92223100b5b1e1aa809", null ],
+    [ "AUDIO_SAMPLES", "d3/d9a/audio_8c.html#a58e80361cf95d18afbe8f25713f4cdc6", null ],
+    [ "SDL_AUDIO_ALLOW_CHANGES", "d3/d9a/audio_8c.html#a0398585ffb30b83b6686b78e61317d1d", null ],
+    [ "addAudio", "d3/d9a/audio_8c.html#a31815ea21df258dbe2e50db77380cf08", null ],
+    [ "addMusic", "d3/d9a/audio_8c.html#ab4172bac28cebfdba5ec4bcd3b0cb390", null ],
+    [ "audioCallback", "d3/d9a/audio_8c.html#a4d77eb648242c09f939373f6fc5aa1a3", null ],
+    [ "createAudio", "d3/d9a/audio_8c.html#a83eb6efb3d674325c1377daf30c54883", null ],
+    [ "endAudio", "d3/d9a/audio_8c.html#a3fae9ccf354612f523af6a8078ae11d9", null ],
+    [ "freeAudio", "d3/d9a/audio_8c.html#aa3730ab77fa3498af628a47bbe29fac0", null ],
+    [ "initAudio", "d3/d9a/audio_8c.html#aa497dc0e932d8008a092680b6078ba0c", null ],
+    [ "pauseAudio", "d3/d9a/audio_8c.html#a80e7cce4d19baad74c85d0433e5920da", null ],
+    [ "playAudio", "d3/d9a/audio_8c.html#a7a8c2c1a553b4eb15711bccc4e950199", null ],
+    [ "playMusic", "d3/d9a/audio_8c.html#a8fb0f93c63af671ba8a536f875f66f1d", null ],
+    [ "playMusicFromMemory", "d3/d9a/audio_8c.html#a95ded0954a20cfc7f3fb6ff68bb2452c", null ],
+    [ "playSound", "d3/d9a/audio_8c.html#aa2a1c236a8c22740fd92902a1929f36d", null ],
+    [ "playSoundFromMemory", "d3/d9a/audio_8c.html#a5df7f8b69fad1f5fcd7ad6937f0c30cc", null ],
+    [ "unpauseAudio", "d3/d9a/audio_8c.html#a59ae60979e26937b6934ebc4606307c9", null ],
+    [ "gDevice", "d3/d9a/audio_8c.html#af9ea75dd614f75c35ec73935e0fcf3e6", null ],
+    [ "gSoundCount", "d3/d9a/audio_8c.html#aead5b624b88785e5df99ee5e9a552289", null ]
+];

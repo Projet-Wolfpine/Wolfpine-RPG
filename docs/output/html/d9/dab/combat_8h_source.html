@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Wolfpine:  Fichier source de /info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/lib/combat.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Wolfpine<span id="projectnumber">&#160;1.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.2 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','Recherche');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d9/dab/combat_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">combat.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d9/dab/combat_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef _COMBAT_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define _COMBAT_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dd/da3/structures_8h.html">structures.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d9/d42/spells_8h.html">spells.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../da/dab/inventory_8h.html">inventory.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d8/da5/deplacement_8h.html">deplacement.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<a class="code" href="../../df/de6/structperso__t.html">perso_t</a> <a class="code" href="../../d9/dab/combat_8h.html#a3790ce6458cef9238474baf44426c232">init_player</a>();</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d9/dab/combat_8h.html#ae4af95d1a00a3eb23173ebac6a4b1387">init_monster</a>(<a class="code" href="../../d4/ddf/structmonstre__t.html">monstre_t</a> * monster, <span class="keywordtype">char</span> * name, <span class="keywordtype">char</span> * sprite, <span class="keywordtype">int</span> hp, <span class="keywordtype">int</span> dgt, <span class="keywordtype">int</span> armor);</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d9/dab/combat_8h.html#aeec6653f2b515dc92c85cb133ff8b8d2">aff_info</a>(<a class="code" href="../../df/de6/structperso__t.html">perso_t</a> * player, <a class="code" href="../../d4/ddf/structmonstre__t.html">monstre_t</a> * monstre, <span class="keywordtype">char</span> * fond, <span class="keywordtype">char</span> * sprite);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d9/dab/combat_8h.html#a8217596f9d0ada09fc13341d48cc7122">tour_joueur</a>(<a class="code" href="../../df/de6/structperso__t.html">perso_t</a> * player, <a class="code" href="../../d4/ddf/structmonstre__t.html">monstre_t</a> * monstre);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d9/dab/combat_8h.html#a6fda867fa46bf42bf625634bac4daeaf">tour_monstre</a>(<a class="code" href="../../df/de6/structperso__t.html">perso_t</a> * player, <a class="code" href="../../d4/ddf/structmonstre__t.html">monstre_t</a> * monstre);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<a class="code" href="../../df/de6/structperso__t.html">perso_t</a> <a class="code" href="../../d9/dab/combat_8h.html#aa2c1ca7f1bdf0a9c7e48a79c2890a095">combat</a>(<a class="code" href="../../df/de6/structperso__t.html">perso_t</a> * player, <a class="code" href="../../d4/ddf/structmonstre__t.html">monstre_t</a> * monstre);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="acombat_8h_html_a3790ce6458cef9238474baf44426c232"><div class="ttname"><a href="../../d9/dab/combat_8h.html#a3790ce6458cef9238474baf44426c232">init_player</a></div><div class="ttdeci">perso_t init_player()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d19/combat_8c_source.html#l00058">combat.c:58</a></div></div>
+<div class="ttc" id="acombat_8h_html_a6fda867fa46bf42bf625634bac4daeaf"><div class="ttname"><a href="../../d9/dab/combat_8h.html#a6fda867fa46bf42bf625634bac4daeaf">tour_monstre</a></div><div class="ttdeci">void tour_monstre(perso_t *player, monstre_t *monstre)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d19/combat_8c_source.html#l00288">combat.c:288</a></div></div>
+<div class="ttc" id="acombat_8h_html_a8217596f9d0ada09fc13341d48cc7122"><div class="ttname"><a href="../../d9/dab/combat_8h.html#a8217596f9d0ada09fc13341d48cc7122">tour_joueur</a></div><div class="ttdeci">void tour_joueur(perso_t *player, monstre_t *monstre)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d19/combat_8c_source.html#l00150">combat.c:150</a></div></div>
+<div class="ttc" id="acombat_8h_html_aa2c1ca7f1bdf0a9c7e48a79c2890a095"><div class="ttname"><a href="../../d9/dab/combat_8h.html#aa2c1ca7f1bdf0a9c7e48a79c2890a095">combat</a></div><div class="ttdeci">perso_t combat(perso_t *player, monstre_t *monstre)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d19/combat_8c_source.html#l00324">combat.c:324</a></div></div>
+<div class="ttc" id="acombat_8h_html_ae4af95d1a00a3eb23173ebac6a4b1387"><div class="ttname"><a href="../../d9/dab/combat_8h.html#ae4af95d1a00a3eb23173ebac6a4b1387">init_monster</a></div><div class="ttdeci">void init_monster(monstre_t *monster, char *name, char *sprite, int hp, int dgt, int armor)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d19/combat_8c_source.html#l00087">combat.c:87</a></div></div>
+<div class="ttc" id="acombat_8h_html_aeec6653f2b515dc92c85cb133ff8b8d2"><div class="ttname"><a href="../../d9/dab/combat_8h.html#aeec6653f2b515dc92c85cb133ff8b8d2">aff_info</a></div><div class="ttdeci">void aff_info(perso_t *player, monstre_t *monstre, char *fond, char *sprite)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d19/combat_8c_source.html#l00097">combat.c:97</a></div></div>
+<div class="ttc" id="adeplacement_8h_html"><div class="ttname"><a href="../../d8/da5/deplacement_8h.html">deplacement.h</a></div></div>
+<div class="ttc" id="ainventory_8h_html"><div class="ttname"><a href="../../da/dab/inventory_8h.html">inventory.h</a></div></div>
+<div class="ttc" id="aspells_8h_html"><div class="ttname"><a href="../../d9/d42/spells_8h.html">spells.h</a></div></div>
+<div class="ttc" id="astructmonstre__t_html"><div class="ttname"><a href="../../d4/ddf/structmonstre__t.html">monstre_t</a></div></div>
+<div class="ttc" id="astructperso__t_html"><div class="ttname"><a href="../../df/de6/structperso__t.html">perso_t</a></div></div>
+<div class="ttc" id="astructures_8h_html"><div class="ttname"><a href="../../dd/da3/structures_8h.html">structures.h</a></div><div class="ttdoc">Structures d'objets.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li><li class="navelem"><a class="el" href="../../d9/dab/combat_8h.html">combat.h</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+  </ul>
+</div>
+</body>
+</html>

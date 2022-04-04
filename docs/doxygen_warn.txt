@@ -1,0 +1,58 @@
+warning: The selected output language "french" has not been updated
+since release 1.8.15.  As a result some sentences may appear in English.
+
+warning: source '$(../lib)' is not a readable file or directory... skipping.
+/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/affichage_sdl.c:71: warning: argument 'menu' of command @param is not found in the argument list of affichage_dialogue(char *id_PNJ)
+/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/lib/affichage_sdl.h:2: warning: The following parameter of affichage_dialogue(char *id_PNJ) is not documented:
+  parameter 'id_PNJ'
+/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/fonction_sdl.c:167: warning: argument 'Abscisse' of command @param is not found in the argument list of drawImage(int x, int y, char *nom, int w, int h)
+/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/fonction_sdl.c:167: warning: argument 'Ordonnée' of command @param is not found in the argument list of drawImage(int x, int y, char *nom, int w, int h)
+/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/fonction_sdl.c:167: warning: argument 'Nom' of command @param is not found in the argument list of drawImage(int x, int y, char *nom, int w, int h)
+/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/fonction_sdl.c:167: warning: argument 'Hauteur' of command @param is not found in the argument list of drawImage(int x, int y, char *nom, int w, int h)
+/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/fonction_sdl.c:167: warning: argument 'Largeur' of command @param is not found in the argument list of drawImage(int x, int y, char *nom, int w, int h)
+/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/lib/fonction_sdl.h:16: warning: The following parameters of drawImage(int x, int y, char *nom, int w, int h) are not documented:
+  parameter 'x'
+  parameter 'y'
+  parameter 'nom'
+  parameter 'w'
+  parameter 'h'
+/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/fonction_sdl.c:141: warning: argument 'Abscisse' of command @param is not found in the argument list of drawText(int x, int y, char *string, int h, int w, SDL_Color color)
+/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/fonction_sdl.c:141: warning: argument 'Ordonnée' of command @param is not found in the argument list of drawText(int x, int y, char *string, int h, int w, SDL_Color color)
+/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/fonction_sdl.c:141: warning: argument 'Contenu' of command @param is not found in the argument list of drawText(int x, int y, char *string, int h, int w, SDL_Color color)
+/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/fonction_sdl.c:141: warning: argument 'Hauteur' of command @param is not found in the argument list of drawText(int x, int y, char *string, int h, int w, SDL_Color color)
+/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/fonction_sdl.c:141: warning: argument 'Largeur' of command @param is not found in the argument list of drawText(int x, int y, char *string, int h, int w, SDL_Color color)
+/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/fonction_sdl.c:141: warning: argument 'couleur' of command @param is not found in the argument list of drawText(int x, int y, char *string, int h, int w, SDL_Color color)
+/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/lib/fonction_sdl.h:15: warning: The following parameters of drawText(int x, int y, char *string, int h, int w, SDL_Color color) are not documented:
+  parameter 'x'
+  parameter 'y'
+  parameter 'string'
+  parameter 'h'
+  parameter 'w'
+  parameter 'color'
+/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/affichage_sdl.c:71: warning: argument 'menu' of command @param is not found in the argument list of affichage_dialogue(char *id_PNJ)
+/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/affichage_sdl.c:75: warning: The following parameter of affichage_dialogue(char *id_PNJ) is not documented:
+  parameter 'id_PNJ'
+/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/fonction_sdl.c:167: warning: argument 'Abscisse' of command @param is not found in the argument list of drawImage(int x, int y, char *nom, int w, int h)
+/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/fonction_sdl.c:167: warning: argument 'Ordonnée' of command @param is not found in the argument list of drawImage(int x, int y, char *nom, int w, int h)
+/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/fonction_sdl.c:167: warning: argument 'Nom' of command @param is not found in the argument list of drawImage(int x, int y, char *nom, int w, int h)
+/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/fonction_sdl.c:167: warning: argument 'Hauteur' of command @param is not found in the argument list of drawImage(int x, int y, char *nom, int w, int h)
+/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/fonction_sdl.c:167: warning: argument 'Largeur' of command @param is not found in the argument list of drawImage(int x, int y, char *nom, int w, int h)
+/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/fonction_sdl.c:175: warning: The following parameters of drawImage(int x, int y, char *nom, int w, int h) are not documented:
+  parameter 'x'
+  parameter 'y'
+  parameter 'nom'
+  parameter 'w'
+  parameter 'h'
+/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/fonction_sdl.c:141: warning: argument 'Abscisse' of command @param is not found in the argument list of drawText(int x, int y, char *string, int h, int w, SDL_Color color)
+/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/fonction_sdl.c:141: warning: argument 'Ordonnée' of command @param is not found in the argument list of drawText(int x, int y, char *string, int h, int w, SDL_Color color)
+/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/fonction_sdl.c:141: warning: argument 'Contenu' of command @param is not found in the argument list of drawText(int x, int y, char *string, int h, int w, SDL_Color color)
+/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/fonction_sdl.c:141: warning: argument 'Hauteur' of command @param is not found in the argument list of drawText(int x, int y, char *string, int h, int w, SDL_Color color)
+/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/fonction_sdl.c:141: warning: argument 'Largeur' of command @param is not found in the argument list of drawText(int x, int y, char *string, int h, int w, SDL_Color color)
+/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/fonction_sdl.c:141: warning: argument 'couleur' of command @param is not found in the argument list of drawText(int x, int y, char *string, int h, int w, SDL_Color color)
+/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/fonction_sdl.c:150: warning: The following parameters of drawText(int x, int y, char *string, int h, int w, SDL_Color color) are not documented:
+  parameter 'x'
+  parameter 'y'
+  parameter 'string'
+  parameter 'h'
+  parameter 'w'
+  parameter 'color'

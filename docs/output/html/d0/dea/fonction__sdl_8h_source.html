@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Wolfpine:  Fichier source de /info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/lib/fonction_sdl.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Wolfpine<span id="projectnumber">&#160;1.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.2 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','Recherche');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d0/dea/fonction__sdl_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">fonction_sdl.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d0/dea/fonction__sdl_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;SDL2/SDL.h&gt;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;ncurses.h&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;SDL2/SDL_ttf.h&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="../../d0/dea/fonction__sdl_8h.html#af1c710caf1e3a9e81829078054e83799">    5</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../d0/dea/fonction__sdl_8h.html#af1c710caf1e3a9e81829078054e83799">SCREEN_HEIGHT</a>;</div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="../../d0/dea/fonction__sdl_8h.html#a599adbe412c60e0cc5abb86be7ee4507">    6</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../d0/dea/fonction__sdl_8h.html#a599adbe412c60e0cc5abb86be7ee4507">SCREEN_WIDTH</a>;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="../../d0/dea/fonction__sdl_8h.html#aac3d10974df03ea537d2eb8ded2e17d3">    8</a></span>&#160;<span class="keywordtype">void</span> * <a class="code" href="../../d0/dea/fonction__sdl_8h.html#aac3d10974df03ea537d2eb8ded2e17d3">fenetre</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="../../d0/dea/fonction__sdl_8h.html#a41da1d9c960c28bf3d7e2ec2138425c8">    9</a></span>&#160;SDL_Window*<a class="code" href="../../d0/dea/fonction__sdl_8h.html#a41da1d9c960c28bf3d7e2ec2138425c8">pWindow</a>;</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="../../d0/dea/fonction__sdl_8h.html#a966da7a60c4ea3ba301e26ccc5efe452">   10</a></span>&#160;SDL_Renderer*<a class="code" href="../../d0/dea/fonction__sdl_8h.html#a966da7a60c4ea3ba301e26ccc5efe452">renderer</a>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="../../d0/dea/fonction__sdl_8h.html#aa73601f944838ffac2fa4d3e298a6ef4">   11</a></span>&#160;SDL_Surface *<a class="code" href="../../d0/dea/fonction__sdl_8h.html#aa73601f944838ffac2fa4d3e298a6ef4">image</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="../../d0/dea/fonction__sdl_8h.html#a9239b9be416490359dc85d089a239ada">   12</a></span>&#160;SDL_DisplayMode <a class="code" href="../../d0/dea/fonction__sdl_8h.html#a9239b9be416490359dc85d089a239ada">dm</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="../../d0/dea/fonction__sdl_8h.html#af9bbd52e1fb3355ca65418d77f023b23">   14</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d0/dea/fonction__sdl_8h.html#af9bbd52e1fb3355ca65418d77f023b23">setcolor</a>(<span class="keywordtype">int</span>, <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d0/dea/fonction__sdl_8h.html#aebe6d58fb84ee534ca0427aa5a0b48f7">drawText</a> (<span class="keywordtype">int</span> , <span class="keywordtype">int</span> , <span class="keywordtype">char</span> *, <span class="keywordtype">int</span>, <span class="keywordtype">int</span>, SDL_Color);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d0/dea/fonction__sdl_8h.html#a71cbacd3612f3b99b170b894f2341e91">drawImage</a> (<span class="keywordtype">int</span> , <span class="keywordtype">int</span> , <span class="keywordtype">char</span> *, <span class="keywordtype">int</span>, <span class="keywordtype">int</span> );</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d0/dea/fonction__sdl_8h.html#a79d4020cf0b63c5c11c847b98348af97">init_affichage</a>();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d0/dea/fonction__sdl_8h.html#a9a6c8918d7cb1e0eff8e5c574512da62">loadImages</a>();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d0/dea/fonction__sdl_8h.html#a1b8ec94d5f19922027d2c85ac4232398">unloadImages</a>();</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="../../d0/dea/fonction__sdl_8h.html#aae02cc4cef6bcbb0d78251146784b058">   20</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d0/dea/fonction__sdl_8h.html#aae02cc4cef6bcbb0d78251146784b058">showWindow</a>();</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d0/dea/fonction__sdl_8h.html#ac8372499b2cbfc9e82c12a3a003a426f">fond_blanc</a>();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d0/dea/fonction__sdl_8h.html#a42b50d6f3e8bb9a23498a642f94691f4">fond_rouge</a>();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d0/dea/fonction__sdl_8h.html#a5455135b00eeef7d3eab7d3ec02269a5">fond_vert</a>();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d0/dea/fonction__sdl_8h.html#a6b9f30bd354d48d81d672c0214074fab">fond_bleu</a>();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d0/dea/fonction__sdl_8h.html#a95c2e8cb34e25d1dd3f34153dc3512f2">faire_rendu</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="../../d0/dea/fonction__sdl_8h.html#a27bf92ff761d188ffc68b9232e78e76e">   26</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d0/dea/fonction__sdl_8h.html#a27bf92ff761d188ffc68b9232e78e76e">quitter_sdl</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d0/dea/fonction__sdl_8h.html#a9997b9c0deff4119dd1a312e048dd0b5">quitter_affichage</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d0/dea/fonction__sdl_8h.html#ac3b8549344c280045d9187e6c49bcba2">afficher_image_menu</a>(SDL_PRINTF_FORMAT_STRING <span class="keywordtype">char</span> *nom);</div>
+<div class="ttc" id="afonction__sdl_8h_html_a1b8ec94d5f19922027d2c85ac4232398"><div class="ttname"><a href="../../d0/dea/fonction__sdl_8h.html#a1b8ec94d5f19922027d2c85ac4232398">unloadImages</a></div><div class="ttdeci">void unloadImages()</div><div class="ttdoc">free de toutes les textures présent dans le tableau images[i]</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da1/fonction__sdl_8c_source.html#l00065">fonction_sdl.c:65</a></div></div>
+<div class="ttc" id="afonction__sdl_8h_html_a27bf92ff761d188ffc68b9232e78e76e"><div class="ttname"><a href="../../d0/dea/fonction__sdl_8h.html#a27bf92ff761d188ffc68b9232e78e76e">quitter_sdl</a></div><div class="ttdeci">void quitter_sdl()</div></div>
+<div class="ttc" id="afonction__sdl_8h_html_a41da1d9c960c28bf3d7e2ec2138425c8"><div class="ttname"><a href="../../d0/dea/fonction__sdl_8h.html#a41da1d9c960c28bf3d7e2ec2138425c8">pWindow</a></div><div class="ttdeci">SDL_Window * pWindow</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dea/fonction__sdl_8h_source.html#l00009">fonction_sdl.h:9</a></div></div>
+<div class="ttc" id="afonction__sdl_8h_html_a42b50d6f3e8bb9a23498a642f94691f4"><div class="ttname"><a href="../../d0/dea/fonction__sdl_8h.html#a42b50d6f3e8bb9a23498a642f94691f4">fond_rouge</a></div><div class="ttdeci">void fond_rouge()</div><div class="ttdoc">fenêtre en rouge</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da1/fonction__sdl_8c_source.html#l00096">fonction_sdl.c:96</a></div></div>
+<div class="ttc" id="afonction__sdl_8h_html_a5455135b00eeef7d3eab7d3ec02269a5"><div class="ttname"><a href="../../d0/dea/fonction__sdl_8h.html#a5455135b00eeef7d3eab7d3ec02269a5">fond_vert</a></div><div class="ttdeci">void fond_vert()</div><div class="ttdoc">fenêtre en vert</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da1/fonction__sdl_8c_source.html#l00107">fonction_sdl.c:107</a></div></div>
+<div class="ttc" id="afonction__sdl_8h_html_a599adbe412c60e0cc5abb86be7ee4507"><div class="ttname"><a href="../../d0/dea/fonction__sdl_8h.html#a599adbe412c60e0cc5abb86be7ee4507">SCREEN_WIDTH</a></div><div class="ttdeci">int SCREEN_WIDTH</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dea/fonction__sdl_8h_source.html#l00006">fonction_sdl.h:6</a></div></div>
+<div class="ttc" id="afonction__sdl_8h_html_a6b9f30bd354d48d81d672c0214074fab"><div class="ttname"><a href="../../d0/dea/fonction__sdl_8h.html#a6b9f30bd354d48d81d672c0214074fab">fond_bleu</a></div><div class="ttdeci">void fond_bleu()</div><div class="ttdoc">fenêtre en bleu</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da1/fonction__sdl_8c_source.html#l00118">fonction_sdl.c:118</a></div></div>
+<div class="ttc" id="afonction__sdl_8h_html_a71cbacd3612f3b99b170b894f2341e91"><div class="ttname"><a href="../../d0/dea/fonction__sdl_8h.html#a71cbacd3612f3b99b170b894f2341e91">drawImage</a></div><div class="ttdeci">void drawImage(int, int, char *, int, int)</div><div class="ttdoc">Affiche de l'image d'une certaine taille à des coordonnées données.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da1/fonction__sdl_8c_source.html#l00175">fonction_sdl.c:175</a></div></div>
+<div class="ttc" id="afonction__sdl_8h_html_a79d4020cf0b63c5c11c847b98348af97"><div class="ttname"><a href="../../d0/dea/fonction__sdl_8h.html#a79d4020cf0b63c5c11c847b98348af97">init_affichage</a></div><div class="ttdeci">void init_affichage()</div><div class="ttdoc">Affiche la fenêtre du jeu en fonction en plein ecran avec les fonctions de rendu de police et de char...</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da1/fonction__sdl_8c_source.html#l00198">fonction_sdl.c:198</a></div></div>
+<div class="ttc" id="afonction__sdl_8h_html_a9239b9be416490359dc85d089a239ada"><div class="ttname"><a href="../../d0/dea/fonction__sdl_8h.html#a9239b9be416490359dc85d089a239ada">dm</a></div><div class="ttdeci">SDL_DisplayMode dm</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dea/fonction__sdl_8h_source.html#l00012">fonction_sdl.h:12</a></div></div>
+<div class="ttc" id="afonction__sdl_8h_html_a95c2e8cb34e25d1dd3f34153dc3512f2"><div class="ttname"><a href="../../d0/dea/fonction__sdl_8h.html#a95c2e8cb34e25d1dd3f34153dc3512f2">faire_rendu</a></div><div class="ttdeci">void faire_rendu()</div><div class="ttdoc">Mise a jour de l'etat de rendu de l'ecran.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da1/fonction__sdl_8c_source.html#l00076">fonction_sdl.c:76</a></div></div>
+<div class="ttc" id="afonction__sdl_8h_html_a966da7a60c4ea3ba301e26ccc5efe452"><div class="ttname"><a href="../../d0/dea/fonction__sdl_8h.html#a966da7a60c4ea3ba301e26ccc5efe452">renderer</a></div><div class="ttdeci">SDL_Renderer * renderer</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dea/fonction__sdl_8h_source.html#l00010">fonction_sdl.h:10</a></div></div>
+<div class="ttc" id="afonction__sdl_8h_html_a9997b9c0deff4119dd1a312e048dd0b5"><div class="ttname"><a href="../../d0/dea/fonction__sdl_8h.html#a9997b9c0deff4119dd1a312e048dd0b5">quitter_affichage</a></div><div class="ttdeci">void quitter_affichage()</div><div class="ttdoc">fonction qui permet de quitter le jeu proprement</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da1/fonction__sdl_8c_source.html#l00129">fonction_sdl.c:129</a></div></div>
+<div class="ttc" id="afonction__sdl_8h_html_a9a6c8918d7cb1e0eff8e5c574512da62"><div class="ttname"><a href="../../d0/dea/fonction__sdl_8h.html#a9a6c8918d7cb1e0eff8e5c574512da62">loadImages</a></div><div class="ttdeci">void loadImages()</div><div class="ttdoc">Chargement de toutes les textures présent dans le dossier ./images.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da1/fonction__sdl_8c_source.html#l00032">fonction_sdl.c:32</a></div></div>
+<div class="ttc" id="afonction__sdl_8h_html_aa73601f944838ffac2fa4d3e298a6ef4"><div class="ttname"><a href="../../d0/dea/fonction__sdl_8h.html#aa73601f944838ffac2fa4d3e298a6ef4">image</a></div><div class="ttdeci">SDL_Surface * image</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dea/fonction__sdl_8h_source.html#l00011">fonction_sdl.h:11</a></div></div>
+<div class="ttc" id="afonction__sdl_8h_html_aac3d10974df03ea537d2eb8ded2e17d3"><div class="ttname"><a href="../../d0/dea/fonction__sdl_8h.html#aac3d10974df03ea537d2eb8ded2e17d3">fenetre</a></div><div class="ttdeci">void * fenetre</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dea/fonction__sdl_8h_source.html#l00008">fonction_sdl.h:8</a></div></div>
+<div class="ttc" id="afonction__sdl_8h_html_aae02cc4cef6bcbb0d78251146784b058"><div class="ttname"><a href="../../d0/dea/fonction__sdl_8h.html#aae02cc4cef6bcbb0d78251146784b058">showWindow</a></div><div class="ttdeci">void showWindow()</div></div>
+<div class="ttc" id="afonction__sdl_8h_html_ac3b8549344c280045d9187e6c49bcba2"><div class="ttname"><a href="../../d0/dea/fonction__sdl_8h.html#ac3b8549344c280045d9187e6c49bcba2">afficher_image_menu</a></div><div class="ttdeci">void afficher_image_menu(SDL_PRINTF_FORMAT_STRING char *nom)</div><div class="ttdoc">affiche l'image du fond dans le menu pricipal</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da1/fonction__sdl_8c_source.html#l00231">fonction_sdl.c:231</a></div></div>
+<div class="ttc" id="afonction__sdl_8h_html_ac8372499b2cbfc9e82c12a3a003a426f"><div class="ttname"><a href="../../d0/dea/fonction__sdl_8h.html#ac8372499b2cbfc9e82c12a3a003a426f">fond_blanc</a></div><div class="ttdeci">void fond_blanc()</div><div class="ttdoc">fenêtre en blanc</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da1/fonction__sdl_8c_source.html#l00085">fonction_sdl.c:85</a></div></div>
+<div class="ttc" id="afonction__sdl_8h_html_aebe6d58fb84ee534ca0427aa5a0b48f7"><div class="ttname"><a href="../../d0/dea/fonction__sdl_8h.html#aebe6d58fb84ee534ca0427aa5a0b48f7">drawText</a></div><div class="ttdeci">void drawText(int, int, char *, int, int, SDL_Color)</div><div class="ttdoc">Affiche du texte d'une certaine taille à des coordonnées données.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da1/fonction__sdl_8c_source.html#l00150">fonction_sdl.c:150</a></div></div>
+<div class="ttc" id="afonction__sdl_8h_html_af1c710caf1e3a9e81829078054e83799"><div class="ttname"><a href="../../d0/dea/fonction__sdl_8h.html#af1c710caf1e3a9e81829078054e83799">SCREEN_HEIGHT</a></div><div class="ttdeci">int SCREEN_HEIGHT</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dea/fonction__sdl_8h_source.html#l00005">fonction_sdl.h:5</a></div></div>
+<div class="ttc" id="afonction__sdl_8h_html_af9bbd52e1fb3355ca65418d77f023b23"><div class="ttname"><a href="../../d0/dea/fonction__sdl_8h.html#af9bbd52e1fb3355ca65418d77f023b23">setcolor</a></div><div class="ttdeci">void setcolor(int, int)</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li><li class="navelem"><a class="el" href="../../d0/dea/fonction__sdl_8h.html">fonction_sdl.h</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+  </ul>
+</div>
+</body>
+</html>

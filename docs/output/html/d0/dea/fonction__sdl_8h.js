@@ -1,0 +1,25 @@
+var fonction__sdl_8h =
+[
+    [ "afficher_image_menu", "d0/dea/fonction__sdl_8h.html#ac3b8549344c280045d9187e6c49bcba2", null ],
+    [ "drawImage", "d0/dea/fonction__sdl_8h.html#a71cbacd3612f3b99b170b894f2341e91", null ],
+    [ "drawText", "d0/dea/fonction__sdl_8h.html#aebe6d58fb84ee534ca0427aa5a0b48f7", null ],
+    [ "faire_rendu", "d0/dea/fonction__sdl_8h.html#a95c2e8cb34e25d1dd3f34153dc3512f2", null ],
+    [ "fond_blanc", "d0/dea/fonction__sdl_8h.html#ac8372499b2cbfc9e82c12a3a003a426f", null ],
+    [ "fond_bleu", "d0/dea/fonction__sdl_8h.html#a6b9f30bd354d48d81d672c0214074fab", null ],
+    [ "fond_rouge", "d0/dea/fonction__sdl_8h.html#a42b50d6f3e8bb9a23498a642f94691f4", null ],
+    [ "fond_vert", "d0/dea/fonction__sdl_8h.html#a5455135b00eeef7d3eab7d3ec02269a5", null ],
+    [ "init_affichage", "d0/dea/fonction__sdl_8h.html#a79d4020cf0b63c5c11c847b98348af97", null ],
+    [ "loadImages", "d0/dea/fonction__sdl_8h.html#a9a6c8918d7cb1e0eff8e5c574512da62", null ],
+    [ "quitter_affichage", "d0/dea/fonction__sdl_8h.html#a9997b9c0deff4119dd1a312e048dd0b5", null ],
+    [ "quitter_sdl", "d0/dea/fonction__sdl_8h.html#a27bf92ff761d188ffc68b9232e78e76e", null ],
+    [ "setcolor", "d0/dea/fonction__sdl_8h.html#af9bbd52e1fb3355ca65418d77f023b23", null ],
+    [ "showWindow", "d0/dea/fonction__sdl_8h.html#aae02cc4cef6bcbb0d78251146784b058", null ],
+    [ "unloadImages", "d0/dea/fonction__sdl_8h.html#a1b8ec94d5f19922027d2c85ac4232398", null ],
+    [ "dm", "d0/dea/fonction__sdl_8h.html#a9239b9be416490359dc85d089a239ada", null ],
+    [ "fenetre", "d0/dea/fonction__sdl_8h.html#aac3d10974df03ea537d2eb8ded2e17d3", null ],
+    [ "image", "d0/dea/fonction__sdl_8h.html#aa73601f944838ffac2fa4d3e298a6ef4", null ],
+    [ "pWindow", "d0/dea/fonction__sdl_8h.html#a41da1d9c960c28bf3d7e2ec2138425c8", null ],
+    [ "renderer", "d0/dea/fonction__sdl_8h.html#a966da7a60c4ea3ba301e26ccc5efe452", null ],
+    [ "SCREEN_HEIGHT", "d0/dea/fonction__sdl_8h.html#af1c710caf1e3a9e81829078054e83799", null ],
+    [ "SCREEN_WIDTH", "d0/dea/fonction__sdl_8h.html#a599adbe412c60e0cc5abb86be7ee4507", null ]
+];

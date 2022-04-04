@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Wolfpine:  Fichier source de /info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/lib/spells.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Wolfpine<span id="projectnumber">&#160;1.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.2 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','Recherche');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d9/d42/spells_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">spells.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d9/d42/spells_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef _SPELLS_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define _SPELLS_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dd/da3/structures_8h.html">structures.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d9/d42/spells_8h.html#ac406b871d394d9cc5cb14febd451da6f">add_spell</a>(<a class="code" href="../../df/de6/structperso__t.html">perso_t</a> * player, <span class="keywordtype">int</span> num_spell, <span class="keywordtype">char</span> * spell_name, <span class="keywordtype">int</span> dgt);</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../d9/d42/spells_8h.html#a9b7843c37f71e4b978bf75657fcee555">spell_existe</a>(<a class="code" href="../../df/de6/structperso__t.html">perso_t</a> * player, <span class="keywordtype">int</span> num_spell);</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d9/d42/spells_8h.html#ad9feb4a5045d784e03f30f355bd630a7">spell_choice</a>(<a class="code" href="../../df/de6/structperso__t.html">perso_t</a> * player, <span class="keywordtype">int</span> * spell_num);</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aspells_8h_html_a9b7843c37f71e4b978bf75657fcee555"><div class="ttname"><a href="../../d9/d42/spells_8h.html#a9b7843c37f71e4b978bf75657fcee555">spell_existe</a></div><div class="ttdeci">int spell_existe(perso_t *player, int num_spell)</div><div class="ttdoc">Vérifie si un sort existe ou non. Si il n'existe pas, il ne peut pas être utilisé</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d8d/spells_8c_source.html#l00039">spells.c:39</a></div></div>
+<div class="ttc" id="aspells_8h_html_ac406b871d394d9cc5cb14febd451da6f"><div class="ttname"><a href="../../d9/d42/spells_8h.html#ac406b871d394d9cc5cb14febd451da6f">add_spell</a></div><div class="ttdeci">void add_spell(perso_t *player, int num_spell, char *spell_name, int dgt)</div><div class="ttdoc">Fonction d'ajout d'un sort dans le tableau de sorts.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d8d/spells_8c_source.html#l00023">spells.c:23</a></div></div>
+<div class="ttc" id="aspells_8h_html_ad9feb4a5045d784e03f30f355bd630a7"><div class="ttname"><a href="../../d9/d42/spells_8h.html#ad9feb4a5045d784e03f30f355bd630a7">spell_choice</a></div><div class="ttdeci">void spell_choice(perso_t *player, int *spell_num)</div><div class="ttdoc">Choix du sort à utiliser lors de l'attaque.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d8d/spells_8c_source.html#l00051">spells.c:51</a></div></div>
+<div class="ttc" id="astructperso__t_html"><div class="ttname"><a href="../../df/de6/structperso__t.html">perso_t</a></div></div>
+<div class="ttc" id="astructures_8h_html"><div class="ttname"><a href="../../dd/da3/structures_8h.html">structures.h</a></div><div class="ttdoc">Structures d'objets.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li><li class="navelem"><a class="el" href="../../d9/d42/spells_8h.html">spells.h</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+  </ul>
+</div>
+</body>
+</html>
