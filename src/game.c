@@ -63,6 +63,7 @@ void start(){
     int touche=-1;
     int running = 1;//Initialisation pour savoir si le jeu continue de tourner ou non
     int random;
+    int r_monstre;
     srand(time(0));
 
 	//Initialisation de la matrice et du joueur
@@ -126,11 +127,20 @@ void start(){
             // Gestion de combat donjon
             if(!strcmp(info,"ID_SOLMONSTRE1") || !strcmp(info,"ID_SOLMONSTRE2" )){
                 random=rand() % 101;
+                r_monstre=rand() % 3;
+                printf("MONSTRE : %d\n", r_monstre);
                		
                 if(random > DROP_RATE){
                 	monstre_t monstre;
-            		init_monster(&monstre, "Sanik", "sanic.png", 50, 30 ,5);
-          			
+                    if(r_monstre == 0){
+                        init_monster(&monstre, "Sanik", "sanic.png", 50, 30 ,5);
+                    }
+                    else if(r_monstre == 1){
+                        init_monster(&monstre, "Pop", "pop_cat.png", 100, 50 ,20);
+                    }
+                    else if (r_monstre == 2){
+                        init_monster(&monstre, "Picolo", "picolo.png", 50, 30 ,5);
+                    }
             		combat(&joueur,&monstre);
                 }
             }
