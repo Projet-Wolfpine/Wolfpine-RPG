@@ -14,8 +14,8 @@
  * \file combat.c
  * \brief Fonctions de combat.
  * \author Killian.R
- * \version 1.1
- * \date 24 mars 2022
+ * \version 1.3
+ * \date 04 avril 2022
  */
 SDL_Color noir = {0, 0, 0};
 SDL_Color rouge = {255, 0, 0};
@@ -24,6 +24,15 @@ char hp_joueur[3];
 char hp_monstre[3];
 char inf_dgt[2];
 
+/**
+ * \fn int __itoa(int num,char *result,int base,int nbrNum)
+ * \brief fonction de convertion d'un int en char
+ * \param num nombre que l'on souhaite convertir
+ * \param result variable dans laquelle on stocke le résultat de la convertion
+ * \param base base numérique de la convertion
+ * \param nbrNum taille de caractères du résultat
+ * \return 0 si tout s'est bien passé
+ */
 int __itoa(int num,char *result,int base,int nbrNum)
 {
 	int j=0;
@@ -50,11 +59,15 @@ int __itoa(int num,char *result,int base,int nbrNum)
 	for(k=j;k<32;k++)res2[i++]=res[k];
 
 	res2[nbrNum]='\0';
-	//printf("res2=%s \n",res2);
 	memcpy(result,res2,sizeof(res2));
 	return 0;
 }
 
+/**
+ * \fn perso_t init_player()
+ * \brief fonction d'initialisation d'un perso_t
+ * \return retourne un pointeur sur le joueur initialisé
+ */
 perso_t init_player(){
 	perso_t * player = malloc(sizeof(perso_t));
 	player->name =  malloc(sizeof(char *));
@@ -84,6 +97,17 @@ perso_t init_player(){
   return *player;
 }
 
+/**
+ * \fn void init_monster(monstre_t * monster, char * name, char * sprite, int hp, int dgt, int armor)
+ * \brief fonction d'initialisation d'un monstre_t
+ * \param monster monstre_t dans lequel va être renvoyé le monstre 
+ * \param name nom associé au monstre
+ * \param sprite texture d'affichage du monstre
+ * \param hp nombre de points de vie du monstre
+ * \param dgt nombre de dégats du monstre
+ * \param armor nombre de résistance du monstre
+ * \return retourne un pointeur sur le joueur initialisé
+ */
 void init_monster(monstre_t * monster, char * name, char * sprite, int hp, int dgt, int armor){
 	monster->name =  malloc(sizeof(char *));
 	monster->sprite =  malloc(sizeof(char *));
@@ -94,6 +118,14 @@ void init_monster(monstre_t * monster, char * name, char * sprite, int hp, int d
 	monster->armor = armor;
 }
 
+/**
+ * \fn void aff_info(perso_t * player, monstre_t * monstre, char * fond, char * sprite)
+ * \brief fonction d'affichage d'information durant le combat
+ * \param player personnage concerné par le combat
+ * \param monstre monstre concerné par le combat
+ * \param fond texture affichée en background
+ * \param sprite texture du monstre à afficher
+ */
 void aff_info(perso_t * player, monstre_t * monstre, char * fond, char * sprite){
 
 	if(!strcmp(fond,"combat.png")){
@@ -147,6 +179,12 @@ void aff_info(perso_t * player, monstre_t * monstre, char * fond, char * sprite)
 	}
 }
 
+/**
+ * \fn void tour_joueur(perso_t * player, monstre_t * monstre)
+ * \brief fonction d'attaque du joueur
+ * \param player personnage concerné par le combat
+ * \param monstre monstre concerné par le combat
+ */
 void tour_joueur(perso_t * player, monstre_t * monstre){
 	SDL_Event event;
 	int choix = 0; 
@@ -285,6 +323,12 @@ void tour_joueur(perso_t * player, monstre_t * monstre){
   	}
 }
 
+/**
+ * \fn void tour_monstre(perso_t * player, monstre_t * monstre)
+ * \brief fonction d'attaque du monstre
+ * \param player personnage concerné par le combat
+ * \param monstre monstre concerné par le combat
+ */
 void tour_monstre(perso_t * player, monstre_t * monstre)
 {
   	int dgt;
@@ -321,11 +365,17 @@ void tour_monstre(perso_t * player, monstre_t * monstre)
   		
 }
 
+/**
+ * \fn void combat(perso_t * player, monstre_t * monstre)
+ * \brief fonction de lancement du combat au tour par tour
+ * \param player adresse du personnage concerné par le combat
+ * \param monstre adresse du monstre concerné par le combat
+ */
 perso_t combat(perso_t * player, monstre_t * monstre){
 
   while(monstre->hp > 0 && player->hp > 0){
 	tour_joueur(player,monstre);
-    	tour_monstre(player,monstre);
+    tour_monstre(player,monstre);
   }
   
   return(*player);

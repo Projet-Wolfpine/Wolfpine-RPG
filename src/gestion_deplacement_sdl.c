@@ -2,8 +2,20 @@
 #include "../lib/fonction_sdl.h"
 #include <SDL2/SDL.h>
 
+/**
+ * \file gestion_deplacement_sdl.c
+ * \brief Fonctions de gestion du déplacement en SDL.
+ * \author Thibault.C
+ * \version 1.0
+ * \date 04 avril 2022
+ */
 SDL_Event event;
 
+/**
+ * \fn int touche_detecter()
+ * \brief Fonction permettant la détection de touches
+ * \return retourne la valeur relative à la touche utilisée
+ */
 int touche_detecter(){ 
     if ( SDL_PollEvent(&event) ){
         switch(event.type){

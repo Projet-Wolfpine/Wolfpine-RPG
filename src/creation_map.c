@@ -4,21 +4,36 @@
 #include <sys/time.h>
 #include <time.h>
 
+/**
+ * \file creation_map.c
+ * \brief Fonctions de création d'une map
+ * \author Dimitri.B, Thibault.C
+ * \version 1.1
+ * \date 04 avril 2022
+ */
+
 case_t map_info[Y][X];
 int map_int[Y][X];
 
+/**
+ * \fn float time_diff2(struct timespec *start, struct timespec *end)
+ * \brief Calcule le temps d'éxécution d'une fonction
+ * \param start heure de lancement du chronomètre (en ms)
+ * \param stop heure de fin du chronomètre (en ms)
+ * \return temps d'éxécution (float)
+ */
 float time_diff2(struct timespec *start, struct timespec *end){
     return (end->tv_sec - start->tv_sec) + 1e-9*(end->tv_nsec - start->tv_nsec);
 }
 
-
-  /* la fonction prend la matrice avec les entiers afin de  remplir un tableau
-  de structure contenant les infos de chaque cases (id_bloc et statut colision)*/
-
-
+/**
+ * \fn void lecture_fichier_map(char nom_fichier[20],int map_int[Y][X])
+ * \brief La fonction prend la matrice avec les entiers afin de remplir un tableau
+            de structure contenant les infos de chaque cases (id_bloc et statut colision)
+ * \param nom_fichier fichier contenant les informations matricielles relatives à la map
+ * \param map_int matrice où les informations sont stockées
+ */
 void lecture_fichier_map(char nom_fichier[20],int map_int[Y][X]){
-  /* lis un fichier.txt data de a map demandée,
-   et met chaque entier dans une case de la matrice*/
   int i, j, var;
   FILE * fic;
   fic=fopen(nom_fichier,"r");
@@ -32,7 +47,12 @@ void lecture_fichier_map(char nom_fichier[20],int map_int[Y][X]){
   fclose(fic);
 }
 
-//Fonction pemetant d'associer un id et un statut de collision à toutes les cases de la matrice
+/**
+ * \fn void mise_struct_map(case_t map_info[Y][X], int map_int[Y][X])
+ * \brief Fonction permetant d'associer un id et un statut de collision à toutes les cases de la matrice
+ * \param map_info matrice contenant les id et les collisions de chaque bloc
+ * \param map_int matrice où les informations sont stockées
+ */
 void mise_struct_map(case_t map_info[Y][X], int map_int[Y][X]){
     struct timespec start2;
     struct timespec end2;
@@ -591,6 +611,13 @@ void mise_struct_map(case_t map_info[Y][X], int map_int[Y][X]){
      printf("time fonction %0.8f sec\n",time_diff2(&start2, &end2));
 }
 
+/**
+ * \fn void afficher_map(char * nom_map,int taille, case_t map_info[Y][X])
+ * \brief Affiche en SDL une matrice contenant les informations de chaque bloc
+ * \param nom_map nom de la map que l'on veut afficher
+ * \param taille taille d'une case en pixel (64px)
+ * \param map_info matrice contenant les id et les collisions de chaque bloc
+ */
 void afficher_map(char * nom_map,int taille, case_t map_info[Y][X]){
   int i,j;
   lecture_fichier_map(nom_map, map_int);

@@ -11,17 +11,38 @@
 #include "string.h"
 #include "time.h"
 
+/**
+ * \file game.c
+ * \brief Fonctions de lancement du jeu
+ * \author Thibault.C Killian.R Ilyas.A
+ * \version 1.2
+ * \date 04 avril 2022
+ */
+
 #define TAILLE_CASE_PXL 64
 #define DROP_RATE 97
 
 char * nom_map="map1.txt";
 
-
+/**
+ * \fn char * info_case(case_t mat[Y][X] , int coord_y, int coord_x)
+ * \brief Fonction donnant l'id de la case indiquée
+ * \param mat matrice sur laquelle on effectue le test
+ * \param coord_y coordonée en y à tester
+ * \param coord_x coordonée en x à tester
+ * \return retourne l'id de la case
+ */
 char * info_case(case_t mat[Y][X] , int coord_y, int coord_x){
     return(mat[coord_y][coord_x].id);
 }
 
-//Fonction qui permet de sauvegarder diverse informations sur le joueur et son placement pour les inclure dans un fichier txt 
+/**
+ * \fn void sauvegarder_jeu (case_t mat[Y][X],perso_t *perso, char * nom_map)
+ * \brief Fonction qui permet de sauvegarder diverse informations sur le joueur et son placement pour les inclure dans un fichier txt 
+ * \param mat matrice sur laquelle est placé le personnage
+ * \param perso personnage à sauvegarder
+ * \param nom_map nom de la map à sauvegarder
+ */
 void sauvegarder_jeu (case_t mat[Y][X],perso_t *perso, char * nom_map){
     FILE * sauv;
     sauv=fopen("sauvegarde.txt","w");
@@ -40,6 +61,14 @@ void charger_jeu (case_t mat[Y][X], perso_t *perso,char * nom_map){
     }
 }
 */
+
+/**
+ * \fn char* interaction_pnj(case_t mat[Y][X], perso_t *perso)
+ * \brief Indique l'id du PNJ proche du joueur
+ * \param mat matrice sur laquelle est placé le personnage
+ * \param perso personnage à tester
+ * \return retourne en char * l'id du PNJ
+ */
 char* interaction_pnj(case_t mat[Y][X], perso_t *perso) {
     if(est_a_cote(mat,perso) == -1){//pnj au dessus
         printf("\nid = %s\n",mat[perso->anc_coord_y+1][perso->anc_coord_x].id);
@@ -56,6 +85,10 @@ char* interaction_pnj(case_t mat[Y][X], perso_t *perso) {
     }
 }
 
+/**
+ * \fn void start()
+ * \brief Fonction de lancement du jeu
+ */
 void start(){
     char * info;
     int y=10,x=10;//Initialisation de la posiition de départ dans la premiere map
@@ -85,6 +118,8 @@ void start(){
 	    char * id_pnj = interaction_pnj(mat,&joueur);
             afficher_map(nom_map,64,mat);
             info=info_case(mat,y,x);
+
+            //Déplacement haut du Player
 		    if(touche == 1 && dessus(mat,&joueur)){
                 y--;
 		        printf("%d\n",est_a_cote(mat,&joueur));
@@ -94,6 +129,7 @@ void start(){
                 faire_rendu();
             }
 
+            //Déplacement bas du Player
             if(touche == 2 && dessous(mat,&joueur)){
                 y++;
 		        printf("%d\n",est_a_cote(mat,&joueur));
@@ -104,6 +140,7 @@ void start(){
                 faire_rendu();
             }
 
+            //Déplacement droite du Player
             if(touche == 3 && droite(mat,&joueur)){
                 x++;
 		        printf("%d\n",est_a_cote(mat,&joueur));
@@ -113,6 +150,7 @@ void start(){
                 faire_rendu();
             }
 
+            //Déplacement gauche du Player
             if(touche == 4 && gauche(mat,&joueur)){
                 x--;
 		        printf("%d\n",est_a_cote(mat,&joueur));
@@ -143,9 +181,12 @@ void start(){
                 }
             }
 
+            // Echap = sortie du jeu
             if(touche == 5){
                 running=0;
             }
+
+            // Gestion affichage inventaire
             if(touche == 6 ){
                 drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
 		    
@@ -193,7 +234,8 @@ void start(){
                 faire_rendu();
                 
             }
-		
+
+            // Gestion des allez-retour entre maps
             printf("\nvaleur de strcmp = %d\n",strcmp(info,"ID_SORTIE1"));
             if((strcmp(info,"ID_SORTIE1"))== 0 && strcmp(nom_map,"map1.txt")==0){
                 SDL_RenderClear(renderer);
@@ -296,6 +338,8 @@ void start(){
             drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );
             faire_rendu();
             }
+
+            // Gestion intéraction avec PNJ
             if(touche == 7 && est_a_cote(mat, &joueur)<0){
                 affichage_dialogue(id_pnj);
                 drawImage(TAILLE_CASE_PXL*x , TAILLE_CASE_PXL*y , "perso.png", TAILLE_CASE_PXL, TAILLE_CASE_PXL );

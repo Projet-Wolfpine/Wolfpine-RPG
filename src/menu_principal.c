@@ -4,13 +4,20 @@
 #include <SDL2/SDL.h>
 #include  "../lib/game.h"
 
+/**
+ * \file menu_principal.c
+ * \brief Fonctions d'affichage du menu
+ * \author Thibault.C
+ * \version 1.0
+ * \date 04 avril 2022
+ */
 
 TTF_Font *police;
 
-
-//#define TAILLE_CASE_PXL2 63
-
-
+/**
+ * \fn void Menu()
+ * \brief Fonction permettant de charger le menu
+ */
 void Menu(){
 	SDL_Color rouge = {192, 0, 26};
 	SDL_DisplayMode dm;
@@ -33,8 +40,6 @@ void Menu(){
 		SDL_Delay(1000);
 		SDL_RenderClear(renderer);
 		Menu();
-
-		
 	}
 	if(running==2){
 		fond_vert();

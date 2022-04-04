@@ -3,7 +3,18 @@
 #include "../lib/string.h"
 #include "../lib/combat.h"
 
-//Test de la création, initialisation de la map et du joueur en terminal, et du déplacement
+/**
+ * \file test_deplacement.c
+ * \brief Test des fonctions de déplacement
+ * \author Ilyas.A
+ * \version 1.0
+ * \date 04 avril 2022
+ */
+
+/**
+ * \fn int main()
+ * \brief Test de la création, initialisation de la map et du joueur en terminal, et du déplacement
+ */
 int main(){
   //Initialisation
   case_t mat[Y][X];
