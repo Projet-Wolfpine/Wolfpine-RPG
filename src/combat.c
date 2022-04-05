@@ -97,6 +97,7 @@ perso_t init_player(){
   return *player;
 }
 
+
 /**
  * \fn perso_t free_player(perso_t * player)
  * \brief Libère la mémoire associée à un perso_t

@@ -25,7 +25,7 @@ perso_t init_player();
  * \brief Libère la mémoire associée à un perso_t
  * \param player adresse du perso_t concerné
  */
-void free_player(perso_t * player)
+void free_player(perso_t * player);
 
 /**
  * \fn void init_monster(monstre_t * monster, char * name, char * sprite, int hp, int dgt, int armor)
