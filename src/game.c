@@ -368,7 +368,7 @@ void start(){
                     
                 }
                 if(strcmp(id_pnj,"PNJ09")==0){
-                    add_item(&joueur, 1, "Arc", "Pour toujours plus de degats", 0, 10, 0);
+                    add_item(&joueur, 2, "Arc", "Pour toujours plus de degats", 0, 10, 0);
                 }
                 if(strcmp(id_pnj,"PNJ10")==0){
                     SDL_Delay(2000);

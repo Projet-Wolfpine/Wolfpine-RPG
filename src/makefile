@@ -10,27 +10,28 @@ SDL_DIR=${HOME}/SDL2
 LIBS=-L${SDLLIB_DIR} -lSDL2 -lSDL2_ttf -lSDL2_image -lm
 INCLUDES=-I${SDLINC_DIR} 
 
-include=include/
-src=src/
-prog=../bin/prog 
-obj=obj/
-lib=../lib/
-ncurse=-lncurses
-fichierc=main.c menu_principal.c affichage_sdl.c fonction_sdl.c game.c gestion_deplacement_sdl.c creation_map.c combat.c deplacement.c inventory.c spells.c audio.c
-fichierh=${lib}menu_principal.h ${lib}affichage_sdl.h ${lib}fonction_sdl.h ${lib}game.h ${lib}gestion_deplacement_sdl.h ${lib}creation_map.h ${lib}structures.h ${lib}combat.h ${lib}deplacement.h ${lib}inventory.h ${lib}spells.h ${lib}audio.h
+INCLUDE=include/
+SRC=src/
+PROG=../bin/prog 
+OBJ=obj/
+LIB=../lib/
+NCURSE=-lncurses
+
+FICHIERC=main.c menu_principal.c affichage_sdl.c fonction_sdl.c game.c gestion_deplacement_sdl.c creation_map.c combat.c deplacement.c inventory.c spells.c audio.c 
+
+FICHIERH=${LIB}menu_principal.h ${LIB}affichage_sdl.h ${LIB}fonction_sdl.h ${LIB}game.h ${LIB}gestion_deplacement_sdl.h ${LIB}creation_map.h ${LIB}structures.h ${LIB}combat.h ${LIB}deplacement.h ${LIB}inventory.h ${LIB}spells.h ${LIB}audio.h
 
 
 all:clean main
 
-main: ${fichierc} ${fichierh}
-	${CC} -o ${prog} ${fichierc} ${fichierh} ${LIBS} ${INCLUDES} 
-
-
+main: ${FICHIERC} ${FICHIERH}
+	${CC} -o ${PROG} ${FICHIERC} ${FICHIERH} ${LIBS} ${INCLUDES} 
+	
 PATH:
 	export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/SDL2/lib
 
 clean: 
-	rm -f ${src}*.o
-	rm -f ${include}*.o
+	rm -f ${SRC}*.o
+	rm -f ${INCLUDE}*.o
 	rm -f *.o
 	rm -f ${prog}
