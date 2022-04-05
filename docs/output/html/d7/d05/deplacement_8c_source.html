@@ -2,10 +2,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Wolfpine:  Fichier source de /info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/deplacement.c</title>
+<title>Wolfpine:  Fichier source de /home/killian/Wolfpine/Wolfpine-RPG-1/src/deplacement.c</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -22,7 +22,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Wolfpine<span id="projectnumber">&#160;1.1</span>
+   <div id="projectname">Wolfpine
+   &#160;<span id="projectnumber">1.1</span>
    </div>
   </td>
  </tr>
@@ -30,7 +31,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.9.2 -->
+<!-- Généré par Doxygen 1.8.17 -->
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
 <script type="text/javascript">
@@ -38,8 +39,7 @@
 $(function() {
   initMenu('../../',false,false,'search.php','Recherche');
 });
-/* @license-end */
-</script>
+/* @license-end */</script>
 <div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
@@ -59,7 +59,8 @@ $(document).ready(function(){initNavTree('d7/d05/deplacement_8c_source.html','..
 </script>
 <div id="doc-content">
 <div class="header">
-  <div class="headertitle"><div class="title">deplacement.c</div></div>
+  <div class="headertitle">
+<div class="title">deplacement.c</div>  </div>
 </div><!--header-->
 <div class="contents">
 <a href="../../d7/d05/deplacement_8c.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
@@ -90,7 +91,7 @@ $(document).ready(function(){initNavTree('d7/d05/deplacement_8c_source.html','..
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"> * \fn void init_mat(case_t mat[Y][X])</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"> * \fn void contour_mat(case_t mat[Y][X])</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"> * \brief Fonction de création des bordures de la matrice</span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment"> * \param mat matrice de case_t dans laquelle on stocke les informations initialisées</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment"> */</span></div>
@@ -242,28 +243,30 @@ $(document).ready(function(){initNavTree('d7/d05/deplacement_8c_source.html','..
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    }</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;}</div>
-<div class="ttc" id="adeplacement_8c_html_a04260b3165d8fb41f19458afed0fd29b"><div class="ttname"><a href="../../d7/d05/deplacement_8c.html#a04260b3165d8fb41f19458afed0fd29b">case_libre</a></div><div class="ttdeci">int case_libre(case_t mat[Y][X], int coord_y, int coord_x)</div><div class="ttdoc">Vérifie si la case sur laquelle on se déplace est libre (id collision)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d05/deplacement_8c_source.html#l00075">deplacement.c:75</a></div></div>
-<div class="ttc" id="adeplacement_8c_html_a0622ec9dff683b30f2111e2f4aec8857"><div class="ttname"><a href="../../d7/d05/deplacement_8c.html#a0622ec9dff683b30f2111e2f4aec8857">gauche</a></div><div class="ttdeci">int gauche(case_t mat[Y][X], perso_t *player)</div><div class="ttdoc">Fonction de déplacement matriciel vers la gauche.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d05/deplacement_8c_source.html#l00119">deplacement.c:119</a></div></div>
-<div class="ttc" id="adeplacement_8c_html_a2d3825605142e376781f4535dc6aaa13"><div class="ttname"><a href="../../d7/d05/deplacement_8c.html#a2d3825605142e376781f4535dc6aaa13">dessous</a></div><div class="ttdeci">int dessous(case_t mat[Y][X], perso_t *player)</div><div class="ttdoc">Fonction de déplacement matriciel vers le bas.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d05/deplacement_8c_source.html#l00149">deplacement.c:149</a></div></div>
-<div class="ttc" id="adeplacement_8c_html_a47f25ac68281276f6abe6fcce529db3b"><div class="ttname"><a href="../../d7/d05/deplacement_8c.html#a47f25ac68281276f6abe6fcce529db3b">placer_pers</a></div><div class="ttdeci">void placer_pers(case_t mat[Y][X], int coord_y, int coord_x, perso_t *player)</div><div class="ttdoc">Place le personnage si la case est libre.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d05/deplacement_8c_source.html#l00086">deplacement.c:86</a></div></div>
-<div class="ttc" id="adeplacement_8c_html_a5bdbdc6208a68b49e5d3ab21c87ebbc1"><div class="ttname"><a href="../../d7/d05/deplacement_8c.html#a5bdbdc6208a68b49e5d3ab21c87ebbc1">dessus</a></div><div class="ttdeci">int dessus(case_t mat[Y][X], perso_t *player)</div><div class="ttdoc">Fonction de déplacement matriciel vers le haut.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d05/deplacement_8c_source.html#l00139">deplacement.c:139</a></div></div>
-<div class="ttc" id="adeplacement_8c_html_a6e281bd852f3bc0b840baec39b3c8946"><div class="ttname"><a href="../../d7/d05/deplacement_8c.html#a6e281bd852f3bc0b840baec39b3c8946">afficher_mat</a></div><div class="ttdeci">void afficher_mat(case_t mat[Y][X])</div><div class="ttdoc">Fonction d'affichage de la matrice.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d05/deplacement_8c_source.html#l00049">deplacement.c:49</a></div></div>
-<div class="ttc" id="adeplacement_8c_html_a7c700a504a0ea609fb3a5deb28c6b120"><div class="ttname"><a href="../../d7/d05/deplacement_8c.html#a7c700a504a0ea609fb3a5deb28c6b120">contour_mat</a></div><div class="ttdeci">void contour_mat(case_t mat[Y][X])</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d05/deplacement_8c_source.html#l00033">deplacement.c:33</a></div></div>
-<div class="ttc" id="adeplacement_8c_html_a89897777c3fd1de9394e6becb81d8dbe"><div class="ttname"><a href="../../d7/d05/deplacement_8c.html#a89897777c3fd1de9394e6becb81d8dbe">deplacer_pers</a></div><div class="ttdeci">int deplacer_pers(case_t mat[Y][X], int coord_y, int coord_x, perso_t *player)</div><div class="ttdoc">Déplace le personnage sur la case souhaitée.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d05/deplacement_8c_source.html#l00102">deplacement.c:102</a></div></div>
-<div class="ttc" id="adeplacement_8c_html_a96bf9e7875cff5fa0ccbb1721731d6e6"><div class="ttname"><a href="../../d7/d05/deplacement_8c.html#a96bf9e7875cff5fa0ccbb1721731d6e6">droite</a></div><div class="ttdeci">int droite(case_t mat[Y][X], perso_t *player)</div><div class="ttdoc">Fonction de déplacement matriciel vers la droite.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d05/deplacement_8c_source.html#l00129">deplacement.c:129</a></div></div>
-<div class="ttc" id="adeplacement_8c_html_a9c31d48445c5803a15c70851c22dcaf5"><div class="ttname"><a href="../../d7/d05/deplacement_8c.html#a9c31d48445c5803a15c70851c22dcaf5">init_mat</a></div><div class="ttdeci">void init_mat(case_t mat[Y][X])</div><div class="ttdoc">Fonction de création et d'initialisationn d'une matrice vide (remplie d'etat de collision à 0)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d05/deplacement_8c_source.html#l00019">deplacement.c:19</a></div></div>
-<div class="ttc" id="adeplacement_8c_html_ac07c3e82cdb4dce84ae9f0b758cf5089"><div class="ttname"><a href="../../d7/d05/deplacement_8c.html#ac07c3e82cdb4dce84ae9f0b758cf5089">est_a_cote</a></div><div class="ttdeci">int est_a_cote(case_t mat[Y][X], perso_t *perso)</div><div class="ttdoc">Fonction pour savoir si on est proche ou non d'un PNJ.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d05/deplacement_8c_source.html#l00160">deplacement.c:160</a></div></div>
-<div class="ttc" id="agame_8h_html_a207fd5507206d307cd63f95374fcd00d"><div class="ttname"><a href="../../d2/dd5/game_8h.html#a207fd5507206d307cd63f95374fcd00d">X</a></div><div class="ttdeci">#define X</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dd5/game_8h_source.html#l00002">game.h:2</a></div></div>
-<div class="ttc" id="agame_8h_html_a798e4073d613ca5ba9618e1b3253df14"><div class="ttname"><a href="../../d2/dd5/game_8h.html#a798e4073d613ca5ba9618e1b3253df14">Y</a></div><div class="ttdeci">#define Y</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dd5/game_8h_source.html#l00001">game.h:1</a></div></div>
-<div class="ttc" id="astructcase__t_html"><div class="ttname"><a href="../../d9/d08/structcase__t.html">case_t</a></div></div>
-<div class="ttc" id="astructperso__t_html"><div class="ttname"><a href="../../df/de6/structperso__t.html">perso_t</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="astructperso__t_html"><div class="ttname"><a href="../../df/de6/structperso__t.html">perso_t</a></div></div>
+<div class="ttc" id="agame_8h_html_a207fd5507206d307cd63f95374fcd00d"><div class="ttname"><a href="../../d2/dd5/game_8h.html#a207fd5507206d307cd63f95374fcd00d">X</a></div><div class="ttdeci">#define X</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dd5/game_8h_source.html#l00010">game.h:10</a></div></div>
+<div class="ttc" id="adeplacement_8c_html_a89897777c3fd1de9394e6becb81d8dbe"><div class="ttname"><a href="../../d7/d05/deplacement_8c.html#a89897777c3fd1de9394e6becb81d8dbe">deplacer_pers</a></div><div class="ttdeci">int deplacer_pers(case_t mat[Y][X], int coord_y, int coord_x, perso_t *player)</div><div class="ttdoc">Déplace le personnage sur la case souhaitée.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d05/deplacement_8c_source.html#l00102">deplacement.c:102</a></div></div>
+<div class="ttc" id="adeplacement_8c_html_a0622ec9dff683b30f2111e2f4aec8857"><div class="ttname"><a href="../../d7/d05/deplacement_8c.html#a0622ec9dff683b30f2111e2f4aec8857">gauche</a></div><div class="ttdeci">int gauche(case_t mat[Y][X], perso_t *player)</div><div class="ttdoc">Fonction de déplacement matriciel vers la gauche.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d05/deplacement_8c_source.html#l00119">deplacement.c:119</a></div></div>
+<div class="ttc" id="adeplacement_8c_html_a96bf9e7875cff5fa0ccbb1721731d6e6"><div class="ttname"><a href="../../d7/d05/deplacement_8c.html#a96bf9e7875cff5fa0ccbb1721731d6e6">droite</a></div><div class="ttdeci">int droite(case_t mat[Y][X], perso_t *player)</div><div class="ttdoc">Fonction de déplacement matriciel vers la droite.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d05/deplacement_8c_source.html#l00129">deplacement.c:129</a></div></div>
+<div class="ttc" id="adeplacement_8c_html_a9c31d48445c5803a15c70851c22dcaf5"><div class="ttname"><a href="../../d7/d05/deplacement_8c.html#a9c31d48445c5803a15c70851c22dcaf5">init_mat</a></div><div class="ttdeci">void init_mat(case_t mat[Y][X])</div><div class="ttdoc">Fonction de création et d'initialisationn d'une matrice vide (remplie d'etat de collision à 0)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d05/deplacement_8c_source.html#l00019">deplacement.c:19</a></div></div>
+<div class="ttc" id="astructcase__t_html"><div class="ttname"><a href="../../d9/d08/structcase__t.html">case_t</a></div></div>
+<div class="ttc" id="adeplacement_8c_html_ac07c3e82cdb4dce84ae9f0b758cf5089"><div class="ttname"><a href="../../d7/d05/deplacement_8c.html#ac07c3e82cdb4dce84ae9f0b758cf5089">est_a_cote</a></div><div class="ttdeci">int est_a_cote(case_t mat[Y][X], perso_t *perso)</div><div class="ttdoc">Fonction pour savoir si on est proche ou non d'un PNJ.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d05/deplacement_8c_source.html#l00160">deplacement.c:160</a></div></div>
+<div class="ttc" id="adeplacement_8c_html_a47f25ac68281276f6abe6fcce529db3b"><div class="ttname"><a href="../../d7/d05/deplacement_8c.html#a47f25ac68281276f6abe6fcce529db3b">placer_pers</a></div><div class="ttdeci">void placer_pers(case_t mat[Y][X], int coord_y, int coord_x, perso_t *player)</div><div class="ttdoc">Place le personnage si la case est libre.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d05/deplacement_8c_source.html#l00086">deplacement.c:86</a></div></div>
+<div class="ttc" id="adeplacement_8c_html_a04260b3165d8fb41f19458afed0fd29b"><div class="ttname"><a href="../../d7/d05/deplacement_8c.html#a04260b3165d8fb41f19458afed0fd29b">case_libre</a></div><div class="ttdeci">int case_libre(case_t mat[Y][X], int coord_y, int coord_x)</div><div class="ttdoc">Vérifie si la case sur laquelle on se déplace est libre (id collision)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d05/deplacement_8c_source.html#l00075">deplacement.c:75</a></div></div>
+<div class="ttc" id="adeplacement_8c_html_a6e281bd852f3bc0b840baec39b3c8946"><div class="ttname"><a href="../../d7/d05/deplacement_8c.html#a6e281bd852f3bc0b840baec39b3c8946">afficher_mat</a></div><div class="ttdeci">void afficher_mat(case_t mat[Y][X])</div><div class="ttdoc">Fonction d'affichage de la matrice.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d05/deplacement_8c_source.html#l00049">deplacement.c:49</a></div></div>
+<div class="ttc" id="adeplacement_8c_html_a2d3825605142e376781f4535dc6aaa13"><div class="ttname"><a href="../../d7/d05/deplacement_8c.html#a2d3825605142e376781f4535dc6aaa13">dessous</a></div><div class="ttdeci">int dessous(case_t mat[Y][X], perso_t *player)</div><div class="ttdoc">Fonction de déplacement matriciel vers le bas.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d05/deplacement_8c_source.html#l00149">deplacement.c:149</a></div></div>
+<div class="ttc" id="agame_8h_html_a798e4073d613ca5ba9618e1b3253df14"><div class="ttname"><a href="../../d2/dd5/game_8h.html#a798e4073d613ca5ba9618e1b3253df14">Y</a></div><div class="ttdeci">#define Y</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dd5/game_8h_source.html#l00009">game.h:9</a></div></div>
+<div class="ttc" id="adeplacement_8c_html_a5bdbdc6208a68b49e5d3ab21c87ebbc1"><div class="ttname"><a href="../../d7/d05/deplacement_8c.html#a5bdbdc6208a68b49e5d3ab21c87ebbc1">dessus</a></div><div class="ttdeci">int dessus(case_t mat[Y][X], perso_t *player)</div><div class="ttdoc">Fonction de déplacement matriciel vers le haut.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d05/deplacement_8c_source.html#l00139">deplacement.c:139</a></div></div>
+<div class="ttc" id="adeplacement_8c_html_a7c700a504a0ea609fb3a5deb28c6b120"><div class="ttname"><a href="../../d7/d05/deplacement_8c.html#a7c700a504a0ea609fb3a5deb28c6b120">contour_mat</a></div><div class="ttdeci">void contour_mat(case_t mat[Y][X])</div><div class="ttdoc">Fonction de création des bordures de la matrice.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d05/deplacement_8c_source.html#l00033">deplacement.c:33</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../d7/d05/deplacement_8c.html">deplacement.c</a></li>
-    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>
 </div>
 </body>

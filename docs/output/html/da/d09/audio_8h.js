@@ -1,6 +1,6 @@
 var audio_8h =
 [
-    [ "Audio", "dc/d69/struct_audio.html", "dc/d69/struct_audio" ],
+    [ "sound", "d3/dad/structsound.html", "d3/dad/structsound" ],
     [ "createAudio", "da/d09/audio_8h.html#a83eb6efb3d674325c1377daf30c54883", null ],
     [ "endAudio", "da/d09/audio_8h.html#a3fae9ccf354612f523af6a8078ae11d9", null ],
     [ "freeAudio", "da/d09/audio_8h.html#aa3730ab77fa3498af628a47bbe29fac0", null ],

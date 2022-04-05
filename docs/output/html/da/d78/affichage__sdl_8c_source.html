@@ -2,10 +2,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Wolfpine:  Fichier source de /info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/affichage_sdl.c</title>
+<title>Wolfpine:  Fichier source de /home/killian/Wolfpine/Wolfpine-RPG-1/src/affichage_sdl.c</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -22,7 +22,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Wolfpine<span id="projectnumber">&#160;1.1</span>
+   <div id="projectname">Wolfpine
+   &#160;<span id="projectnumber">1.1</span>
    </div>
   </td>
  </tr>
@@ -30,7 +31,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.9.2 -->
+<!-- Généré par Doxygen 1.8.17 -->
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
 <script type="text/javascript">
@@ -38,8 +39,7 @@
 $(function() {
   initMenu('../../',false,false,'search.php','Recherche');
 });
-/* @license-end */
-</script>
+/* @license-end */</script>
 <div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
@@ -59,7 +59,8 @@ $(document).ready(function(){initNavTree('da/d78/affichage__sdl_8c_source.html',
 </script>
 <div id="doc-content">
 <div class="header">
-  <div class="headertitle"><div class="title">affichage_sdl.c</div></div>
+  <div class="headertitle">
+<div class="title">affichage_sdl.c</div>  </div>
 </div><!--header-->
 <div class="contents">
 <a href="../../da/d78/affichage__sdl_8c.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;../lib/affichage_sdl.h&quot;</span></div>
@@ -67,7 +68,7 @@ $(document).ready(function(){initNavTree('da/d78/affichage__sdl_8c_source.html',
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;string.h&quot;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;SDL2/SDL.h&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="../../da/d78/affichage__sdl_8c.html#ae6ad0540d5109a0200f0dde5dc5b4bf6">    6</a></span>&#160;<span class="preprocessor">#define TAILLE_MAX 1000 </span><span class="comment">/*!&lt; Taille du texte ici de 1000 caractère*/</span><span class="preprocessor"></span><span class="comment"></span></div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="../../da/d78/affichage__sdl_8c.html#ae6ad0540d5109a0200f0dde5dc5b4bf6">    6</a></span>&#160;<span class="preprocessor">#define TAILLE_MAX 1000 </span><span class="comment">/*!&lt; Taille du texte ici de 1000 caractère*/</span><span class="preprocessor"></span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/**</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * \file affichage_sdl.c</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * \brief Fonctions d&#39;affichage du menu et du dialogue.</span></div>
@@ -87,7 +88,7 @@ $(document).ready(function(){initNavTree('da/d78/affichage__sdl_8c_source.html',
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="../../d8/d1b/affichage__sdl_8h.html#a0a86720440ed48cd84f9bda8b7ca10f6">   24</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../da/d78/affichage__sdl_8c.html#a0a86720440ed48cd84f9bda8b7ca10f6">afficher_menu</a>(<span class="keywordtype">char</span> menu[4][30]){</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="comment">//afficher_image_menu(&quot;images/menu.jpeg&quot;);</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <a class="code" href="../../d0/dea/fonction__sdl_8h.html#a71cbacd3612f3b99b170b894f2341e91">drawImage</a>(0,0,<span class="stringliteral">&quot;menu&quot;</span>,1920,1080);<span class="comment">// ou dm.x , dm.y </span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <a class="code" href="../../d9/da1/fonction__sdl_8c.html#adbbccbf07482575ee093f705dc02108a">drawImage</a>(0,0,<span class="stringliteral">&quot;menu&quot;</span>,1920,1080);<span class="comment">// ou dm.x , dm.y </span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keywordtype">char</span> * text;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keywordtype">int</span> largeur = <a class="code" href="../../d0/dea/fonction__sdl_8h.html#a599adbe412c60e0cc5abb86be7ee4507">SCREEN_WIDTH</a>;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  printf(<span class="stringliteral">&quot;hauteur = %d\n&quot;</span>,<a class="code" href="../../d0/dea/fonction__sdl_8h.html#af1c710caf1e3a9e81829078054e83799">SCREEN_HEIGHT</a>);</div>
@@ -95,14 +96,14 @@ $(document).ready(function(){initNavTree('da/d78/affichage__sdl_8c_source.html',
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  text = <span class="stringliteral">&quot;W O L F P I N E&quot;</span>;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keywordtype">int</span> w;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        TTF_SizeText(<a class="code" href="../../da/d78/affichage__sdl_8c.html#a49a11b0728728090fa1189391c9fe0c8">police</a>,text,&amp;w,NULL);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <a class="code" href="../../d0/dea/fonction__sdl_8h.html#aebe6d58fb84ee534ca0427aa5a0b48f7">drawText</a>((largeur-w)/2, 40, text, 45, 15, <a class="code" href="../../da/d78/affichage__sdl_8c.html#a7368b709b22538a39462fd37ea1a2151">jaune</a>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <a class="code" href="../../d9/da1/fonction__sdl_8c.html#a55ed689bac95823b56801c705ab8496e">drawText</a>((largeur-w)/2, 40, text, 45, 15, <a class="code" href="../../da/d78/affichage__sdl_8c.html#a7368b709b22538a39462fd37ea1a2151">jaune</a>);</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  </div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  </div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0, y=200; i&lt;4; i++, y+=150){</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="../../d0/dea/fonction__sdl_8h.html#a71cbacd3612f3b99b170b894f2341e91">drawImage</a>( 700, y, <span class="stringliteral">&quot;button.png&quot;</span>, 475, 130);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="../../d0/dea/fonction__sdl_8h.html#aebe6d58fb84ee534ca0427aa5a0b48f7">drawText</a>(800, y+45, menu[i], 25, 12, <a class="code" href="../../da/d78/affichage__sdl_8c.html#a7368b709b22538a39462fd37ea1a2151">jaune</a>);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="../../d9/da1/fonction__sdl_8c.html#adbbccbf07482575ee093f705dc02108a">drawImage</a>( 700, y, <span class="stringliteral">&quot;button.png&quot;</span>, 475, 130);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="../../d9/da1/fonction__sdl_8c.html#a55ed689bac95823b56801c705ab8496e">drawText</a>(800, y+45, menu[i], 25, 12, <a class="code" href="../../da/d78/affichage__sdl_8c.html#a7368b709b22538a39462fd37ea1a2151">jaune</a>);</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  }</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <a class="code" href="../../d0/dea/fonction__sdl_8h.html#a95c2e8cb34e25d1dd3f34153dc3512f2">faire_rendu</a>();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <a class="code" href="../../d9/da1/fonction__sdl_8c.html#a95c2e8cb34e25d1dd3f34153dc3512f2">faire_rendu</a>();</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  SDL_Event <a class="code" href="../../de/d62/gestion__deplacement__sdl_8c.html#a6b57f01d3c576db5368dd0efc2f435a4">event</a>;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keywordtype">int</span> running = -1;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keywordtype">int</span> souris_x=0, souris_y=0;</div>
@@ -151,30 +152,32 @@ $(document).ready(function(){initNavTree('da/d78/affichage__sdl_8c_source.html',
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    fscanf(fichier_dialogue, <span class="stringliteral">&quot;%*[^\n]&quot;</span>); <span class="comment">/*!&lt; permet de changer de faire un saut de ligne */</span></div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  }</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  fclose(fichier_dialogue);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <a class="code" href="../../d0/dea/fonction__sdl_8h.html#a71cbacd3612f3b99b170b894f2341e91">drawImage</a>( 5, 900, <span class="stringliteral">&quot;dialogue.png&quot;</span>, 1900, 120); <span class="comment">/*!&lt; affichage de la bulle du dialogue */</span> </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <a class="code" href="../../d0/dea/fonction__sdl_8h.html#aebe6d58fb84ee534ca0427aa5a0b48f7">drawText</a>(10, 950, list[0], 23, 12, <a class="code" href="../../da/d78/affichage__sdl_8c.html#a7b1e239da7325a1f77d284b1ac12a701">noire</a>); <span class="comment">/*!&lt; affichage de la bulle du dialogue */</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <a class="code" href="../../d9/da1/fonction__sdl_8c.html#adbbccbf07482575ee093f705dc02108a">drawImage</a>( 5, 900, <span class="stringliteral">&quot;dialogue.png&quot;</span>, 1900, 120); <span class="comment">/*!&lt; affichage de la bulle du dialogue */</span> </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <a class="code" href="../../d9/da1/fonction__sdl_8c.html#a55ed689bac95823b56801c705ab8496e">drawText</a>(10, 950, list[0], 23, 12, <a class="code" href="../../da/d78/affichage__sdl_8c.html#a7b1e239da7325a1f77d284b1ac12a701">noire</a>); <span class="comment">/*!&lt; affichage de la bulle du dialogue */</span></div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  printf(<span class="stringliteral">&quot;\naffichage du dialogue: %s\n&quot;</span>,list[0]);</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
-<div class="ttc" id="aaffichage__sdl_8c_html_a0a86720440ed48cd84f9bda8b7ca10f6"><div class="ttname"><a href="../../da/d78/affichage__sdl_8c.html#a0a86720440ed48cd84f9bda8b7ca10f6">afficher_menu</a></div><div class="ttdeci">int afficher_menu(char menu[4][30])</div><div class="ttdoc">fonction d'affichage du menu et de detection du choix de l'utilisateur</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d78/affichage__sdl_8c_source.html#l00024">affichage_sdl.c:24</a></div></div>
-<div class="ttc" id="aaffichage__sdl_8c_html_a38dc84bd7da8d9d381981d966f4c7b8d"><div class="ttname"><a href="../../da/d78/affichage__sdl_8c.html#a38dc84bd7da8d9d381981d966f4c7b8d">affichage_dialogue</a></div><div class="ttdeci">void affichage_dialogue(char *id_PNJ)</div><div class="ttdoc">fonction d'affichage des dialogue</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d78/affichage__sdl_8c_source.html#l00075">affichage_sdl.c:75</a></div></div>
-<div class="ttc" id="aaffichage__sdl_8c_html_a49a11b0728728090fa1189391c9fe0c8"><div class="ttname"><a href="../../da/d78/affichage__sdl_8c.html#a49a11b0728728090fa1189391c9fe0c8">police</a></div><div class="ttdeci">TTF_Font * police</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d78/affichage__sdl_8c_source.html#l00015">affichage_sdl.c:15</a></div></div>
-<div class="ttc" id="aaffichage__sdl_8c_html_a7368b709b22538a39462fd37ea1a2151"><div class="ttname"><a href="../../da/d78/affichage__sdl_8c.html#a7368b709b22538a39462fd37ea1a2151">jaune</a></div><div class="ttdeci">SDL_Color jaune</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d78/affichage__sdl_8c_source.html#l00016">affichage_sdl.c:16</a></div></div>
-<div class="ttc" id="aaffichage__sdl_8c_html_a7b1e239da7325a1f77d284b1ac12a701"><div class="ttname"><a href="../../da/d78/affichage__sdl_8c.html#a7b1e239da7325a1f77d284b1ac12a701">noire</a></div><div class="ttdeci">SDL_Color noire</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d78/affichage__sdl_8c_source.html#l00017">affichage_sdl.c:17</a></div></div>
-<div class="ttc" id="aaffichage__sdl_8c_html_ae6ad0540d5109a0200f0dde5dc5b4bf6"><div class="ttname"><a href="../../da/d78/affichage__sdl_8c.html#ae6ad0540d5109a0200f0dde5dc5b4bf6">TAILLE_MAX</a></div><div class="ttdeci">#define TAILLE_MAX</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d78/affichage__sdl_8c_source.html#l00006">affichage_sdl.c:6</a></div></div>
-<div class="ttc" id="afonction__sdl_8h_html_a599adbe412c60e0cc5abb86be7ee4507"><div class="ttname"><a href="../../d0/dea/fonction__sdl_8h.html#a599adbe412c60e0cc5abb86be7ee4507">SCREEN_WIDTH</a></div><div class="ttdeci">int SCREEN_WIDTH</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dea/fonction__sdl_8h_source.html#l00006">fonction_sdl.h:6</a></div></div>
-<div class="ttc" id="afonction__sdl_8h_html_a71cbacd3612f3b99b170b894f2341e91"><div class="ttname"><a href="../../d0/dea/fonction__sdl_8h.html#a71cbacd3612f3b99b170b894f2341e91">drawImage</a></div><div class="ttdeci">void drawImage(int, int, char *, int, int)</div><div class="ttdoc">Affiche de l'image d'une certaine taille à des coordonnées données.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da1/fonction__sdl_8c_source.html#l00175">fonction_sdl.c:175</a></div></div>
-<div class="ttc" id="afonction__sdl_8h_html_a95c2e8cb34e25d1dd3f34153dc3512f2"><div class="ttname"><a href="../../d0/dea/fonction__sdl_8h.html#a95c2e8cb34e25d1dd3f34153dc3512f2">faire_rendu</a></div><div class="ttdeci">void faire_rendu()</div><div class="ttdoc">Mise a jour de l'etat de rendu de l'ecran.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da1/fonction__sdl_8c_source.html#l00076">fonction_sdl.c:76</a></div></div>
-<div class="ttc" id="afonction__sdl_8h_html_aebe6d58fb84ee534ca0427aa5a0b48f7"><div class="ttname"><a href="../../d0/dea/fonction__sdl_8h.html#aebe6d58fb84ee534ca0427aa5a0b48f7">drawText</a></div><div class="ttdeci">void drawText(int, int, char *, int, int, SDL_Color)</div><div class="ttdoc">Affiche du texte d'une certaine taille à des coordonnées données.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da1/fonction__sdl_8c_source.html#l00150">fonction_sdl.c:150</a></div></div>
-<div class="ttc" id="afonction__sdl_8h_html_af1c710caf1e3a9e81829078054e83799"><div class="ttname"><a href="../../d0/dea/fonction__sdl_8h.html#af1c710caf1e3a9e81829078054e83799">SCREEN_HEIGHT</a></div><div class="ttdeci">int SCREEN_HEIGHT</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dea/fonction__sdl_8h_source.html#l00005">fonction_sdl.h:5</a></div></div>
-<div class="ttc" id="agestion__deplacement__sdl_8c_html_a6b57f01d3c576db5368dd0efc2f435a4"><div class="ttname"><a href="../../de/d62/gestion__deplacement__sdl_8c.html#a6b57f01d3c576db5368dd0efc2f435a4">event</a></div><div class="ttdeci">SDL_Event event</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d62/gestion__deplacement__sdl_8c_source.html#l00012">gestion_deplacement_sdl.c:12</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="afonction__sdl_8h_html_a599adbe412c60e0cc5abb86be7ee4507"><div class="ttname"><a href="../../d0/dea/fonction__sdl_8h.html#a599adbe412c60e0cc5abb86be7ee4507">SCREEN_WIDTH</a></div><div class="ttdeci">int SCREEN_WIDTH</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dea/fonction__sdl_8h_source.html#l00014">fonction_sdl.h:14</a></div></div>
+<div class="ttc" id="aaffichage__sdl_8c_html_a7368b709b22538a39462fd37ea1a2151"><div class="ttname"><a href="../../da/d78/affichage__sdl_8c.html#a7368b709b22538a39462fd37ea1a2151">jaune</a></div><div class="ttdeci">SDL_Color jaune</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d78/affichage__sdl_8c_source.html#l00016">affichage_sdl.c:16</a></div></div>
+<div class="ttc" id="aaffichage__sdl_8c_html_a49a11b0728728090fa1189391c9fe0c8"><div class="ttname"><a href="../../da/d78/affichage__sdl_8c.html#a49a11b0728728090fa1189391c9fe0c8">police</a></div><div class="ttdeci">TTF_Font * police</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d78/affichage__sdl_8c_source.html#l00015">affichage_sdl.c:15</a></div></div>
+<div class="ttc" id="afonction__sdl_8c_html_adbbccbf07482575ee093f705dc02108a"><div class="ttname"><a href="../../d9/da1/fonction__sdl_8c.html#adbbccbf07482575ee093f705dc02108a">drawImage</a></div><div class="ttdeci">void drawImage(int x, int y, char *nom, int w, int h)</div><div class="ttdoc">Affiche de l'image d'une certaine taille à des coordonnées données.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da1/fonction__sdl_8c_source.html#l00175">fonction_sdl.c:175</a></div></div>
+<div class="ttc" id="aaffichage__sdl_8c_html_ae6ad0540d5109a0200f0dde5dc5b4bf6"><div class="ttname"><a href="../../da/d78/affichage__sdl_8c.html#ae6ad0540d5109a0200f0dde5dc5b4bf6">TAILLE_MAX</a></div><div class="ttdeci">#define TAILLE_MAX</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d78/affichage__sdl_8c_source.html#l00006">affichage_sdl.c:6</a></div></div>
+<div class="ttc" id="afonction__sdl_8c_html_a55ed689bac95823b56801c705ab8496e"><div class="ttname"><a href="../../d9/da1/fonction__sdl_8c.html#a55ed689bac95823b56801c705ab8496e">drawText</a></div><div class="ttdeci">void drawText(int x, int y, char *string, int h, int w, SDL_Color color)</div><div class="ttdoc">Affiche du texte d'une certaine taille à des coordonnées données.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da1/fonction__sdl_8c_source.html#l00150">fonction_sdl.c:150</a></div></div>
+<div class="ttc" id="agestion__deplacement__sdl_8c_html_a6b57f01d3c576db5368dd0efc2f435a4"><div class="ttname"><a href="../../de/d62/gestion__deplacement__sdl_8c.html#a6b57f01d3c576db5368dd0efc2f435a4">event</a></div><div class="ttdeci">SDL_Event event</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d62/gestion__deplacement__sdl_8c_source.html#l00012">gestion_deplacement_sdl.c:12</a></div></div>
+<div class="ttc" id="aaffichage__sdl_8c_html_a0a86720440ed48cd84f9bda8b7ca10f6"><div class="ttname"><a href="../../da/d78/affichage__sdl_8c.html#a0a86720440ed48cd84f9bda8b7ca10f6">afficher_menu</a></div><div class="ttdeci">int afficher_menu(char menu[4][30])</div><div class="ttdoc">fonction d'affichage du menu et de detection du choix de l'utilisateur</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d78/affichage__sdl_8c_source.html#l00024">affichage_sdl.c:24</a></div></div>
+<div class="ttc" id="aaffichage__sdl_8c_html_a38dc84bd7da8d9d381981d966f4c7b8d"><div class="ttname"><a href="../../da/d78/affichage__sdl_8c.html#a38dc84bd7da8d9d381981d966f4c7b8d">affichage_dialogue</a></div><div class="ttdeci">void affichage_dialogue(char *id_PNJ)</div><div class="ttdoc">fonction d'affichage des dialogue</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d78/affichage__sdl_8c_source.html#l00075">affichage_sdl.c:75</a></div></div>
+<div class="ttc" id="afonction__sdl_8h_html_af1c710caf1e3a9e81829078054e83799"><div class="ttname"><a href="../../d0/dea/fonction__sdl_8h.html#af1c710caf1e3a9e81829078054e83799">SCREEN_HEIGHT</a></div><div class="ttdeci">int SCREEN_HEIGHT</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dea/fonction__sdl_8h_source.html#l00013">fonction_sdl.h:13</a></div></div>
+<div class="ttc" id="afonction__sdl_8c_html_a95c2e8cb34e25d1dd3f34153dc3512f2"><div class="ttname"><a href="../../d9/da1/fonction__sdl_8c.html#a95c2e8cb34e25d1dd3f34153dc3512f2">faire_rendu</a></div><div class="ttdeci">void faire_rendu()</div><div class="ttdoc">Mise a jour de l'etat de rendu de l'ecran.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da1/fonction__sdl_8c_source.html#l00076">fonction_sdl.c:76</a></div></div>
+<div class="ttc" id="aaffichage__sdl_8c_html_a7b1e239da7325a1f77d284b1ac12a701"><div class="ttname"><a href="../../da/d78/affichage__sdl_8c.html#a7b1e239da7325a1f77d284b1ac12a701">noire</a></div><div class="ttdeci">SDL_Color noire</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d78/affichage__sdl_8c_source.html#l00017">affichage_sdl.c:17</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../da/d78/affichage__sdl_8c.html">affichage_sdl.c</a></li>
-    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>
 </div>
 </body>

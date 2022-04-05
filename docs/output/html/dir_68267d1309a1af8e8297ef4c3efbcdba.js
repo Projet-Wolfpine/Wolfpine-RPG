@@ -11,6 +11,5 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "inventory.c", "de/d04/inventory_8c.html", "de/d04/inventory_8c" ],
     [ "main.c", "d0/d29/main_8c.html", "d0/d29/main_8c" ],
     [ "menu_principal.c", "df/d1b/menu__principal_8c.html", "df/d1b/menu__principal_8c" ],
-    [ "spells.c", "d2/d8d/spells_8c.html", "d2/d8d/spells_8c" ],
-    [ "test_deplacement.c", "d5/d47/test__deplacement_8c.html", "d5/d47/test__deplacement_8c" ]
+    [ "spells.c", "d2/d8d/spells_8c.html", "d2/d8d/spells_8c" ]
 ];

@@ -1,6 +1,6 @@
 var audio_8c =
 [
-    [ "PrivateAudioDevice", "d2/dcc/struct_private_audio_device.html", "d2/dcc/struct_private_audio_device" ],
+    [ "privateAudioDevice", "d4/da7/structprivate_audio_device.html", "d4/da7/structprivate_audio_device" ],
     [ "AUDIO_CHANNELS", "d3/d9a/audio_8c.html#a8fc745a0f6e356f4b79cb0ab059c40f0", null ],
     [ "AUDIO_FORMAT", "d3/d9a/audio_8c.html#a25ef1d957093181c04182f3c55f3f1ea", null ],
     [ "AUDIO_FREQUENCY", "d3/d9a/audio_8c.html#aae969438a57a86fddf0cf53106c9b6b4", null ],

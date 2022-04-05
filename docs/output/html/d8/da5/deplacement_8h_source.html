@@ -2,10 +2,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Wolfpine:  Fichier source de /info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/lib/deplacement.h</title>
+<title>Wolfpine:  Fichier source de /home/killian/Wolfpine/Wolfpine-RPG-1/lib/deplacement.h</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -22,7 +22,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Wolfpine<span id="projectnumber">&#160;1.1</span>
+   <div id="projectname">Wolfpine
+   &#160;<span id="projectnumber">1.1</span>
    </div>
   </td>
  </tr>
@@ -30,7 +31,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.9.2 -->
+<!-- Généré par Doxygen 1.8.17 -->
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
 <script type="text/javascript">
@@ -38,8 +39,7 @@
 $(function() {
   initMenu('../../',false,false,'search.php','Recherche');
 });
-/* @license-end */
-</script>
+/* @license-end */</script>
 <div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
@@ -59,61 +59,141 @@ $(document).ready(function(){initNavTree('d8/da5/deplacement_8h_source.html','..
 </script>
 <div id="doc-content">
 <div class="header">
-  <div class="headertitle"><div class="title">deplacement.h</div></div>
+  <div class="headertitle">
+<div class="title">deplacement.h</div>  </div>
 </div><!--header-->
 <div class="contents">
 <a href="../../d8/da5/deplacement_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef _DEPLACEMENT_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define _DEPLACEMENT_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dd/da3/structures_8h.html">structures.h</a>&quot;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d2/dd5/game_8h.html">game.h</a>&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d8/da5/deplacement_8h.html#a9c31d48445c5803a15c70851c22dcaf5">init_mat</a>(<a class="code" href="../../d9/d08/structcase__t.html">case_t</a> mat[<a class="code" href="../../d2/dd5/game_8h.html#a798e4073d613ca5ba9618e1b3253df14">Y</a>][<a class="code" href="../../d2/dd5/game_8h.html#a207fd5507206d307cd63f95374fcd00d">X</a>]);</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d8/da5/deplacement_8h.html#a7c700a504a0ea609fb3a5deb28c6b120">contour_mat</a>(<a class="code" href="../../d9/d08/structcase__t.html">case_t</a> mat[<a class="code" href="../../d2/dd5/game_8h.html#a798e4073d613ca5ba9618e1b3253df14">Y</a>][<a class="code" href="../../d2/dd5/game_8h.html#a207fd5507206d307cd63f95374fcd00d">X</a>]);</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d8/da5/deplacement_8h.html#a6e281bd852f3bc0b840baec39b3c8946">afficher_mat</a>(<a class="code" href="../../d9/d08/structcase__t.html">case_t</a> mat[<a class="code" href="../../d2/dd5/game_8h.html#a798e4073d613ca5ba9618e1b3253df14">Y</a>][<a class="code" href="../../d2/dd5/game_8h.html#a207fd5507206d307cd63f95374fcd00d">X</a>]);</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../d8/da5/deplacement_8h.html#a04260b3165d8fb41f19458afed0fd29b">case_libre</a> (<a class="code" href="../../d9/d08/structcase__t.html">case_t</a> mat[<a class="code" href="../../d2/dd5/game_8h.html#a798e4073d613ca5ba9618e1b3253df14">Y</a>][<a class="code" href="../../d2/dd5/game_8h.html#a207fd5507206d307cd63f95374fcd00d">X</a>], <span class="keywordtype">int</span> coord_y, <span class="keywordtype">int</span> coord_x);</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d8/da5/deplacement_8h.html#a47f25ac68281276f6abe6fcce529db3b">placer_pers</a>(<a class="code" href="../../d9/d08/structcase__t.html">case_t</a> mat[<a class="code" href="../../d2/dd5/game_8h.html#a798e4073d613ca5ba9618e1b3253df14">Y</a>][<a class="code" href="../../d2/dd5/game_8h.html#a207fd5507206d307cd63f95374fcd00d">X</a>], <span class="keywordtype">int</span> coord_y, <span class="keywordtype">int</span> coord_x, <a class="code" href="../../df/de6/structperso__t.html">perso_t</a>  *player);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../d8/da5/deplacement_8h.html#a89897777c3fd1de9394e6becb81d8dbe">deplacer_pers</a>(<a class="code" href="../../d9/d08/structcase__t.html">case_t</a> mat[<a class="code" href="../../d2/dd5/game_8h.html#a798e4073d613ca5ba9618e1b3253df14">Y</a>][<a class="code" href="../../d2/dd5/game_8h.html#a207fd5507206d307cd63f95374fcd00d">X</a>], <span class="keywordtype">int</span> coord_y, <span class="keywordtype">int</span> coord_x, <a class="code" href="../../df/de6/structperso__t.html">perso_t</a>  *player);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../d8/da5/deplacement_8h.html#a0622ec9dff683b30f2111e2f4aec8857">gauche</a>(<a class="code" href="../../d9/d08/structcase__t.html">case_t</a> mat[<a class="code" href="../../d2/dd5/game_8h.html#a798e4073d613ca5ba9618e1b3253df14">Y</a>][<a class="code" href="../../d2/dd5/game_8h.html#a207fd5507206d307cd63f95374fcd00d">X</a>], <a class="code" href="../../df/de6/structperso__t.html">perso_t</a> *player);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../d8/da5/deplacement_8h.html#a96bf9e7875cff5fa0ccbb1721731d6e6">droite</a>(<a class="code" href="../../d9/d08/structcase__t.html">case_t</a> mat[<a class="code" href="../../d2/dd5/game_8h.html#a798e4073d613ca5ba9618e1b3253df14">Y</a>][<a class="code" href="../../d2/dd5/game_8h.html#a207fd5507206d307cd63f95374fcd00d">X</a>], <a class="code" href="../../df/de6/structperso__t.html">perso_t</a> *player);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../d8/da5/deplacement_8h.html#a5bdbdc6208a68b49e5d3ab21c87ebbc1">dessus</a>(<a class="code" href="../../d9/d08/structcase__t.html">case_t</a> mat[<a class="code" href="../../d2/dd5/game_8h.html#a798e4073d613ca5ba9618e1b3253df14">Y</a>][<a class="code" href="../../d2/dd5/game_8h.html#a207fd5507206d307cd63f95374fcd00d">X</a>], <a class="code" href="../../df/de6/structperso__t.html">perso_t</a> *player);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../d8/da5/deplacement_8h.html#a2d3825605142e376781f4535dc6aaa13">dessous</a>(<a class="code" href="../../d9/d08/structcase__t.html">case_t</a> mat[<a class="code" href="../../d2/dd5/game_8h.html#a798e4073d613ca5ba9618e1b3253df14">Y</a>][<a class="code" href="../../d2/dd5/game_8h.html#a207fd5507206d307cd63f95374fcd00d">X</a>], <a class="code" href="../../df/de6/structperso__t.html">perso_t</a> *player);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../d8/da5/deplacement_8h.html#ac07c3e82cdb4dce84ae9f0b758cf5089">est_a_cote</a>(<a class="code" href="../../d9/d08/structcase__t.html">case_t</a> mat[<a class="code" href="../../d2/dd5/game_8h.html#a798e4073d613ca5ba9618e1b3253df14">Y</a>][<a class="code" href="../../d2/dd5/game_8h.html#a207fd5507206d307cd63f95374fcd00d">X</a>], <a class="code" href="../../df/de6/structperso__t.html">perso_t</a> *perso);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="adeplacement_8h_html_a04260b3165d8fb41f19458afed0fd29b"><div class="ttname"><a href="../../d8/da5/deplacement_8h.html#a04260b3165d8fb41f19458afed0fd29b">case_libre</a></div><div class="ttdeci">int case_libre(case_t mat[Y][X], int coord_y, int coord_x)</div><div class="ttdoc">Vérifie si la case sur laquelle on se déplace est libre (id collision)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d05/deplacement_8c_source.html#l00075">deplacement.c:75</a></div></div>
-<div class="ttc" id="adeplacement_8h_html_a0622ec9dff683b30f2111e2f4aec8857"><div class="ttname"><a href="../../d8/da5/deplacement_8h.html#a0622ec9dff683b30f2111e2f4aec8857">gauche</a></div><div class="ttdeci">int gauche(case_t mat[Y][X], perso_t *player)</div><div class="ttdoc">Fonction de déplacement matriciel vers la gauche.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d05/deplacement_8c_source.html#l00119">deplacement.c:119</a></div></div>
-<div class="ttc" id="adeplacement_8h_html_a2d3825605142e376781f4535dc6aaa13"><div class="ttname"><a href="../../d8/da5/deplacement_8h.html#a2d3825605142e376781f4535dc6aaa13">dessous</a></div><div class="ttdeci">int dessous(case_t mat[Y][X], perso_t *player)</div><div class="ttdoc">Fonction de déplacement matriciel vers le bas.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d05/deplacement_8c_source.html#l00149">deplacement.c:149</a></div></div>
-<div class="ttc" id="adeplacement_8h_html_a47f25ac68281276f6abe6fcce529db3b"><div class="ttname"><a href="../../d8/da5/deplacement_8h.html#a47f25ac68281276f6abe6fcce529db3b">placer_pers</a></div><div class="ttdeci">void placer_pers(case_t mat[Y][X], int coord_y, int coord_x, perso_t *player)</div><div class="ttdoc">Place le personnage si la case est libre.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d05/deplacement_8c_source.html#l00086">deplacement.c:86</a></div></div>
-<div class="ttc" id="adeplacement_8h_html_a5bdbdc6208a68b49e5d3ab21c87ebbc1"><div class="ttname"><a href="../../d8/da5/deplacement_8h.html#a5bdbdc6208a68b49e5d3ab21c87ebbc1">dessus</a></div><div class="ttdeci">int dessus(case_t mat[Y][X], perso_t *player)</div><div class="ttdoc">Fonction de déplacement matriciel vers le haut.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d05/deplacement_8c_source.html#l00139">deplacement.c:139</a></div></div>
-<div class="ttc" id="adeplacement_8h_html_a6e281bd852f3bc0b840baec39b3c8946"><div class="ttname"><a href="../../d8/da5/deplacement_8h.html#a6e281bd852f3bc0b840baec39b3c8946">afficher_mat</a></div><div class="ttdeci">void afficher_mat(case_t mat[Y][X])</div><div class="ttdoc">Fonction d'affichage de la matrice.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d05/deplacement_8c_source.html#l00049">deplacement.c:49</a></div></div>
-<div class="ttc" id="adeplacement_8h_html_a7c700a504a0ea609fb3a5deb28c6b120"><div class="ttname"><a href="../../d8/da5/deplacement_8h.html#a7c700a504a0ea609fb3a5deb28c6b120">contour_mat</a></div><div class="ttdeci">void contour_mat(case_t mat[Y][X])</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d05/deplacement_8c_source.html#l00033">deplacement.c:33</a></div></div>
-<div class="ttc" id="adeplacement_8h_html_a89897777c3fd1de9394e6becb81d8dbe"><div class="ttname"><a href="../../d8/da5/deplacement_8h.html#a89897777c3fd1de9394e6becb81d8dbe">deplacer_pers</a></div><div class="ttdeci">int deplacer_pers(case_t mat[Y][X], int coord_y, int coord_x, perso_t *player)</div><div class="ttdoc">Déplace le personnage sur la case souhaitée.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d05/deplacement_8c_source.html#l00102">deplacement.c:102</a></div></div>
-<div class="ttc" id="adeplacement_8h_html_a96bf9e7875cff5fa0ccbb1721731d6e6"><div class="ttname"><a href="../../d8/da5/deplacement_8h.html#a96bf9e7875cff5fa0ccbb1721731d6e6">droite</a></div><div class="ttdeci">int droite(case_t mat[Y][X], perso_t *player)</div><div class="ttdoc">Fonction de déplacement matriciel vers la droite.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d05/deplacement_8c_source.html#l00129">deplacement.c:129</a></div></div>
-<div class="ttc" id="adeplacement_8h_html_a9c31d48445c5803a15c70851c22dcaf5"><div class="ttname"><a href="../../d8/da5/deplacement_8h.html#a9c31d48445c5803a15c70851c22dcaf5">init_mat</a></div><div class="ttdeci">void init_mat(case_t mat[Y][X])</div><div class="ttdoc">Fonction de création et d'initialisationn d'une matrice vide (remplie d'etat de collision à 0)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d05/deplacement_8c_source.html#l00019">deplacement.c:19</a></div></div>
-<div class="ttc" id="adeplacement_8h_html_ac07c3e82cdb4dce84ae9f0b758cf5089"><div class="ttname"><a href="../../d8/da5/deplacement_8h.html#ac07c3e82cdb4dce84ae9f0b758cf5089">est_a_cote</a></div><div class="ttdeci">int est_a_cote(case_t mat[Y][X], perso_t *perso)</div><div class="ttdoc">Fonction pour savoir si on est proche ou non d'un PNJ.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d05/deplacement_8c_source.html#l00160">deplacement.c:160</a></div></div>
-<div class="ttc" id="agame_8h_html"><div class="ttname"><a href="../../d2/dd5/game_8h.html">game.h</a></div></div>
-<div class="ttc" id="agame_8h_html_a207fd5507206d307cd63f95374fcd00d"><div class="ttname"><a href="../../d2/dd5/game_8h.html#a207fd5507206d307cd63f95374fcd00d">X</a></div><div class="ttdeci">#define X</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dd5/game_8h_source.html#l00002">game.h:2</a></div></div>
-<div class="ttc" id="agame_8h_html_a798e4073d613ca5ba9618e1b3253df14"><div class="ttname"><a href="../../d2/dd5/game_8h.html#a798e4073d613ca5ba9618e1b3253df14">Y</a></div><div class="ttdeci">#define Y</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dd5/game_8h_source.html#l00001">game.h:1</a></div></div>
-<div class="ttc" id="astructcase__t_html"><div class="ttname"><a href="../../d9/d08/structcase__t.html">case_t</a></div></div>
-<div class="ttc" id="astructperso__t_html"><div class="ttname"><a href="../../df/de6/structperso__t.html">perso_t</a></div></div>
-<div class="ttc" id="astructures_8h_html"><div class="ttname"><a href="../../dd/da3/structures_8h.html">structures.h</a></div><div class="ttdoc">Structures d'objets.</div></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * \file deplacement.c</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * \brief Prototypes des fonctions de déplacement d&#39;un personnage dans une matrice.</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * \author Ilyas.A</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * \version 1.2</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * \date 04 avril 2022</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> * \fn void init_mat(case_t mat[Y][X])</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * \brief Fonction de création et d&#39;initialisationn d&#39;une matrice vide (remplie d&#39;etat de collision à 0)</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> * \param mat matrice de case_t dans laquelle on stocke les informations initialisées</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d8/da5/deplacement_8h.html#a9c31d48445c5803a15c70851c22dcaf5">init_mat</a>(<a class="code" href="../../d9/d08/structcase__t.html">case_t</a> mat[<a class="code" href="../../d2/dd5/game_8h.html#a798e4073d613ca5ba9618e1b3253df14">Y</a>][<a class="code" href="../../d2/dd5/game_8h.html#a207fd5507206d307cd63f95374fcd00d">X</a>]);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> * \fn void contour_mat(case_t mat[Y][X])</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> * \brief Fonction de création des bordures de la matrice</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"> * \param mat matrice de case_t dans laquelle on stocke les informations initialisées</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d8/da5/deplacement_8h.html#a7c700a504a0ea609fb3a5deb28c6b120">contour_mat</a>(<a class="code" href="../../d9/d08/structcase__t.html">case_t</a> mat[<a class="code" href="../../d2/dd5/game_8h.html#a798e4073d613ca5ba9618e1b3253df14">Y</a>][<a class="code" href="../../d2/dd5/game_8h.html#a207fd5507206d307cd63f95374fcd00d">X</a>]);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"> * \fn void afficher_mat(case_t mat[Y][X])</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"> * \brief Fonction d&#39;affichage de la matrice</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment"> * \param mat matrice de case_t que l&#39;on souhaite afficher</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d8/da5/deplacement_8h.html#a6e281bd852f3bc0b840baec39b3c8946">afficher_mat</a>(<a class="code" href="../../d9/d08/structcase__t.html">case_t</a> mat[<a class="code" href="../../d2/dd5/game_8h.html#a798e4073d613ca5ba9618e1b3253df14">Y</a>][<a class="code" href="../../d2/dd5/game_8h.html#a207fd5507206d307cd63f95374fcd00d">X</a>]);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment"> * \fn int case_libre (case_t mat[Y][X], int coord_y, int coord_x)</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment"> * \brief Vérifie si la case sur laquelle on se déplace est libre (id collision)</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment"> * \param mat matrice de case_t sur laquelle on se déplace</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment"> * \param coord_y coordonée en y que l&#39;on souhaite tester</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment"> * \param coor_x coordonée en x que l&#39;on souhaite tester</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment"> * \return renvoie 1 si la case est libre, 0 sinon</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../d8/da5/deplacement_8h.html#a04260b3165d8fb41f19458afed0fd29b">case_libre</a> (<a class="code" href="../../d9/d08/structcase__t.html">case_t</a> mat[<a class="code" href="../../d2/dd5/game_8h.html#a798e4073d613ca5ba9618e1b3253df14">Y</a>][<a class="code" href="../../d2/dd5/game_8h.html#a207fd5507206d307cd63f95374fcd00d">X</a>], <span class="keywordtype">int</span> coord_y, <span class="keywordtype">int</span> coord_x);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment"> * \fn void placer_pers(case_t mat[Y][X], int coord_y, int coord_x, perso_t  *player)</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment"> * \brief Place le personnage si la case est libre</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment"> * \param mat matrice de case_t sur laquelle on souhaite placer le personnage</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment"> * \param coord_y coordonée en y où l&#39;on place le personnage</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment"> * \param coor_x coordonée en x où l&#39;on place le personnage</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d8/da5/deplacement_8h.html#a47f25ac68281276f6abe6fcce529db3b">placer_pers</a>(<a class="code" href="../../d9/d08/structcase__t.html">case_t</a> mat[<a class="code" href="../../d2/dd5/game_8h.html#a798e4073d613ca5ba9618e1b3253df14">Y</a>][<a class="code" href="../../d2/dd5/game_8h.html#a207fd5507206d307cd63f95374fcd00d">X</a>], <span class="keywordtype">int</span> coord_y, <span class="keywordtype">int</span> coord_x, <a class="code" href="../../df/de6/structperso__t.html">perso_t</a>  *player);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment"> * \fn int deplacer_pers(case_t mat[Y][X], int coord_y, int coord_x, perso_t  *player)</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment"> * \brief Déplace le personnage sur la case souhaitée</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment"> * \param mat matrice de case_t sur laquelle on souhaite déplacer le personnage</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment"> * \param coord_y coordonée en y où l&#39;on place le personnage</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment"> * \param coor_x coordonée en x où l&#39;on place le personnage</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment"> * \param player personnage que l&#39;on souhaite déplacer</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../d8/da5/deplacement_8h.html#a89897777c3fd1de9394e6becb81d8dbe">deplacer_pers</a>(<a class="code" href="../../d9/d08/structcase__t.html">case_t</a> mat[<a class="code" href="../../d2/dd5/game_8h.html#a798e4073d613ca5ba9618e1b3253df14">Y</a>][<a class="code" href="../../d2/dd5/game_8h.html#a207fd5507206d307cd63f95374fcd00d">X</a>], <span class="keywordtype">int</span> coord_y, <span class="keywordtype">int</span> coord_x, <a class="code" href="../../df/de6/structperso__t.html">perso_t</a>  *player);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment"> * \fn int gauche(case_t mat[Y][X], perso_t *player)</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment"> * \brief Fonction de déplacement matriciel vers la gauche</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment"> * \param mat matrice de case_t sur laquelle on souhaite déplacer le personnage</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment"> * \param player personnage que l&#39;on souhaite déplacer</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../d8/da5/deplacement_8h.html#a0622ec9dff683b30f2111e2f4aec8857">gauche</a>(<a class="code" href="../../d9/d08/structcase__t.html">case_t</a> mat[<a class="code" href="../../d2/dd5/game_8h.html#a798e4073d613ca5ba9618e1b3253df14">Y</a>][<a class="code" href="../../d2/dd5/game_8h.html#a207fd5507206d307cd63f95374fcd00d">X</a>], <a class="code" href="../../df/de6/structperso__t.html">perso_t</a> *player);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment"> * \fn int droite(case_t mat[Y][X], perso_t *player)</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment"> * \brief Fonction de déplacement matriciel vers la droite</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment"> * \param mat matrice de case_t sur laquelle on souhaite déplacer le personnage</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment"> * \param player personnage que l&#39;on souhaite déplacer</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../d8/da5/deplacement_8h.html#a96bf9e7875cff5fa0ccbb1721731d6e6">droite</a>(<a class="code" href="../../d9/d08/structcase__t.html">case_t</a> mat[<a class="code" href="../../d2/dd5/game_8h.html#a798e4073d613ca5ba9618e1b3253df14">Y</a>][<a class="code" href="../../d2/dd5/game_8h.html#a207fd5507206d307cd63f95374fcd00d">X</a>], <a class="code" href="../../df/de6/structperso__t.html">perso_t</a> *player);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment"> * \fn int dessus(case_t mat[Y][X], perso_t *player)</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment"> * \brief Fonction de déplacement matriciel vers le haut</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment"> * \param mat matrice de case_t sur laquelle on souhaite déplacer le personnage</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment"> * \param player personnage que l&#39;on souhaite déplacer</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../d8/da5/deplacement_8h.html#a5bdbdc6208a68b49e5d3ab21c87ebbc1">dessus</a>(<a class="code" href="../../d9/d08/structcase__t.html">case_t</a> mat[<a class="code" href="../../d2/dd5/game_8h.html#a798e4073d613ca5ba9618e1b3253df14">Y</a>][<a class="code" href="../../d2/dd5/game_8h.html#a207fd5507206d307cd63f95374fcd00d">X</a>], <a class="code" href="../../df/de6/structperso__t.html">perso_t</a> *player);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment"> * \fn int dessous(case_t mat[Y][X], perso_t *player)</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment"> * \brief Fonction de déplacement matriciel vers le bas</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment"> * \param mat matrice de case_t sur laquelle on souhaite déplacer le personnage</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment"> * \param player personnage que l&#39;on souhaite déplacer</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../d8/da5/deplacement_8h.html#a2d3825605142e376781f4535dc6aaa13">dessous</a>(<a class="code" href="../../d9/d08/structcase__t.html">case_t</a> mat[<a class="code" href="../../d2/dd5/game_8h.html#a798e4073d613ca5ba9618e1b3253df14">Y</a>][<a class="code" href="../../d2/dd5/game_8h.html#a207fd5507206d307cd63f95374fcd00d">X</a>], <a class="code" href="../../df/de6/structperso__t.html">perso_t</a> *player);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment"> * \fn int est_a_cote(case_t mat[Y][X], perso_t *perso)</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="comment"> * \brief Fonction pour savoir si on est proche ou non d&#39;un PNJ</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="comment"> * \param mat matrice de case_t dans laquelle on souhaite effectuer le test</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="comment"> * \param perso personnage sur qui on souhaite effectuer le test</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment"> * \return -1 si bas, -2 si haut, -3 si droite, -4 si gauche, 0 si pas de PNJ</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../d8/da5/deplacement_8h.html#ac07c3e82cdb4dce84ae9f0b758cf5089">est_a_cote</a>(<a class="code" href="../../d9/d08/structcase__t.html">case_t</a> mat[<a class="code" href="../../d2/dd5/game_8h.html#a798e4073d613ca5ba9618e1b3253df14">Y</a>][<a class="code" href="../../d2/dd5/game_8h.html#a207fd5507206d307cd63f95374fcd00d">X</a>], <a class="code" href="../../df/de6/structperso__t.html">perso_t</a> *perso);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="astructperso__t_html"><div class="ttname"><a href="../../df/de6/structperso__t.html">perso_t</a></div></div>
+<div class="ttc" id="adeplacement_8h_html_a89897777c3fd1de9394e6becb81d8dbe"><div class="ttname"><a href="../../d8/da5/deplacement_8h.html#a89897777c3fd1de9394e6becb81d8dbe">deplacer_pers</a></div><div class="ttdeci">int deplacer_pers(case_t mat[Y][X], int coord_y, int coord_x, perso_t *player)</div><div class="ttdoc">Déplace le personnage sur la case souhaitée.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d05/deplacement_8c_source.html#l00102">deplacement.c:102</a></div></div>
+<div class="ttc" id="adeplacement_8h_html_a0622ec9dff683b30f2111e2f4aec8857"><div class="ttname"><a href="../../d8/da5/deplacement_8h.html#a0622ec9dff683b30f2111e2f4aec8857">gauche</a></div><div class="ttdeci">int gauche(case_t mat[Y][X], perso_t *player)</div><div class="ttdoc">Fonction de déplacement matriciel vers la gauche.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d05/deplacement_8c_source.html#l00119">deplacement.c:119</a></div></div>
+<div class="ttc" id="agame_8h_html_a207fd5507206d307cd63f95374fcd00d"><div class="ttname"><a href="../../d2/dd5/game_8h.html#a207fd5507206d307cd63f95374fcd00d">X</a></div><div class="ttdeci">#define X</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dd5/game_8h_source.html#l00010">game.h:10</a></div></div>
+<div class="ttc" id="astructures_8h_html"><div class="ttname"><a href="../../dd/da3/structures_8h.html">structures.h</a></div><div class="ttdoc">Structures d'objets.</div></div>
+<div class="ttc" id="adeplacement_8h_html_a2d3825605142e376781f4535dc6aaa13"><div class="ttname"><a href="../../d8/da5/deplacement_8h.html#a2d3825605142e376781f4535dc6aaa13">dessous</a></div><div class="ttdeci">int dessous(case_t mat[Y][X], perso_t *player)</div><div class="ttdoc">Fonction de déplacement matriciel vers le bas.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d05/deplacement_8c_source.html#l00149">deplacement.c:149</a></div></div>
+<div class="ttc" id="adeplacement_8h_html_ac07c3e82cdb4dce84ae9f0b758cf5089"><div class="ttname"><a href="../../d8/da5/deplacement_8h.html#ac07c3e82cdb4dce84ae9f0b758cf5089">est_a_cote</a></div><div class="ttdeci">int est_a_cote(case_t mat[Y][X], perso_t *perso)</div><div class="ttdoc">Fonction pour savoir si on est proche ou non d'un PNJ.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d05/deplacement_8c_source.html#l00160">deplacement.c:160</a></div></div>
+<div class="ttc" id="adeplacement_8h_html_a7c700a504a0ea609fb3a5deb28c6b120"><div class="ttname"><a href="../../d8/da5/deplacement_8h.html#a7c700a504a0ea609fb3a5deb28c6b120">contour_mat</a></div><div class="ttdeci">void contour_mat(case_t mat[Y][X])</div><div class="ttdoc">Fonction de création des bordures de la matrice.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d05/deplacement_8c_source.html#l00033">deplacement.c:33</a></div></div>
+<div class="ttc" id="astructcase__t_html"><div class="ttname"><a href="../../d9/d08/structcase__t.html">case_t</a></div></div>
+<div class="ttc" id="adeplacement_8h_html_a04260b3165d8fb41f19458afed0fd29b"><div class="ttname"><a href="../../d8/da5/deplacement_8h.html#a04260b3165d8fb41f19458afed0fd29b">case_libre</a></div><div class="ttdeci">int case_libre(case_t mat[Y][X], int coord_y, int coord_x)</div><div class="ttdoc">Vérifie si la case sur laquelle on se déplace est libre (id collision)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d05/deplacement_8c_source.html#l00075">deplacement.c:75</a></div></div>
+<div class="ttc" id="adeplacement_8h_html_a47f25ac68281276f6abe6fcce529db3b"><div class="ttname"><a href="../../d8/da5/deplacement_8h.html#a47f25ac68281276f6abe6fcce529db3b">placer_pers</a></div><div class="ttdeci">void placer_pers(case_t mat[Y][X], int coord_y, int coord_x, perso_t *player)</div><div class="ttdoc">Place le personnage si la case est libre.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d05/deplacement_8c_source.html#l00086">deplacement.c:86</a></div></div>
+<div class="ttc" id="adeplacement_8h_html_a6e281bd852f3bc0b840baec39b3c8946"><div class="ttname"><a href="../../d8/da5/deplacement_8h.html#a6e281bd852f3bc0b840baec39b3c8946">afficher_mat</a></div><div class="ttdeci">void afficher_mat(case_t mat[Y][X])</div><div class="ttdoc">Fonction d'affichage de la matrice.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d05/deplacement_8c_source.html#l00049">deplacement.c:49</a></div></div>
+<div class="ttc" id="adeplacement_8h_html_a9c31d48445c5803a15c70851c22dcaf5"><div class="ttname"><a href="../../d8/da5/deplacement_8h.html#a9c31d48445c5803a15c70851c22dcaf5">init_mat</a></div><div class="ttdeci">void init_mat(case_t mat[Y][X])</div><div class="ttdoc">Fonction de création et d'initialisationn d'une matrice vide (remplie d'etat de collision à 0)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d05/deplacement_8c_source.html#l00019">deplacement.c:19</a></div></div>
+<div class="ttc" id="adeplacement_8h_html_a5bdbdc6208a68b49e5d3ab21c87ebbc1"><div class="ttname"><a href="../../d8/da5/deplacement_8h.html#a5bdbdc6208a68b49e5d3ab21c87ebbc1">dessus</a></div><div class="ttdeci">int dessus(case_t mat[Y][X], perso_t *player)</div><div class="ttdoc">Fonction de déplacement matriciel vers le haut.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d05/deplacement_8c_source.html#l00139">deplacement.c:139</a></div></div>
+<div class="ttc" id="agame_8h_html"><div class="ttname"><a href="../../d2/dd5/game_8h.html">game.h</a></div></div>
+<div class="ttc" id="agame_8h_html_a798e4073d613ca5ba9618e1b3253df14"><div class="ttname"><a href="../../d2/dd5/game_8h.html#a798e4073d613ca5ba9618e1b3253df14">Y</a></div><div class="ttdeci">#define Y</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dd5/game_8h_source.html#l00009">game.h:9</a></div></div>
+<div class="ttc" id="adeplacement_8h_html_a96bf9e7875cff5fa0ccbb1721731d6e6"><div class="ttname"><a href="../../d8/da5/deplacement_8h.html#a96bf9e7875cff5fa0ccbb1721731d6e6">droite</a></div><div class="ttdeci">int droite(case_t mat[Y][X], perso_t *player)</div><div class="ttdoc">Fonction de déplacement matriciel vers la droite.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d05/deplacement_8c_source.html#l00129">deplacement.c:129</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li><li class="navelem"><a class="el" href="../../d8/da5/deplacement_8h.html">deplacement.h</a></li>
-    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>
 </div>
 </body>

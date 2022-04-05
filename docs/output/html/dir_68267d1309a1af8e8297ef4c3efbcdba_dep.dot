@@ -1,0 +1,8 @@
+digraph "/home/killian/Wolfpine/Wolfpine-RPG-1/src" {
+  compound=true
+  node [ fontsize="10", fontname="FreeSans"];
+  edge [ labelfontsize="10", labelfontname="FreeSans"];
+  dir_68267d1309a1af8e8297ef4c3efbcdba [shape=box, label="src", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_68267d1309a1af8e8297ef4c3efbcdba.html"];
+  dir_97aefd0d527b934f1d99a682da8fe6a9 [shape=box label="lib" URL="dir_97aefd0d527b934f1d99a682da8fe6a9.html"];
+  dir_68267d1309a1af8e8297ef4c3efbcdba->dir_97aefd0d527b934f1d99a682da8fe6a9 [headlabel="29", labeldistance=1.5 headhref="dir_000001_000000.html"];
+}

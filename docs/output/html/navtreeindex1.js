@@ -1,6 +1,5 @@
 var NAVTREEINDEX1 =
 {
-"de/d3e/gestion__deplacement__sdl_8h_source.html":[1,0,0,7],
 "de/d62/gestion__deplacement__sdl_8c.html":[1,0,1,7],
 "de/d62/gestion__deplacement__sdl_8c.html#a6b57f01d3c576db5368dd0efc2f435a4":[1,0,1,7,1],
 "de/d62/gestion__deplacement__sdl_8c.html#a7b5d1496929e9a11c445f66cc3ac2062":[1,0,1,7,0],
@@ -19,7 +18,7 @@ var NAVTREEINDEX1 =
 "df/d1b/menu__principal_8c.html#a49a11b0728728090fa1189391c9fe0c8":[1,0,1,10,1],
 "df/d1b/menu__principal_8c.html#afdf1ca9e7afc3e7ec41b47fea4b3d80d":[1,0,1,10,0],
 "df/d1b/menu__principal_8c_source.html":[1,0,1,10],
-"df/de6/structperso__t.html":[0,0,8],
+"df/de6/structperso__t.html":[0,0,6],
 "dir_68267d1309a1af8e8297ef4c3efbcdba.html":[1,0,1],
 "dir_97aefd0d527b934f1d99a682da8fe6a9.html":[1,0,0],
 "files.html":[1,0],

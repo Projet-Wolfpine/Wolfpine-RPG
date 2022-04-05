@@ -1,83 +1,120 @@
 warning: The selected output language "french" has not been updated
 since release 1.8.15.  As a result some sentences may appear in English.
 
-warning: source '$(../lib)' is not a readable file or directory... skipping.
-/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/affichage_sdl.c:71: warning: argument 'menu' of command @param is not found in the argument list of affichage_dialogue(char *id_PNJ)
-/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/lib/affichage_sdl.h:2: warning: The following parameter of affichage_dialogue(char *id_PNJ) is not documented:
+warning: source $(../lib) is not a readable file or directory... skipping.
+/home/killian/Wolfpine/Wolfpine-RPG-1/src/affichage_sdl.c:70: warning: argument 'menu' of command @param is not found in the argument list of affichage_dialogue(char *id_PNJ)
+/home/killian/Wolfpine/Wolfpine-RPG-1/lib/affichage_sdl.h:21: warning: The following parameter of affichage_dialogue(char *id_PNJ) is not documented:
   parameter 'id_PNJ'
-/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/lib/combat.h:10: warning: documented empty return type of init_monster
-/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/deplacement.c:69: warning: argument 'coor_x' of command @param is not found in the argument list of case_libre(case_t mat[Y][X], int coord_y, int coord_x)
-/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/lib/deplacement.h:12: warning: The following parameter of case_libre(case_t mat[Y][X], int coord_y, int coord_x) is not documented:
+/home/killian/Wolfpine/Wolfpine-RPG-1/lib/combat.h:41: warning: documented empty return type of init_monster
+/home/killian/Wolfpine/Wolfpine-RPG-1/src/deplacement.c:68: warning: argument 'coor_x' of command @param is not found in the argument list of case_libre(case_t mat[Y][X], int coord_y, int coord_x)
+/home/killian/Wolfpine/Wolfpine-RPG-1/lib/deplacement.h:43: warning: The following parameter of case_libre(case_t mat[Y][X], int coord_y, int coord_x) is not documented:
   parameter 'coord_x'
-/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/deplacement.c:96: warning: argument 'coor_x' of command @param is not found in the argument list of deplacer_pers(case_t mat[Y][X], int coord_y, int coord_x, perso_t *player)
-/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/lib/deplacement.h:16: warning: The following parameter of deplacer_pers(case_t mat[Y][X], int coord_y, int coord_x, perso_t *player) is not documented:
+/home/killian/Wolfpine/Wolfpine-RPG-1/src/deplacement.c:95: warning: argument 'coor_x' of command @param is not found in the argument list of deplacer_pers(case_t mat[Y][X], int coord_y, int coord_x, perso_t *player)
+/home/killian/Wolfpine/Wolfpine-RPG-1/lib/deplacement.h:62: warning: The following parameter of deplacer_pers(case_t mat[Y][X], int coord_y, int coord_x, perso_t *player) is not documented:
   parameter 'coord_x'
-/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/deplacement.c:81: warning: argument 'coor_x' of command @param is not found in the argument list of placer_pers(case_t mat[Y][X], int coord_y, int coord_x, perso_t *player)
-/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/lib/deplacement.h:14: warning: The following parameters of placer_pers(case_t mat[Y][X], int coord_y, int coord_x, perso_t *player) are not documented:
+/home/killian/Wolfpine/Wolfpine-RPG-1/src/deplacement.c:80: warning: argument 'coor_x' of command @param is not found in the argument list of placer_pers(case_t mat[Y][X], int coord_y, int coord_x, perso_t *player)
+/home/killian/Wolfpine/Wolfpine-RPG-1/lib/deplacement.h:52: warning: The following parameters of placer_pers(case_t mat[Y][X], int coord_y, int coord_x, perso_t *player) are not documented:
   parameter 'coord_x'
   parameter 'player'
-/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/fonction_sdl.c:167: warning: argument 'Abscisse' of command @param is not found in the argument list of drawImage(int x, int y, char *nom, int w, int h)
-/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/fonction_sdl.c:167: warning: argument 'Ordonnée' of command @param is not found in the argument list of drawImage(int x, int y, char *nom, int w, int h)
-/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/fonction_sdl.c:167: warning: argument 'Nom' of command @param is not found in the argument list of drawImage(int x, int y, char *nom, int w, int h)
-/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/fonction_sdl.c:167: warning: argument 'Hauteur' of command @param is not found in the argument list of drawImage(int x, int y, char *nom, int w, int h)
-/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/fonction_sdl.c:167: warning: argument 'Largeur' of command @param is not found in the argument list of drawImage(int x, int y, char *nom, int w, int h)
-/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/lib/fonction_sdl.h:16: warning: The following parameters of drawImage(int x, int y, char *nom, int w, int h) are not documented:
+/home/killian/Wolfpine/Wolfpine-RPG-1/src/fonction_sdl.c:166: warning: argument 'Abscisse' of command @param is not found in the argument list of drawImage(int x, int y, char *nom, int w, int h)
+/home/killian/Wolfpine/Wolfpine-RPG-1/src/fonction_sdl.c:166: warning: argument 'Ordonnée' of command @param is not found in the argument list of drawImage(int x, int y, char *nom, int w, int h)
+/home/killian/Wolfpine/Wolfpine-RPG-1/src/fonction_sdl.c:166: warning: argument 'Nom' of command @param is not found in the argument list of drawImage(int x, int y, char *nom, int w, int h)
+/home/killian/Wolfpine/Wolfpine-RPG-1/src/fonction_sdl.c:166: warning: argument 'Hauteur' of command @param is not found in the argument list of drawImage(int x, int y, char *nom, int w, int h)
+/home/killian/Wolfpine/Wolfpine-RPG-1/src/fonction_sdl.c:166: warning: argument 'Largeur' of command @param is not found in the argument list of drawImage(int x, int y, char *nom, int w, int h)
+/home/killian/Wolfpine/Wolfpine-RPG-1/lib/fonction_sdl.h:45: warning: The following parameters of drawImage(int x, int y, char *nom, int w, int h) are not documented:
   parameter 'x'
   parameter 'y'
   parameter 'nom'
   parameter 'w'
   parameter 'h'
-/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/fonction_sdl.c:141: warning: argument 'Abscisse' of command @param is not found in the argument list of drawText(int x, int y, char *string, int h, int w, SDL_Color color)
-/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/fonction_sdl.c:141: warning: argument 'Ordonnée' of command @param is not found in the argument list of drawText(int x, int y, char *string, int h, int w, SDL_Color color)
-/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/fonction_sdl.c:141: warning: argument 'Contenu' of command @param is not found in the argument list of drawText(int x, int y, char *string, int h, int w, SDL_Color color)
-/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/fonction_sdl.c:141: warning: argument 'Hauteur' of command @param is not found in the argument list of drawText(int x, int y, char *string, int h, int w, SDL_Color color)
-/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/fonction_sdl.c:141: warning: argument 'Largeur' of command @param is not found in the argument list of drawText(int x, int y, char *string, int h, int w, SDL_Color color)
-/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/fonction_sdl.c:141: warning: argument 'couleur' of command @param is not found in the argument list of drawText(int x, int y, char *string, int h, int w, SDL_Color color)
-/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/lib/fonction_sdl.h:15: warning: The following parameters of drawText(int x, int y, char *string, int h, int w, SDL_Color color) are not documented:
+/home/killian/Wolfpine/Wolfpine-RPG-1/src/fonction_sdl.c:140: warning: argument 'Abscisse' of command @param is not found in the argument list of drawText(int x, int y, char *string, int h, int w, SDL_Color color)
+/home/killian/Wolfpine/Wolfpine-RPG-1/src/fonction_sdl.c:140: warning: argument 'Ordonnée' of command @param is not found in the argument list of drawText(int x, int y, char *string, int h, int w, SDL_Color color)
+/home/killian/Wolfpine/Wolfpine-RPG-1/src/fonction_sdl.c:140: warning: argument 'Contenu' of command @param is not found in the argument list of drawText(int x, int y, char *string, int h, int w, SDL_Color color)
+/home/killian/Wolfpine/Wolfpine-RPG-1/src/fonction_sdl.c:140: warning: argument 'Hauteur' of command @param is not found in the argument list of drawText(int x, int y, char *string, int h, int w, SDL_Color color)
+/home/killian/Wolfpine/Wolfpine-RPG-1/src/fonction_sdl.c:140: warning: argument 'Largeur' of command @param is not found in the argument list of drawText(int x, int y, char *string, int h, int w, SDL_Color color)
+/home/killian/Wolfpine/Wolfpine-RPG-1/src/fonction_sdl.c:140: warning: argument 'couleur' of command @param is not found in the argument list of drawText(int x, int y, char *string, int h, int w, SDL_Color color)
+/home/killian/Wolfpine/Wolfpine-RPG-1/lib/fonction_sdl.h:34: warning: The following parameters of drawText(int x, int y, char *string, int h, int w, SDL_Color color) are not documented:
   parameter 'x'
   parameter 'y'
   parameter 'string'
   parameter 'h'
   parameter 'w'
   parameter 'color'
-/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/affichage_sdl.c:71: warning: argument 'menu' of command @param is not found in the argument list of affichage_dialogue(char *id_PNJ)
-/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/affichage_sdl.c:75: warning: The following parameter of affichage_dialogue(char *id_PNJ) is not documented:
+/home/killian/Wolfpine/Wolfpine-RPG-1/src/affichage_sdl.c:70: warning: argument 'menu' of command @param is not found in the argument list of affichage_dialogue(char *id_PNJ)
+/home/killian/Wolfpine/Wolfpine-RPG-1/src/affichage_sdl.c:75: warning: The following parameter of affichage_dialogue(char *id_PNJ) is not documented:
   parameter 'id_PNJ'
-/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/combat.c:111: warning: documented empty return type of init_monster
-/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/creation_map.c:20: warning: argument 'stop' of command @param is not found in the argument list of time_diff2(struct timespec *start, struct timespec *end)
-/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/creation_map.c:25: warning: The following parameter of time_diff2(struct timespec *start, struct timespec *end) is not documented:
+/home/killian/Wolfpine/Wolfpine-RPG-1/src/combat.c:139: warning: documented empty return type of init_monster
+/home/killian/Wolfpine/Wolfpine-RPG-1/src/creation_map.c:19: warning: argument 'stop' of command @param is not found in the argument list of time_diff2(struct timespec *start, struct timespec *end)
+/home/killian/Wolfpine/Wolfpine-RPG-1/src/creation_map.c:25: warning: The following parameter of time_diff2(struct timespec *start, struct timespec *end) is not documented:
   parameter 'end'
-/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/deplacement.c:69: warning: argument 'coor_x' of command @param is not found in the argument list of case_libre(case_t mat[Y][X], int coord_y, int coord_x)
-/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/deplacement.c:75: warning: The following parameter of case_libre(case_t mat[Y][X], int coord_y, int coord_x) is not documented:
+/home/killian/Wolfpine/Wolfpine-RPG-1/src/deplacement.c:68: warning: argument 'coor_x' of command @param is not found in the argument list of case_libre(case_t mat[Y][X], int coord_y, int coord_x)
+/home/killian/Wolfpine/Wolfpine-RPG-1/src/deplacement.c:75: warning: The following parameter of case_libre(case_t mat[Y][X], int coord_y, int coord_x) is not documented:
   parameter 'coord_x'
-/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/deplacement.c:96: warning: argument 'coor_x' of command @param is not found in the argument list of deplacer_pers(case_t mat[Y][X], int coord_y, int coord_x, perso_t *player)
-/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/deplacement.c:102: warning: The following parameter of deplacer_pers(case_t mat[Y][X], int coord_y, int coord_x, perso_t *player) is not documented:
+/home/killian/Wolfpine/Wolfpine-RPG-1/src/deplacement.c:95: warning: argument 'coor_x' of command @param is not found in the argument list of deplacer_pers(case_t mat[Y][X], int coord_y, int coord_x, perso_t *player)
+/home/killian/Wolfpine/Wolfpine-RPG-1/src/deplacement.c:102: warning: The following parameter of deplacer_pers(case_t mat[Y][X], int coord_y, int coord_x, perso_t *player) is not documented:
   parameter 'coord_x'
-/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/deplacement.c:81: warning: argument 'coor_x' of command @param is not found in the argument list of placer_pers(case_t mat[Y][X], int coord_y, int coord_x, perso_t *player)
-/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/deplacement.c:86: warning: The following parameters of placer_pers(case_t mat[Y][X], int coord_y, int coord_x, perso_t *player) are not documented:
+/home/killian/Wolfpine/Wolfpine-RPG-1/src/deplacement.c:80: warning: argument 'coor_x' of command @param is not found in the argument list of placer_pers(case_t mat[Y][X], int coord_y, int coord_x, perso_t *player)
+/home/killian/Wolfpine/Wolfpine-RPG-1/src/deplacement.c:86: warning: The following parameters of placer_pers(case_t mat[Y][X], int coord_y, int coord_x, perso_t *player) are not documented:
   parameter 'coord_x'
   parameter 'player'
-/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/fonction_sdl.c:167: warning: argument 'Abscisse' of command @param is not found in the argument list of drawImage(int x, int y, char *nom, int w, int h)
-/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/fonction_sdl.c:167: warning: argument 'Ordonnée' of command @param is not found in the argument list of drawImage(int x, int y, char *nom, int w, int h)
-/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/fonction_sdl.c:167: warning: argument 'Nom' of command @param is not found in the argument list of drawImage(int x, int y, char *nom, int w, int h)
-/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/fonction_sdl.c:167: warning: argument 'Hauteur' of command @param is not found in the argument list of drawImage(int x, int y, char *nom, int w, int h)
-/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/fonction_sdl.c:167: warning: argument 'Largeur' of command @param is not found in the argument list of drawImage(int x, int y, char *nom, int w, int h)
-/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/fonction_sdl.c:175: warning: The following parameters of drawImage(int x, int y, char *nom, int w, int h) are not documented:
+/home/killian/Wolfpine/Wolfpine-RPG-1/src/fonction_sdl.c:166: warning: argument 'Abscisse' of command @param is not found in the argument list of drawImage(int x, int y, char *nom, int w, int h)
+/home/killian/Wolfpine/Wolfpine-RPG-1/src/fonction_sdl.c:166: warning: argument 'Ordonnée' of command @param is not found in the argument list of drawImage(int x, int y, char *nom, int w, int h)
+/home/killian/Wolfpine/Wolfpine-RPG-1/src/fonction_sdl.c:166: warning: argument 'Nom' of command @param is not found in the argument list of drawImage(int x, int y, char *nom, int w, int h)
+/home/killian/Wolfpine/Wolfpine-RPG-1/src/fonction_sdl.c:166: warning: argument 'Hauteur' of command @param is not found in the argument list of drawImage(int x, int y, char *nom, int w, int h)
+/home/killian/Wolfpine/Wolfpine-RPG-1/src/fonction_sdl.c:166: warning: argument 'Largeur' of command @param is not found in the argument list of drawImage(int x, int y, char *nom, int w, int h)
+/home/killian/Wolfpine/Wolfpine-RPG-1/src/fonction_sdl.c:175: warning: The following parameters of drawImage(int x, int y, char *nom, int w, int h) are not documented:
   parameter 'x'
   parameter 'y'
   parameter 'nom'
   parameter 'w'
   parameter 'h'
-/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/fonction_sdl.c:141: warning: argument 'Abscisse' of command @param is not found in the argument list of drawText(int x, int y, char *string, int h, int w, SDL_Color color)
-/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/fonction_sdl.c:141: warning: argument 'Ordonnée' of command @param is not found in the argument list of drawText(int x, int y, char *string, int h, int w, SDL_Color color)
-/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/fonction_sdl.c:141: warning: argument 'Contenu' of command @param is not found in the argument list of drawText(int x, int y, char *string, int h, int w, SDL_Color color)
-/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/fonction_sdl.c:141: warning: argument 'Hauteur' of command @param is not found in the argument list of drawText(int x, int y, char *string, int h, int w, SDL_Color color)
-/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/fonction_sdl.c:141: warning: argument 'Largeur' of command @param is not found in the argument list of drawText(int x, int y, char *string, int h, int w, SDL_Color color)
-/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/fonction_sdl.c:141: warning: argument 'couleur' of command @param is not found in the argument list of drawText(int x, int y, char *string, int h, int w, SDL_Color color)
-/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/fonction_sdl.c:150: warning: The following parameters of drawText(int x, int y, char *string, int h, int w, SDL_Color color) are not documented:
+/home/killian/Wolfpine/Wolfpine-RPG-1/src/fonction_sdl.c:140: warning: argument 'Abscisse' of command @param is not found in the argument list of drawText(int x, int y, char *string, int h, int w, SDL_Color color)
+/home/killian/Wolfpine/Wolfpine-RPG-1/src/fonction_sdl.c:140: warning: argument 'Ordonnée' of command @param is not found in the argument list of drawText(int x, int y, char *string, int h, int w, SDL_Color color)
+/home/killian/Wolfpine/Wolfpine-RPG-1/src/fonction_sdl.c:140: warning: argument 'Contenu' of command @param is not found in the argument list of drawText(int x, int y, char *string, int h, int w, SDL_Color color)
+/home/killian/Wolfpine/Wolfpine-RPG-1/src/fonction_sdl.c:140: warning: argument 'Hauteur' of command @param is not found in the argument list of drawText(int x, int y, char *string, int h, int w, SDL_Color color)
+/home/killian/Wolfpine/Wolfpine-RPG-1/src/fonction_sdl.c:140: warning: argument 'Largeur' of command @param is not found in the argument list of drawText(int x, int y, char *string, int h, int w, SDL_Color color)
+/home/killian/Wolfpine/Wolfpine-RPG-1/src/fonction_sdl.c:140: warning: argument 'couleur' of command @param is not found in the argument list of drawText(int x, int y, char *string, int h, int w, SDL_Color color)
+/home/killian/Wolfpine/Wolfpine-RPG-1/src/fonction_sdl.c:150: warning: The following parameters of drawText(int x, int y, char *string, int h, int w, SDL_Color color) are not documented:
   parameter 'x'
   parameter 'y'
   parameter 'string'
   parameter 'h'
   parameter 'w'
   parameter 'color'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d9/d19/creation__map_8h__incl.dot" -Tpng -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d9/d19/creation__map_8h__incl.png" -Tcmapx -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d9/d19/creation__map_8h__incl.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/db/dcb/gestion__deplacement__sdl_8c__incl.dot" -Tpng -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/db/dcb/gestion__deplacement__sdl_8c__incl.png" -Tcmapx -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/db/dcb/gestion__deplacement__sdl_8c__incl.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d5/d5d/combat_8h__incl.dot" -Tpng -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d5/d5d/combat_8h__incl.png" -Tcmapx -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d5/d5d/combat_8h__incl.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d1/dcd/menu__principal_8c__incl.dot" -Tpng -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d1/dcd/menu__principal_8c__incl.png" -Tcmapx -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d1/dcd/menu__principal_8c__incl.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/db/d46/affichage__sdl_8c__incl.dot" -Tpng -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/db/d46/affichage__sdl_8c__incl.png" -Tcmapx -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/db/d46/affichage__sdl_8c__incl.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/dc/d36/audio_8h__dep__incl.dot" -Tpng -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/dc/d36/audio_8h__dep__incl.png" -Tcmapx -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/dc/d36/audio_8h__dep__incl.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d2/d8a/spells_8h__incl.dot" -Tpng -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d2/d8a/spells_8h__incl.png" -Tcmapx -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d2/d8a/spells_8h__incl.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d8/d96/deplacement_8h__incl.dot" -Tpng -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d8/d96/deplacement_8h__incl.png" -Tcmapx -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d8/d96/deplacement_8h__incl.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/dd/d26/inventory_8h__dep__incl.dot" -Tpng -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/dd/d26/inventory_8h__dep__incl.png" -Tcmapx -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/dd/d26/inventory_8h__dep__incl.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d2/de3/structsound__coll__graph.dot" -Tpng -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d2/de3/structsound__coll__graph.png" -Tcmapx -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d2/de3/structsound__coll__graph.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d8/d51/inventory_8c__incl.dot" -Tpng -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d8/d51/inventory_8c__incl.png" -Tcmapx -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d8/d51/inventory_8c__incl.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/dc/d5d/spells_8c__incl.dot" -Tpng -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/dc/d5d/spells_8c__incl.png" -Tcmapx -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/dc/d5d/spells_8c__incl.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/da/db3/fonction__sdl_8h__dep__incl.dot" -Tpng -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/da/db3/fonction__sdl_8h__dep__incl.png" -Tcmapx -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/da/db3/fonction__sdl_8h__dep__incl.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d9/d7c/affichage__sdl_8h__dep__incl.dot" -Tpng -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d9/d7c/affichage__sdl_8h__dep__incl.png" -Tcmapx -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d9/d7c/affichage__sdl_8h__dep__incl.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/db/dd4/audio_8c__incl.dot" -Tpng -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/db/dd4/audio_8c__incl.png" -Tcmapx -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/db/dd4/audio_8c__incl.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/db/d20/inventory_8h__incl.dot" -Tpng -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/db/d20/inventory_8h__incl.png" -Tcmapx -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/db/d20/inventory_8h__incl.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d0/d58/spells_8h__dep__incl.dot" -Tpng -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d0/d58/spells_8h__dep__incl.png" -Tcmapx -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d0/d58/spells_8h__dep__incl.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d4/d91/gestion__deplacement__sdl_8h__incl.dot" -Tpng -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d4/d91/gestion__deplacement__sdl_8h__incl.png" -Tcmapx -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d4/d91/gestion__deplacement__sdl_8h__incl.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/df/dcc/game_8h__dep__incl.dot" -Tpng -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/df/dcc/game_8h__dep__incl.png" -Tcmapx -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/df/dcc/game_8h__dep__incl.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d2/d54/fonction__sdl_8h__incl.dot" -Tpng -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d2/d54/fonction__sdl_8h__incl.png" -Tcmapx -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d2/d54/fonction__sdl_8h__incl.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d7/dc3/structures_8h__dep__incl.dot" -Tpng -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d7/dc3/structures_8h__dep__incl.png" -Tcmapx -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d7/dc3/structures_8h__dep__incl.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d1/dde/deplacement_8c__incl.dot" -Tpng -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d1/dde/deplacement_8c__incl.png" -Tcmapx -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d1/dde/deplacement_8c__incl.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/df/de8/game_8c__incl.dot" -Tpng -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/df/de8/game_8c__incl.png" -Tcmapx -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/df/de8/game_8c__incl.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d4/d10/main_8c__incl.dot" -Tpng -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d4/d10/main_8c__incl.png" -Tcmapx -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d4/d10/main_8c__incl.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d0/d01/creation__map_8h__dep__incl.dot" -Tpng -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d0/d01/creation__map_8h__dep__incl.png" -Tcmapx -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d0/d01/creation__map_8h__dep__incl.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d8/d07/deplacement_8h__dep__incl.dot" -Tpng -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d8/d07/deplacement_8h__dep__incl.png" -Tcmapx -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d8/d07/deplacement_8h__dep__incl.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/dd/d27/fonction__sdl_8c__incl.dot" -Tpng -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/dd/d27/fonction__sdl_8c__incl.png" -Tcmapx -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/dd/d27/fonction__sdl_8c__incl.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d1/dc1/combat_8c__incl.dot" -Tpng -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d1/dc1/combat_8c__incl.png" -Tcmapx -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d1/dc1/combat_8c__incl.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d0/d73/combat_8h__dep__incl.dot" -Tpng -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d0/d73/combat_8h__dep__incl.png" -Tcmapx -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d0/d73/combat_8h__dep__incl.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d8/d45/audio_8h__incl.dot" -Tpng -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d8/d45/audio_8h__incl.png" -Tcmapx -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d8/d45/audio_8h__incl.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/db/d4a/creation__map_8c__incl.dot" -Tpng -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/db/d4a/creation__map_8c__incl.png" -Tcmapx -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/db/d4a/creation__map_8c__incl.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d9/d04/gestion__deplacement__sdl_8h__dep__incl.dot" -Tpng -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d9/d04/gestion__deplacement__sdl_8h__dep__incl.png" -Tcmapx -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d9/d04/gestion__deplacement__sdl_8h__dep__incl.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/dir_68267d1309a1af8e8297ef4c3efbcdba_dep.dot" -Tpng -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/dir_68267d1309a1af8e8297ef4c3efbcdba_dep.png" -Tcmapx -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/dir_68267d1309a1af8e8297ef4c3efbcdba_dep.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/df/d8a/menu__principal_8h__dep__incl.dot" -Tpng -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/df/d8a/menu__principal_8h__dep__incl.png" -Tcmapx -o "/home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/df/d8a/menu__principal_8h__dep__incl.map"'
+error: problems opening map file /home/killian/Wolfpine/Wolfpine-RPG-1/docs/output/html/d2/de3/structsound__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.

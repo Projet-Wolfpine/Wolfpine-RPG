@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
-<tagfile doxygen_version="1.9.2" doxygen_gitid="da0a6b42c349bc06b2804a4b0e8f55c7690f5cf9">
+<tagfile>
   <compound kind="file">
     <name>affichage_sdl.h</name>
-    <path>/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/lib/</path>
+    <path>/home/killian/Wolfpine/Wolfpine-RPG-1/lib/</path>
     <filename>d8/d1b/affichage__sdl_8h.html</filename>
     <member kind="function">
       <type>int</type>
@@ -21,9 +21,9 @@
   </compound>
   <compound kind="file">
     <name>audio.h</name>
-    <path>/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/lib/</path>
+    <path>/home/killian/Wolfpine/Wolfpine-RPG-1/lib/</path>
     <filename>da/d09/audio_8h.html</filename>
-    <class kind="struct">Audio</class>
+    <class kind="struct">sound</class>
     <member kind="function">
       <type>Audio *</type>
       <name>createAudio</name>
@@ -97,7 +97,7 @@
   </compound>
   <compound kind="file">
     <name>combat.h</name>
-    <path>/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/lib/</path>
+    <path>/home/killian/Wolfpine/Wolfpine-RPG-1/lib/</path>
     <filename>d9/dab/combat_8h.html</filename>
     <includes id="dd/da3/structures_8h" name="structures.h" local="yes" imported="no">structures.h</includes>
     <includes id="d9/d42/spells_8h" name="spells.h" local="yes" imported="no">spells.h</includes>
@@ -109,6 +109,13 @@
       <anchorfile>d9/dab/combat_8h.html</anchorfile>
       <anchor>a3790ce6458cef9238474baf44426c232</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>free_player</name>
+      <anchorfile>d9/dab/combat_8h.html</anchorfile>
+      <anchor>a1447d8366bf13b04d1f607ac82c620b8</anchor>
+      <arglist>(perso_t *player)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -142,13 +149,13 @@
       <type>perso_t</type>
       <name>combat</name>
       <anchorfile>d9/dab/combat_8h.html</anchorfile>
-      <anchor>a0b43da61372174ac12c0c21e8c37701c</anchor>
+      <anchor>aa2c1ca7f1bdf0a9c7e48a79c2890a095</anchor>
       <arglist>(perso_t *player, monstre_t *monstre)</arglist>
     </member>
   </compound>
   <compound kind="file">
     <name>creation_map.h</name>
-    <path>/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/lib/</path>
+    <path>/home/killian/Wolfpine/Wolfpine-RPG-1/lib/</path>
     <filename>d7/d00/creation__map_8h.html</filename>
     <includes id="d8/da5/deplacement_8h" name="deplacement.h" local="yes" imported="no">deplacement.h</includes>
     <member kind="function">
@@ -175,7 +182,7 @@
   </compound>
   <compound kind="file">
     <name>deplacement.h</name>
-    <path>/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/lib/</path>
+    <path>/home/killian/Wolfpine/Wolfpine-RPG-1/lib/</path>
     <filename>d8/da5/deplacement_8h.html</filename>
     <includes id="dd/da3/structures_8h" name="structures.h" local="yes" imported="no">structures.h</includes>
     <includes id="d2/dd5/game_8h" name="game.h" local="yes" imported="no">game.h</includes>
@@ -259,7 +266,7 @@
   </compound>
   <compound kind="file">
     <name>fonction_sdl.h</name>
-    <path>/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/lib/</path>
+    <path>/home/killian/Wolfpine/Wolfpine-RPG-1/lib/</path>
     <filename>d0/dea/fonction__sdl_8h.html</filename>
     <member kind="function">
       <type>void</type>
@@ -363,7 +370,7 @@
       <type>void</type>
       <name>afficher_image_menu</name>
       <anchorfile>d0/dea/fonction__sdl_8h.html</anchorfile>
-      <anchor>ac3b8549344c280045d9187e6c49bcba2</anchor>
+      <anchor>a9dc3d841a878f31da123d3a5167bd6f1</anchor>
       <arglist>(SDL_PRINTF_FORMAT_STRING char *nom)</arglist>
     </member>
     <member kind="variable">
@@ -418,7 +425,7 @@
   </compound>
   <compound kind="file">
     <name>game.h</name>
-    <path>/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/lib/</path>
+    <path>/home/killian/Wolfpine/Wolfpine-RPG-1/lib/</path>
     <filename>d2/dd5/game_8h.html</filename>
     <member kind="define">
       <type>#define</type>
@@ -458,7 +465,7 @@
   </compound>
   <compound kind="file">
     <name>gestion_deplacement_sdl.h</name>
-    <path>/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/lib/</path>
+    <path>/home/killian/Wolfpine/Wolfpine-RPG-1/lib/</path>
     <filename>de/d3e/gestion__deplacement__sdl_8h.html</filename>
     <member kind="function">
       <type>int</type>
@@ -477,14 +484,14 @@
   </compound>
   <compound kind="file">
     <name>inventory.h</name>
-    <path>/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/lib/</path>
+    <path>/home/killian/Wolfpine/Wolfpine-RPG-1/lib/</path>
     <filename>da/dab/inventory_8h.html</filename>
     <includes id="dd/da3/structures_8h" name="structures.h" local="yes" imported="no">structures.h</includes>
     <member kind="function">
       <type>int</type>
       <name>add_item</name>
       <anchorfile>da/dab/inventory_8h.html</anchorfile>
-      <anchor>ab69ad73aa719fd7bb0d63a26f0a6734f</anchor>
+      <anchor>a615ed55f7d61fc26f639449ba4f1199d</anchor>
       <arglist>(perso_t *player, int id, char *name, char *desc, int heal, int dgt, int armor)</arglist>
     </member>
     <member kind="function">
@@ -511,7 +518,7 @@
   </compound>
   <compound kind="file">
     <name>menu_principal.h</name>
-    <path>/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/lib/</path>
+    <path>/home/killian/Wolfpine/Wolfpine-RPG-1/lib/</path>
     <filename>d8/d8c/menu__principal_8h.html</filename>
     <member kind="function">
       <type>void</type>
@@ -523,7 +530,7 @@
   </compound>
   <compound kind="file">
     <name>spells.h</name>
-    <path>/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/lib/</path>
+    <path>/home/killian/Wolfpine/Wolfpine-RPG-1/lib/</path>
     <filename>d9/d42/spells_8h.html</filename>
     <includes id="dd/da3/structures_8h" name="structures.h" local="yes" imported="no">structures.h</includes>
     <member kind="function">
@@ -550,7 +557,7 @@
   </compound>
   <compound kind="file">
     <name>structures.h</name>
-    <path>/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/lib/</path>
+    <path>/home/killian/Wolfpine/Wolfpine-RPG-1/lib/</path>
     <filename>dd/da3/structures_8h.html</filename>
     <class kind="struct">objet_s</class>
     <class kind="struct">case_s</class>
@@ -581,7 +588,7 @@
   </compound>
   <compound kind="file">
     <name>affichage_sdl.c</name>
-    <path>/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/</path>
+    <path>/home/killian/Wolfpine/Wolfpine-RPG-1/src/</path>
     <filename>da/d78/affichage__sdl_8c.html</filename>
     <includes id="d8/d1b/affichage__sdl_8h" name="affichage_sdl.h" local="yes" imported="no">../lib/affichage_sdl.h</includes>
     <includes id="d0/dea/fonction__sdl_8h" name="fonction_sdl.h" local="yes" imported="no">../lib/fonction_sdl.h</includes>
@@ -630,10 +637,10 @@
   </compound>
   <compound kind="file">
     <name>audio.c</name>
-    <path>/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/</path>
+    <path>/home/killian/Wolfpine/Wolfpine-RPG-1/src/</path>
     <filename>d3/d9a/audio_8c.html</filename>
     <includes id="da/d09/audio_8h" name="audio.h" local="yes" imported="no">../lib/audio.h</includes>
-    <class kind="struct">PrivateAudioDevice</class>
+    <class kind="struct">privateAudioDevice</class>
     <member kind="define">
       <type>#define</type>
       <name>AUDIO_FORMAT</name>
@@ -798,7 +805,7 @@
   </compound>
   <compound kind="file">
     <name>combat.c</name>
-    <path>/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/</path>
+    <path>/home/killian/Wolfpine/Wolfpine-RPG-1/src/</path>
     <filename>d3/d19/combat_8c.html</filename>
     <includes id="d0/dea/fonction__sdl_8h" name="fonction_sdl.h" local="yes" imported="no">../lib/fonction_sdl.h</includes>
     <includes id="d9/dab/combat_8h" name="combat.h" local="yes" imported="no">../lib/combat.h</includes>
@@ -816,6 +823,13 @@
       <anchorfile>d3/d19/combat_8c.html</anchorfile>
       <anchor>a3790ce6458cef9238474baf44426c232</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>free_player</name>
+      <anchorfile>d3/d19/combat_8c.html</anchorfile>
+      <anchor>a0cb422cc832db792b6aabe3e76ee0f27</anchor>
+      <arglist>(perso_t *player)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -849,7 +863,7 @@
       <type>perso_t</type>
       <name>combat</name>
       <anchorfile>d3/d19/combat_8c.html</anchorfile>
-      <anchor>aa2c1ca7f1bdf0a9c7e48a79c2890a095</anchor>
+      <anchor>a0b43da61372174ac12c0c21e8c37701c</anchor>
       <arglist>(perso_t *player, monstre_t *monstre)</arglist>
     </member>
     <member kind="variable">
@@ -897,7 +911,7 @@
   </compound>
   <compound kind="file">
     <name>creation_map.c</name>
-    <path>/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/</path>
+    <path>/home/killian/Wolfpine/Wolfpine-RPG-1/src/</path>
     <filename>dd/d49/creation__map_8c.html</filename>
     <includes id="d8/da5/deplacement_8h" name="deplacement.h" local="yes" imported="no">../lib/deplacement.h</includes>
     <includes id="d7/d00/creation__map_8h" name="creation_map.h" local="yes" imported="no">../lib/creation_map.h</includes>
@@ -947,7 +961,7 @@
   </compound>
   <compound kind="file">
     <name>deplacement.c</name>
-    <path>/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/</path>
+    <path>/home/killian/Wolfpine/Wolfpine-RPG-1/src/</path>
     <filename>d7/d05/deplacement_8c.html</filename>
     <includes id="d8/da5/deplacement_8h" name="deplacement.h" local="yes" imported="no">../lib/deplacement.h</includes>
     <member kind="function">
@@ -1030,7 +1044,7 @@
   </compound>
   <compound kind="file">
     <name>fonction_sdl.c</name>
-    <path>/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/</path>
+    <path>/home/killian/Wolfpine/Wolfpine-RPG-1/src/</path>
     <filename>d9/da1/fonction__sdl_8c.html</filename>
     <includes id="d0/dea/fonction__sdl_8h" name="fonction_sdl.h" local="yes" imported="no">../lib/fonction_sdl.h</includes>
     <member kind="function">
@@ -1114,7 +1128,7 @@
       <type>void</type>
       <name>afficher_image_menu</name>
       <anchorfile>d9/da1/fonction__sdl_8c.html</anchorfile>
-      <anchor>a9dc3d841a878f31da123d3a5167bd6f1</anchor>
+      <anchor>ac3b8549344c280045d9187e6c49bcba2</anchor>
       <arglist>(SDL_PRINTF_FORMAT_STRING char *nom)</arglist>
     </member>
     <member kind="variable">
@@ -1155,7 +1169,7 @@
   </compound>
   <compound kind="file">
     <name>game.c</name>
-    <path>/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/</path>
+    <path>/home/killian/Wolfpine/Wolfpine-RPG-1/src/</path>
     <filename>d1/dcb/game_8c.html</filename>
     <includes id="d0/dea/fonction__sdl_8h" name="fonction_sdl.h" local="yes" imported="no">../lib/fonction_sdl.h</includes>
     <includes id="de/d3e/gestion__deplacement__sdl_8h" name="gestion_deplacement_sdl.h" local="yes" imported="no">../lib/gestion_deplacement_sdl.h</includes>
@@ -1217,7 +1231,7 @@
   </compound>
   <compound kind="file">
     <name>gestion_deplacement_sdl.c</name>
-    <path>/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/</path>
+    <path>/home/killian/Wolfpine/Wolfpine-RPG-1/src/</path>
     <filename>de/d62/gestion__deplacement__sdl_8c.html</filename>
     <includes id="de/d3e/gestion__deplacement__sdl_8h" name="gestion_deplacement_sdl.h" local="yes" imported="no">../lib/gestion_deplacement_sdl.h</includes>
     <includes id="d0/dea/fonction__sdl_8h" name="fonction_sdl.h" local="yes" imported="no">../lib/fonction_sdl.h</includes>
@@ -1238,14 +1252,14 @@
   </compound>
   <compound kind="file">
     <name>inventory.c</name>
-    <path>/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/</path>
+    <path>/home/killian/Wolfpine/Wolfpine-RPG-1/src/</path>
     <filename>de/d04/inventory_8c.html</filename>
     <includes id="da/dab/inventory_8h" name="inventory.h" local="yes" imported="no">../lib/inventory.h</includes>
     <member kind="function">
       <type>int</type>
       <name>add_item</name>
       <anchorfile>de/d04/inventory_8c.html</anchorfile>
-      <anchor>a615ed55f7d61fc26f639449ba4f1199d</anchor>
+      <anchor>ab69ad73aa719fd7bb0d63a26f0a6734f</anchor>
       <arglist>(perso_t *player, int id, char *name, char *desc, int heal, int dgt, int armor)</arglist>
     </member>
     <member kind="function">
@@ -1272,7 +1286,7 @@
   </compound>
   <compound kind="file">
     <name>main.c</name>
-    <path>/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/</path>
+    <path>/home/killian/Wolfpine/Wolfpine-RPG-1/src/</path>
     <filename>d0/d29/main_8c.html</filename>
     <includes id="d8/d8c/menu__principal_8h" name="menu_principal.h" local="yes" imported="no">../lib/menu_principal.h</includes>
     <includes id="d0/dea/fonction__sdl_8h" name="fonction_sdl.h" local="yes" imported="no">../lib/fonction_sdl.h</includes>
@@ -1287,7 +1301,7 @@
   </compound>
   <compound kind="file">
     <name>menu_principal.c</name>
-    <path>/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/</path>
+    <path>/home/killian/Wolfpine/Wolfpine-RPG-1/src/</path>
     <filename>df/d1b/menu__principal_8c.html</filename>
     <includes id="d8/d1b/affichage__sdl_8h" name="affichage_sdl.h" local="yes" imported="no">../lib/affichage_sdl.h</includes>
     <includes id="d0/dea/fonction__sdl_8h" name="fonction_sdl.h" local="yes" imported="no">../lib/fonction_sdl.h</includes>
@@ -1309,7 +1323,7 @@
   </compound>
   <compound kind="file">
     <name>spells.c</name>
-    <path>/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/</path>
+    <path>/home/killian/Wolfpine/Wolfpine-RPG-1/src/</path>
     <filename>d2/d8d/spells_8c.html</filename>
     <includes id="d9/d42/spells_8h" name="spells.h" local="yes" imported="no">../lib/spells.h</includes>
     <member kind="function">
@@ -1332,93 +1346,6 @@
       <anchorfile>d2/d8d/spells_8c.html</anchorfile>
       <anchor>ad9feb4a5045d784e03f30f355bd630a7</anchor>
       <arglist>(perso_t *player, int *spell_num)</arglist>
-    </member>
-  </compound>
-  <compound kind="file">
-    <name>test_deplacement.c</name>
-    <path>/info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/</path>
-    <filename>d5/d47/test__deplacement_8c.html</filename>
-    <includes id="d9/dab/combat_8h" name="combat.h" local="yes" imported="no">../lib/combat.h</includes>
-    <member kind="function">
-      <type>int</type>
-      <name>main</name>
-      <anchorfile>d5/d47/test__deplacement_8c.html</anchorfile>
-      <anchor>ae66f6b31b5ad750f1fe042a706a4e3d4</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="struct">
-    <name>Audio</name>
-    <filename>dc/d69/struct_audio.html</filename>
-    <member kind="variable">
-      <type>uint32_t</type>
-      <name>length</name>
-      <anchorfile>dc/d69/struct_audio.html</anchorfile>
-      <anchor>a7e8c9a5ca37dc868542902b8328deaad</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>uint32_t</type>
-      <name>lengthTrue</name>
-      <anchorfile>dc/d69/struct_audio.html</anchorfile>
-      <anchor>a2fa8d2a2d4c6e83d37f36a0026830d4d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>uint8_t *</type>
-      <name>bufferTrue</name>
-      <anchorfile>dc/d69/struct_audio.html</anchorfile>
-      <anchor>a13b38888ff854f5587a9ce25aea417d1</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>uint8_t *</type>
-      <name>buffer</name>
-      <anchorfile>dc/d69/struct_audio.html</anchorfile>
-      <anchor>a491b84a20d7ccb9b52dee4357c7dae15</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>uint8_t</type>
-      <name>loop</name>
-      <anchorfile>dc/d69/struct_audio.html</anchorfile>
-      <anchor>a9b3d4a3e789e1688cc91666ac94cff4d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>uint8_t</type>
-      <name>fade</name>
-      <anchorfile>dc/d69/struct_audio.html</anchorfile>
-      <anchor>abb3611172d2af3f8cd67d6f2e259ec86</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>uint8_t</type>
-      <name>free</name>
-      <anchorfile>dc/d69/struct_audio.html</anchorfile>
-      <anchor>a5fb59d5671325dd2460ce1b613dc4555</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>uint8_t</type>
-      <name>volume</name>
-      <anchorfile>dc/d69/struct_audio.html</anchorfile>
-      <anchor>aff309cb275657927818ce381e5222285</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>SDL_AudioSpec</type>
-      <name>audio</name>
-      <anchorfile>dc/d69/struct_audio.html</anchorfile>
-      <anchor>a434856de9dbf4b4bf2c1173a3db9fc9a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>struct sound *</type>
-      <name>next</name>
-      <anchorfile>dc/d69/struct_audio.html</anchorfile>
-      <anchor>a58920d11420b003844e9b21493a88272</anchor>
-      <arglist></arglist>
     </member>
   </compound>
   <compound kind="struct">
@@ -1487,6 +1414,10 @@
     <filename>d4/ddf/structmonstre__t.html</filename>
   </compound>
   <compound kind="struct">
+    <name>objet_t</name>
+    <filename>d6/d8d/structobjet__t.html</filename>
+  </compound>
+  <compound kind="struct">
     <name>objet_s</name>
     <filename>da/d7d/structobjet__s.html</filename>
     <member kind="variable">
@@ -1540,8 +1471,8 @@
     </member>
   </compound>
   <compound kind="struct">
-    <name>objet_t</name>
-    <filename>d6/d8d/structobjet__t.html</filename>
+    <name>perso_t</name>
+    <filename>df/de6/structperso__t.html</filename>
   </compound>
   <compound kind="struct">
     <name>perso_s</name>
@@ -1611,31 +1542,101 @@
     </member>
   </compound>
   <compound kind="struct">
-    <name>perso_t</name>
-    <filename>df/de6/structperso__t.html</filename>
-  </compound>
-  <compound kind="struct">
-    <name>PrivateAudioDevice</name>
-    <filename>d2/dcc/struct_private_audio_device.html</filename>
+    <name>privateAudioDevice</name>
+    <filename>d4/da7/structprivate_audio_device.html</filename>
     <member kind="variable">
       <type>SDL_AudioDeviceID</type>
       <name>device</name>
-      <anchorfile>d2/dcc/struct_private_audio_device.html</anchorfile>
-      <anchor>ae0ef52cc14c68199540c718d893bd8bd</anchor>
+      <anchorfile>d4/da7/structprivate_audio_device.html</anchorfile>
+      <anchor>ae92381be77b55b09b866131df1454ae2</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>SDL_AudioSpec</type>
       <name>want</name>
-      <anchorfile>d2/dcc/struct_private_audio_device.html</anchorfile>
-      <anchor>a4be64dd1a91a9931c5a83dd8ead550cc</anchor>
+      <anchorfile>d4/da7/structprivate_audio_device.html</anchorfile>
+      <anchor>aecf060271fb9c072a506c1247a89e732</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>uint8_t</type>
       <name>audioEnabled</name>
-      <anchorfile>d2/dcc/struct_private_audio_device.html</anchorfile>
-      <anchor>a59f47a0ebc5e3a1e46320fd2986a80ba</anchor>
+      <anchorfile>d4/da7/structprivate_audio_device.html</anchorfile>
+      <anchor>ae535238cb420721686872e55ec08ff02</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>sound</name>
+    <filename>d3/dad/structsound.html</filename>
+    <member kind="variable">
+      <type>uint32_t</type>
+      <name>length</name>
+      <anchorfile>d3/dad/structsound.html</anchorfile>
+      <anchor>ae53b068049017bd141049d7ee2cb1678</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>uint32_t</type>
+      <name>lengthTrue</name>
+      <anchorfile>d3/dad/structsound.html</anchorfile>
+      <anchor>afb2c8ec16bb783473636b01c7bdb59aa</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>uint8_t *</type>
+      <name>bufferTrue</name>
+      <anchorfile>d3/dad/structsound.html</anchorfile>
+      <anchor>a300a209126f64c43d9f7527ae9329bd7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>uint8_t *</type>
+      <name>buffer</name>
+      <anchorfile>d3/dad/structsound.html</anchorfile>
+      <anchor>ab08beb2016609af60b8be2ee0dce6684</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>uint8_t</type>
+      <name>loop</name>
+      <anchorfile>d3/dad/structsound.html</anchorfile>
+      <anchor>a1a6341d200e9f8e86cd0bcef97b7c1b7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>uint8_t</type>
+      <name>fade</name>
+      <anchorfile>d3/dad/structsound.html</anchorfile>
+      <anchor>aff330af24a942d785229cba654bf37a6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>uint8_t</type>
+      <name>free</name>
+      <anchorfile>d3/dad/structsound.html</anchorfile>
+      <anchor>aad91547cb39fa4cfc0085da56c88fa46</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>uint8_t</type>
+      <name>volume</name>
+      <anchorfile>d3/dad/structsound.html</anchorfile>
+      <anchor>adf4600032771849128488f3c8b33da63</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>SDL_AudioSpec</type>
+      <name>audio</name>
+      <anchorfile>d3/dad/structsound.html</anchorfile>
+      <anchor>a560dc18ec81be9a0649d76abe3558bb3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>struct sound *</type>
+      <name>next</name>
+      <anchorfile>d3/dad/structsound.html</anchorfile>
+      <anchor>ad18c2f0a23299514a346fca7968ebbf2</anchor>
       <arglist></arglist>
     </member>
   </compound>

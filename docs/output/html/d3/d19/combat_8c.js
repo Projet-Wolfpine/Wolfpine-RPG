@@ -2,7 +2,8 @@ var combat_8c =
 [
     [ "__itoa", "d3/d19/combat_8c.html#a96205f2a14e4cbb7bb7dd3430301c5a0", null ],
     [ "aff_info", "d3/d19/combat_8c.html#aeec6653f2b515dc92c85cb133ff8b8d2", null ],
-    [ "combat", "d3/d19/combat_8c.html#aa2c1ca7f1bdf0a9c7e48a79c2890a095", null ],
+    [ "combat", "d3/d19/combat_8c.html#a0b43da61372174ac12c0c21e8c37701c", null ],
+    [ "free_player", "d3/d19/combat_8c.html#a0cb422cc832db792b6aabe3e76ee0f27", null ],
     [ "init_monster", "d3/d19/combat_8c.html#ae4af95d1a00a3eb23173ebac6a4b1387", null ],
     [ "init_player", "d3/d19/combat_8c.html#a3790ce6458cef9238474baf44426c232", null ],
     [ "tour_joueur", "d3/d19/combat_8c.html#a8217596f9d0ada09fc13341d48cc7122", null ],

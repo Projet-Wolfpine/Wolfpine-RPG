@@ -2,10 +2,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Wolfpine:  Fichier source de /info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/src/inventory.c</title>
+<title>Wolfpine:  Fichier source de /home/killian/Wolfpine/Wolfpine-RPG-1/src/inventory.c</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -22,7 +22,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Wolfpine<span id="projectnumber">&#160;1.1</span>
+   <div id="projectname">Wolfpine
+   &#160;<span id="projectnumber">1.1</span>
    </div>
   </td>
  </tr>
@@ -30,7 +31,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.9.2 -->
+<!-- Généré par Doxygen 1.8.17 -->
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
 <script type="text/javascript">
@@ -38,8 +39,7 @@
 $(function() {
   initMenu('../../',false,false,'search.php','Recherche');
 });
-/* @license-end */
-</script>
+/* @license-end */</script>
 <div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
@@ -59,7 +59,8 @@ $(document).ready(function(){initNavTree('de/d04/inventory_8c_source.html','../.
 </script>
 <div id="doc-content">
 <div class="header">
-  <div class="headertitle"><div class="title">inventory.c</div></div>
+  <div class="headertitle">
+<div class="title">inventory.c</div>  </div>
 </div><!--header-->
 <div class="contents">
 <a href="../../de/d04/inventory_8c.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
@@ -90,7 +91,7 @@ $(document).ready(function(){initNavTree('de/d04/inventory_8c_source.html','../.
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"> * \param armor Nombre d&#39;armure ajoutée par l&#39;item.</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> * \return On retourne 0 si l&#39;ajout s&#39;est bien passé, -1 si on possède déjà un item comportant cet id.</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"> */</span> </div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="../../da/dab/inventory_8h.html#ab69ad73aa719fd7bb0d63a26f0a6734f">   29</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../de/d04/inventory_8c.html#a615ed55f7d61fc26f639449ba4f1199d">add_item</a>(<a class="code" href="../../df/de6/structperso__t.html">perso_t</a> * player, <span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keywordtype">char</span> * name, <span class="keywordtype">char</span> * desc, <span class="keywordtype">int</span> heal, <span class="keywordtype">int</span> dgt, <span class="keywordtype">int</span> armor){</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="../../da/dab/inventory_8h.html#a615ed55f7d61fc26f639449ba4f1199d">   29</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../de/d04/inventory_8c.html#ab69ad73aa719fd7bb0d63a26f0a6734f">add_item</a>(<a class="code" href="../../df/de6/structperso__t.html">perso_t</a> * player, <span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keywordtype">char</span> * name, <span class="keywordtype">char</span> * desc, <span class="keywordtype">int</span> heal, <span class="keywordtype">int</span> dgt, <span class="keywordtype">int</span> armor){</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordflow">if</span>(player-&gt;objets[<span class="keywordtype">id</span>]-&gt;id != -1){</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                <span class="keywordflow">return</span>(-1);</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        }                </div>
@@ -172,20 +173,22 @@ $(document).ready(function(){initNavTree('de/d04/inventory_8c_source.html','../.
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  }</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;}</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
-<div class="ttc" id="ainventory_8c_html_a157f10d450802cacb4be49cad09b2431"><div class="ttname"><a href="../../de/d04/inventory_8c.html#a157f10d450802cacb4be49cad09b2431">del_item</a></div><div class="ttdeci">void del_item(perso_t *player, int id)</div><div class="ttdoc">Fonction de destruction d'un item dans l'inventaire.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d04/inventory_8c_source.html#l00058">inventory.c:58</a></div></div>
-<div class="ttc" id="ainventory_8c_html_a28b64e50a79cc64ac06e86949ea5aaed"><div class="ttname"><a href="../../de/d04/inventory_8c.html#a28b64e50a79cc64ac06e86949ea5aaed">use_heal</a></div><div class="ttdeci">void use_heal(perso_t *player)</div><div class="ttdoc">Fonction d'utilisation d'une potion stockée dans l'inventaire.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d04/inventory_8c_source.html#l00073">inventory.c:73</a></div></div>
-<div class="ttc" id="ainventory_8c_html_a615ed55f7d61fc26f639449ba4f1199d"><div class="ttname"><a href="../../de/d04/inventory_8c.html#a615ed55f7d61fc26f639449ba4f1199d">add_item</a></div><div class="ttdeci">int add_item(perso_t *player, int id, char *name, char *desc, int heal, int dgt, int armor)</div><div class="ttdoc">Fonction d'ajout d'un item dans l'inventaire.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d04/inventory_8c_source.html#l00029">inventory.c:29</a></div></div>
-<div class="ttc" id="ainventory_8c_html_a7bc318626fc83cfadadc28900d0f64f1"><div class="ttname"><a href="../../de/d04/inventory_8c.html#a7bc318626fc83cfadadc28900d0f64f1">aff_inventory</a></div><div class="ttdeci">void aff_inventory(perso_t *player)</div><div class="ttdoc">Fonction d'affichage de l'inventaire.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d04/inventory_8c_source.html#l00102">inventory.c:102</a></div></div>
-<div class="ttc" id="astructperso__t_html"><div class="ttname"><a href="../../df/de6/structperso__t.html">perso_t</a></div></div>
-<div class="ttc" id="astructures_8h_html_ab79bf1ced3b25083a255fb0748b0b31c"><div class="ttname"><a href="../../dd/da3/structures_8h.html#ab79bf1ced3b25083a255fb0748b0b31c">PLAYER_HP</a></div><div class="ttdeci">#define PLAYER_HP</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/da3/structures_8h_source.html#l00020">structures.h:20</a></div></div>
-<div class="ttc" id="astructures_8h_html_ac29d7726f294f287d1794cf8cc828f6a"><div class="ttname"><a href="../../dd/da3/structures_8h.html#ac29d7726f294f287d1794cf8cc828f6a">TAILLE_INV</a></div><div class="ttdeci">#define TAILLE_INV</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/da3/structures_8h_source.html#l00019">structures.h:19</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="astructperso__t_html"><div class="ttname"><a href="../../df/de6/structperso__t.html">perso_t</a></div></div>
+<div class="ttc" id="astructures_8h_html_ac29d7726f294f287d1794cf8cc828f6a"><div class="ttname"><a href="../../dd/da3/structures_8h.html#ac29d7726f294f287d1794cf8cc828f6a">TAILLE_INV</a></div><div class="ttdeci">#define TAILLE_INV</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/da3/structures_8h_source.html#l00019">structures.h:19</a></div></div>
+<div class="ttc" id="ainventory_8c_html_a157f10d450802cacb4be49cad09b2431"><div class="ttname"><a href="../../de/d04/inventory_8c.html#a157f10d450802cacb4be49cad09b2431">del_item</a></div><div class="ttdeci">void del_item(perso_t *player, int id)</div><div class="ttdoc">Fonction de destruction d'un item dans l'inventaire.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d04/inventory_8c_source.html#l00058">inventory.c:58</a></div></div>
+<div class="ttc" id="ainventory_8c_html_ab69ad73aa719fd7bb0d63a26f0a6734f"><div class="ttname"><a href="../../de/d04/inventory_8c.html#ab69ad73aa719fd7bb0d63a26f0a6734f">add_item</a></div><div class="ttdeci">int add_item(perso_t *player, int id, char *name, char *desc, int heal, int dgt, int armor)</div><div class="ttdoc">Fonction d'ajout d'un item dans l'inventaire.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d04/inventory_8c_source.html#l00029">inventory.c:29</a></div></div>
+<div class="ttc" id="ainventory_8c_html_a28b64e50a79cc64ac06e86949ea5aaed"><div class="ttname"><a href="../../de/d04/inventory_8c.html#a28b64e50a79cc64ac06e86949ea5aaed">use_heal</a></div><div class="ttdeci">void use_heal(perso_t *player)</div><div class="ttdoc">Fonction d'utilisation d'une potion stockée dans l'inventaire.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d04/inventory_8c_source.html#l00073">inventory.c:73</a></div></div>
+<div class="ttc" id="ainventory_8c_html_a7bc318626fc83cfadadc28900d0f64f1"><div class="ttname"><a href="../../de/d04/inventory_8c.html#a7bc318626fc83cfadadc28900d0f64f1">aff_inventory</a></div><div class="ttdeci">void aff_inventory(perso_t *player)</div><div class="ttdoc">Fonction d'affichage de l'inventaire.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d04/inventory_8c_source.html#l00102">inventory.c:102</a></div></div>
+<div class="ttc" id="astructures_8h_html_ab79bf1ced3b25083a255fb0748b0b31c"><div class="ttname"><a href="../../dd/da3/structures_8h.html#ab79bf1ced3b25083a255fb0748b0b31c">PLAYER_HP</a></div><div class="ttdeci">#define PLAYER_HP</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/da3/structures_8h_source.html#l00020">structures.h:20</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../de/d04/inventory_8c.html">inventory.c</a></li>
-    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>
 </div>
 </body>

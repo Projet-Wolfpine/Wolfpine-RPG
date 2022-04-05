@@ -2,10 +2,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Wolfpine:  Fichier source de /info/etu/l2info/s202278/Wolfpine/Wolfpine-RPG/lib/affichage_sdl.h</title>
+<title>Wolfpine:  Fichier source de /home/killian/Wolfpine/Wolfpine-RPG-1/lib/affichage_sdl.h</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -22,7 +22,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Wolfpine<span id="projectnumber">&#160;1.1</span>
+   <div id="projectname">Wolfpine
+   &#160;<span id="projectnumber">1.1</span>
    </div>
   </td>
  </tr>
@@ -30,7 +31,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.9.2 -->
+<!-- Généré par Doxygen 1.8.17 -->
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
 <script type="text/javascript">
@@ -38,8 +39,7 @@
 $(function() {
   initMenu('../../',false,false,'search.php','Recherche');
 });
-/* @license-end */
-</script>
+/* @license-end */</script>
 <div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
@@ -59,20 +59,42 @@ $(document).ready(function(){initNavTree('d8/d1b/affichage__sdl_8h_source.html',
 </script>
 <div id="doc-content">
 <div class="header">
-  <div class="headertitle"><div class="title">affichage_sdl.h</div></div>
+  <div class="headertitle">
+<div class="title">affichage_sdl.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d8/d1b/affichage__sdl_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../d8/d1b/affichage__sdl_8h.html#a0a86720440ed48cd84f9bda8b7ca10f6">afficher_menu</a>(<span class="keywordtype">char</span> menu[4][30]);</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d8/d1b/affichage__sdl_8h.html#a38dc84bd7da8d9d381981d966f4c7b8d">affichage_dialogue</a>(<span class="keywordtype">char</span> * id_PNJ);</div>
-<div class="ttc" id="aaffichage__sdl_8h_html_a0a86720440ed48cd84f9bda8b7ca10f6"><div class="ttname"><a href="../../d8/d1b/affichage__sdl_8h.html#a0a86720440ed48cd84f9bda8b7ca10f6">afficher_menu</a></div><div class="ttdeci">int afficher_menu(char menu[4][30])</div><div class="ttdoc">fonction d'affichage du menu et de detection du choix de l'utilisateur</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d78/affichage__sdl_8c_source.html#l00024">affichage_sdl.c:24</a></div></div>
-<div class="ttc" id="aaffichage__sdl_8h_html_a38dc84bd7da8d9d381981d966f4c7b8d"><div class="ttname"><a href="../../d8/d1b/affichage__sdl_8h.html#a38dc84bd7da8d9d381981d966f4c7b8d">affichage_dialogue</a></div><div class="ttdeci">void affichage_dialogue(char *id_PNJ)</div><div class="ttdoc">fonction d'affichage des dialogue</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d78/affichage__sdl_8c_source.html#l00075">affichage_sdl.c:75</a></div></div>
+<a href="../../d8/d1b/affichage__sdl_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * \file affichage_sdl.c</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * \brief Prototypes des fonctions d&#39;affichage du menu et du dialogue.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * \author thibault.C</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * \version 1.1</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * \date 03/04/2022</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * \fn int afficher_menu(char menu[4][30])</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * \brief fonction d&#39;affichage du menu et de detection du choix de l&#39;utilisateur </span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * \param[in] menu Récupération de la liste format texte du menu pour effectuer l&#39;affichage</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../d8/d1b/affichage__sdl_8h.html#a0a86720440ed48cd84f9bda8b7ca10f6">afficher_menu</a>(<span class="keywordtype">char</span> menu[4][30]);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> * \fn void affichage_dialogue(char * id_PNJ)</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> * \brief fonction d&#39;affichage des dialogue </span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> * \param[in] menu Récupération de la liste format texte du menu pour effectuer l&#39;affichage</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d8/d1b/affichage__sdl_8h.html#a38dc84bd7da8d9d381981d966f4c7b8d">affichage_dialogue</a>(<span class="keywordtype">char</span> * id_PNJ);</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aaffichage__sdl_8h_html_a0a86720440ed48cd84f9bda8b7ca10f6"><div class="ttname"><a href="../../d8/d1b/affichage__sdl_8h.html#a0a86720440ed48cd84f9bda8b7ca10f6">afficher_menu</a></div><div class="ttdeci">int afficher_menu(char menu[4][30])</div><div class="ttdoc">fonction d'affichage du menu et de detection du choix de l'utilisateur</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d78/affichage__sdl_8c_source.html#l00024">affichage_sdl.c:24</a></div></div>
+<div class="ttc" id="aaffichage__sdl_8h_html_a38dc84bd7da8d9d381981d966f4c7b8d"><div class="ttname"><a href="../../d8/d1b/affichage__sdl_8h.html#a38dc84bd7da8d9d381981d966f4c7b8d">affichage_dialogue</a></div><div class="ttdeci">void affichage_dialogue(char *id_PNJ)</div><div class="ttdoc">fonction d'affichage des dialogue</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d78/affichage__sdl_8c_source.html#l00075">affichage_sdl.c:75</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li><li class="navelem"><a class="el" href="../../d8/d1b/affichage__sdl_8h.html">affichage_sdl.h</a></li>
-    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>
 </div>
 </body>

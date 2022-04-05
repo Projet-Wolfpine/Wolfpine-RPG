@@ -1,0 +1,19 @@
+digraph "/home/killian/Wolfpine/Wolfpine-RPG-1/src/gestion_deplacement_sdl.c"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="/home/killian/Wolfpine\l/Wolfpine-RPG-1/src/gestion\l_deplacement_sdl.c",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Fonctions de gestion du déplacement en SDL."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="../lib/gestion_deplacement\l_sdl.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/d3e/gestion__deplacement__sdl_8h.html",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="SDL2/SDL.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="../lib/fonction_sdl.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/dea/fonction__sdl_8h.html",tooltip=" "];
+  Node4 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 [label="ncurses.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node4 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 [label="SDL2/SDL_ttf.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+}
