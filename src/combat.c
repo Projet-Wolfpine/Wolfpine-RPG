@@ -98,6 +98,33 @@ perso_t init_player(){
 }
 
 /**
+ * \fn perso_t free_player(perso_t * player)
+ * \brief Libère la mémoire associée à un perso_t
+ * \param player adresse du perso_t concerné
+ */
+void free_player(perso_t * player){
+	for (int i = 0; i < NB_SPELLS; i++){
+		
+		free(player->spell[i]);
+		player->spell[i] = NULL;
+		
+	} 
+	for (int j = 0; j < TAILLE_INV; j++){
+		
+		free(player->objets[j]);
+		player->objets[j] = NULL;
+		
+	} 
+	
+	free(player->name);
+	player->name = NULL;
+	
+	free(player);
+	player = NULL;
+	
+}
+
+/**
  * \fn void init_monster(monstre_t * monster, char * name, char * sprite, int hp, int dgt, int armor)
  * \brief fonction d'initialisation d'un monstre_t
  * \param monster monstre_t dans lequel va être renvoyé le monstre 

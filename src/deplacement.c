@@ -26,7 +26,7 @@ void init_mat(case_t mat[Y][X]){
 }
 
 /**
- * \fn void init_mat(case_t mat[Y][X])
+ * \fn void contour_mat(case_t mat[Y][X])
  * \brief Fonction de création des bordures de la matrice
  * \param mat matrice de case_t dans laquelle on stocke les informations initialisées
  */
