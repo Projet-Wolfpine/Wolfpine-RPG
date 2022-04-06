@@ -20,7 +20,7 @@
  */
 
 #define TAILLE_CASE_PXL 64
-#define DROP_RATE 95
+#define DROP_RATE 97
 
 char * nom_map="map1.txt";
 
@@ -376,7 +376,7 @@ void start(){
                 if(strcmp(id_pnj,"PNJ10")==0){
                     SDL_Delay(2000);
                     monstre_t monstre;
-            		init_monster(&monstre, "WOLFY IN SHAPE", "wolfboss.png", 999, 200 ,5);
+            		init_monster(&monstre, "WOLFY IN SHAPE", "wolfboss.png", 999, 70 ,5);
             		combat(&joueur,&monstre);
                     
                 }
