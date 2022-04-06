@@ -20,7 +20,7 @@
  */
 
 #define TAILLE_CASE_PXL 64
-#define DROP_RATE 97
+#define DROP_RATE 95
 
 char * nom_map="map1.txt";
 
