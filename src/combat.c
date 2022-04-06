@@ -377,12 +377,18 @@ void tour_monstre(perso_t * player, monstre_t * monstre)
 		player->hp -= dgt;
 	}
     if(player->hp < 0){
-      player->hp = 0;
-      printf("%s attaque ! vous prenez %d dégats    ||	HP player : %d  HP monstre : %d\n\n",monstre->name, dgt, player->hp, monstre->hp);
-      printf("Oh.. vous avez perdu il me semble.\n");
+      	player->hp = 0;
+
+		//GAME OVER
+		drawImage(0, 0, "game_over.png", 1920, 1080);
+		faire_rendu();
+		SDL_Delay(3500);
+		
 	}
  	else{
- 		printf("%s attaque ! vous prenez %d dégats    ||	HP player : %d  HP monstre : %d\n\n",monstre->name, dgt, player->hp, monstre->hp);
+ 		drawText(500,700,"Le monstre attaque !",60,40,blanc);
+		 faire_rendu();
+		 SDL_Delay(700);
  	}
   }
   else{

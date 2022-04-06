@@ -92,6 +92,7 @@ char* interaction_pnj(case_t mat[Y][X], perso_t *perso) {
 void start(){
     char * info;
     int y=10,x=10;//Initialisation de la posiition de départ dans la premiere map
+    char * nom_map="map1.txt";
     SDL_RenderClear(renderer);
     int touche=-1;
     int running = 1;//Initialisation pour savoir si le jeu continue de tourner ou non
@@ -162,7 +163,9 @@ void start(){
 
             // Gestion de combat donjon
             if(!strcmp(info,"ID_SOLMONSTRE1") || !strcmp(info,"ID_SOLMONSTRE2" )){
+                srand(time(0));
                 random=rand() % 101;
+                srand(time(0));
                 r_monstre=rand() % 3;
                 printf("MONSTRE : %d\n", r_monstre);
                		
@@ -181,8 +184,8 @@ void start(){
                 }
             }
 
-            // Echap = sortie du jeu
-            if(touche == 5){
+            // Echap = sortie du jeu || Player mort
+            if(touche == 5 || joueur.hp <= 0){
                 running=0;
             }
 
@@ -373,7 +376,7 @@ void start(){
                 if(strcmp(id_pnj,"PNJ10")==0){
                     SDL_Delay(2000);
                     monstre_t monstre;
-            		init_monster(&monstre, "WOLFY IN SHAPE", "wolfboss.png", 999, 70 ,5);
+            		init_monster(&monstre, "WOLFY IN SHAPE", "wolfboss.png", 999, 200 ,5);
             		combat(&joueur,&monstre);
                     
                 }
