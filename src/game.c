@@ -173,6 +173,7 @@ void start(){
                 	monstre_t monstre;
                     if(r_monstre == 0){
                         init_monster(&monstre, "Sanik", "sanic.png", 50, 30 ,5);
+                        add_item(&joueur,3,"Potion de soin", "Vous redonne 50 pv.", 50, 0, 0);
                     }
                     else if(r_monstre == 1){
                         init_monster(&monstre, "Pop", "pop_cat.png", 100, 50 ,20);
