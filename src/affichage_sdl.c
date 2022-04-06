@@ -14,7 +14,8 @@
 
 TTF_Font *police; /*!< Pointeur sur la police utilisée */
 SDL_Color jaune = {204, 154, 0}; /*!< Couleur jaune  */
-SDL_Color noire = {0, 0, 0}; /*!< Couleur jaune  */
+SDL_Color noire = {0, 0, 0}; /*!< Couleur noire  */
+SDL_Color blanche = {255, 255, 255}; /*!< Couleur blanche  */
 
 /**
  * \fn int afficher_menu(char menu[4][30])
@@ -36,7 +37,7 @@ int afficher_menu(char menu[4][30]){
   
   for(int i = 0, y=200; i<4; i++, y+=150){
     drawImage( 700, y, "button.png", 475, 130);
-    drawText(800, y+45, menu[i], 25, 12, jaune);
+    drawText(800, y+45, menu[i], 25, 12, blanche);
   }
   faire_rendu();
   SDL_Event event;
